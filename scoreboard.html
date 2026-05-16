@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lil Tony — Scoreboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0d0d0d;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 24px 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 1.3rem; color: #ff6b00; letter-spacing: 1px; margin-bottom: 4px; }
+    .updated { font-size: 0.75rem; color: #555; margin-bottom: 24px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 16px 12px;
+      text-align: center;
+    }
+    .card .label { font-size: 0.7rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+    .card .value { font-size: 2rem; font-weight: 700; margin-top: 4px; }
+    .win { color: #00c853; }
+    .loss { color: #ff3d3d; }
+    .pending { color: #888; }
+    .rate { color: #ff6b00; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    th {
+      text-align: left;
+      padding: 8px 10px;
+      color: #555;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #222;
+    }
+    td {
+      padding: 10px 10px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    tr:last-child td { border-bottom: none; }
+    h2 { font-size: 0.8rem; color: #444; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <h1>🔥 LIL TONY — SCOREBOARD</h1>
+  <div class="updated">Updated May 15, 2026 12:59 AM · Strategies under review</div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="label">Signals</div>
+      <div class="value" style="color:#e0e0e0">7</div>
+    </div>
+    <div class="card">
+      <div class="label">Wins</div>
+      <div class="value win">0</div>
+    </div>
+    <div class="card">
+      <div class="label">Losses</div>
+      <div class="value loss">0</div>
+    </div>
+    <div class="card">
+      <div class="label">Win Rate</div>
+      <div class="value rate">—</div>
+    </div>
+  </div>
+
+  <h2>By Strategy</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Strategy</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Pending</th>
+        <th>Win Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>Mean Reversion</td>
+          <td class="win">0</td>
+          <td class="loss">0</td>
+          <td class="pending">3</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Momentum Breakout</td>
+          <td class="win">0</td>
+          <td class="loss">0</td>
+          <td class="pending">4</td>
+          <td>—</td>
+        </tr>
+    </tbody>
+  </table>
+</body>
+</html>

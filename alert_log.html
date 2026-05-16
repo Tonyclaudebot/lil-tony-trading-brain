@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lil Tony — Alert Log</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:    #000000;
+    --bg:       #0a0a0a;
+    --bg2:      #111111;
+    --bg3:      #161616;
+    --border:   #1e1e1e;
+    --border2:  #2a2a2a;
+    --text:     #e0e0e0;
+    --muted:    #555555;
+    --muted2:   #333333;
+    --green:    #4ade80;
+    --green-bg: rgba(74,222,128,0.08);
+    --green-bd: rgba(74,222,128,0.2);
+    --red:      #f87171;
+    --red-bg:   rgba(248,113,113,0.08);
+    --red-bd:   rgba(248,113,113,0.2);
+    --gold:     #fbbf24;
+    --gold-bg:  rgba(251,191,36,0.08);
+    --gold-bd:  rgba(251,191,36,0.2);
+    --blue:     #38bdf8;
+    --blue-bg:  rgba(56,189,248,0.08);
+    --blue-bd:  rgba(56,189,248,0.2);
+    --purple:   #818cf8;
+    --purple-bg:rgba(129,140,248,0.08);
+    --purple-bd:rgba(129,140,248,0.2);
+    --warn:     #fbbf24;
+    --warn-bg:  rgba(251,191,36,0.08);
+    --warn-bd:  rgba(251,191,36,0.2);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+    pointer-events: none; z-index: 1000;
+  }
+
+  /* Header */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px; position: sticky; top: 0; z-index: 100;
+    background: rgba(0,0,0,0.92); backdrop-filter: blur(12px);
+  }
+  .header-brand {
+    font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700;
+    color: var(--gold); letter-spacing: 0.02em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .header-right { display: flex; align-items: center; gap: 12px; }
+  .nav-btn {
+    font-size: 11px; color: var(--muted); text-decoration: none;
+    padding: 4px 12px; border: 1px solid var(--border); border-radius: 8px;
+    font-family: 'DM Mono', monospace;
+    transition: color 0.2s, border-color 0.2s; background: none; cursor: pointer;
+  }
+  .nav-btn:hover { color: var(--green); border-color: var(--green); }
+
+  .main { max-width: 860px; margin: 0 auto; padding: 24px 16px; }
+
+  /* Summary bar */
+  .summary-bar {
+    display: flex; align-items: center; gap: 20px;
+    margin-bottom: 20px; padding: 14px 16px;
+    background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
+    font-size: 11px; flex-wrap: wrap;
+  }
+  .sum-stat { display: flex; flex-direction: column; gap: 3px; }
+  .sum-val { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; line-height: 1; }
+  .sum-lbl { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .sum-divider { width: 1px; height: 32px; background: var(--border); }
+
+  /* Filter pills */
+  .filters { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .filter-btn {
+    font-size: 10px; padding: 5px 14px; border-radius: 20px; cursor: pointer;
+    border: 1px solid var(--border); background: none; color: var(--muted);
+    font-family: 'DM Mono', monospace; transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--border2); color: var(--text); }
+  .filter-btn.active { background: var(--gold-bg); border-color: var(--gold-bd); color: var(--gold); }
+
+  /* Alert card */
+  .alert-card {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 14px; margin-bottom: 12px; overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .alert-card:hover { border-color: var(--border2); }
+  .alert-card.traded-yes { border-left: 3px solid var(--green); }
+  .alert-card.traded-no  { border-left: 3px solid var(--muted2); }
+  .alert-card.has-notes  { border-left: 3px solid var(--blue); }
+
+  .card-top {
+    padding: 14px 16px; cursor: pointer;
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+  }
+  .card-top:hover { background: rgba(255,255,255,0.015); }
+
+  .ct-left { flex: 1; min-width: 0; }
+  .ct-row1 { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .ct-ticker { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: var(--gold); }
+  .ct-contract { font-size: 13px; color: var(--text); }
+  .ct-row2 { display: flex; align-items: center; gap: 12px; font-size: 10px; color: var(--muted); flex-wrap: wrap; }
+  .ct-entry  { color: var(--text); }
+  .ct-target { color: var(--green); }
+  .ct-stop   { color: var(--red); }
+  .ct-pct    { color: var(--gold); }
+
+  .ct-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+  .review-badge {
+    font-size: 9px; padding: 3px 9px; border-radius: 20px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap;
+  }
+  .rb-pending  { background: rgba(85,85,85,0.12); border: 1px solid var(--border);  color: var(--muted); }
+  .rb-traded   { background: var(--green-bg);      border: 1px solid var(--green-bd); color: var(--green); }
+  .rb-passed   { background: rgba(85,85,85,0.12); border: 1px solid var(--border2); color: var(--muted2); }
+  .rb-auto     { background: rgba(85,85,85,0.06); border: 1px solid var(--border);  color: var(--muted2); font-style: italic; }
+  .rb-noted    { background: var(--blue-bg);       border: 1px solid var(--blue-bd);  color: var(--blue); }
+  .rb-target   { background: var(--green-bg);      border: 1px solid var(--green-bd); color: var(--green); }
+  .rb-stop     { background: var(--red-bg);        border: 1px solid var(--red-bd);   color: var(--red); }
+  .rb-expired  { background: rgba(85,85,85,0.1);   border: 1px solid var(--border);   color: var(--muted); }
+  .rb-open     { background: var(--blue-bg);       border: 1px solid var(--blue-bd);  color: var(--blue); }
+
+  /* Outcome buttons */
+  .outcome-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+  .outcome-btn {
+    font-size: 10px; padding: 5px 13px; border-radius: 20px; cursor: pointer;
+    border: 1px solid var(--border); background: none; color: var(--muted);
+    font-family: 'DM Mono', monospace; transition: all 0.15s;
+  }
+  .outcome-btn:hover { border-color: var(--border2); color: var(--text); }
+  .outcome-btn.sel-target  { background: var(--green-bg); border-color: var(--green-bd); color: var(--green); }
+  .outcome-btn.sel-stop    { background: var(--red-bg);   border-color: var(--red-bd);   color: var(--red); }
+  .outcome-btn.sel-expired { background: rgba(85,85,85,0.1); border-color: var(--border2); color: var(--muted); }
+  .outcome-btn.sel-open    { background: var(--blue-bg);  border-color: var(--blue-bd);  color: var(--blue); }
+  .auto-note { font-size: 9px; color: var(--muted2); font-style: italic; margin-top: 6px; }
+  .ct-ts { font-size: 9px; color: var(--muted); }
+  .ct-caret { font-size: 12px; color: var(--muted); transition: transform 0.2s; margin-top: 2px; }
+  .alert-card.open .ct-caret { transform: rotate(90deg); }
+
+  /* Strat pill */
+  .strat-pill { font-size: 9px; padding: 3px 8px; border-radius: 20px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; display: inline-block; }
+  .sp-mb { background: var(--purple-bg); border: 1px solid var(--purple-bd); color: var(--purple); }
+  .sp-mr { background: var(--warn-bg);   border: 1px solid var(--warn-bd);   color: var(--warn); }
+  .sp-uo { background: var(--blue-bg);   border: 1px solid var(--blue-bd);   color: var(--blue); }
+
+  /* Review panel */
+  .review-panel { display: none; padding: 0 16px 16px; border-top: 1px solid var(--border); }
+  .alert-card.open .review-panel { display: block; }
+
+  .rp-section { margin-top: 14px; }
+  .rp-label { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+
+  /* Quick traded button (on collapsed card) */
+  .quick-traded {
+    font-size: 10px; padding: 4px 11px; border-radius: 20px; cursor: pointer;
+    border: 1px solid var(--border); background: none; color: var(--muted);
+    font-family: 'DM Mono', monospace; transition: all 0.15s; white-space: nowrap;
+  }
+  .quick-traded:hover { background: var(--green-bg); border-color: var(--green-bd); color: var(--green); }
+  .quick-traded.active { background: var(--green-bg); border-color: var(--green-bd); color: var(--green); }
+
+  /* Trade buttons (inside panel) */
+  .trade-btns { display: flex; gap: 8px; }
+  .trade-btn {
+    font-size: 11px; padding: 7px 18px; border-radius: 8px; cursor: pointer;
+    border: 1px solid var(--border); background: none; color: var(--muted);
+    font-family: 'DM Mono', monospace; transition: all 0.15s;
+  }
+  .trade-btn:hover { border-color: var(--border2); color: var(--text); }
+  .trade-btn.sel-yes { background: var(--green-bg); border-color: var(--green-bd); color: var(--green); }
+  .trade-btn.sel-no  { background: rgba(85,85,85,0.1); border-color: var(--border2); color: var(--muted); }
+
+  /* Notes */
+  .notes-wrap { position: relative; }
+  .notes-input {
+    width: 100%; background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 8px; color: var(--text); font-family: 'DM Mono', monospace;
+    font-size: 11px; padding: 10px 12px; resize: vertical; min-height: 72px;
+    transition: border-color 0.2s; outline: none; line-height: 1.6;
+  }
+  .notes-input:focus { border-color: var(--border2); }
+  .notes-input::placeholder { color: var(--muted2); }
+
+  /* Save row */
+  .save-row { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+  .save-btn {
+    font-size: 11px; padding: 7px 20px; border-radius: 8px; cursor: pointer;
+    background: var(--gold-bg); border: 1px solid var(--gold-bd); color: var(--gold);
+    font-family: 'DM Mono', monospace; transition: all 0.15s;
+  }
+  .save-btn:hover { background: rgba(251,191,36,0.15); }
+  .save-confirm { font-size: 10px; color: var(--green); opacity: 0; transition: opacity 0.3s; }
+  .save-confirm.show { opacity: 1; }
+  .saved-ts { font-size: 9px; color: var(--muted); }
+
+  /* Empty state */
+  .empty { text-align: center; padding: 60px 20px; color: var(--muted); font-size: 13px; }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid var(--border); padding: 16px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 10px; color: var(--muted2); margin-top: 40px;
+  }
+  .footer a { color: var(--muted); text-decoration: none; }
+  .footer a:hover { color: var(--green); }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-brand">
+    📋 Alert Log
+  </div>
+  <div class="header-right">
+    <a href="admin.html" class="nav-btn">← Admin</a>
+    <a href="index.html" class="nav-btn">Dashboard</a>
+    <span style="font-size:11px;color:var(--muted);" id="clock"></span>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- Summary -->
+  <div class="summary-bar">
+    <div class="sum-stat">
+      <div class="sum-val" id="sm-total" style="color:var(--text);">--</div>
+      <div class="sum-lbl">Total Alerts</div>
+    </div>
+    <div class="sum-divider"></div>
+    <div class="sum-stat">
+      <div class="sum-val" id="sm-traded" style="color:var(--green);">--</div>
+      <div class="sum-lbl">Traded</div>
+    </div>
+    <div class="sum-divider"></div>
+    <div class="sum-stat">
+      <div class="sum-val" id="sm-passed" style="color:var(--muted);">--</div>
+      <div class="sum-lbl">Passed</div>
+    </div>
+    <div class="sum-divider"></div>
+    <div class="sum-stat">
+      <div class="sum-val" id="sm-pending" style="color:var(--gold);">--</div>
+      <div class="sum-lbl">Pending Review</div>
+    </div>
+    <div class="sum-divider"></div>
+    <div class="sum-stat">
+      <div class="sum-val" id="sm-target" style="color:var(--green);">--</div>
+      <div class="sum-lbl">Target Hit</div>
+    </div>
+    <div class="sum-divider"></div>
+    <div class="sum-stat">
+      <div class="sum-val" id="sm-noted" style="color:var(--blue);">--</div>
+      <div class="sum-lbl">With Notes</div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">All</button>
+    <button class="filter-btn" data-filter="pending" onclick="setFilter('pending')">Pending Review</button>
+    <button class="filter-btn" data-filter="traded" onclick="setFilter('traded')">Traded</button>
+    <button class="filter-btn" data-filter="passed" onclick="setFilter('passed')">Passed</button>
+    <button class="filter-btn" data-filter="target" onclick="setFilter('target')">Target Hit</button>
+    <button class="filter-btn" data-filter="noted" onclick="setFilter('noted')">Has Notes</button>
+  </div>
+
+  <!-- Cards -->
+  <div id="card-list"></div>
+
+</main>
+
+<footer class="footer">
+  <span>Alert Log · Private · Notes saved locally</span>
+  <a href="admin.html">← Admin Console</a>
+</footer>
+
+<script>
+var _alerts = [];
+var _reviews = {};
+var _filter = 'all';
+var STORE_KEY = 'lil-tony-reviews';
+
+/* Clock */
+function tick(){
+  var el = document.getElementById('clock');
+  if(el) el.textContent = new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}
+setInterval(tick, 1000); tick();
+
+/* Persistence */
+function loadReviews(){
+  try { _reviews = JSON.parse(localStorage.getItem(STORE_KEY)||'{}'); } catch(e){ _reviews={}; }
+}
+function saveReview(id, fields){
+  var existing = _reviews[id] || {};
+  _reviews[id] = Object.assign({}, existing, fields, {saved_at: new Date().toISOString()});
+  localStorage.setItem(STORE_KEY, JSON.stringify(_reviews));
+}
+
+function autoAssumeNotTraded(){
+  var cutoff = Date.now() - 24*60*60*1000;
+  var changed = false;
+  _alerts.forEach(function(a){
+    var id = a.alert_id;
+    if(!_reviews[id] && a.timestamp && new Date(a.timestamp).getTime() < cutoff){
+      _reviews[id] = {traded:false, auto:true, outcome:null, notes:'', saved_at:new Date().toISOString()};
+      changed = true;
+    }
+  });
+  if(changed) localStorage.setItem(STORE_KEY, JSON.stringify(_reviews));
+}
+
+/* Helpers */
+function stratPill(s){
+  var low = (s||'').toLowerCase();
+  if(low.includes('momentum')||low.includes('breakout')) return '<span class="strat-pill sp-mb">Momentum</span>';
+  if(low.includes('mean')||low.includes('revert'))       return '<span class="strat-pill sp-mr">Mean Rev</span>';
+  if(low.includes('unusual')||low.includes('uoa'))       return '<span class="strat-pill sp-uo">UOA</span>';
+  return '<span class="strat-pill sp-mb">'+(s||'--')+'</span>';
+}
+
+function fmtTs(iso){
+  if(!iso) return '--';
+  return new Date(iso).toLocaleString([],{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+}
+
+function reviewState(id){
+  var r = _reviews[id];
+  if(!r) return 'pending';
+  if(r.traded === true)  return 'traded';
+  if(r.traded === false) return r.auto ? 'auto-passed' : 'passed';
+  if(r.notes && r.notes.trim()) return 'noted';
+  return 'pending';
+}
+
+function outcomeBadge(outcome){
+  if(outcome==='target')  return '<span class="review-badge rb-target">🎯 Target Hit</span>';
+  if(outcome==='stop')    return '<span class="review-badge rb-stop">Stop Hit</span>';
+  if(outcome==='expired') return '<span class="review-badge rb-expired">Expired</span>';
+  if(outcome==='open')    return '<span class="review-badge rb-open">Still Open</span>';
+  return '';
+}
+
+function badgeHtml(state, outcome){
+  var ob = outcomeBadge(outcome);
+  if(state==='traded')      return '<span class="review-badge rb-traded">✓ Traded</span>'+ob;
+  if(state==='passed')      return '<span class="review-badge rb-passed">Passed</span>'+ob;
+  if(state==='auto-passed') return '<span class="review-badge rb-auto">Not Traded</span>'+ob;
+  if(state==='noted')       return '<span class="review-badge rb-noted">Notes</span>'+ob;
+  return '<span class="review-badge rb-pending">Pending</span>';
+}
+
+/* Filter */
+function setFilter(f){
+  _filter = f;
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.filter===f); });
+  renderCards();
+}
+
+/* Summary */
+function renderSummary(){
+  var total   = _alerts.length;
+  var traded  = _alerts.filter(function(a){ return _reviews[a.alert_id] && _reviews[a.alert_id].traded===true; }).length;
+  var passed  = _alerts.filter(function(a){ return _reviews[a.alert_id] && _reviews[a.alert_id].traded===false; }).length;
+  var target  = _alerts.filter(function(a){ return _reviews[a.alert_id] && _reviews[a.alert_id].outcome==='target'; }).length;
+  var noted   = _alerts.filter(function(a){ var r=_reviews[a.alert_id]; return r && r.notes && r.notes.trim(); }).length;
+  var pending = _alerts.filter(function(a){ return reviewState(a.alert_id)==='pending'; }).length;
+  document.getElementById('sm-total').textContent   = total;
+  document.getElementById('sm-traded').textContent  = traded;
+  document.getElementById('sm-passed').textContent  = passed;
+  document.getElementById('sm-pending').textContent = pending;
+  document.getElementById('sm-target').textContent  = target;
+  document.getElementById('sm-noted').textContent   = noted;
+}
+
+/* Card render */
+function renderCards(){
+  var list = document.getElementById('card-list');
+  var visible = _alerts.filter(function(a){
+    var state = reviewState(a.alert_id);
+    var r = _reviews[a.alert_id] || {};
+    if(_filter==='all')     return true;
+    if(_filter==='pending') return state==='pending';
+    if(_filter==='traded')  return state==='traded';
+    if(_filter==='passed')  return state==='passed' || state==='auto-passed';
+    if(_filter==='target')  return r.outcome==='target';
+    if(_filter==='noted')   return r.notes && r.notes.trim();
+    return true;
+  });
+
+  if(!visible.length){
+    list.innerHTML = '<div class="empty">No alerts match this filter</div>';
+    return;
+  }
+
+  list.innerHTML = visible.map(function(a){
+    var id = a.alert_id;
+    var r  = _reviews[id] || {};
+    var state = reviewState(id);
+    var ol = a.opt_type==='call'?'C':'P';
+    var exp = a.expiration ? a.expiration.slice(5).replace('-','/') : '?';
+    var tpct = typeof a.target_pct==='number' ? '+'+a.target_pct.toFixed(0)+'%' : '';
+    var isAutoPass = state==='auto-passed';
+    var cardCls = 'alert-card'+(state==='traded'?' traded-yes':(state==='passed'||isAutoPass)?' traded-no':r.notes&&r.notes.trim()?' has-notes':'');
+    var yesActive = r.traded===true  ? ' sel-yes' : '';
+    var noActive  = r.traded===false ? ' sel-no'  : '';
+    var oc = r.outcome||null;
+    var savedTs = r.saved_at ? 'Last saved '+fmtTs(r.saved_at) : '';
+    return '<div class="'+cardCls+'" id="card-'+id+'">'+
+      '<div class="card-top" onclick="toggleCard(\''+id+'\')">'+
+        '<div class="ct-left">'+
+          '<div class="ct-row1">'+
+            '<span class="ct-ticker">'+a.ticker+'</span>'+
+            '<span class="ct-contract">$'+a.strike+ol+' '+exp+'</span>'+
+            stratPill(a.strategy_name||a.strategy_key||'')+
+            '<span style="font-size:10px;color:var(--muted);">'+( a.score ? a.score.toFixed(1) : '' )+'</span>'+
+          '</div>'+
+          '<div class="ct-row2">'+
+            '<span>Entry <span class="ct-entry">$'+a.entry+'</span></span>'+
+            '<span>Target <span class="ct-target">$'+a.target+'</span></span>'+
+            '<span>Stop <span class="ct-stop">$'+a.stop+'</span></span>'+
+            (tpct ? '<span class="ct-pct">'+tpct+'</span>' : '')+
+            '<span style="color:var(--muted);">'+(a.confidence||'')+'</span>'+
+          '</div>'+
+        '</div>'+
+        '<div class="ct-right">'+
+          '<button class="quick-traded'+(r.traded===true?' active':'')+'" id="qt-'+id+'" onclick="quickTraded(event,\''+id+'\')">'+
+            (r.traded===true ? '✓ Traded' : '+ Traded')+
+          '</button>'+
+          '<div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;">'+badgeHtml(state,oc)+'</div>'+
+          '<span class="ct-ts">'+fmtTs(a.timestamp)+'</span>'+
+          '<span class="ct-caret">›</span>'+
+        '</div>'+
+      '</div>'+
+      '<div class="review-panel">'+
+        (isAutoPass ? '<div class="auto-note" style="padding:10px 0 0;">Auto-marked as not traded (alert is over 24h old) — override below if needed.</div>' : '')+
+        '<div class="rp-section">'+
+          '<div class="rp-label">Did you trade this?</div>'+
+          '<div class="trade-btns">'+
+            '<button class="trade-btn'+yesActive+'" id="btn-yes-'+id+'" onclick="setTraded(\''+id+'\',true)">✓ Yes, I traded it</button>'+
+            '<button class="trade-btn'+noActive+'"  id="btn-no-'+id+'"  onclick="setTraded(\''+id+'\',false)">✗ Passed on it</button>'+
+          '</div>'+
+        '</div>'+
+        '<div class="rp-section">'+
+          '<div class="rp-label">Trade Conclusion</div>'+
+          '<div class="outcome-btns">'+
+            '<button class="outcome-btn'+(oc==='target'?' sel-target':'')+'" id="oc-target-'+id+'" onclick="setOutcome(\''+id+'\',\'target\')">🎯 Target Hit</button>'+
+            '<button class="outcome-btn'+(oc==='stop'?' sel-stop':'')+'"   id="oc-stop-'+id+'"   onclick="setOutcome(\''+id+'\',\'stop\')">🛑 Stop Hit</button>'+
+            '<button class="outcome-btn'+(oc==='expired'?' sel-expired':'')+'" id="oc-expired-'+id+'" onclick="setOutcome(\''+id+'\',\'expired\')">Expired</button>'+
+            '<button class="outcome-btn'+(oc==='open'?' sel-open':'')+'"   id="oc-open-'+id+'"   onclick="setOutcome(\''+id+'\',\'open\')">Still Open</button>'+
+          '</div>'+
+        '</div>'+
+        '<div class="rp-section">'+
+          '<div class="rp-label">Notes for Tony</div>'+
+          '<textarea class="notes-input" id="notes-'+id+'" placeholder="Why you took or passed it, how it played out, anything you noticed…">'+escHtml(r.notes||'')+'</textarea>'+
+        '</div>'+
+        '<div class="save-row">'+
+          '<button class="save-btn" onclick="saveCard(\''+id+'\')">Save</button>'+
+          '<div style="text-align:right;">'+
+            '<div class="save-confirm" id="conf-'+id+'">Saved ✓</div>'+
+            '<div class="saved-ts" id="ts-'+id+'">'+savedTs+'</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+function escHtml(s){
+  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* Actions */
+function quickTraded(evt, id){
+  evt.stopPropagation();
+  var r = _reviews[id] || {};
+  r.traded = r.traded===true ? null : true;
+  r.auto = false;
+  _reviews[id] = r;
+  saveReview(id, {traded:r.traded, auto:false});
+  var btn = document.getElementById('qt-'+id);
+  if(btn){ btn.className='quick-traded'+(r.traded===true?' active':''); btn.textContent=r.traded===true?'✓ Traded':'+ Traded'; }
+  var yesBtn = document.getElementById('btn-yes-'+id);
+  if(yesBtn) yesBtn.className='trade-btn'+(r.traded===true?' sel-yes':'');
+  var noBtn = document.getElementById('btn-no-'+id);
+  if(noBtn) noBtn.className='trade-btn'+(r.traded===false?' sel-no':'');
+  refreshCardShell(id);
+  renderSummary();
+}
+
+function setOutcome(id, val){
+  var r = _reviews[id] || {};
+  r.outcome = r.outcome===val ? null : val;
+  _reviews[id] = r;
+  ['target','stop','expired','open'].forEach(function(o){
+    var btn = document.getElementById('oc-'+o+'-'+id);
+    if(btn) btn.className='outcome-btn'+(r.outcome===o?' sel-'+o:'');
+  });
+}
+
+function refreshCardShell(id){
+  var r = _reviews[id]||{};
+  var state = reviewState(id);
+  var card = document.getElementById('card-'+id);
+  if(!card) return;
+  var base = card.className.replace(/\s*(traded-yes|traded-no|has-notes)/g,'').trim();
+  card.className = base+(state==='traded'?' traded-yes':(state==='passed'||state==='auto-passed')?' traded-no':r.notes&&r.notes.trim()?' has-notes':'');
+  var badges = card.querySelectorAll('.review-badge');
+  badges.forEach(function(b,i){ if(i>0||!b.closest('.review-panel')) b.remove(); });
+  var badgeWrap = card.querySelector('.ct-right > div');
+  if(badgeWrap) badgeWrap.innerHTML = badgeHtml(state, r.outcome);
+}
+
+function toggleCard(id){
+  var card = document.getElementById('card-'+id);
+  if(card) card.classList.toggle('open');
+}
+
+function setTraded(id, val){
+  var r = _reviews[id] || {};
+  r.traded = val; r.auto = false;
+  _reviews[id] = r;
+  var yes = document.getElementById('btn-yes-'+id);
+  var no  = document.getElementById('btn-no-'+id);
+  var qt  = document.getElementById('qt-'+id);
+  if(yes) yes.className = 'trade-btn'+(val===true?' sel-yes':'');
+  if(no)  no.className  = 'trade-btn'+(val===false?' sel-no':'');
+  if(qt){ qt.className='quick-traded'+(val===true?' active':''); qt.textContent=val===true?'✓ Traded':'+ Traded'; }
+}
+
+function saveCard(id){
+  var notesEl = document.getElementById('notes-'+id);
+  var r = _reviews[id] || {};
+  saveReview(id, {
+    traded:  r.traded!==undefined ? r.traded : null,
+    outcome: r.outcome||null,
+    notes:   notesEl ? notesEl.value : '',
+    auto:    false
+  });
+  var conf = document.getElementById('conf-'+id);
+  var ts   = document.getElementById('ts-'+id);
+  if(conf){ conf.classList.add('show'); setTimeout(function(){ conf.classList.remove('show'); }, 2000); }
+  if(ts) ts.textContent = 'Last saved '+fmtTs(new Date().toISOString());
+  refreshCardShell(id);
+  renderSummary();
+}
+
+/* Load */
+function loadAlerts(){
+  fetch('alerts.json?t='+Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      _alerts = (data.phase4_alerts||[]).slice().reverse();
+      loadReviews();
+      autoAssumeNotTraded();
+      renderSummary();
+      renderCards();
+    })
+    .catch(function(){
+      document.getElementById('card-list').innerHTML = '<div class="empty">Could not load alerts.json — make sure the server is running.</div>';
+    });
+}
+
+loadAlerts();
+</script>
+</body>
+</html>

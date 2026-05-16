@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lil Tony — Live Scan</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:  #000;
+    --bg:     #0a0a0a;
+    --bg2:    #111;
+    --border: #1e1e1e;
+    --text:   #e0e0e0;
+    --muted:  #555;
+    --green:  #4ade80;
+    --gold:   #fbbf24;
+    --blue:   #38bdf8;
+    --purple: #818cf8;
+    --red:    #f87171;
+    --warn:   #fbbf24;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+    pointer-events: none; z-index: 1000;
+  }
+
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(12px);
+  }
+  .brand {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px; font-weight: 700; color: var(--gold);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-link {
+    font-size: 11px; color: var(--muted);
+    text-decoration: none; padding: 4px 12px;
+    border: 1px solid var(--border); border-radius: 8px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-link:hover { color: var(--green); border-color: var(--green); }
+
+  .main { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+
+  /* Status banner */
+  .status-banner {
+    border-radius: 14px; padding: 16px 20px;
+    margin-bottom: 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    border: 1px solid;
+    transition: all 0.3s;
+  }
+  .status-banner.scanning {
+    background: rgba(74,222,128,0.05);
+    border-color: rgba(74,222,128,0.2);
+  }
+  .status-banner.idle {
+    background: rgba(85,85,85,0.08);
+    border-color: var(--border);
+  }
+  .status-left { display: flex; align-items: center; gap: 12px; }
+  .status-icon { font-size: 20px; }
+  .status-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px; font-weight: 700;
+  }
+  .status-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .status-time { font-size: 11px; color: var(--muted); text-align: right; }
+
+  /* Progress bar */
+  .progress-wrap { margin-bottom: 20px; }
+  .progress-head {
+    display: flex; justify-content: space-between;
+    font-size: 11px; color: var(--muted); margin-bottom: 8px;
+  }
+  .progress-track {
+    height: 6px; background: var(--bg2);
+    border-radius: 3px; overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; border-radius: 3px;
+    background: linear-gradient(90deg, var(--green), var(--gold));
+    transition: width 0.6s ease;
+  }
+
+  /* Current ticker */
+  .current-card {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 14px; padding: 20px; margin-bottom: 20px;
+  }
+  .current-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .current-ticker {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px; font-weight: 800; color: var(--gold);
+    line-height: 1; margin-bottom: 6px;
+  }
+  .current-row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+  .strat-tag {
+    font-size: 9px; padding: 3px 9px; border-radius: 20px;
+    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500;
+  }
+  .tag-mb { background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.25); color: var(--purple); }
+  .tag-uo { background: rgba(56,189,248,0.1);  border: 1px solid rgba(56,189,248,0.25);  color: var(--blue); }
+  .tag-mr { background: rgba(251,191,36,0.1);  border: 1px solid rgba(251,191,36,0.25);  color: var(--warn); }
+  .score-val { font-size: 12px; color: var(--muted); }
+  .score-num { color: var(--green); font-weight: 500; }
+
+  /* Ticker tape */
+  .tape-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .tape {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 14px; padding: 14px 16px;
+    margin-bottom: 20px; max-height: 200px; overflow-y: auto;
+  }
+  .tape::-webkit-scrollbar { width: 4px; }
+  .tape::-webkit-scrollbar-track { background: var(--bg2); }
+  .tape::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  .tape-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 5px 0; border-bottom: 1px solid var(--border);
+    font-size: 12px; animation: fadeIn 0.3s ease;
+  }
+  .tape-item:last-child { border-bottom: none; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .tape-ticker { color: var(--gold); font-weight: 500; min-width: 52px; }
+  .tape-score { color: var(--green); min-width: 36px; text-align: right; }
+  .tape-strat { color: var(--muted); flex: 1; font-size: 10px; }
+  .tape-check { color: var(--green); font-size: 10px; }
+
+  /* Waiting state */
+  .waiting {
+    text-align: center; padding: 60px 20px;
+    color: var(--muted); font-size: 13px;
+  }
+  .waiting-icon { font-size: 40px; margin-bottom: 12px; }
+
+  .blink { animation: blink 1.2s step-end infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="brand">🧠 Lil Tony — Live Scan</div>
+  <a class="nav-link" href="index.html">← Dashboard</a>
+</header>
+
+<main class="main">
+
+  <div id="status-banner" class="status-banner idle">
+    <div class="status-left">
+      <span class="status-icon" id="status-icon">💤</span>
+      <div>
+        <div class="status-label" id="status-label">Bot Idle</div>
+        <div class="status-sub" id="status-sub">Waiting for next scan...</div>
+      </div>
+    </div>
+    <div class="status-time" id="status-time">--</div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-head">
+      <span id="prog-label">Progress</span>
+      <span id="prog-pct">0%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="prog-bar" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div id="current-card" class="current-card" style="display:none;">
+    <div class="current-label">Currently scanning</div>
+    <div class="current-ticker" id="cur-ticker">--</div>
+    <div class="current-row">
+      <span class="strat-tag tag-mb" id="cur-strat">--</span>
+      <span class="score-val">Score: <span class="score-num" id="cur-score">0</span>/100</span>
+    </div>
+  </div>
+
+  <div id="tape-wrap" style="display:none;">
+    <div class="tape-label">Scanned so far</div>
+    <div class="tape" id="tape"></div>
+  </div>
+
+  <div id="waiting" class="waiting">
+    <div class="waiting-icon">🔍</div>
+    <div>Waiting for Lil Tony to start scanning<span class="blink">_</span></div>
+    <div style="margin-top:8px;font-size:11px;">Page auto-refreshes every 3 seconds</div>
+  </div>
+
+</main>
+
+<script>
+var SCAN_URL = 'scan_status.json';
+var lastTicker = '';
+
+function stratClass(s){
+  if(!s) return 'tag-mb';
+  s = s.toLowerCase();
+  if(s.includes('momentum')) return 'tag-mb';
+  if(s.includes('unusual'))  return 'tag-uo';
+  if(s.includes('mean'))     return 'tag-mr';
+  return 'tag-mb';
+}
+
+function render(d){
+  var scanning = d.status === 'scanning';
+  var banner = document.getElementById('status-banner');
+  banner.className = 'status-banner ' + (scanning ? 'scanning' : 'idle');
+  document.getElementById('status-icon').textContent  = scanning ? '⚡' : '💤';
+  document.getElementById('status-label').textContent = scanning ? 'Scanning...' : 'Bot Idle';
+  document.getElementById('status-sub').textContent   = scanning
+    ? 'Lil Tony is running — ' + d.total_tickers + ' tickers'
+    : (d.finished_at ? 'Last scan: ' + d.finished_at : 'Waiting for next scan...');
+  document.getElementById('status-time').textContent  = d.last_updated
+    ? new Date(d.last_updated).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',second:'2-digit'})
+    : '--';
+
+  var pct = d.pct_complete || 0;
+  document.getElementById('prog-bar').style.width   = pct + '%';
+  document.getElementById('prog-pct').textContent   = pct + '%';
+  document.getElementById('prog-label').textContent = d.current_index + ' / ' + d.total_tickers + ' tickers';
+
+  if(scanning && d.current_ticker){
+    document.getElementById('current-card').style.display = 'block';
+    document.getElementById('cur-ticker').textContent = d.current_ticker;
+    document.getElementById('cur-score').textContent  = d.current_score || 0;
+    var strat = document.getElementById('cur-strat');
+    strat.textContent  = d.current_strategy || '--';
+    strat.className    = 'strat-tag ' + stratClass(d.current_strategy);
+    document.getElementById('waiting').style.display = 'none';
+  } else {
+    document.getElementById('current-card').style.display = 'none';
+  }
+
+  var done = d.tickers_done || [];
+  if(done.length > 0){
+    document.getElementById('tape-wrap').style.display = 'block';
+    document.getElementById('waiting').style.display   = 'none';
+    var tape = document.getElementById('tape');
+    tape.innerHTML = done.slice().reverse().map(function(t){
+      return '<div class="tape-item"><span class="tape-ticker">' + t + '</span><span class="tape-strat">scanned</span><span class="tape-check">✓</span></div>';
+    }).join('');
+  }
+}
+
+function poll(){
+  fetch(SCAN_URL + '?t=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(d){ render(d); })
+    .catch(function(){ /* file not found yet, keep waiting */ });
+}
+
+poll();
+setInterval(poll, 3000);
+
+// Clock
+function tick(){
+  // no clock needed on this page
+}
+</script>
+
+</body>
+</html>
