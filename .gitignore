@@ -1,5 +1,36 @@
+# Secrets — R6 / T3
 .env
-*.log
-*.pyc
+.env.*
+!.env.example
+
+# Audit log + local logs — T10, stay local only
+logs/
+alerts.jsonl
+alerts.jsonl.bak*
+*.bak
+*.bak-*
+
+# Python build / cache
 __pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Virtualenvs
+venv/
+.venv/
+
+# macOS
 .DS_Store
+
+# Archives and ad-hoc backups
+*.zip
+BIG_TONY_BACKUP.md
+email update/
+
+# Editor / scratch
+.claude/
+*.swp
