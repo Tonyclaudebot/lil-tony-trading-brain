@@ -10,6 +10,13 @@ alerts.jsonl.bak*
 *.bak
 *.bak-*
 
+# Pipeline intermediate artifacts (regenerated each run)
+nightly_picks.json
+morning_40.json
+phase3_top10.json
+phase4_seen.json
+brain/state.json
+
 # Python build / cache
 __pycache__/
 *.pyc
