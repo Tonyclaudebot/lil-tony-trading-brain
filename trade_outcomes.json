@@ -40,8 +40,8 @@
     "outcome_at": null,
     "implied_vol": 0.9744456529617308,
     "last_underlying": 174.69,
-    "last_polled_at": "2026-05-19T04:03:51.463831+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-05-19T12:09:02.681034+00:00",
+    "poll_count": 5
   },
   "2236ae6e-45e5-468f-9a3e-21ca10d6d292": {
     "ticker": "F",
@@ -282,8 +282,8 @@
     "outcome_at": null,
     "implied_vol": 0.4739910268783569,
     "last_underlying": 300.6,
-    "last_polled_at": "2026-05-19T04:04:44.404087+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-05-19T12:09:15.919532+00:00",
+    "poll_count": 4
   },
   "8beff662-4405-42b3-9a82-9ae2e3d69864": {
     "ticker": "DDOG",
@@ -480,17 +480,17 @@
     "outcome_at": null,
     "implied_vol": 1.3998830556869506,
     "last_underlying": 69.94,
-    "last_polled_at": "2026-05-19T04:04:31.163882+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-05-19T12:09:29.016522+00:00",
+    "poll_count": 4
   },
   "_meta": {
-    "updated_at": "2026-05-19T04:05:10.796579+00:00",
+    "updated_at": "2026-05-19T12:09:55.454614+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 3,
     "losses": 16,
     "expired": 0,
-    "open": 4
+    "open": 5
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -511,7 +511,29 @@
     "outcome_at": null,
     "implied_vol": 0.3503945779800415,
     "last_underlying": null,
-    "last_polled_at": "2026-05-19T04:05:10.796431+00:00",
+    "last_polled_at": "2026-05-19T12:09:42.221025+00:00",
+    "poll_count": 2
+  },
+  "babc8032-903b-45d0-87cf-2b818c0e4497": {
+    "ticker": "DDOG",
+    "contract": "O:DDOG260522P00200000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 200.0,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-19T12:07:29.355029+00:00",
+    "spot_at_send": 208.82,
+    "entry": 2.6,
+    "target": 5.2,
+    "stop": 1.3,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.7714113569259643,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-19T12:09:55.454440+00:00",
     "poll_count": 1
   }
 }
