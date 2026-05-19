@@ -18,8 +18,8 @@
     "outcome_at": null,
     "implied_vol": 0.9467071914672851,
     "last_underlying": 3.78,
-    "last_polled_at": "2026-05-16T07:42:33.338056+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:00.402612+00:00",
+    "poll_count": 3
   },
   "bc0608aa-1513-4471-9b37-1af1446a486c": {
     "ticker": "ZS",
@@ -40,8 +40,8 @@
     "outcome_at": null,
     "implied_vol": 0.9744456529617308,
     "last_underlying": 161.05,
-    "last_polled_at": "2026-05-16T07:42:46.448042+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:13.573283+00:00",
+    "poll_count": 3
   },
   "2236ae6e-45e5-468f-9a3e-21ca10d6d292": {
     "ticker": "F",
@@ -84,8 +84,8 @@
     "outcome_at": null,
     "implied_vol": 0.7896226119995116,
     "last_underlying": 13.4,
-    "last_polled_at": "2026-05-16T07:42:59.544115+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:26.693624+00:00",
+    "poll_count": 3
   },
   "faefdeef-1d66-401f-9421-f98ad868b981": {
     "ticker": "F",
@@ -172,8 +172,8 @@
     "outcome_at": null,
     "implied_vol": 0.4165324449539184,
     "last_underlying": 225.32,
-    "last_polled_at": "2026-05-16T07:43:38.850537+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:39.790554+00:00",
+    "poll_count": 3
   },
   "6512858d-fdb1-41ed-81dc-141bafb9a9b5": {
     "ticker": "F",
@@ -194,8 +194,8 @@
     "outcome_at": null,
     "implied_vol": 0.4225679302215576,
     "last_underlying": null,
-    "last_polled_at": "2026-05-16T07:42:59.544565+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:26.693694+00:00",
+    "poll_count": 3
   },
   "5172720e-9c9d-4dde-a749-18cab6bc8093": {
     "ticker": "NVDA",
@@ -216,8 +216,8 @@
     "outcome_at": null,
     "implied_vol": 0.777823166847229,
     "last_underlying": null,
-    "last_polled_at": "2026-05-16T07:43:38.850600+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:39.790588+00:00",
+    "poll_count": 3
   },
   "b8827ae5-e128-479a-9ccd-82eedbc942d7": {
     "ticker": "SLV",
@@ -260,8 +260,8 @@
     "outcome_at": null,
     "implied_vol": 0.42762687683105466,
     "last_underlying": null,
-    "last_polled_at": "2026-05-16T07:42:59.544605+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:26.693743+00:00",
+    "poll_count": 3
   },
   "363f2e09-b038-4ead-a455-a29117f9982e": {
     "ticker": "TXN",
@@ -326,8 +326,8 @@
     "outcome_at": null,
     "implied_vol": 0.45476036071777337,
     "last_underlying": null,
-    "last_polled_at": "2026-05-16T07:42:59.544636+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:26.693794+00:00",
+    "poll_count": 3
   },
   "1689a678-3c7e-4f03-bfed-e393fc708e6c": {
     "ticker": "SLV",
@@ -370,8 +370,8 @@
     "outcome_at": null,
     "implied_vol": 0.5916472625732421,
     "last_underlying": null,
-    "last_polled_at": "2026-05-16T07:42:59.544664+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:26.693823+00:00",
+    "poll_count": 3
   },
   "087b1933-2f34-492f-be12-2c6bea587981": {
     "ticker": "ZS",
@@ -392,8 +392,8 @@
     "outcome_at": null,
     "implied_vol": 0.736360764503479,
     "last_underlying": null,
-    "last_polled_at": "2026-05-16T07:42:46.448121+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:13.573641+00:00",
+    "poll_count": 3
   },
   "fbd489c7-40a9-4a98-a8de-1e151acfccaa": {
     "ticker": "SLV",
@@ -436,8 +436,8 @@
     "outcome_at": null,
     "implied_vol": 0.5607791137695313,
     "last_underlying": null,
-    "last_polled_at": "2026-05-16T07:42:59.544691+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:26.693850+00:00",
+    "poll_count": 3
   },
   "52cc8575-c4fe-4724-9065-5ec1bb9f4a91": {
     "ticker": "F",
@@ -458,8 +458,8 @@
     "outcome_at": null,
     "implied_vol": 0.28525230407714836,
     "last_underlying": null,
-    "last_polled_at": "2026-05-16T07:42:59.544720+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-19T00:05:26.693962+00:00",
+    "poll_count": 3
   },
   "e25ecdc9-8cf1-49bc-8ac4-f09b29ecf36a": {
     "ticker": "SLV",
@@ -484,12 +484,34 @@
     "poll_count": 2
   },
   "_meta": {
-    "updated_at": "2026-05-16T07:44:18.165881+00:00",
+    "updated_at": "2026-05-19T00:05:56.595331+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 0,
     "losses": 4,
     "expired": 0,
-    "open": 18
+    "open": 19
+  },
+  "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
+    "ticker": "XOM",
+    "contract": "O:XOM260529C00167500",
+    "strategy": "Momentum Breakout",
+    "opt_type": "call",
+    "strike": 167.5,
+    "expiration": "2026-05-29",
+    "sent_at": "2026-05-19T00:03:24.817229+00:00",
+    "spot_at_send": 157.92,
+    "entry": 0.9,
+    "target": 2.25,
+    "stop": 0.45,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
   }
 }
