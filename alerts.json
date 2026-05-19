@@ -1,206 +1,134 @@
 {
   "alerts": [
     {
-      "ticker": "F",
-      "strategy": "momentum_breakout",
-      "score": 69.54,
-      "momentum_score": 99.08,
-      "uoa_score": 0.0,
-      "spot": 13.57,
-      "rsi": 63.9,
-      "volume_ratio": 5.11,
-      "ret_1d": 13.18,
-      "ret_5d": 11.5
+      "ticker": "COST",
+      "strategy": "composite",
+      "score": 31.63,
+      "momentum_score": 52.71,
+      "uoa_score": 0.0
     },
     {
-      "ticker": "MU",
-      "strategy": "momentum_breakout",
-      "score": 53.77,
-      "momentum_score": 67.54,
-      "uoa_score": 0.0,
-      "spot": 803.63,
-      "rsi": 84.8,
-      "volume_ratio": 1.21,
-      "ret_1d": 4.83,
-      "ret_5d": 20.56
+      "ticker": "CVX",
+      "strategy": "composite",
+      "score": 28.63,
+      "momentum_score": 47.72,
+      "uoa_score": 0.0
     },
     {
-      "ticker": "TSLA",
-      "strategy": "momentum_breakout",
-      "score": 46.34,
-      "momentum_score": 52.67,
-      "uoa_score": 0.0,
-      "spot": 445.27,
-      "rsi": 81.8,
-      "volume_ratio": 1.05,
-      "ret_1d": 2.73,
-      "ret_5d": 11.67
+      "ticker": "ADBE",
+      "strategy": "composite",
+      "score": 28.33,
+      "momentum_score": 47.21,
+      "uoa_score": 0.0
     },
     {
-      "ticker": "NVDA",
-      "strategy": "momentum_breakout",
-      "score": 46.31,
-      "momentum_score": 52.62,
-      "uoa_score": 0.0,
-      "spot": 225.83,
-      "rsi": 69.7,
-      "volume_ratio": 0.99,
-      "ret_1d": 2.29,
-      "ret_5d": 8.66
+      "ticker": "XOM",
+      "strategy": "composite",
+      "score": 27.73,
+      "momentum_score": 46.22,
+      "uoa_score": 0.0
     },
     {
-      "ticker": "GOOGL",
-      "strategy": "mean_reversion",
-      "score": 38.82,
-      "momentum_score": 37.85,
-      "uoa_score": 0.0,
-      "spot": 402.62,
-      "rsi": 82.9,
-      "volume_ratio": 1.01,
-      "ret_1d": 3.94,
-      "ret_5d": 1.15
+      "ticker": "SLB",
+      "strategy": "composite",
+      "score": 27.28,
+      "momentum_score": 45.47,
+      "uoa_score": 0.0
     },
     {
-      "ticker": "AAPL",
-      "strategy": "mean_reversion",
-      "score": 33.45,
-      "momentum_score": 30.97,
-      "uoa_score": 0.0,
-      "spot": 298.87,
-      "rsi": 77.5,
-      "volume_ratio": 1.08,
-      "ret_1d": 1.38,
-      "ret_5d": 3.95
+      "ticker": "EOG",
+      "strategy": "composite",
+      "score": 27.23,
+      "momentum_score": 45.39,
+      "uoa_score": 0.0
     },
     {
-      "ticker": "LLY",
-      "strategy": "mean_reversion",
-      "score": 33.43,
-      "momentum_score": 39.85,
-      "uoa_score": 0.0,
-      "spot": 1015.75,
-      "rsi": 65.2,
-      "volume_ratio": 0.98,
-      "ret_1d": 2.61,
-      "ret_5d": 2.91
+      "ticker": "XLE",
+      "strategy": "composite",
+      "score": 26.35,
+      "momentum_score": 43.92,
+      "uoa_score": 0.0
     },
     {
-      "ticker": "INTC",
-      "strategy": "mean_reversion",
-      "score": 32.41,
-      "momentum_score": 24.81,
-      "uoa_score": 0.0,
-      "spot": 120.29,
-      "rsi": 80.5,
-      "volume_ratio": 0.75,
-      "ret_1d": -0.27,
-      "ret_5d": 6.44
+      "ticker": "COP",
+      "strategy": "composite",
+      "score": 26.21,
+      "momentum_score": 43.68,
+      "uoa_score": 0.0
     },
     {
-      "ticker": "NET",
-      "strategy": "momentum_breakout",
-      "score": 29.27,
-      "momentum_score": 30.54,
-      "uoa_score": 0.0,
-      "spot": 192.62,
-      "rsi": 45.9,
-      "volume_ratio": 0.89,
-      "ret_1d": 3.12,
-      "ret_5d": -22.51
+      "ticker": "CRM",
+      "strategy": "composite",
+      "score": 23.5,
+      "momentum_score": 39.16,
+      "uoa_score": 0.0
     },
     {
-      "ticker": "RIVN",
-      "strategy": "mean_reversion",
-      "score": 27.62,
-      "momentum_score": 16.94,
-      "uoa_score": 0.0,
-      "spot": 14.27,
-      "rsi": 21.2,
-      "volume_ratio": 1.07,
-      "ret_1d": 2.29,
-      "ret_5d": -1.45
+      "ticker": "NFLX",
+      "strategy": "composite",
+      "score": 23.38,
+      "momentum_score": 38.97,
+      "uoa_score": 0.0
     }
   ],
   "top_picks": [
     {
-      "ticker": "F",
-      "score": 69.54,
-      "strategy": "momentum_breakout"
+      "ticker": "COST",
+      "score": 31.63,
+      "strategy": "composite"
     },
     {
-      "ticker": "MU",
-      "score": 53.77,
-      "strategy": "momentum_breakout"
+      "ticker": "CVX",
+      "score": 28.63,
+      "strategy": "composite"
     },
     {
-      "ticker": "TSLA",
-      "score": 46.34,
-      "strategy": "momentum_breakout"
+      "ticker": "ADBE",
+      "score": 28.33,
+      "strategy": "composite"
     },
     {
-      "ticker": "NVDA",
-      "score": 46.31,
-      "strategy": "momentum_breakout"
+      "ticker": "XOM",
+      "score": 27.73,
+      "strategy": "composite"
     },
     {
-      "ticker": "GOOGL",
-      "score": 38.82,
-      "strategy": "mean_reversion"
+      "ticker": "SLB",
+      "score": 27.28,
+      "strategy": "composite"
     },
     {
-      "ticker": "AAPL",
-      "score": 33.45,
-      "strategy": "mean_reversion"
+      "ticker": "EOG",
+      "score": 27.23,
+      "strategy": "composite"
     },
     {
-      "ticker": "LLY",
-      "score": 33.43,
-      "strategy": "mean_reversion"
+      "ticker": "XLE",
+      "score": 26.35,
+      "strategy": "composite"
     },
     {
-      "ticker": "INTC",
-      "score": 32.41,
-      "strategy": "mean_reversion"
+      "ticker": "COP",
+      "score": 26.21,
+      "strategy": "composite"
     },
     {
-      "ticker": "NET",
-      "score": 29.27,
-      "strategy": "momentum_breakout"
+      "ticker": "CRM",
+      "score": 23.5,
+      "strategy": "composite"
     },
     {
-      "ticker": "RIVN",
-      "score": 27.62,
-      "strategy": "mean_reversion"
-    }
-  ],
-  "phase4_alerts": [
-    {
-      "ticker": "F",
-      "contract_type": "CALL",
-      "strike": "$15.00",
-      "expiry": "05/22",
-      "entry": "$0.05",
-      "stop": "$0.02",
-      "target": "$0.12",
-      "score": 70,
-      "contract": "$15C"
-    },
-    {
-      "ticker": "SLV",
-      "contract_type": "PUT",
-      "strike": "$70.00",
-      "expiry": "05/22",
-      "entry": "$2.88",
-      "stop": "$1.44",
-      "target": "$5.76",
-      "score": 42,
-      "contract": "$70P"
+      "ticker": "NFLX",
+      "score": 23.38,
+      "strategy": "composite"
     }
   ],
   "scan_status": "idle",
-  "total_tickers": 15,
-  "scan_finished_at": "2026-05-15T01:04:53.349401+00:00",
-  "last_updated": "2026-05-16T18:02:33.695602+00:00",
+  "total_tickers": 93,
+  "scan_finished_at": "2026-05-19T11:23:16.882584+00:00",
+  "last_updated": "2026-05-19T17:41:35.374403+00:00",
+  "prices": {},
+  "phase4_alerts": [],
   "trades": {
     "active": [
       {
@@ -901,6 +829,104 @@
         "binary_event_flag": false,
         "binary_event_detail": null,
         "news_context": [],
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "afa997ea-4c1b-4b04-86fc-a55c76d3c9af",
+        "timestamp": "2026-05-19T00:03:24.817229+00:00",
+        "ticker": "XOM",
+        "contract": "O:XOM260529C00167500",
+        "opt_type": "call",
+        "strike": 167.5,
+        "expiration": "2026-05-29",
+        "dte": 11,
+        "strategy_key": "momentum_breakout",
+        "strategy_name": "Momentum Breakout",
+        "spot": 157.92,
+        "entry": 0.9,
+        "target": 2.25,
+        "stop": 0.45,
+        "target_pct": 150.0,
+        "iv": 0.0,
+        "volume": 283,
+        "open_interest": 0,
+        "score": 90.76,
+        "confidence": "MEDIUM",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [
+          "FOMC Meeting Minutes"
+        ],
+        "macro_warning": "FOMC Meeting Minutes in 2d\n!! Market-wide binary event \u2014 elevated volatility expected !!",
+        "binary_event_flag": true,
+        "binary_event_detail": "FOMC Meeting Minutes in 2d\n!! Market-wide binary event \u2014 elevated volatility expected !!",
+        "news_context": [],
+        "risk_iv_rank": 50.0,
+        "risk_iv_label": "MEDIUM",
+        "risk_premium_label": "FAIR",
+        "risk_score": "MEDIUM",
+        "risk_summary": "Watch: moderate theta (11d); strike 6% OTM",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "babc8032-903b-45d0-87cf-2b818c0e4497",
+        "timestamp": "2026-05-19T12:07:29.355029+00:00",
+        "ticker": "DDOG",
+        "contract": "O:DDOG260522P00200000",
+        "opt_type": "put",
+        "strike": 200.0,
+        "expiration": "2026-05-22",
+        "dte": 3,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 208.82,
+        "entry": 2.6,
+        "target": 5.2,
+        "stop": 1.3,
+        "target_pct": 100.0,
+        "iv": 0.0,
+        "volume": 95,
+        "open_interest": 0,
+        "score": 79.35,
+        "confidence": "MEDIUM",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [
+          "FOMC Meeting Minutes"
+        ],
+        "macro_warning": "FOMC Meeting Minutes in 1d\n!! Market-wide binary event \u2014 elevated volatility expected !!",
+        "binary_event_flag": true,
+        "binary_event_detail": "FOMC Meeting Minutes in 1d\n!! Market-wide binary event \u2014 elevated volatility expected !!",
+        "news_context": [],
+        "risk_iv_rank": 50.0,
+        "risk_iv_label": "MEDIUM",
+        "risk_premium_label": "EXPENSIVE",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: expensive premium ($2.60); short-dated (3d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
         "outcome": null,
         "graded_at": null,
         "exit_price": null
