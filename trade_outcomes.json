@@ -282,8 +282,8 @@
     "outcome_at": null,
     "implied_vol": 0.4739910268783569,
     "last_underlying": 300.6,
-    "last_polled_at": "2026-05-20T12:05:48.214180+00:00",
-    "poll_count": 8
+    "last_polled_at": "2026-05-20T16:11:02.923577+00:00",
+    "poll_count": 9
   },
   "8beff662-4405-42b3-9a82-9ae2e3d69864": {
     "ticker": "DDOG",
@@ -480,17 +480,17 @@
     "outcome_at": null,
     "implied_vol": 1.3998830556869506,
     "last_underlying": 69.94,
-    "last_polled_at": "2026-05-20T12:05:49.715101+00:00",
-    "poll_count": 8
+    "last_polled_at": "2026-05-20T16:11:04.332662+00:00",
+    "poll_count": 9
   },
   "_meta": {
-    "updated_at": "2026-05-20T12:06:00.983576+00:00",
+    "updated_at": "2026-05-20T16:11:16.560989+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 4,
     "losses": 17,
     "expired": 0,
-    "open": 12
+    "open": 15
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -511,8 +511,8 @@
     "outcome_at": null,
     "implied_vol": 0.3503945779800415,
     "last_underlying": 162.55,
-    "last_polled_at": "2026-05-20T12:05:51.074213+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-05-20T16:11:05.662348+00:00",
+    "poll_count": 7
   },
   "babc8032-903b-45d0-87cf-2b818c0e4497": {
     "ticker": "DDOG",
@@ -555,8 +555,8 @@
     "outcome_at": null,
     "implied_vol": 0.45476036071777337,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T12:05:52.416420+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-05-20T16:11:07.018131+00:00",
+    "poll_count": 5
   },
   "f4ebcf0d-dd33-40f2-af3f-b140c046acf4": {
     "ticker": "XOM",
@@ -577,8 +577,8 @@
     "outcome_at": null,
     "implied_vol": 0.39292879104614253,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T12:05:51.074246+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-05-20T16:11:05.662427+00:00",
+    "poll_count": 5
   },
   "cba8972d-3488-49c0-a591-a8b36229e522": {
     "ticker": "ZS",
@@ -599,8 +599,8 @@
     "outcome_at": null,
     "implied_vol": 0.898118438720703,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T12:05:53.760324+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-05-20T16:11:08.352283+00:00",
+    "poll_count": 5
   },
   "e36c2f0c-87f6-4a68-ba32-44971ad0f587": {
     "ticker": "TGT",
@@ -621,8 +621,8 @@
     "outcome_at": null,
     "implied_vol": 1.1851398229599002,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T12:05:55.171847+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-05-20T16:11:09.696530+00:00",
+    "poll_count": 4
   },
   "d413d540-ed56-49e4-aae0-3c93bebfde2d": {
     "ticker": "MRVL",
@@ -643,8 +643,8 @@
     "outcome_at": null,
     "implied_vol": 0.9656949138641355,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T12:05:56.514346+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-05-20T16:11:11.039465+00:00",
+    "poll_count": 4
   },
   "d7fc8dd3-6721-4e90-b8de-4ed3172f6869": {
     "ticker": "NET",
@@ -665,8 +665,8 @@
     "outcome_at": null,
     "implied_vol": 0.7725927305221557,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T12:05:57.823580+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-05-20T16:11:12.391929+00:00",
+    "poll_count": 4
   },
   "5b2fcde4-95d9-4b3f-a192-155fc5482378": {
     "ticker": "DDOG",
@@ -687,8 +687,8 @@
     "outcome_at": null,
     "implied_vol": 0.9018245220184324,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T12:05:59.430167+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-05-20T16:11:13.819472+00:00",
+    "poll_count": 2
   },
   "56c533d3-0e6b-4f15-96f2-9761231779fd": {
     "ticker": "ZS",
@@ -709,8 +709,8 @@
     "outcome_at": null,
     "implied_vol": 0.6169324684143067,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T12:05:53.760510+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-05-20T16:11:08.352332+00:00",
+    "poll_count": 2
   },
   "541c9ded-aef5-4d8f-8c20-684db9fd39ef": {
     "ticker": "CRWD",
@@ -731,7 +731,73 @@
     "outcome_at": null,
     "implied_vol": 0.6100871706008911,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T12:06:00.983486+00:00",
+    "last_polled_at": "2026-05-20T16:11:15.017935+00:00",
+    "poll_count": 2
+  },
+  "84b6d410-1358-42ef-916b-3ef41bf1b819": {
+    "ticker": "TGT",
+    "contract": "TGT260522C00130000",
+    "strategy": "Momentum Breakout",
+    "opt_type": "call",
+    "strike": 130.0,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T16:10:39.005163+00:00",
+    "spot_at_send": 122.0901,
+    "entry": 0.26,
+    "target": 0.65,
+    "stop": 0.13,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.609672737121582,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T16:11:09.696664+00:00",
+    "poll_count": 1
+  },
+  "2b60e229-4b45-4571-8f79-56baab26cd46": {
+    "ticker": "LLY",
+    "contract": "LLY260522P00975000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 975.0,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T16:10:47.210886+00:00",
+    "spot_at_send": 1009.08,
+    "entry": 2.16,
+    "target": 4.32,
+    "stop": 1.08,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.4068432760238646,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T16:11:16.560839+00:00",
+    "poll_count": 1
+  },
+  "84103113-2d23-4e91-9d8b-2bfb0eafe0b1": {
+    "ticker": "OXY",
+    "contract": "OXY260522P00058000",
+    "strategy": "Unusual Options Activity",
+    "opt_type": "put",
+    "strike": 58.0,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T16:10:49.177827+00:00",
+    "spot_at_send": 59.51,
+    "entry": 0.32,
+    "target": 0.64,
+    "stop": 0.16,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.48433280944824203,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T16:11:07.018209+00:00",
     "poll_count": 1
   }
 }
