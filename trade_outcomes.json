@@ -40,8 +40,8 @@
     "outcome_at": null,
     "implied_vol": 0.9744456529617308,
     "last_underlying": 174.69,
-    "last_polled_at": "2026-05-19T12:09:02.681034+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-05-20T00:40:03.234370+00:00",
+    "poll_count": 6
   },
   "2236ae6e-45e5-468f-9a3e-21ca10d6d292": {
     "ticker": "F",
@@ -282,8 +282,8 @@
     "outcome_at": null,
     "implied_vol": 0.4739910268783569,
     "last_underlying": 300.6,
-    "last_polled_at": "2026-05-19T12:09:15.919532+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-05-20T00:40:16.410778+00:00",
+    "poll_count": 5
   },
   "8beff662-4405-42b3-9a82-9ae2e3d69864": {
     "ticker": "DDOG",
@@ -480,17 +480,17 @@
     "outcome_at": null,
     "implied_vol": 1.3998830556869506,
     "last_underlying": 69.94,
-    "last_polled_at": "2026-05-19T12:09:29.016522+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-05-20T00:40:29.544339+00:00",
+    "poll_count": 5
   },
   "_meta": {
-    "updated_at": "2026-05-19T12:09:55.454614+00:00",
+    "updated_at": "2026-05-20T00:41:08.948707+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 3,
     "losses": 16,
     "expired": 0,
-    "open": 5
+    "open": 8
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -511,8 +511,8 @@
     "outcome_at": null,
     "implied_vol": 0.3503945779800415,
     "last_underlying": null,
-    "last_polled_at": "2026-05-19T12:09:42.221025+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T00:40:42.684235+00:00",
+    "poll_count": 3
   },
   "babc8032-903b-45d0-87cf-2b818c0e4497": {
     "ticker": "DDOG",
@@ -533,7 +533,73 @@
     "outcome_at": null,
     "implied_vol": 0.7714113569259643,
     "last_underlying": null,
-    "last_polled_at": "2026-05-19T12:09:55.454440+00:00",
+    "last_polled_at": "2026-05-20T00:40:55.819889+00:00",
+    "poll_count": 2
+  },
+  "4afe86a3-651c-4fdf-ae5d-a3eee5724c5c": {
+    "ticker": "OXY",
+    "contract": "OXY260522C00061000",
+    "strategy": "Momentum Breakout",
+    "opt_type": "call",
+    "strike": 61.0,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T00:39:44.625346+00:00",
+    "spot_at_send": 60.6065,
+    "entry": 0.8,
+    "target": 2.0,
+    "stop": 0.4,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.45476036071777337,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T00:41:08.948571+00:00",
+    "poll_count": 1
+  },
+  "f4ebcf0d-dd33-40f2-af3f-b140c046acf4": {
+    "ticker": "XOM",
+    "contract": "XOM260522C00167500",
+    "strategy": "Momentum Breakout",
+    "opt_type": "call",
+    "strike": 167.5,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T00:39:48.634851+00:00",
+    "spot_at_send": 162.37,
+    "entry": 0.59,
+    "target": 1.47,
+    "stop": 0.29,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.39292879104614253,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T00:40:42.684366+00:00",
+    "poll_count": 1
+  },
+  "cba8972d-3488-49c0-a591-a8b36229e522": {
+    "ticker": "ZS",
+    "contract": "ZS260522C00190000",
+    "strategy": "Momentum Breakout",
+    "opt_type": "call",
+    "strike": 190.0,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T00:39:51.276251+00:00",
+    "spot_at_send": 174.0,
+    "entry": 0.98,
+    "target": 2.45,
+    "stop": 0.49,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.898118438720703,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T00:40:03.234504+00:00",
     "poll_count": 1
   }
 }
