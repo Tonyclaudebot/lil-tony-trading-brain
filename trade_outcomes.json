@@ -281,9 +281,9 @@
     "graded_at": null,
     "outcome_at": null,
     "implied_vol": 0.4739910268783569,
-    "last_underlying": 302.31,
-    "last_polled_at": "2026-05-20T04:03:53.187561+00:00",
-    "poll_count": 7
+    "last_underlying": 300.6,
+    "last_polled_at": "2026-05-20T12:05:48.214180+00:00",
+    "poll_count": 8
   },
   "8beff662-4405-42b3-9a82-9ae2e3d69864": {
     "ticker": "DDOG",
@@ -479,18 +479,18 @@
     "graded_at": null,
     "outcome_at": null,
     "implied_vol": 1.3998830556869506,
-    "last_underlying": 66.9,
-    "last_polled_at": "2026-05-20T04:04:06.343470+00:00",
-    "poll_count": 7
+    "last_underlying": 69.94,
+    "last_polled_at": "2026-05-20T12:05:49.715101+00:00",
+    "poll_count": 8
   },
   "_meta": {
-    "updated_at": "2026-05-20T04:05:25.216549+00:00",
+    "updated_at": "2026-05-20T12:06:00.983576+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 4,
     "losses": 17,
     "expired": 0,
-    "open": 9
+    "open": 12
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -511,8 +511,8 @@
     "outcome_at": null,
     "implied_vol": 0.3503945779800415,
     "last_underlying": 162.55,
-    "last_polled_at": "2026-05-20T04:04:19.494388+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-05-20T12:05:51.074213+00:00",
+    "poll_count": 6
   },
   "babc8032-903b-45d0-87cf-2b818c0e4497": {
     "ticker": "DDOG",
@@ -555,8 +555,8 @@
     "outcome_at": null,
     "implied_vol": 0.45476036071777337,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T04:04:45.795033+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-05-20T12:05:52.416420+00:00",
+    "poll_count": 4
   },
   "f4ebcf0d-dd33-40f2-af3f-b140c046acf4": {
     "ticker": "XOM",
@@ -577,8 +577,8 @@
     "outcome_at": null,
     "implied_vol": 0.39292879104614253,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T04:04:19.494448+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-05-20T12:05:51.074246+00:00",
+    "poll_count": 4
   },
   "cba8972d-3488-49c0-a591-a8b36229e522": {
     "ticker": "ZS",
@@ -599,8 +599,8 @@
     "outcome_at": null,
     "implied_vol": 0.898118438720703,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T04:03:40.074668+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-05-20T12:05:53.760324+00:00",
+    "poll_count": 4
   },
   "e36c2f0c-87f6-4a68-ba32-44971ad0f587": {
     "ticker": "TGT",
@@ -621,8 +621,8 @@
     "outcome_at": null,
     "implied_vol": 1.1851398229599002,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T04:04:58.935422+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T12:05:55.171847+00:00",
+    "poll_count": 3
   },
   "d413d540-ed56-49e4-aae0-3c93bebfde2d": {
     "ticker": "MRVL",
@@ -643,8 +643,8 @@
     "outcome_at": null,
     "implied_vol": 0.9656949138641355,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T04:05:12.079304+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T12:05:56.514346+00:00",
+    "poll_count": 3
   },
   "d7fc8dd3-6721-4e90-b8de-4ed3172f6869": {
     "ticker": "NET",
@@ -665,7 +665,73 @@
     "outcome_at": null,
     "implied_vol": 0.7725927305221557,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T04:05:25.216422+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T12:05:57.823580+00:00",
+    "poll_count": 3
+  },
+  "5b2fcde4-95d9-4b3f-a192-155fc5482378": {
+    "ticker": "DDOG",
+    "contract": "DDOG260522P00195000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 195.0,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T12:01:50.613120+00:00",
+    "spot_at_send": 214.0,
+    "entry": 0.7,
+    "target": 1.4,
+    "stop": 0.35,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.9018245220184324,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T12:05:59.430167+00:00",
+    "poll_count": 1
+  },
+  "56c533d3-0e6b-4f15-96f2-9761231779fd": {
+    "ticker": "ZS",
+    "contract": "ZS260522P00162500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 162.5,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T12:01:54.068483+00:00",
+    "spot_at_send": 169.5,
+    "entry": 0.9,
+    "target": 1.8,
+    "stop": 0.45,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6169324684143067,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T12:05:53.760510+00:00",
+    "poll_count": 1
+  },
+  "541c9ded-aef5-4d8f-8c20-684db9fd39ef": {
+    "ticker": "CRWD",
+    "contract": "CRWD260522P00580000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 580.0,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T12:01:57.057877+00:00",
+    "spot_at_send": 609.1362,
+    "entry": 2.42,
+    "target": 4.84,
+    "stop": 1.21,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6100871706008911,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T12:06:00.983486+00:00",
+    "poll_count": 1
   }
 }
