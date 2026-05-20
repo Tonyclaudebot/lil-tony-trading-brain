@@ -33,13 +33,13 @@
     "entry": 13.3,
     "target": 33.25,
     "stop": 6.65,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 33.25,
+    "graded_at": "2026-05-20T04:03:40.074230+00:00",
+    "outcome_at": "2026-05-19",
     "implied_vol": 0.9744456529617308,
-    "last_underlying": 174.69,
+    "last_underlying": 175.25,
     "last_polled_at": "2026-05-20T00:52:51.347331+00:00",
     "poll_count": 7
   },
@@ -281,9 +281,9 @@
     "graded_at": null,
     "outcome_at": null,
     "implied_vol": 0.4739910268783569,
-    "last_underlying": 300.6,
-    "last_polled_at": "2026-05-20T00:53:04.514364+00:00",
-    "poll_count": 6
+    "last_underlying": 302.31,
+    "last_polled_at": "2026-05-20T04:03:53.187561+00:00",
+    "poll_count": 7
   },
   "8beff662-4405-42b3-9a82-9ae2e3d69864": {
     "ticker": "DDOG",
@@ -479,18 +479,18 @@
     "graded_at": null,
     "outcome_at": null,
     "implied_vol": 1.3998830556869506,
-    "last_underlying": 69.94,
-    "last_polled_at": "2026-05-20T00:53:17.602168+00:00",
-    "poll_count": 6
+    "last_underlying": 66.9,
+    "last_polled_at": "2026-05-20T04:04:06.343470+00:00",
+    "poll_count": 7
   },
   "_meta": {
-    "updated_at": "2026-05-20T00:54:36.486881+00:00",
+    "updated_at": "2026-05-20T04:05:25.216549+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 3,
-    "losses": 16,
+    "wins": 4,
+    "losses": 17,
     "expired": 0,
-    "open": 11
+    "open": 9
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -510,9 +510,9 @@
     "graded_at": null,
     "outcome_at": null,
     "implied_vol": 0.3503945779800415,
-    "last_underlying": null,
-    "last_polled_at": "2026-05-20T00:53:30.738454+00:00",
-    "poll_count": 4
+    "last_underlying": 162.55,
+    "last_polled_at": "2026-05-20T04:04:19.494388+00:00",
+    "poll_count": 5
   },
   "babc8032-903b-45d0-87cf-2b818c0e4497": {
     "ticker": "DDOG",
@@ -526,13 +526,13 @@
     "entry": 2.6,
     "target": 5.2,
     "stop": 1.3,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 1.3,
+    "graded_at": "2026-05-20T04:04:32.652110+00:00",
+    "outcome_at": "2026-05-19",
     "implied_vol": 0.7714113569259643,
-    "last_underlying": null,
+    "last_underlying": 215.15,
     "last_polled_at": "2026-05-20T00:53:43.897924+00:00",
     "poll_count": 3
   },
@@ -555,8 +555,8 @@
     "outcome_at": null,
     "implied_vol": 0.45476036071777337,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T00:53:57.036362+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T04:04:45.795033+00:00",
+    "poll_count": 3
   },
   "f4ebcf0d-dd33-40f2-af3f-b140c046acf4": {
     "ticker": "XOM",
@@ -577,8 +577,8 @@
     "outcome_at": null,
     "implied_vol": 0.39292879104614253,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T00:53:30.738544+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T04:04:19.494448+00:00",
+    "poll_count": 3
   },
   "cba8972d-3488-49c0-a591-a8b36229e522": {
     "ticker": "ZS",
@@ -599,8 +599,8 @@
     "outcome_at": null,
     "implied_vol": 0.898118438720703,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T00:52:51.347381+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T04:03:40.074668+00:00",
+    "poll_count": 3
   },
   "e36c2f0c-87f6-4a68-ba32-44971ad0f587": {
     "ticker": "TGT",
@@ -621,8 +621,8 @@
     "outcome_at": null,
     "implied_vol": 1.1851398229599002,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T00:54:10.171985+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-05-20T04:04:58.935422+00:00",
+    "poll_count": 2
   },
   "d413d540-ed56-49e4-aae0-3c93bebfde2d": {
     "ticker": "MRVL",
@@ -643,8 +643,8 @@
     "outcome_at": null,
     "implied_vol": 0.9656949138641355,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T00:54:23.300903+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-05-20T04:05:12.079304+00:00",
+    "poll_count": 2
   },
   "d7fc8dd3-6721-4e90-b8de-4ed3172f6869": {
     "ticker": "NET",
@@ -665,7 +665,7 @@
     "outcome_at": null,
     "implied_vol": 0.7725927305221557,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T00:54:36.486796+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-05-20T04:05:25.216422+00:00",
+    "poll_count": 2
   }
 }
