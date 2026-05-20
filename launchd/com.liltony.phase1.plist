@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <key>Label</key>
+  <string>com.liltony.phase1</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/bin/python3</string>
+    <string>/Users/tonybot/Lil-Tony-Trading-Brain/runner.py</string>
+    <string>1</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/tonybot/Lil-Tony-Trading-Brain</string>
+
+  <!-- 6:00 PM CT every day -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>18</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/tonybot/Lil-Tony-Trading-Brain/logs/phase1.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/tonybot/Lil-Tony-Trading-Brain/logs/phase1.log</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>TZ</key>
+    <string>America/Chicago</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+</dict>
+</plist>

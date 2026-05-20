@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <key>Label</key>
+  <string>com.liltony.outcome-tracker</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/bin/python3</string>
+    <string>/Users/tonybot/Lil-Tony-Trading-Brain/outcome_tracker.py</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/tonybot/Lil-Tony-Trading-Brain</string>
+
+  <!-- Persistent daemon — launchd restarts it if it crashes -->
+  <key>KeepAlive</key>
+  <true/>
+
+  <!-- Start immediately on load (and on reboot) -->
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/tonybot/Lil-Tony-Trading-Brain/logs/outcome-tracker.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/tonybot/Lil-Tony-Trading-Brain/logs/outcome-tracker.log</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>TZ</key>
+    <string>America/Chicago</string>
+  </dict>
+
+</dict>
+</plist>
