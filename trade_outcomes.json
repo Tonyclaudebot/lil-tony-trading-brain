@@ -282,8 +282,8 @@
     "outcome_at": null,
     "implied_vol": 0.4739910268783569,
     "last_underlying": 300.6,
-    "last_polled_at": "2026-05-20T16:11:02.923577+00:00",
-    "poll_count": 9
+    "last_polled_at": "2026-05-20T17:44:39.689990+00:00",
+    "poll_count": 10
   },
   "8beff662-4405-42b3-9a82-9ae2e3d69864": {
     "ticker": "DDOG",
@@ -480,17 +480,17 @@
     "outcome_at": null,
     "implied_vol": 1.3998830556869506,
     "last_underlying": 69.94,
-    "last_polled_at": "2026-05-20T16:11:04.332662+00:00",
-    "poll_count": 9
+    "last_polled_at": "2026-05-20T17:44:40.896844+00:00",
+    "poll_count": 10
   },
   "_meta": {
-    "updated_at": "2026-05-20T16:11:16.560989+00:00",
+    "updated_at": "2026-05-20T17:44:53.178620+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 4,
     "losses": 17,
     "expired": 0,
-    "open": 15
+    "open": 18
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -511,8 +511,8 @@
     "outcome_at": null,
     "implied_vol": 0.3503945779800415,
     "last_underlying": 162.55,
-    "last_polled_at": "2026-05-20T16:11:05.662348+00:00",
-    "poll_count": 7
+    "last_polled_at": "2026-05-20T17:44:42.252715+00:00",
+    "poll_count": 8
   },
   "babc8032-903b-45d0-87cf-2b818c0e4497": {
     "ticker": "DDOG",
@@ -555,8 +555,8 @@
     "outcome_at": null,
     "implied_vol": 0.45476036071777337,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:07.018131+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-05-20T17:44:43.613547+00:00",
+    "poll_count": 6
   },
   "f4ebcf0d-dd33-40f2-af3f-b140c046acf4": {
     "ticker": "XOM",
@@ -577,8 +577,8 @@
     "outcome_at": null,
     "implied_vol": 0.39292879104614253,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:05.662427+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-05-20T17:44:42.252771+00:00",
+    "poll_count": 6
   },
   "cba8972d-3488-49c0-a591-a8b36229e522": {
     "ticker": "ZS",
@@ -599,8 +599,8 @@
     "outcome_at": null,
     "implied_vol": 0.898118438720703,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:08.352283+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-05-20T17:44:44.959367+00:00",
+    "poll_count": 6
   },
   "e36c2f0c-87f6-4a68-ba32-44971ad0f587": {
     "ticker": "TGT",
@@ -621,8 +621,8 @@
     "outcome_at": null,
     "implied_vol": 1.1851398229599002,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:09.696530+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-05-20T17:44:46.373395+00:00",
+    "poll_count": 5
   },
   "d413d540-ed56-49e4-aae0-3c93bebfde2d": {
     "ticker": "MRVL",
@@ -643,8 +643,8 @@
     "outcome_at": null,
     "implied_vol": 0.9656949138641355,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:11.039465+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-05-20T17:44:47.792146+00:00",
+    "poll_count": 5
   },
   "d7fc8dd3-6721-4e90-b8de-4ed3172f6869": {
     "ticker": "NET",
@@ -665,8 +665,8 @@
     "outcome_at": null,
     "implied_vol": 0.7725927305221557,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:12.391929+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-05-20T17:44:49.149198+00:00",
+    "poll_count": 5
   },
   "5b2fcde4-95d9-4b3f-a192-155fc5482378": {
     "ticker": "DDOG",
@@ -687,8 +687,8 @@
     "outcome_at": null,
     "implied_vol": 0.9018245220184324,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:13.819472+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T17:44:50.488804+00:00",
+    "poll_count": 3
   },
   "56c533d3-0e6b-4f15-96f2-9761231779fd": {
     "ticker": "ZS",
@@ -709,8 +709,8 @@
     "outcome_at": null,
     "implied_vol": 0.6169324684143067,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:08.352332+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T17:44:44.959420+00:00",
+    "poll_count": 3
   },
   "541c9ded-aef5-4d8f-8c20-684db9fd39ef": {
     "ticker": "CRWD",
@@ -731,8 +731,8 @@
     "outcome_at": null,
     "implied_vol": 0.6100871706008911,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:15.017935+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-05-20T17:44:51.840393+00:00",
+    "poll_count": 3
   },
   "84b6d410-1358-42ef-916b-3ef41bf1b819": {
     "ticker": "TGT",
@@ -753,8 +753,8 @@
     "outcome_at": null,
     "implied_vol": 0.609672737121582,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:09.696664+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-05-20T17:44:46.373451+00:00",
+    "poll_count": 2
   },
   "2b60e229-4b45-4571-8f79-56baab26cd46": {
     "ticker": "LLY",
@@ -775,8 +775,8 @@
     "outcome_at": null,
     "implied_vol": 0.4068432760238646,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:16.560839+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-05-20T17:44:53.178533+00:00",
+    "poll_count": 2
   },
   "84103113-2d23-4e91-9d8b-2bfb0eafe0b1": {
     "ticker": "OXY",
@@ -797,7 +797,73 @@
     "outcome_at": null,
     "implied_vol": 0.48433280944824203,
     "last_underlying": null,
-    "last_polled_at": "2026-05-20T16:11:07.018209+00:00",
+    "last_polled_at": "2026-05-20T17:44:43.613605+00:00",
+    "poll_count": 2
+  },
+  "9e8014b3-10b3-48ac-a1df-a43b277832c8": {
+    "ticker": "TGT",
+    "contract": "TGT260522C00128000",
+    "strategy": "Unusual Options Activity",
+    "opt_type": "call",
+    "strike": 128.0,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T17:40:50.517940+00:00",
+    "spot_at_send": 121.885,
+    "entry": 0.4,
+    "target": 0.8,
+    "stop": 0.2,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5881221961975098,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T17:44:46.373573+00:00",
+    "poll_count": 1
+  },
+  "8a3675fa-c4f3-49c9-b88f-13f6fc40786c": {
+    "ticker": "MRVL",
+    "contract": "MRVL260522C00192500",
+    "strategy": "Unusual Options Activity",
+    "opt_type": "call",
+    "strike": 192.5,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T17:40:54.265020+00:00",
+    "spot_at_send": 183.95,
+    "entry": 2.91,
+    "target": 5.82,
+    "stop": 1.46,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.090529899597168,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T17:44:47.792277+00:00",
+    "poll_count": 1
+  },
+  "0c8c5858-54bf-43cb-a3b3-5642b345c57c": {
+    "ticker": "DDOG",
+    "contract": "DDOG260522P00197500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 197.5,
+    "expiration": "2026-05-22",
+    "sent_at": "2026-05-20T17:40:56.975235+00:00",
+    "spot_at_send": 212.09,
+    "entry": 0.72,
+    "target": 1.44,
+    "stop": 0.36,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.7910183477401732,
+    "last_underlying": null,
+    "last_polled_at": "2026-05-20T17:44:50.488944+00:00",
     "poll_count": 1
   }
 }
