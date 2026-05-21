@@ -126,26 +126,9 @@
   "scan_status": "idle",
   "total_tickers": 93,
   "scan_finished_at": "2026-05-20T21:31:44.969184+00:00",
-  "last_updated": "2026-05-21T16:10:51.878630+00:00",
+  "last_updated": "2026-05-21T17:40:52.655025+00:00",
   "prices": {},
-  "phase4_alerts": [
-    {
-      "ticker": "CRWD",
-      "contract_type": "PUT",
-      "strike": "$620.00",
-      "expiry": "05/22",
-      "entry": "$0.98",
-      "stop": "$0.49",
-      "target": "$1.96",
-      "score": 80,
-      "contract": "$620P",
-      "risk_iv_rank": 91.7,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "FAIR",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (92); short-dated (1d to expiry)"
-    }
-  ],
+  "phase4_alerts": [],
   "trades": {
     "active": [
       {
