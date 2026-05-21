@@ -1,181 +1,149 @@
 {
   "alerts": [
     {
-      "ticker": "COST",
+      "ticker": "CRWD",
       "strategy": "composite",
-      "score": 31.63,
-      "momentum_score": 52.71,
-      "uoa_score": 0.0
+      "score": 79.57,
+      "momentum_score": 65.95,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "CVX",
+      "ticker": "GS",
       "strategy": "composite",
-      "score": 28.63,
-      "momentum_score": 47.72,
-      "uoa_score": 0.0
+      "score": 79.36,
+      "momentum_score": 65.6,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "ADBE",
+      "ticker": "MRVL",
       "strategy": "composite",
-      "score": 28.33,
-      "momentum_score": 47.21,
-      "uoa_score": 0.0
+      "score": 78.0,
+      "momentum_score": 63.33,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "XOM",
+      "ticker": "MARA",
       "strategy": "composite",
-      "score": 27.73,
-      "momentum_score": 46.22,
-      "uoa_score": 0.0
+      "score": 74.77,
+      "momentum_score": 57.95,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "SLB",
+      "ticker": "NKE",
       "strategy": "composite",
-      "score": 27.28,
-      "momentum_score": 45.47,
-      "uoa_score": 0.0
+      "score": 73.25,
+      "momentum_score": 55.41,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "EOG",
+      "ticker": "MS",
       "strategy": "composite",
-      "score": 27.23,
-      "momentum_score": 45.39,
-      "uoa_score": 0.0
+      "score": 72.62,
+      "momentum_score": 54.37,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "XLE",
+      "ticker": "AMD",
       "strategy": "composite",
-      "score": 26.35,
-      "momentum_score": 43.92,
-      "uoa_score": 0.0
+      "score": 70.55,
+      "momentum_score": 50.91,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "COP",
+      "ticker": "INTC",
       "strategy": "composite",
-      "score": 26.21,
-      "momentum_score": 43.68,
-      "uoa_score": 0.0
+      "score": 69.56,
+      "momentum_score": 49.27,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "CRM",
+      "ticker": "MU",
       "strategy": "composite",
-      "score": 23.5,
-      "momentum_score": 39.16,
-      "uoa_score": 0.0
+      "score": 68.92,
+      "momentum_score": 48.2,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "NFLX",
+      "ticker": "RIVN",
       "strategy": "composite",
-      "score": 23.38,
-      "momentum_score": 38.97,
-      "uoa_score": 0.0
+      "score": 64.5,
+      "momentum_score": 40.84,
+      "uoa_score": 100.0
     }
   ],
   "top_picks": [
     {
-      "ticker": "COST",
-      "score": 31.63,
+      "ticker": "CRWD",
+      "score": 79.57,
       "strategy": "composite"
     },
     {
-      "ticker": "CVX",
-      "score": 28.63,
+      "ticker": "GS",
+      "score": 79.36,
       "strategy": "composite"
     },
     {
-      "ticker": "ADBE",
-      "score": 28.33,
+      "ticker": "MRVL",
+      "score": 78.0,
       "strategy": "composite"
     },
     {
-      "ticker": "XOM",
-      "score": 27.73,
+      "ticker": "MARA",
+      "score": 74.77,
       "strategy": "composite"
     },
     {
-      "ticker": "SLB",
-      "score": 27.28,
+      "ticker": "NKE",
+      "score": 73.25,
       "strategy": "composite"
     },
     {
-      "ticker": "EOG",
-      "score": 27.23,
+      "ticker": "MS",
+      "score": 72.62,
       "strategy": "composite"
     },
     {
-      "ticker": "XLE",
-      "score": 26.35,
+      "ticker": "AMD",
+      "score": 70.55,
       "strategy": "composite"
     },
     {
-      "ticker": "COP",
-      "score": 26.21,
+      "ticker": "INTC",
+      "score": 69.56,
       "strategy": "composite"
     },
     {
-      "ticker": "CRM",
-      "score": 23.5,
+      "ticker": "MU",
+      "score": 68.92,
       "strategy": "composite"
     },
     {
-      "ticker": "NFLX",
-      "score": 23.38,
+      "ticker": "RIVN",
+      "score": 64.5,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-05-19T11:23:16.882584+00:00",
-  "last_updated": "2026-05-20T17:40:58.396638+00:00",
+  "scan_finished_at": "2026-05-20T21:31:44.969184+00:00",
+  "last_updated": "2026-05-21T12:01:48.293711+00:00",
   "prices": {},
   "phase4_alerts": [
     {
-      "ticker": "TGT",
-      "contract_type": "CALL",
-      "strike": "$128.00",
+      "ticker": "CRWD",
+      "contract_type": "PUT",
+      "strike": "$615.00",
       "expiry": "05/22",
-      "entry": "$0.40",
-      "stop": "$0.20",
-      "target": "$0.80",
-      "score": 78,
-      "contract": "$128C",
-      "risk_iv_rank": 80.1,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (80); short-dated (2d to expiry)"
-    },
-    {
-      "ticker": "MRVL",
-      "contract_type": "CALL",
-      "strike": "$192.50",
-      "expiry": "05/22",
-      "entry": "$2.91",
-      "stop": "$1.46",
-      "target": "$5.82",
-      "score": 77,
-      "contract": "$192C",
-      "risk_iv_rank": 100.0,
+      "entry": "$1.82",
+      "stop": "$0.91",
+      "target": "$3.64",
+      "score": 80,
+      "contract": "$615P",
+      "risk_iv_rank": 99.4,
       "risk_iv_label": "HIGH",
       "risk_premium_label": "EXPENSIVE",
       "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (100); expensive premium ($2.91)"
-    },
-    {
-      "ticker": "DDOG",
-      "contract_type": "PUT",
-      "strike": "$197.50",
-      "expiry": "05/22",
-      "entry": "$0.72",
-      "stop": "$0.36",
-      "target": "$1.44",
-      "score": 66,
-      "contract": "$197P",
-      "risk_iv_rank": 100.0,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "FAIR",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)"
+      "risk_summary": "Watch: high IV rank (99); expensive premium ($1.82)"
     }
   ],
   "trades": {
@@ -1735,6 +1703,57 @@
         "risk_premium_label": "FAIR",
         "risk_score": "HIGH",
         "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "66002590-e34b-429f-8cd3-1883ff3d7ffc",
+        "timestamp": "2026-05-21T12:01:45.769486+00:00",
+        "ticker": "CRWD",
+        "contract": "CRWD260522P00615000",
+        "opt_type": "put",
+        "strike": 615.0,
+        "expiration": "2026-05-22",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 646.65,
+        "entry": 1.82,
+        "target": 3.64,
+        "stop": 0.91,
+        "target_pct": 100.0,
+        "iv": 66.3,
+        "volume": 530,
+        "open_interest": 231,
+        "score": 89.8,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "CROWDSTRIKE HOLDINGS, INC. <CRWD.O>: WELLS FARGO RAISES TARGET PRICE TO $700 FROM $525",
+          "This Insider Has Just Sold Shares In CrowdStrike Holdings",
+          "CROWDSTRIKE HOLDINGS, INC. <CRWD.O>: WELLS FARGO RAISES TARGET PRICE TO $700 FROM $525"
+        ],
+        "risk_iv_rank": 99.4,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "EXPENSIVE",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (99); expensive premium ($1.82)",
         "or_high": null,
         "or_low": null,
         "or_t1": null,
