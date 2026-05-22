@@ -1,132 +1,132 @@
 {
   "alerts": [
     {
-      "ticker": "CRWD",
+      "ticker": "QCOM",
       "strategy": "composite",
-      "score": 79.57,
-      "momentum_score": 65.95,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "GS",
-      "strategy": "composite",
-      "score": 79.36,
-      "momentum_score": 65.6,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "MRVL",
-      "strategy": "composite",
-      "score": 78.0,
-      "momentum_score": 63.33,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "MARA",
-      "strategy": "composite",
-      "score": 74.77,
-      "momentum_score": 57.95,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "NKE",
-      "strategy": "composite",
-      "score": 73.25,
-      "momentum_score": 55.41,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "MS",
-      "strategy": "composite",
-      "score": 72.62,
-      "momentum_score": 54.37,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "AMD",
-      "strategy": "composite",
-      "score": 70.55,
-      "momentum_score": 50.91,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "INTC",
-      "strategy": "composite",
-      "score": 69.56,
-      "momentum_score": 49.27,
+      "score": 79.28,
+      "momentum_score": 65.47,
       "uoa_score": 100.0
     },
     {
       "ticker": "MU",
       "strategy": "composite",
-      "score": 68.92,
-      "momentum_score": 48.2,
+      "score": 66.24,
+      "momentum_score": 43.73,
       "uoa_score": 100.0
     },
     {
-      "ticker": "RIVN",
+      "ticker": "DDOG",
       "strategy": "composite",
-      "score": 64.5,
-      "momentum_score": 40.84,
+      "score": 64.82,
+      "momentum_score": 41.37,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "LLY",
+      "strategy": "composite",
+      "score": 63.72,
+      "momentum_score": 39.53,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "BMY",
+      "strategy": "composite",
+      "score": 62.7,
+      "momentum_score": 37.84,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "MRVL",
+      "strategy": "composite",
+      "score": 62.09,
+      "momentum_score": 39.77,
+      "uoa_score": 95.57223264540339
+    },
+    {
+      "ticker": "NET",
+      "strategy": "composite",
+      "score": 61.04,
+      "momentum_score": 35.07,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "MCD",
+      "strategy": "composite",
+      "score": 56.79,
+      "momentum_score": 27.99,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "GS",
+      "strategy": "composite",
+      "score": 56.59,
+      "momentum_score": 27.65,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "ABBV",
+      "strategy": "composite",
+      "score": 55.53,
+      "momentum_score": 25.89,
       "uoa_score": 100.0
     }
   ],
   "top_picks": [
     {
-      "ticker": "CRWD",
-      "score": 79.57,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "GS",
-      "score": 79.36,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "MRVL",
-      "score": 78.0,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "MARA",
-      "score": 74.77,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "NKE",
-      "score": 73.25,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "MS",
-      "score": 72.62,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "AMD",
-      "score": 70.55,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "INTC",
-      "score": 69.56,
+      "ticker": "QCOM",
+      "score": 79.28,
       "strategy": "composite"
     },
     {
       "ticker": "MU",
-      "score": 68.92,
+      "score": 66.24,
       "strategy": "composite"
     },
     {
-      "ticker": "RIVN",
-      "score": 64.5,
+      "ticker": "DDOG",
+      "score": 64.82,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "LLY",
+      "score": 63.72,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "BMY",
+      "score": 62.7,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "MRVL",
+      "score": 62.09,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "NET",
+      "score": 61.04,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "MCD",
+      "score": 56.79,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "GS",
+      "score": 56.59,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "ABBV",
+      "score": 55.53,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-05-20T21:31:44.969184+00:00",
-  "last_updated": "2026-05-21T17:40:52.655025+00:00",
+  "scan_finished_at": "2026-05-21T21:31:33.254960+00:00",
+  "last_updated": "2026-05-22T16:10:46.628537+00:00",
   "prices": {},
   "phase4_alerts": [],
   "trades": {
