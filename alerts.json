@@ -1,134 +1,6 @@
 {
-  "alerts": [
-    {
-      "ticker": "MRVL",
-      "strategy": "composite",
-      "score": 90.63,
-      "momentum_score": 84.39,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "MU",
-      "strategy": "composite",
-      "score": 88.33,
-      "momentum_score": 80.55,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "AMAT",
-      "strategy": "composite",
-      "score": 84.66,
-      "momentum_score": 74.43,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "RIOT",
-      "strategy": "composite",
-      "score": 83.61,
-      "momentum_score": 72.68,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "UPST",
-      "strategy": "composite",
-      "score": 82.97,
-      "momentum_score": 71.61,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "QCOM",
-      "strategy": "composite",
-      "score": 82.76,
-      "momentum_score": 71.27,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "AMD",
-      "strategy": "composite",
-      "score": 82.38,
-      "momentum_score": 70.63,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "AFRM",
-      "strategy": "composite",
-      "score": 80.4,
-      "momentum_score": 67.34,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "INTC",
-      "strategy": "composite",
-      "score": 76.15,
-      "momentum_score": 60.25,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "ZS",
-      "strategy": "composite",
-      "score": 72.77,
-      "momentum_score": 54.62,
-      "uoa_score": 100.0
-    }
-  ],
-  "top_picks": [
-    {
-      "ticker": "MRVL",
-      "score": 90.63,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "MU",
-      "score": 88.33,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "AMAT",
-      "score": 84.66,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "RIOT",
-      "score": 83.61,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "UPST",
-      "score": 82.97,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "QCOM",
-      "score": 82.76,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "AMD",
-      "score": 82.38,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "AFRM",
-      "score": 80.4,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "INTC",
-      "score": 76.15,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "ZS",
-      "score": 72.77,
-      "strategy": "composite"
-    }
-  ],
-  "scan_status": "idle",
-  "total_tickers": 93,
-  "scan_finished_at": "2026-05-26T21:31:35.985691+00:00",
-  "last_updated": "2026-05-27T12:01:44.688729+00:00",
-  "prices": {},
   "phase4_alerts": [],
+  "last_updated": "2026-05-27T16:10:52.639199+00:00",
   "trades": {
     "active": [
       {
@@ -539,6 +411,159 @@
         "risk_premium_label": "FAIR",
         "risk_score": "MEDIUM",
         "risk_summary": "Watch: moderate theta (11d); strike 6% OTM",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "d2a8b97f-2a5a-49d1-9ace-e8dd62c47fb9",
+        "timestamp": "2026-05-27T13:52:58.129899+00:00",
+        "ticker": "LRCX",
+        "contract": "LRCX260529P00290000",
+        "opt_type": "put",
+        "strike": 290.0,
+        "expiration": "2026-05-29",
+        "dte": 2,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 322.0,
+        "entry": 0.61,
+        "target": 0.82,
+        "stop": 0.3,
+        "target_pct": 35.0,
+        "iv": 91.5,
+        "volume": 10,
+        "open_interest": 367,
+        "score": 80.17,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Mizuho Maintains Outperform on Lam Research, Raises Price Target to $380",
+          "Lam Research price target raised to $380 from $330 at Mizuho",
+          "Mizuho Maintains Outperform on Lam Research, Raises Price Target to $380"
+        ],
+        "risk_iv_rank": 100.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "FAIR",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "55bbfe74-40f4-4195-bd1f-a5715e37fa0c",
+        "timestamp": "2026-05-27T13:53:01.565834+00:00",
+        "ticker": "RIOT",
+        "contract": "RIOT260529P00024500",
+        "opt_type": "put",
+        "strike": 24.5,
+        "expiration": "2026-05-29",
+        "dte": 2,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 25.8,
+        "entry": 0.3,
+        "target": 0.41,
+        "stop": 0.15,
+        "target_pct": 35.0,
+        "iv": 103.5,
+        "volume": 533,
+        "open_interest": 1730,
+        "score": 85.67,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Riot Blockchain call volume above normal and directionally bullish",
+          "Most big cryptocurrencies increase as Tronix inches up",
+          "Riot Blockchain call volume above normal and directionally bullish"
+        ],
+        "risk_iv_rank": 100.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "CHEAP",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "967250f9-164a-436a-baa4-ef2ef8391fbe",
+        "timestamp": "2026-05-27T13:53:03.776485+00:00",
+        "ticker": "QCOM",
+        "contract": "QCOM260529P00215000",
+        "opt_type": "put",
+        "strike": 215.0,
+        "expiration": "2026-05-29",
+        "dte": 2,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 233.9056,
+        "entry": 0.65,
+        "target": 0.88,
+        "stop": 0.33,
+        "target_pct": 35.0,
+        "iv": 109.7,
+        "volume": 8,
+        "open_interest": 513,
+        "score": 80.97,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Schwab U.S. Dividend Equity ETF (SCHD) Daily Update, 5/27/2026",
+          "Why Is Invesco QQQ Trust ETF\u00a0(QQQ) Rising Today, 5/27/06?",
+          "Schwab U.S. Dividend Equity ETF (SCHD) Daily Update, 5/27/2026"
+        ],
+        "risk_iv_rank": 100.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "FAIR",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
         "or_high": null,
         "or_low": null,
         "or_t1": null,
