@@ -1,132 +1,132 @@
 {
   "alerts": [
     {
-      "ticker": "QCOM",
+      "ticker": "MRVL",
       "strategy": "composite",
-      "score": 84.65,
-      "momentum_score": 74.42,
+      "score": 90.63,
+      "momentum_score": 84.39,
       "uoa_score": 100.0
     },
     {
-      "ticker": "RBLX",
+      "ticker": "MU",
       "strategy": "composite",
-      "score": 80.71,
-      "momentum_score": 67.85,
+      "score": 88.33,
+      "momentum_score": 80.55,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "AMAT",
+      "strategy": "composite",
+      "score": 84.66,
+      "momentum_score": 74.43,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "RIOT",
+      "strategy": "composite",
+      "score": 83.61,
+      "momentum_score": 72.68,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "UPST",
+      "strategy": "composite",
+      "score": 82.97,
+      "momentum_score": 71.61,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "QCOM",
+      "strategy": "composite",
+      "score": 82.76,
+      "momentum_score": 71.27,
       "uoa_score": 100.0
     },
     {
       "ticker": "AMD",
       "strategy": "composite",
-      "score": 78.86,
-      "momentum_score": 64.77,
+      "score": 82.38,
+      "momentum_score": 70.63,
       "uoa_score": 100.0
     },
     {
-      "ticker": "MRVL",
+      "ticker": "AFRM",
       "strategy": "composite",
-      "score": 76.14,
-      "momentum_score": 60.23,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "MARA",
-      "strategy": "composite",
-      "score": 71.7,
-      "momentum_score": 52.83,
+      "score": 80.4,
+      "momentum_score": 67.34,
       "uoa_score": 100.0
     },
     {
       "ticker": "INTC",
       "strategy": "composite",
-      "score": 68.4,
-      "momentum_score": 47.34,
+      "score": 76.15,
+      "momentum_score": 60.25,
       "uoa_score": 100.0
     },
     {
-      "ticker": "NET",
+      "ticker": "ZS",
       "strategy": "composite",
-      "score": 66.87,
-      "momentum_score": 44.79,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "GILD",
-      "strategy": "composite",
-      "score": 65.49,
-      "momentum_score": 42.48,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "NKE",
-      "strategy": "composite",
-      "score": 60.86,
-      "momentum_score": 34.76,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "DDOG",
-      "strategy": "composite",
-      "score": 60.77,
-      "momentum_score": 34.61,
+      "score": 72.77,
+      "momentum_score": 54.62,
       "uoa_score": 100.0
     }
   ],
   "top_picks": [
     {
-      "ticker": "QCOM",
-      "score": 84.65,
+      "ticker": "MRVL",
+      "score": 90.63,
       "strategy": "composite"
     },
     {
-      "ticker": "RBLX",
-      "score": 80.71,
+      "ticker": "MU",
+      "score": 88.33,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "AMAT",
+      "score": 84.66,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "RIOT",
+      "score": 83.61,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "UPST",
+      "score": 82.97,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "QCOM",
+      "score": 82.76,
       "strategy": "composite"
     },
     {
       "ticker": "AMD",
-      "score": 78.86,
+      "score": 82.38,
       "strategy": "composite"
     },
     {
-      "ticker": "MRVL",
-      "score": 76.14,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "MARA",
-      "score": 71.7,
+      "ticker": "AFRM",
+      "score": 80.4,
       "strategy": "composite"
     },
     {
       "ticker": "INTC",
-      "score": 68.4,
+      "score": 76.15,
       "strategy": "composite"
     },
     {
-      "ticker": "NET",
-      "score": 66.87,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "GILD",
-      "score": 65.49,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "NKE",
-      "score": 60.86,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "DDOG",
-      "score": 60.77,
+      "ticker": "ZS",
+      "score": 72.77,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-05-25T21:31:35.429707+00:00",
-  "last_updated": "2026-05-26T17:40:50.786889+00:00",
+  "scan_finished_at": "2026-05-26T21:31:35.985691+00:00",
+  "last_updated": "2026-05-27T12:01:44.688729+00:00",
   "prices": {},
   "phase4_alerts": [],
   "trades": {
