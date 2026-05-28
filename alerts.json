@@ -126,26 +126,9 @@
   "scan_status": "idle",
   "total_tickers": 93,
   "scan_finished_at": "2026-05-27T21:31:37.188754+00:00",
-  "last_updated": "2026-05-28T16:11:00.505811+00:00",
+  "last_updated": "2026-05-28T17:40:47.921523+00:00",
   "prices": {},
-  "phase4_alerts": [
-    {
-      "ticker": "RIOT",
-      "contract_type": "PUT",
-      "strike": "$28.00",
-      "expiry": "05/29",
-      "entry": "$0.50",
-      "stop": "$0.25",
-      "target": "$0.68",
-      "score": 78,
-      "contract": "$28P",
-      "risk_iv_rank": 100.0,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "MEDIUM",
-      "risk_summary": "Watch: high IV rank (100); short-dated (1d to expiry)"
-    }
-  ],
+  "phase4_alerts": [],
   "trades": {
     "active": [
       {
