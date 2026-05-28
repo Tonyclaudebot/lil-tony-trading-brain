@@ -1,6 +1,151 @@
 {
-  "phase4_alerts": [],
-  "last_updated": "2026-05-27T17:40:50.291192+00:00",
+  "alerts": [
+    {
+      "ticker": "MU",
+      "strategy": "composite",
+      "score": 81.57,
+      "momentum_score": 69.28,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "RIOT",
+      "strategy": "composite",
+      "score": 77.58,
+      "momentum_score": 62.64,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "MRVL",
+      "strategy": "composite",
+      "score": 70.72,
+      "momentum_score": 51.2,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "AFRM",
+      "strategy": "composite",
+      "score": 67.62,
+      "momentum_score": 46.04,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "AMD",
+      "strategy": "composite",
+      "score": 63.75,
+      "momentum_score": 39.59,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "HD",
+      "strategy": "composite",
+      "score": 63.5,
+      "momentum_score": 39.16,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "QCOM",
+      "strategy": "composite",
+      "score": 63.29,
+      "momentum_score": 38.82,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "GS",
+      "strategy": "composite",
+      "score": 59.41,
+      "momentum_score": 35.75,
+      "uoa_score": 94.89208633093526
+    },
+    {
+      "ticker": "NKE",
+      "strategy": "composite",
+      "score": 58.89,
+      "momentum_score": 53.93,
+      "uoa_score": 66.33431085043989
+    },
+    {
+      "ticker": "HOOD",
+      "strategy": "composite",
+      "score": 51.96,
+      "momentum_score": 35.23,
+      "uoa_score": 77.04981773997571
+    }
+  ],
+  "top_picks": [
+    {
+      "ticker": "MU",
+      "score": 81.57,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "RIOT",
+      "score": 77.58,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "MRVL",
+      "score": 70.72,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "AFRM",
+      "score": 67.62,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "AMD",
+      "score": 63.75,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "HD",
+      "score": 63.5,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "QCOM",
+      "score": 63.29,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "GS",
+      "score": 59.41,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "NKE",
+      "score": 58.89,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "HOOD",
+      "score": 51.96,
+      "strategy": "composite"
+    }
+  ],
+  "scan_status": "idle",
+  "total_tickers": 93,
+  "scan_finished_at": "2026-05-27T21:31:37.188754+00:00",
+  "last_updated": "2026-05-28T12:01:50.548474+00:00",
+  "prices": {},
+  "phase4_alerts": [
+    {
+      "ticker": "RIOT",
+      "contract_type": "PUT",
+      "strike": "$25.50",
+      "expiry": "05/29",
+      "entry": "$0.25",
+      "stop": "$0.12",
+      "target": "$0.34",
+      "score": 78,
+      "contract": "$25P",
+      "risk_iv_rank": 100.0,
+      "risk_iv_label": "HIGH",
+      "risk_premium_label": "CHEAP",
+      "risk_score": "MEDIUM",
+      "risk_summary": "Watch: high IV rank (100); short-dated (1d to expiry)"
+    }
+  ],
   "trades": {
     "active": [
       {
@@ -564,6 +709,57 @@
         "risk_premium_label": "FAIR",
         "risk_score": "HIGH",
         "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "8a9e720d-381b-4732-aeab-5bbcb5805c9e",
+        "timestamp": "2026-05-28T12:01:48.215526+00:00",
+        "ticker": "RIOT",
+        "contract": "RIOT260529P00025500",
+        "opt_type": "put",
+        "strike": 25.5,
+        "expiration": "2026-05-29",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 26.6,
+        "entry": 0.25,
+        "target": 0.34,
+        "stop": 0.12,
+        "target_pct": 35.0,
+        "iv": 99.7,
+        "volume": 1852,
+        "open_interest": 1654,
+        "score": 75.82,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Bitcoin breaks below $73K, dragging crypto stocks lower",
+          "Riot Blockchain call volume above normal and directionally bullish",
+          "Bitcoin breaks below $73K, dragging crypto stocks lower"
+        ],
+        "risk_iv_rank": 100.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "CHEAP",
+        "risk_score": "MEDIUM",
+        "risk_summary": "Watch: high IV rank (100); short-dated (1d to expiry)",
         "or_high": null,
         "or_low": null,
         "or_t1": null,
