@@ -403,10 +403,10 @@ function buildWeekPanel(closed, doAnimate){
   document.getElementById('week-panel').innerHTML=
     `<div class="wp-hdr"><span class="wp-title">&#9658; THIS WEEK</span><span class="wp-date">${fmtD(wkS)} &ndash; ${fmtD(wkE)}</span></div>`+
     `<div class="scores" style="margin-bottom:0">`+
-    score('WIN RATE',  wkR==null?'&mdash;':`<span data-cu="${wkR}" data-sfx="%">0%</span>`,'glow-c')+
-    score('P&amp;L',  `<span class="${cls(wkP)}" data-cu="${Math.abs(wkP).toFixed(0)}" data-pfx="${wkP<0?'-$':'$'}">$0</span>`,'')+
-    score('WINS',     `<span class="pos" data-cu="${wkW}">0</span>`,'')+
-    score('LOSSES',   `<span class="neg" data-cu="${wkL}">0</span>`,'')+
+    score('WIN RATE',  wkR==null?'&mdash;':`<span data-cu="${wkR}" data-sfx="%">${wkR}%</span>`,'glow-c')+
+    score('P&amp;L',  `<span class="${cls(wkP)}" data-cu="${Math.abs(wkP).toFixed(0)}" data-pfx="${wkP<0?'-$':'$'}">${wkP<0?'-$':'$'}${Math.abs(wkP).toFixed(0)}</span>`,'')+
+    score('WINS',     `<span class="pos" data-cu="${wkW}">${wkW}</span>`,'')+
+    score('LOSSES',   `<span class="neg" data-cu="${wkL}">${wkL}</span>`,'')+
     `</div>`;
   if(doAnimate){
     document.querySelectorAll('[data-cu]').forEach(el=>{
@@ -475,6 +475,7 @@ function buildMonthTabs(closed){
 }
 
 let initialized = false;
+let prevClosedCount = -1;
 
 async function tick(){
   let s;
@@ -517,34 +518,37 @@ async function tick(){
     document.getElementById('opentbl').innerHTML=oh;
   }
 
-  // closed table — OPENED + CLOSED columns, data-month/data-week for filtering
-  let ch='<tr><th>TICKER</th><th>SIDE</th><th>STRIKE</th><th>RESULT</th><th>OPENED</th><th>CLOSED</th><th>ENTRY</th><th>EXIT</th><th>P&L</th><th>STRAT</th></tr>';
-  if(!s.closed.length){document.getElementById('closedtbl').innerHTML=ch+`<tr><td colspan="10" class="empty">nothing closed yet</td></tr>`;}
-  else{
-    for(const r of s.closed){
-      const ts=r.open_time||r.exit_time;
-      let dm='unknown',dw='0';
-      if(ts){const d=new Date(ts);dm=monthKey(d);dw=weekOfMonth(d).toString();}
-      const res=r.outcome==='win'?'<span class="win">WIN</span>':'<span class="loss">'+(r.outcome==='loss'?'LOSS':'EXPIRED')+'</span>';
-      ch+=`<tr class="trade-row ${r.outcome==='win'?'trade-win':'trade-loss'}" data-month="${dm}" data-week="${dw}">
-        <td class="${r.side==='PUT'?'put':'call'}">${r.ticker}</td>
-        <td class="${r.side==='PUT'?'put':'call'}">${r.side||'&mdash;'}</td>
-        <td>${r.strike==null?'&mdash;':r.strike}</td>
-        <td>${res}</td>
-        <td class="td-time">${fmtTime(r.open_time)}</td>
-        <td class="td-time">${fmtTime(r.exit_time)}</td>
-        <td>${r.entry==null?'&mdash;':'$'+r.entry.toFixed(2)}</td>
-        <td>${r.exit==null?'&mdash;':'$'+r.exit.toFixed(2)}</td>
-        <td class="${cls(r.pnl)}">${money(r.pnl)}</td>
-        <td class="muted">${r.strategy}</td></tr>`;
-    }
-    document.getElementById('closedtbl').innerHTML=ch;
-    buildMonthTabs(s.closed);
-    buildWeekTabs(s.closed);
-    applyClosedFilter();
-    if(!initialized){
-      anime({targets:'.trade-win', backgroundColor:['rgba(57,255,20,.12)','rgba(57,255,20,0)'], duration:800,delay:anime.stagger(16,{start:200}),easing:'easeOutQuad'});
-      anime({targets:'.trade-loss',backgroundColor:['rgba(255,59,86,.12)','rgba(255,59,86,0)'],duration:800,delay:anime.stagger(16,{start:300}),easing:'easeOutQuad'});
+  // closed table — only rebuild when a new trade closes (closed trades never update in-place)
+  if(!initialized || s.closed.length !== prevClosedCount){
+    prevClosedCount = s.closed.length;
+    let ch='<tr><th>TICKER</th><th>SIDE</th><th>STRIKE</th><th>RESULT</th><th>OPENED</th><th>CLOSED</th><th>ENTRY</th><th>EXIT</th><th>P&L</th><th>STRAT</th></tr>';
+    if(!s.closed.length){document.getElementById('closedtbl').innerHTML=ch+`<tr><td colspan="10" class="empty">nothing closed yet</td></tr>`;}
+    else{
+      for(const r of s.closed){
+        const ts=r.open_time||r.exit_time;
+        let dm='unknown',dw='0';
+        if(ts){const d=new Date(ts);dm=monthKey(d);dw=weekOfMonth(d).toString();}
+        const res=r.outcome==='win'?'<span class="win">WIN</span>':'<span class="loss">'+(r.outcome==='loss'?'LOSS':'EXPIRED')+'</span>';
+        ch+=`<tr class="trade-row ${r.outcome==='win'?'trade-win':'trade-loss'}" data-month="${dm}" data-week="${dw}">
+          <td class="${r.side==='PUT'?'put':'call'}">${r.ticker}</td>
+          <td class="${r.side==='PUT'?'put':'call'}">${r.side||'&mdash;'}</td>
+          <td>${r.strike==null?'&mdash;':r.strike}</td>
+          <td>${res}</td>
+          <td class="td-time">${fmtTime(r.open_time)}</td>
+          <td class="td-time">${fmtTime(r.exit_time)}</td>
+          <td>${r.entry==null?'&mdash;':'$'+r.entry.toFixed(2)}</td>
+          <td>${r.exit==null?'&mdash;':'$'+r.exit.toFixed(2)}</td>
+          <td class="${cls(r.pnl)}">${money(r.pnl)}</td>
+          <td class="muted">${r.strategy}</td></tr>`;
+      }
+      document.getElementById('closedtbl').innerHTML=ch;
+      buildMonthTabs(s.closed);
+      buildWeekTabs(s.closed);
+      applyClosedFilter();
+      if(!initialized){
+        anime({targets:'.trade-win', backgroundColor:['rgba(57,255,20,.12)','rgba(57,255,20,0)'], duration:800,delay:anime.stagger(16,{start:200}),easing:'easeOutQuad'});
+        anime({targets:'.trade-loss',backgroundColor:['rgba(255,59,86,.12)','rgba(255,59,86,0)'],duration:800,delay:anime.stagger(16,{start:300}),easing:'easeOutQuad'});
+      }
     }
   }
 
