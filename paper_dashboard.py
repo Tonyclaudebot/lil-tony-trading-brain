@@ -384,7 +384,7 @@ function monthLabel(k){
 }
 function weekOfMonth(d){return Math.ceil(d.getDate()/7);}
 
-function buildWeekPanel(closed){
+function buildWeekPanel(closed, doAnimate){
   const now=new Date();
   const dow=now.getDay();
   const mo=dow===0?6:dow-1;
@@ -408,14 +408,16 @@ function buildWeekPanel(closed){
     score('WINS',     `<span class="pos" data-cu="${wkW}">0</span>`,'')+
     score('LOSSES',   `<span class="neg" data-cu="${wkL}">0</span>`,'')+
     `</div>`;
-  document.querySelectorAll('[data-cu]').forEach(el=>{
-    const target=parseFloat(el.dataset.cu)||0;
-    const pfx=el.dataset.pfx||''; const sfx=el.dataset.sfx||'';
-    const dec=sfx==='%'?1:0;
-    const obj={val:0};
-    anime({targets:obj,val:target,duration:900,easing:'easeOutExpo',
-      update(){el.textContent=pfx+obj.val.toFixed(dec)+sfx;}});
-  });
+  if(doAnimate){
+    document.querySelectorAll('[data-cu]').forEach(el=>{
+      const target=parseFloat(el.dataset.cu)||0;
+      const pfx=el.dataset.pfx||''; const sfx=el.dataset.sfx||'';
+      const dec=sfx==='%'?1:0;
+      const obj={val:0};
+      anime({targets:obj,val:target,duration:900,easing:'easeOutExpo',
+        update(){el.textContent=pfx+obj.val.toFixed(dec)+sfx;}});
+    });
+  }
 }
 
 function applyClosedFilter(){
@@ -472,6 +474,8 @@ function buildMonthTabs(closed){
   }));
 }
 
+let initialized = false;
+
 async function tick(){
   let s;
   try{s=await(await fetch('/api/state',{cache:'no-store'})).json();}
@@ -483,7 +487,7 @@ async function tick(){
     +`<span class="chip">CLOCK: <b class="glow-c">${s.server_time_ct}</b></span>`
     +`<span class="chip">LAST POLL: <b>${v.last_poll||'&mdash;'}</b></span>`;
 
-  buildWeekPanel(s.closed);
+  buildWeekPanel(s.closed, !initialized);
 
   document.getElementById('scores').innerHTML=
       score('REALIZED P&L',money(t.realized),cls(t.realized))
@@ -491,23 +495,24 @@ async function tick(){
     +score('RECORD W&ndash;L',`${t.wins}&ndash;${t.losses}`,'glow-c')
     +score('WIN RATE',t.win_rate==null?'&mdash;':t.win_rate+'%','glow-c')
     +score('OPEN',t.open,'glow-c');
-  anime({targets:'#scores .score',translateY:[14,0],opacity:[0,1],delay:anime.stagger(55),duration:400,easing:'easeOutCubic'});
+  if(!initialized)
+    anime({targets:'#scores .score',translateY:[14,0],opacity:[0,1],delay:anime.stagger(55),duration:400,easing:'easeOutCubic'});
 
-  // open table — OPENED column added
-  let oh='<tr><th>TICKER</th><th>SIDE</th><th>STRIKE</th><th>EXP</th><th>OPENED</th><th>ENTRY</th><th>MARK</th><th>U-P&L</th><th>STOP&rarr;TGT</th><th>STRAT</th></tr>';
-  if(!s.open.length){document.getElementById('opentbl').innerHTML=oh+`<tr><td colspan="10" class="empty">no open paper positions</td></tr>`;}
+  // open table
+  let oh='<tr><th>TICKER</th><th>SIDE</th><th>STRIKE</th><th>ENTRY</th><th>CURRENT</th><th>U-P&L</th><th>EXP</th><th>OPEN DATE</th><th>STRATEGY</th></tr>';
+  if(!s.open.length){document.getElementById('opentbl').innerHTML=oh+`<tr><td colspan="9" class="empty">no open paper positions</td></tr>`;}
   else{
     for(const r of s.open){
       const sc=r.side==='PUT'?'put':'call';
-      const g=r.prog==null?'<span class="muted">&mdash;</span>':`<span class="gauge"><i style="width:${r.prog}%"></i></span>`;
       oh+=`<tr class="open-row">
         <td class="${sc}">${r.ticker}</td><td class="${sc}">${r.side}</td>
-        <td>${r.strike}</td><td class="muted">${r.exp||'&mdash;'}</td>
-        <td class="td-time">${fmtTime(r.open_time)}</td>
+        <td>${r.strike}</td>
         <td>$${r.entry.toFixed(2)}</td>
         <td>${r.mark==null?'<span class="muted">&mdash;</span>':'$'+r.mark.toFixed(2)}</td>
         <td class="${cls(r.upnl)}">${money(r.upnl)}</td>
-        <td>${g}</td><td class="muted">${r.strategy}</td></tr>`;
+        <td class="muted">${r.exp||'&mdash;'}</td>
+        <td class="td-time">${fmtTime(r.open_time)}</td>
+        <td class="muted">${r.strategy}</td></tr>`;
     }
     document.getElementById('opentbl').innerHTML=oh;
   }
@@ -537,12 +542,15 @@ async function tick(){
     buildMonthTabs(s.closed);
     buildWeekTabs(s.closed);
     applyClosedFilter();
-    anime({targets:'.trade-win', backgroundColor:['rgba(57,255,20,.12)','rgba(57,255,20,0)'], duration:800,delay:anime.stagger(16,{start:200}),easing:'easeOutQuad'});
-    anime({targets:'.trade-loss',backgroundColor:['rgba(255,59,86,.12)','rgba(255,59,86,0)'],duration:800,delay:anime.stagger(16,{start:300}),easing:'easeOutQuad'});
+    if(!initialized){
+      anime({targets:'.trade-win', backgroundColor:['rgba(57,255,20,.12)','rgba(57,255,20,0)'], duration:800,delay:anime.stagger(16,{start:200}),easing:'easeOutQuad'});
+      anime({targets:'.trade-loss',backgroundColor:['rgba(255,59,86,.12)','rgba(255,59,86,0)'],duration:800,delay:anime.stagger(16,{start:300}),easing:'easeOutQuad'});
+    }
   }
 
   document.getElementById('foot').innerHTML=
     `<span class="live"></span> live &middot; refreshes every 5s &middot; marks via black-scholes${s.market_open?'':' (frozen — market closed)'}`;
+  initialized = true;
 }
 tick(); setInterval(tick,5000);
 </script>
