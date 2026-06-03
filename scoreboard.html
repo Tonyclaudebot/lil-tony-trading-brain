@@ -2,70 +2,381 @@
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lil Tony — Scoreboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: #0d0d0d; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-       padding: 24px 16px; max-width: 600px; margin: 0 auto; }
+body { background: #0d0d0d; color: #e0e0e0;
+       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+       padding: 24px 16px; max-width: 700px; margin: 0 auto; }
 h1 { font-size: 1.3rem; color: #ff6b00; letter-spacing: 1px; margin-bottom: 4px; }
 .updated { font-size: 0.75rem; color: #555; margin-bottom: 6px; }
-.method { font-size: 0.7rem; color: #b48a00; margin-bottom: 24px; }
+.method  { font-size: 0.7rem;  color: #b48a00; margin-bottom: 24px; }
+h2 { font-size: 0.8rem; color: #444; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 12px; }
 .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
-.card { background: #1a1a1a; border-radius: 10px; padding: 16px 12px; text-align: center; }
+.card { background: #1a1a1a; border-radius: 10px; padding: 16px 12px;
+         text-align: center; opacity: 0; }
 .card .label { font-size: 0.7rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
 .card .value { font-size: 2rem; font-weight: 700; margin-top: 4px; }
 .win { color: #00c853; } .loss { color: #ff3d3d; }
 .pending { color: #888; } .expired { color: #b48a00; }
 .rate { color: #ff6b00; }
-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-th { text-align: left; padding: 8px 10px; color: #555; font-size: 0.7rem;
-      text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #222; }
-td { padding: 10px 10px; border-bottom: 1px solid #1a1a1a; }
-tr:last-child td { border-bottom: none; }
-h2 { font-size: 0.8rem; color: #444; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.week-panel { background: #111; border: 1px solid #1f1f1f; border-radius: 12px;
+               padding: 16px; margin-bottom: 28px; opacity: 0; }
+.week-panel .card { opacity: 1; }
+.wp-header { display: flex; justify-content: space-between; align-items: baseline;
+              margin-bottom: 10px; }
+.wp-title { font-size: 0.7rem; color: #ff6b00; text-transform: uppercase; letter-spacing: 1px; }
+.wp-date  { font-size: 0.65rem; color: #555; }
+.week-panel .cards { margin-bottom: 0; }
+.tab-group { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.tab { background: #1a1a1a; border: none; color: #555; padding: 5px 13px;
+        border-radius: 20px; font-size: 0.72rem; cursor: pointer; }
+.tab:hover { color: #aaa; }
+.tab.active { background: #ff6b00; color: #fff; }
+#week-tabs { display: none; margin-bottom: 14px; }
+.trades-wrap { overflow-x: auto; margin-top: 8px; }
+table.trades-tbl { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+table.trades-tbl th { text-align: left; padding: 6px 8px; color: #555; font-size: 0.68rem;
+                        text-transform: uppercase; letter-spacing: 0.8px;
+                        border-bottom: 1px solid #222; white-space: nowrap; }
+table.trades-tbl td { padding: 9px 8px; border-bottom: 1px solid #141414; }
+table.trades-tbl tr:last-child td { border-bottom: none; }
+.td-contract { font-weight: 600; font-size: 0.82rem; }
+.td-strat    { font-size: 0.7rem; color: #666; max-width: 110px; }
+.td-time     { font-size: 0.7rem; color: #555; white-space: nowrap;
+                font-variant-numeric: tabular-nums; }
+table.strat-tbl { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+table.strat-tbl th { text-align: left; padding: 8px 10px; color: #555; font-size: 0.7rem;
+                       text-transform: uppercase; letter-spacing: 1px;
+                       border-bottom: 1px solid #222; }
+table.strat-tbl td { padding: 10px 10px; border-bottom: 1px solid #1a1a1a; }
+table.strat-tbl tr:last-child td { border-bottom: none; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.trade-open { animation: pulse 2.8s ease-in-out infinite; }
+.dir-call { color: #00c853; }
+.dir-put  { color: #ff6b00; }
+.td-mark  { color: #e0e0e0; font-variant-numeric: tabular-nums; }
+.td-upnl  { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.td-dim   { color: #555; font-size: 0.75rem; }
+.td-empty { color: #555; padding: 14px 8px; text-align: center; font-size: 0.75rem; }
+.open-row { animation: pulse 2.8s ease-in-out infinite; }
 </style></head><body>
 <h1>LIL TONY — SCOREBOARD</h1>
-<div class="updated">Updated Jun 02, 2026 11:13 AM</div>
+<div class="updated">Updated Jun 03, 2026 05:52 AM</div>
 <div class="method">Auto-graded via stock-proxy BS reprice (estimate, not confirmed fill)</div>
-<div class="cards">
-  <div class="card"><div class="label">Signals</div><div class="value" style="color:#e0e0e0">64</div></div>
-  <div class="card"><div class="label">Wins</div><div class="value win">10</div></div>
-  <div class="card"><div class="label">Losses</div><div class="value loss">39</div></div>
-  <div class="card"><div class="label">Win Rate</div><div class="value rate">20.4%</div></div>
+
+<div id="week-panel" class="week-panel">
+  <div class="wp-header">
+    <span class="wp-title">This Week</span>
+    <span class="wp-date">Jun 01 – Jun 07</span>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="label">Win Rate</div>
+      <div class="value rate"><span data-countup="75.0" data-suffix="%" data-decimals="1">0%</span></div></div>
+    <div class="card"><div class="label">P&amp;L</div>
+      <div class="value" style="color:#00c853"
+           data-countup="152" data-prefix="$">$152</div></div>
+    <div class="card"><div class="label">Wins</div>
+      <div class="value win" data-countup="9">9</div></div>
+    <div class="card"><div class="label">Losses</div>
+      <div class="value loss" data-countup="3">3</div></div>
+  </div>
+</div>
+
+<div class="cards" id="signal-cards">
+  <div class="card"><div class="label">Signals</div>
+    <div class="value" style="color:#e0e0e0" data-countup="67">67</div></div>
+  <div class="card"><div class="label">Wins</div>
+    <div class="value win" data-countup="16">16</div></div>
+  <div class="card"><div class="label">Losses</div>
+    <div class="value loss" data-countup="42">42</div></div>
+  <div class="card"><div class="label">Win Rate</div>
+    <div class="value rate"><span data-countup="27.6" data-suffix="%" data-decimals="1">0%</span></div></div>
 </div>
 
 <h2>Paper Trading (simulated)</h2>
-<div class="cards">
-  <div class="card"><div class="label">Trades</div><div class="value" style="color:#e0e0e0">28</div></div>
-  <div class="card"><div class="label">Win Rate</div><div class="value rate">52.2%</div></div>
-  <div class="card"><div class="label">Total P&amp;L</div><div class="value" style="color:#ff3d3d">−$109</div></div>
-  <div class="card"><div class="label">Open</div><div class="value pending">5</div></div>
+<div class="cards" id="paper-cards">
+  <div class="card"><div class="label">Trades</div>
+    <div class="value" style="color:#e0e0e0" data-countup="30">30</div></div>
+  <div class="card"><div class="label">Win Rate</div>
+    <div class="value rate"><span data-countup="50.0" data-suffix="%" data-decimals="1">0%</span></div></div>
+  <div class="card"><div class="label">Total P&amp;L</div>
+    <div class="value" style="color:#ff3d3d"
+         data-countup="157" data-prefix="−$">−$157</div></div>
+  <div class="card"><div class="label">Open</div>
+    <div class="value pending" data-countup="6">6</div></div>
 </div>
+
+<h2>Open Positions</h2>
+<div class="trades-wrap">
+<table class="trades-tbl" id="open-tbl"><thead><tr>
+  <th>Ticker</th><th>Side</th><th>Strike</th><th>Entry</th>
+  <th>Current</th><th>U-P&amp;L</th><th>Exp</th><th>Opened</th><th>Strategy</th>
+</tr></thead><tbody id="open-body">
+      <tr class="open-row" data-id="1fa7f466023e"><td class="td-contract">RIVN</td><td class="dir-put">PUT</td><td>17.0</td><td>$0.30</td><td class="td-mark">—</td><td class="td-upnl">—</td><td class="td-dim">2026-06-05</td><td class="td-time">06/02 17:41</td><td class="td-strat">Mean Reversion</td></tr>
+      <tr class="open-row" data-id="5d6e6be798e6"><td class="td-contract">CRM</td><td class="dir-put">PUT</td><td>185.0</td><td>$0.59</td><td class="td-mark">—</td><td class="td-upnl">—</td><td class="td-dim">2026-06-05</td><td class="td-time">06/02 17:40</td><td class="td-strat">Mean Reversion</td></tr>
+      <tr class="open-row" data-id="d560698af5bf"><td class="td-contract">LYFT</td><td class="dir-put">PUT</td><td>14.5</td><td>$0.49</td><td class="td-mark">—</td><td class="td-upnl">—</td><td class="td-dim">2026-06-05</td><td class="td-time">06/02 16:11</td><td class="td-strat">Momentum Breakout</td></tr>
+      <tr class="open-row" data-id="21052596d787"><td class="td-contract">CRM</td><td class="dir-put">PUT</td><td>187.5</td><td>$0.96</td><td class="td-mark">—</td><td class="td-upnl">—</td><td class="td-dim">2026-06-05</td><td class="td-time">06/02 16:11</td><td class="td-strat">Mean Reversion</td></tr>
+      <tr class="open-row" data-id="4cb8cc454895"><td class="td-contract">NET</td><td class="dir-put">PUT</td><td>242.5</td><td>$1.00</td><td class="td-mark">—</td><td class="td-upnl">—</td><td class="td-dim">2026-06-05</td><td class="td-time">06/02 15:16</td><td class="td-strat">Mean Reversion</td></tr>
+      <tr class="open-row" data-id="e52f492d7b75"><td class="td-contract">NOW</td><td class="dir-put">PUT</td><td>115.0</td><td>$0.70</td><td class="td-mark">—</td><td class="td-upnl">—</td><td class="td-dim">2026-06-05</td><td class="td-time">06/02 15:16</td><td class="td-strat">Mean Reversion</td></tr>
+</tbody></table>
+</div>
+
+<br>
+<h2>Closed Trades</h2>
+<div id="month-tabs" class="tab-group">
+    <button class="tab active" data-month="all">All</button>
+    <button class="tab" data-month="2026-06">Jun 2026</button>
+    <button class="tab" data-month="2026-05">May 2026</button>
+</div>
+<div id="week-tabs" class="tab-group"></div>
+<div class="trades-wrap">
+<table class="trades-tbl"><thead><tr>
+  <th>Contract</th><th>Strategy</th><th>Opened</th><th>Closed</th><th>Result</th><th>P&amp;L</th>
+</tr></thead><tbody id="trades-body">
+      <tr class="trade-row trade-loss" data-month="2026-06" data-week="1"><td class="td-contract">CRM260605P00180000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/02 15:16</td><td class="td-time">06/02 19:02</td><td class="loss">LOSS</td><td class="loss">−$48.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-06" data-week="1"><td class="td-contract">ADBE260605P00245000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/02 12:01</td><td class="td-time">06/02 13:35</td><td class="win">WIN</td><td class="win">+$33.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-06" data-week="1"><td class="td-contract">CRM260605P00195000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/02 12:01</td><td class="td-time">06/02 13:35</td><td class="win">WIN</td><td class="win">+$34.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-06" data-week="1"><td class="td-contract">ORCL260605P00220000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/02 12:01</td><td class="td-time">06/02 13:30</td><td class="loss">LOSS</td><td class="loss">−$40.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-06" data-week="1"><td class="td-contract">NOW260605P00123000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/01 17:41</td><td class="td-time">06/02 13:30</td><td class="win">WIN</td><td class="win">+$35.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-06" data-week="1"><td class="td-contract">PLTR260605P00150000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/01 17:40</td><td class="td-time">06/02 13:30</td><td class="win">WIN</td><td class="win">+$29.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-06" data-week="1"><td class="td-contract">CRM260605C00240000</td><td class="td-strat">Unusual Options Activity</td><td class="td-time">06/01 16:10</td><td class="td-time">06/02 13:30</td><td class="loss">LOSS</td><td class="loss">−$31.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-06" data-week="1"><td class="td-contract">PLTR260605P00147000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/01 16:10</td><td class="td-time">06/02 13:35</td><td class="win">WIN</td><td class="win">+$23.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-06" data-week="1"><td class="td-contract">HOOD260605P00084000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/01 16:10</td><td class="td-time">06/02 13:40</td><td class="win">WIN</td><td class="win">+$28.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-06" data-week="1"><td class="td-contract">PLTR260605P00146000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/01 12:01</td><td class="td-time">06/01 13:35</td><td class="win">WIN</td><td class="win">+$34.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-06" data-week="1"><td class="td-contract">SOFI260605P00018000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/01 12:01</td><td class="td-time">06/01 13:30</td><td class="win">WIN</td><td class="win">+$32.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-06" data-week="1"><td class="td-contract">HOOD260605P00085000</td><td class="td-strat">Mean Reversion</td><td class="td-time">06/01 12:01</td><td class="td-time">06/01 13:30</td><td class="win">WIN</td><td class="win">+$23.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-05" data-week="4"><td class="td-contract">RIOT260529P00028000</td><td class="td-strat">Mean Reversion</td><td class="td-time">05/28 16:10</td><td class="td-time">05/29 13:30</td><td class="win">WIN</td><td class="win">+$36.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-05" data-week="4"><td class="td-contract">RIOT260529P00025500</td><td class="td-strat">Mean Reversion</td><td class="td-time">05/28 12:01</td><td class="td-time">05/28 13:55</td><td class="loss">LOSS</td><td class="loss">−$52.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-05" data-week="4"><td class="td-contract">QCOM260529P00215000</td><td class="td-strat">Mean Reversion</td><td class="td-time">05/27 13:53</td><td class="td-time">05/27 14:10</td><td class="win">WIN</td><td class="win">+$23.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-05" data-week="4"><td class="td-contract">RIOT260529P00024500</td><td class="td-strat">Mean Reversion</td><td class="td-time">05/27 13:53</td><td class="td-time">05/27 17:50</td><td class="loss">LOSS</td><td class="loss">−$45.00</td></tr>
+      <tr class="trade-row trade-win" data-month="2026-05" data-week="4"><td class="td-contract">LRCX260529P00290000</td><td class="td-strat">Mean Reversion</td><td class="td-time">05/27 13:53</td><td class="td-time">05/27 14:10</td><td class="win">WIN</td><td class="win">+$21.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-05" data-week="3"><td class="td-contract">CRWD260522P00620000</td><td class="td-strat">Mean Reversion</td><td class="td-time">05/21 16:10</td><td class="td-time">05/22 13:30</td><td class="loss">LOSS</td><td class="loss">−$49.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-05" data-week="3"><td class="td-contract">DDOG260522P00197500</td><td class="td-strat">Mean Reversion</td><td class="td-time">05/20 17:40</td><td class="td-time">05/21 13:35</td><td class="loss">LOSS</td><td class="loss">−$36.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-05" data-week="3"><td class="td-contract">TGT260522C00128000</td><td class="td-strat">Unusual Options Activity</td><td class="td-time">05/20 17:40</td><td class="td-time">05/20 18:35</td><td class="loss">LOSS</td><td class="loss">−$40.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-05" data-week="3"><td class="td-contract">OXY260522P00058000</td><td class="td-strat">Unusual Options Activity</td><td class="td-time">05/20 16:10</td><td class="td-time">05/21 13:30</td><td class="loss">LOSS</td><td class="loss">−$48.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-05" data-week="3"><td class="td-contract">TGT260522C00130000</td><td class="td-strat">Momentum Breakout</td><td class="td-time">05/20 16:10</td><td class="td-time">05/20 18:25</td><td class="loss">LOSS</td><td class="loss">−$39.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-05" data-week="3"><td class="td-contract">ZS260522P00162500</td><td class="td-strat">Mean Reversion</td><td class="td-time">05/20 12:01</td><td class="td-time">05/20 14:50</td><td class="loss">LOSS</td><td class="loss">−$45.00</td></tr>
+      <tr class="trade-row trade-loss" data-month="2026-05" data-week="3"><td class="td-contract">DDOG260522P00195000</td><td class="td-strat">Mean Reversion</td><td class="td-time">05/20 12:01</td><td class="td-time">05/21 13:35</td><td class="loss">LOSS</td><td class="loss">−$35.00</td></tr>
+</tbody></table>
+</div>
+
+<br>
 <h2>By Strategy</h2>
-<table><thead><tr>
+<table class="strat-tbl"><thead><tr>
   <th>Strategy</th><th>Wins</th><th>Losses</th><th>Open</th><th>Expired</th><th>Win Rate</th>
 </tr></thead><tbody>
-        <tr>
-          <td>Mean Reversion</td>
-          <td class="win">7</td>
-          <td class="loss">15</td>
-          <td class="pending">12</td>
-          <td class="expired">0</td>
-          <td>31.8%</td>
-        </tr>
-        <tr>
-          <td>Momentum Breakout</td>
-          <td class="win">3</td>
-          <td class="loss">21</td>
-          <td class="pending">2</td>
-          <td class="expired">0</td>
-          <td>12.5%</td>
-        </tr>
-        <tr>
-          <td>Unusual Options Activity</td>
-          <td class="win">0</td>
-          <td class="loss">3</td>
-          <td class="pending">1</td>
-          <td class="expired">0</td>
-          <td>0.0%</td>
-        </tr>
-</tbody></table></body></html>
+        <tr><td>Mean Reversion</td><td class="win">13</td><td class="loss">17</td><td class="pending">7</td><td class="expired">0</td><td>43.3%</td></tr>
+        <tr><td>Momentum Breakout</td><td class="win">3</td><td class="loss">21</td><td class="pending">2</td><td class="expired">0</td><td>12.5%</td></tr>
+        <tr><td>Unusual Options Activity</td><td class="win">0</td><td class="loss">4</td><td class="pending">0</td><td class="expired">0</td><td>0.0%</td></tr>
+</tbody></table>
+
+<script>
+(function () {
+  var anime = window.anime;
+  if (!anime) return;
+
+  // Staggered card entrance (signal + paper card groups only; week panel animates separately)
+  anime({
+    targets: '#signal-cards .card, #paper-cards .card',
+    translateY: [20, 0],
+    opacity: [0, 1],
+    delay: anime.stagger(65),
+    duration: 480,
+    easing: 'easeOutCubic'
+  });
+
+  // Week panel slide down
+  anime({
+    targets: '#week-panel',
+    translateY: [-16, 0],
+    opacity: [0, 1],
+    duration: 550,
+    easing: 'easeOutCubic'
+  });
+
+  // Number countup — handles data-countup + optional data-prefix / data-suffix / data-decimals
+  document.querySelectorAll('[data-countup]').forEach(function (el) {
+    var target   = parseFloat(el.dataset.countup) || 0;
+    var prefix   = el.dataset.prefix   || '';
+    var suffix   = el.dataset.suffix   || '';
+    var decimals = parseInt(el.dataset.decimals || '0', 10);
+    var obj = { val: 0 };
+    anime({
+      targets: obj,
+      val: target,
+      duration: 1100,
+      easing: 'easeOutExpo',
+      update: function () {
+        el.textContent = prefix + obj.val.toFixed(decimals) + suffix;
+      }
+    });
+  });
+
+  // Win row flash green
+  anime({
+    targets: '.trade-win',
+    backgroundColor: ['rgba(0,200,83,0.14)', 'rgba(0,200,83,0)'],
+    duration: 900,
+    delay: anime.stagger(22, {start: 500}),
+    easing: 'easeOutQuad'
+  });
+  // Loss row flash red
+  anime({
+    targets: '.trade-loss',
+    backgroundColor: ['rgba(255,61,61,0.14)', 'rgba(255,61,61,0)'],
+    duration: 900,
+    delay: anime.stagger(22, {start: 600}),
+    easing: 'easeOutQuad'
+  });
+
+  // ── Tab filtering ──────────────────────────────────────────────────
+  var currentMonth = 'all';
+  var currentWeek  = 'all';
+
+  function filterTrades(month, week) {
+    var rows    = document.querySelectorAll('.trade-row');
+    var showing = [];
+    rows.forEach(function (r) {
+      var ok = (month === 'all' || r.dataset.month === month) &&
+               (week  === 'all' || r.dataset.week  === week);
+      if (ok) {
+        r.style.display = '';
+        showing.push(r);
+      } else {
+        r.style.display = 'none';
+      }
+    });
+    if (showing.length) {
+      anime({
+        targets: showing,
+        opacity: [0, 1],
+        translateX: [6, 0],
+        delay: anime.stagger(12),
+        duration: 240,
+        easing: 'easeOutCubic'
+      });
+    }
+  }
+
+  function buildWeekTabs(month) {
+    var rows  = document.querySelectorAll('.trade-row');
+    var weeks = [];
+    var seen  = {};
+    rows.forEach(function (r) {
+      if (r.dataset.month === month && !seen[r.dataset.week]) {
+        seen[r.dataset.week] = true;
+        weeks.push(r.dataset.week);
+      }
+    });
+    weeks.sort();
+    var container = document.getElementById('week-tabs');
+    container.innerHTML = '<button class="tab active" data-week="all">All Weeks</button>';
+    weeks.forEach(function (w) {
+      var btn = document.createElement('button');
+      btn.className    = 'tab';
+      btn.dataset.week = w;
+      btn.textContent  = 'Week ' + w;
+      container.appendChild(btn);
+    });
+    container.querySelectorAll('.tab').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        container.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('active'); });
+        this.classList.add('active');
+        currentWeek = this.dataset.week;
+        filterTrades(currentMonth, currentWeek);
+        anime({ targets: this, scale: [0.88, 1], duration: 200, easing: 'easeOutBack' });
+      });
+    });
+  }
+
+  document.querySelectorAll('#month-tabs .tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('#month-tabs .tab').forEach(function (t) {
+        t.classList.remove('active');
+      });
+      this.classList.add('active');
+      currentMonth = this.dataset.month;
+      currentWeek  = 'all';
+      var weekTabsEl = document.getElementById('week-tabs');
+      if (currentMonth === 'all') {
+        weekTabsEl.style.display = 'none';
+      } else {
+        buildWeekTabs(currentMonth);
+        weekTabsEl.style.display = 'flex';
+        anime({
+          targets: weekTabsEl,
+          opacity: [0, 1],
+          translateY: [-6, 0],
+          duration: 220,
+          easing: 'easeOutCubic'
+        });
+      }
+      filterTrades(currentMonth, currentWeek);
+      anime({ targets: this, scale: [0.88, 1], duration: 200, easing: 'easeOutBack' });
+    });
+  });
+
+  // ── Live open positions (polls paper_dashboard :8787) ──────────────
+  function fmtTime(ts) {
+    if (!ts) return '—';
+    try {
+      var d = new Date(ts);
+      return String(d.getMonth()+1).padStart(2,'0') + '/' +
+             String(d.getDate()).padStart(2,'0') + ' ' +
+             String(d.getHours()).padStart(2,'0') + ':' +
+             String(d.getMinutes()).padStart(2,'0');
+    } catch(e) { return '—'; }
+  }
+
+  function pollOpenPositions() {
+    fetch('http://localhost:8787/api/state', {cache: 'no-store'})
+      .then(function(r) { return r.json(); })
+      .then(function(s) {
+        var tbody = document.getElementById('open-body');
+        if (!tbody) return;
+        var open = s.open || [];
+        if (!open.length) {
+          tbody.innerHTML = '<tr><td colspan="9" class="td-empty">no open positions</td></tr>';
+          return;
+        }
+        var html = '';
+        for (var i = 0; i < open.length; i++) {
+          var r = open[i];
+          var markStr = (r.mark == null) ? '—' : '$' + r.mark.toFixed(2);
+          var upnlStr, upnlCls;
+          if (r.upnl == null) {
+            upnlStr = '—'; upnlCls = '';
+          } else {
+            var upnlPct = (r.mark != null && r.entry > 0)
+              ? ' (' + ((r.mark - r.entry) / r.entry * 100).toFixed(1) + '%)'
+              : '';
+            upnlStr = (r.upnl >= 0 ? '+$' : '-$') + Math.abs(r.upnl).toFixed(2) + upnlPct;
+            upnlCls = r.upnl >= 0 ? 'win' : 'loss';
+          }
+          var sc = (r.side || '').toUpperCase() === 'PUT' ? 'dir-put' : 'dir-call';
+          html += '<tr class="open-row">' +
+            '<td class="td-contract">' + (r.ticker || '—') + '</td>' +
+            '<td class="' + sc + '">' + (r.side || '—').toUpperCase() + '</td>' +
+            '<td>' + (r.strike || '—') + '</td>' +
+            '<td>$' + (r.entry || 0).toFixed(2) + '</td>' +
+            '<td class="td-mark">' + markStr + '</td>' +
+            '<td class="td-upnl ' + upnlCls + '">' + upnlStr + '</td>' +
+            '<td class="td-dim">' + (r.exp || '—') + '</td>' +
+            '<td class="td-time">' + fmtTime(r.open_time) + '</td>' +
+            '<td class="td-strat">' + (r.strategy || '—') + '</td>' +
+            '</tr>';
+        }
+        tbody.innerHTML = html;
+        anime({targets: '#open-tbl .open-row', opacity: [0, 1], duration: 300,
+               delay: anime.stagger(12), easing: 'easeOutCubic'});
+      })
+      .catch(function() {/* paper_dashboard offline — keep static rows */});
+  }
+  pollOpenPositions();
+  setInterval(pollOpenPositions, 30000);
+
+})();
+</script>
+</body></html>

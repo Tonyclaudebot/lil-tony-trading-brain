@@ -511,7 +511,8 @@ def regenerate_scoreboard(state: dict) -> None:
     def _week_of_month(d):
         return (d.day - 1) // 7 + 1
 
-    trade_rows = ""
+    open_trade_rows   = ""
+    closed_trade_rows = ""
     for t in sorted(paper, key=lambda x: x.get("open_time") or "", reverse=True):
         ot = t.get("open_time") or ""
         try:
@@ -522,30 +523,45 @@ def regenerate_scoreboard(state: dict) -> None:
             data_month, data_week = "unknown", "0"
 
         outcome = t.get("outcome", "open")
-        if outcome == "win":
-            o_cls, o_lbl, row_cls = "win",     "WIN",  "trade-win"
-        elif outcome == "expired_worthless":
-            o_cls, o_lbl, row_cls = "expired", "EXP",  "trade-loss"
-        elif outcome == "loss":
-            o_cls, o_lbl, row_cls = "loss",    "LOSS", "trade-loss"
+        if outcome == "open":
+            sc  = "dir-put" if (t.get("opt_type") or "").lower().startswith("p") else "dir-call"
+            sid = (t.get("direction") or t.get("opt_type") or "—").upper()
+            open_trade_rows += (
+                f'\n      <tr class="open-row" data-id="{t.get("id", "")}">'
+                f'<td class="td-contract">{t.get("ticker", "—")}</td>'
+                f'<td class="{sc}">{sid}</td>'
+                f'<td>{t.get("strike", "—")}</td>'
+                f'<td>${float(t.get("entry", 0) or 0):.2f}</td>'
+                f'<td class="td-mark">—</td>'
+                f'<td class="td-upnl">—</td>'
+                f'<td class="td-dim">{t.get("expiration", "—")}</td>'
+                f'<td class="td-time">{_fmt_ts(ot)}</td>'
+                f'<td class="td-strat">{t.get("strategy_name", t.get("strategy", "—"))}</td>'
+                f'</tr>'
+            )
         else:
-            o_cls, o_lbl, row_cls = "pending", "OPEN", "trade-open"
+            if outcome == "win":
+                o_cls, o_lbl, row_cls = "win",     "WIN",  "trade-win"
+            elif outcome == "expired_worthless":
+                o_cls, o_lbl, row_cls = "expired", "EXP",  "trade-loss"
+            else:
+                o_cls, o_lbl, row_cls = "loss",    "LOSS", "trade-loss"
 
-        pnl     = t.get("pnl")
-        pnl_str = "—" if pnl is None else (f"+${pnl:.2f}" if pnl >= 0 else f"−${abs(pnl):.2f}")
-        pnl_cls = "" if pnl is None else ("win" if pnl >= 0 else "loss")
+            pnl     = t.get("pnl")
+            pnl_str = "—" if pnl is None else (f"+${pnl:.2f}" if pnl >= 0 else f"−${abs(pnl):.2f}")
+            pnl_cls = "" if pnl is None else ("win" if pnl >= 0 else "loss")
 
-        trade_rows += (
-            f'\n      <tr class="trade-row {row_cls}"'
-            f' data-month="{data_month}" data-week="{data_week}">'
-            f'<td class="td-contract">{t.get("contract", "—")}</td>'
-            f'<td class="td-strat">{t.get("strategy_name", t.get("strategy", "—"))}</td>'
-            f'<td class="td-time">{_fmt_ts(ot)}</td>'
-            f'<td class="td-time">{_fmt_ts(t.get("exit_time"))}</td>'
-            f'<td class="{o_cls}">{o_lbl}</td>'
-            f'<td class="{pnl_cls}">{pnl_str}</td>'
-            f'</tr>'
-        )
+            closed_trade_rows += (
+                f'\n      <tr class="trade-row {row_cls}"'
+                f' data-month="{data_month}" data-week="{data_week}">'
+                f'<td class="td-contract">{t.get("contract", "—")}</td>'
+                f'<td class="td-strat">{t.get("strategy_name", t.get("strategy", "—"))}</td>'
+                f'<td class="td-time">{_fmt_ts(ot)}</td>'
+                f'<td class="td-time">{_fmt_ts(t.get("exit_time"))}</td>'
+                f'<td class="{o_cls}">{o_lbl}</td>'
+                f'<td class="{pnl_cls}">{pnl_str}</td>'
+                f'</tr>'
+            )
 
     # ── Month tabs ─────────────────────────────────────────────────────
     months_seen: list[str] = []
@@ -633,6 +649,13 @@ table.strat-tbl td {{ padding: 10px 10px; border-bottom: 1px solid #1a1a1a; }}
 table.strat-tbl tr:last-child td {{ border-bottom: none; }}
 @keyframes pulse {{ 0%,100% {{ opacity: 1; }} 50% {{ opacity: 0.4; }} }}
 .trade-open {{ animation: pulse 2.8s ease-in-out infinite; }}
+.dir-call {{ color: #00c853; }}
+.dir-put  {{ color: #ff6b00; }}
+.td-mark  {{ color: #e0e0e0; font-variant-numeric: tabular-nums; }}
+.td-upnl  {{ font-variant-numeric: tabular-nums; white-space: nowrap; }}
+.td-dim   {{ color: #555; font-size: 0.75rem; }}
+.td-empty {{ color: #555; padding: 14px 8px; text-align: center; font-size: 0.75rem; }}
+.open-row {{ animation: pulse 2.8s ease-in-out infinite; }}
 </style></head><body>
 <h1>LIL TONY — SCOREBOARD</h1>
 <div class="updated">Updated {updated}</div>
@@ -680,15 +703,25 @@ table.strat-tbl tr:last-child td {{ border-bottom: none; }}
     <div class="value pending" data-countup="{p_open}">{p_open}</div></div>
 </div>
 
+<h2>Open Positions</h2>
+<div class="trades-wrap">
+<table class="trades-tbl" id="open-tbl"><thead><tr>
+  <th>Ticker</th><th>Side</th><th>Strike</th><th>Entry</th>
+  <th>Current</th><th>U-P&amp;L</th><th>Exp</th><th>Opened</th><th>Strategy</th>
+</tr></thead><tbody id="open-body">{open_trade_rows}
+</tbody></table>
+</div>
+
+<br>
+<h2>Closed Trades</h2>
 <div id="month-tabs" class="tab-group">
 {month_tabs}
 </div>
 <div id="week-tabs" class="tab-group"></div>
-
 <div class="trades-wrap">
 <table class="trades-tbl"><thead><tr>
   <th>Contract</th><th>Strategy</th><th>Opened</th><th>Closed</th><th>Result</th><th>P&amp;L</th>
-</tr></thead><tbody id="trades-body">{trade_rows}
+</tr></thead><tbody id="trades-body">{closed_trade_rows}
 </tbody></table>
 </div>
 
@@ -844,6 +877,66 @@ table.strat-tbl tr:last-child td {{ border-bottom: none; }}
       anime({{ targets: this, scale: [0.88, 1], duration: 200, easing: 'easeOutBack' }});
     }});
   }});
+
+  // ── Live open positions (polls paper_dashboard :8787) ──────────────
+  function fmtTime(ts) {{
+    if (!ts) return '—';
+    try {{
+      var d = new Date(ts);
+      return String(d.getMonth()+1).padStart(2,'0') + '/' +
+             String(d.getDate()).padStart(2,'0') + ' ' +
+             String(d.getHours()).padStart(2,'0') + ':' +
+             String(d.getMinutes()).padStart(2,'0');
+    }} catch(e) {{ return '—'; }}
+  }}
+
+  function pollOpenPositions() {{
+    fetch('http://localhost:8787/api/state', {{cache: 'no-store'}})
+      .then(function(r) {{ return r.json(); }})
+      .then(function(s) {{
+        var tbody = document.getElementById('open-body');
+        if (!tbody) return;
+        var open = s.open || [];
+        if (!open.length) {{
+          tbody.innerHTML = '<tr><td colspan="9" class="td-empty">no open positions</td></tr>';
+          return;
+        }}
+        var html = '';
+        for (var i = 0; i < open.length; i++) {{
+          var r = open[i];
+          var markStr = (r.mark == null) ? '—' : '$' + r.mark.toFixed(2);
+          var upnlStr, upnlCls;
+          if (r.upnl == null) {{
+            upnlStr = '—'; upnlCls = '';
+          }} else {{
+            var upnlPct = (r.mark != null && r.entry > 0)
+              ? ' (' + ((r.mark - r.entry) / r.entry * 100).toFixed(1) + '%)'
+              : '';
+            upnlStr = (r.upnl >= 0 ? '+$' : '-$') + Math.abs(r.upnl).toFixed(2) + upnlPct;
+            upnlCls = r.upnl >= 0 ? 'win' : 'loss';
+          }}
+          var sc = (r.side || '').toUpperCase() === 'PUT' ? 'dir-put' : 'dir-call';
+          html += '<tr class="open-row">' +
+            '<td class="td-contract">' + (r.ticker || '—') + '</td>' +
+            '<td class="' + sc + '">' + (r.side || '—').toUpperCase() + '</td>' +
+            '<td>' + (r.strike || '—') + '</td>' +
+            '<td>$' + (r.entry || 0).toFixed(2) + '</td>' +
+            '<td class="td-mark">' + markStr + '</td>' +
+            '<td class="td-upnl ' + upnlCls + '">' + upnlStr + '</td>' +
+            '<td class="td-dim">' + (r.exp || '—') + '</td>' +
+            '<td class="td-time">' + fmtTime(r.open_time) + '</td>' +
+            '<td class="td-strat">' + (r.strategy || '—') + '</td>' +
+            '</tr>';
+        }}
+        tbody.innerHTML = html;
+        anime({{targets: '#open-tbl .open-row', opacity: [0, 1], duration: 300,
+               delay: anime.stagger(12), easing: 'easeOutCubic'}});
+      }})
+      .catch(function() {{/* paper_dashboard offline — keep static rows */}});
+  }}
+  pollOpenPositions();
+  setInterval(pollOpenPositions, 30000);
+
 }})();
 </script>
 </body></html>"""
