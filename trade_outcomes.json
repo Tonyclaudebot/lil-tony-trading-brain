@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-02T20:37:55.039116+00:00",
+    "updated_at": "2026-06-03T12:02:48.105253+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 16,
     "losses": 42,
     "expired": 0,
-    "open": 9
+    "open": 12
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -1303,8 +1303,8 @@
     "outcome_at": null,
     "implied_vol": 0.6070765733718874,
     "last_underlying": null,
-    "last_polled_at": "2026-06-02T20:37:48.236093+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-06-03T12:02:38.363440+00:00",
+    "poll_count": 6
   },
   "60934833-428b-4164-a5a9-3ac3ab4fb773": {
     "ticker": "NOW",
@@ -1325,8 +1325,8 @@
     "outcome_at": null,
     "implied_vol": 0.8533500957489013,
     "last_underlying": null,
-    "last_polled_at": "2026-06-02T20:37:49.577291+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-06-03T12:02:39.699580+00:00",
+    "poll_count": 6
   },
   "f57edff6-9f13-4449-a8c0-83cd8a81315c": {
     "ticker": "NET",
@@ -1347,8 +1347,8 @@
     "outcome_at": null,
     "implied_vol": 0.8557461881637572,
     "last_underlying": null,
-    "last_polled_at": "2026-06-02T20:37:50.970767+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-06-03T12:02:41.044483+00:00",
+    "poll_count": 6
   },
   "3f4bd0bb-6c02-455d-ad91-fb22b5c0a33e": {
     "ticker": "ORCL",
@@ -1369,8 +1369,8 @@
     "outcome_at": null,
     "implied_vol": 0.8271740961074828,
     "last_underlying": null,
-    "last_polled_at": "2026-06-02T20:37:52.314995+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-03T12:02:42.388259+00:00",
+    "poll_count": 5
   },
   "2f490691-3ce2-4893-bda2-5eecd3b1fe8d": {
     "ticker": "CRM",
@@ -1391,8 +1391,8 @@
     "outcome_at": null,
     "implied_vol": 0.6112828350067139,
     "last_underlying": null,
-    "last_polled_at": "2026-06-02T20:37:48.236149+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-03T12:02:38.363613+00:00",
+    "poll_count": 5
   },
   "235d3fbf-687b-4438-9ef5-33addaedae21": {
     "ticker": "LYFT",
@@ -1413,8 +1413,8 @@
     "outcome_at": null,
     "implied_vol": 0.5950008392333984,
     "last_underlying": null,
-    "last_polled_at": "2026-06-02T20:37:53.687783+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-03T12:02:43.832551+00:00",
+    "poll_count": 4
   },
   "1868fe7e-dcb7-446b-a524-474c2e465ed2": {
     "ticker": "CRM",
@@ -1435,8 +1435,8 @@
     "outcome_at": null,
     "implied_vol": 0.6176660633087159,
     "last_underlying": null,
-    "last_polled_at": "2026-06-02T20:37:48.236187+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-03T12:02:38.363817+00:00",
+    "poll_count": 4
   },
   "b0ee8643-fec5-49ef-9915-8cc8b632375d": {
     "ticker": "NET",
@@ -1457,8 +1457,8 @@
     "outcome_at": null,
     "implied_vol": 0.8898821687698363,
     "last_underlying": null,
-    "last_polled_at": "2026-06-02T20:37:50.970824+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-03T12:02:41.044542+00:00",
+    "poll_count": 4
   },
   "3f387331-eb31-4e0a-b5d8-fcb8fc3a9f9b": {
     "ticker": "RIVN",
@@ -1479,7 +1479,73 @@
     "outcome_at": null,
     "implied_vol": 0.7490367126464842,
     "last_underlying": null,
-    "last_polled_at": "2026-06-02T20:37:55.039005+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-03T12:02:45.205435+00:00",
+    "poll_count": 4
+  },
+  "99e6bdd1-4951-48c5-b295-542a56fead23": {
+    "ticker": "AMAT",
+    "contract": "AMAT260605P00455000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 455.0,
+    "expiration": "2026-06-05",
+    "sent_at": "2026-06-03T12:01:49.727895+00:00",
+    "spot_at_send": 491.98,
+    "entry": 2.71,
+    "target": 3.66,
+    "stop": 1.35,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.9310587549209594,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-03T12:02:46.730782+00:00",
+    "poll_count": 1
+  },
+  "0d463746-d881-417b-8036-9fed4440910f": {
+    "ticker": "LRCX",
+    "contract": "LRCX260605P00312500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 312.5,
+    "expiration": "2026-06-05",
+    "sent_at": "2026-06-03T12:01:54.244861+00:00",
+    "spot_at_send": 335.51,
+    "entry": 2.26,
+    "target": 3.05,
+    "stop": 1.13,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.9370799493789671,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-03T12:02:48.105040+00:00",
+    "poll_count": 1
+  },
+  "a6ee468a-9380-4305-9ea1-83851aac8e94": {
+    "ticker": "RIVN",
+    "contract": "RIVN260605P00017000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 17.0,
+    "expiration": "2026-06-05",
+    "sent_at": "2026-06-03T12:01:56.420561+00:00",
+    "spot_at_send": 17.255,
+    "entry": 0.35,
+    "target": 0.47,
+    "stop": 0.17,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.8513589096069336,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-03T12:02:45.205762+00:00",
+    "poll_count": 1
   }
 }
