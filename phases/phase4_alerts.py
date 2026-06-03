@@ -22,6 +22,7 @@ from scanner.strategies.base import CandidateStock
 from scanner.strategies.selector import pick_best_plan
 from send_alert import send_alert
 from alerts.imessage import send_imessage, format_alert_dict
+from paper_trading import engine as paper_engine
 
 TOP10_PATH  = Path(__file__).parent.parent / "phase3_top10.json"
 SEEN_PATH   = Path(__file__).parent.parent / "phase4_seen.json"
@@ -185,6 +186,25 @@ def run() -> list[str]:
                 logger.info(f"  iMessage {'sent' if ok else 'FAILED'} → {ticker}")
             except Exception as e:
                 logger.warning(f"  iMessage error for {ticker}: {e}")
+
+        # Paper trade: open a simulated position from the plan. Wrapped so a
+        # paper-trade failure can never block or kill a real alert (T1/T5).
+        try:
+            paper_engine.open_trade({
+                "ticker":        plan.ticker,
+                "opt_type":      plan.opt_type,
+                "strike":        plan.strike,
+                "expiration":    plan.expiration,
+                "entry":         plan.entry,
+                "stop":          plan.stop,
+                "target":        plan.target,
+                "spot":          plan.spot,
+                "strategy":      plan.strategy_key,
+                "strategy_name": plan.strategy_name,
+                "contract":      plan.contract,
+            })
+        except Exception as e:
+            logger.warning(f"  paper trade open failed for {ticker}: {e}")
 
         fired_records.append(alert_data)
         grader.log_alert(dataclasses.asdict(plan))

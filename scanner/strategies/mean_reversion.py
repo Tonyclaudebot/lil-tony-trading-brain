@@ -14,8 +14,15 @@ _RSI_OVERSOLD = 35    # → buy call (bounce play)
 _RSI_OVERBOUGHT = 65  # → buy put (pullback play)
 _MA_DEVIATION = 0.04  # price must be >4% from 20-day MA
 
-_TARGET_MULT = 2.0
+_TARGET_MULT = 1.35
 _STOP_MULT = 0.5
+
+# Re-enabled 2026-05-27 at Big Tony's direction with a 60 quality gate (mirrors
+# Momentum). Note: the 2026-05-21 backtest found NO out-of-sample edge for this
+# strategy (original RSI bands, RSI<=25/>=75, and MA-stretch>=6% variants all
+# failed test-set validation — see scripts/backtest_sweep.py). Re-enabled despite
+# that, so watch its graded win rate closely. Raise back toward 999 to re-bench.
+MIN_SCORE = 60.0
 
 
 def score(candidate: CandidateStock) -> float:

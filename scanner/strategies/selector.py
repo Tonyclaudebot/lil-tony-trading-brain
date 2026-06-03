@@ -39,11 +39,20 @@ def pick_best_plan(
 
     _strategy_map = {strat.KEY: strat for strat in _STRATEGIES}
     plan: TradePlan | None = None
+    attempted: list[str] = []   # strategies that cleared both gates and tried build_plan
+    benched:   list[str] = []   # strategies skipped by their MIN_SCORE gate
 
     for strategy_key, weighted_score in ranked:
         if weighted_score < 10:
             continue
         strat = _strategy_map[strategy_key]
+        # Backtest-validated firing gate: a strategy only fires when its raw score
+        # clears its MIN_SCORE. Momentum edge appears >=60; Mean Reversion is benched
+        # (MIN_SCORE above any reachable score). See scripts/backtest_sweep.py.
+        if raw_scores[strategy_key] < getattr(strat, "MIN_SCORE", 0.0):
+            benched.append(f"{strategy_key}(raw {raw_scores[strategy_key]:.0f}<{getattr(strat, 'MIN_SCORE', 0.0):.0f})")
+            continue
+        attempted.append(strategy_key)
         combined = round((candidate.composite_score + raw_scores[strategy_key]) / 2, 2)
         plan = strat.build_plan(candidate, combined)
         if plan is not None:
@@ -54,7 +63,12 @@ def pick_best_plan(
             break
 
     if plan is None:
-        logger.debug(f"{candidate.ticker}: no qualifying contract found")
+        # `attempted` strategies failed inside build_plan (their own log line gives the
+        # reason, e.g. ORB not confirmed); `benched` were blocked by MIN_SCORE.
+        detail = f"tried {attempted}" if attempted else "no strategy cleared its gate"
+        if benched:
+            detail += f"; benched {benched}"
+        logger.info(f"{candidate.ticker}: no valid plan — {detail}")
         return None
 
     # ── Risk assessment (all strategies) ─────────────────────────────────────

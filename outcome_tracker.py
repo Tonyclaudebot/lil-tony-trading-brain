@@ -46,6 +46,9 @@ import pytz
 from dotenv import load_dotenv
 load_dotenv()
 
+from paper_trading import engine as paper_engine
+from brain import learner
+
 # ── Paths ─────────────────────────────────────────────────────────────────
 ROOT          = Path(__file__).parent
 ALERTS_LOG    = ROOT / "logs" / "alerts.jsonl"      # READ-ONLY
@@ -239,6 +242,39 @@ def _bar_date(b) -> date:
     return datetime.fromtimestamp(b.timestamp / 1000, tz=timezone.utc).date()
 
 
+# Display name (as stored in trade_outcomes.json) -> learner strategy key.
+_STRATEGY_NAME_TO_KEY = {
+    "Momentum Breakout":        "momentum_breakout",
+    "Mean Reversion":           "mean_reversion",
+    "Unusual Options Activity": "unusual_options_activity",
+    "Volatility Breakout":      "volatility_breakout",
+}
+
+
+def _feed_learner(entry: dict) -> None:
+    """Train the strategy learner on a freshly-graded alert.
+
+    This grader is the single source of truth for the learner — the paper
+    tracker no longer feeds it, to avoid double-counting the same signal.
+    """
+    key = _STRATEGY_NAME_TO_KEY.get(entry.get("strategy", ""))
+    if not key:
+        return
+    o = (entry.get("outcome") or "").upper()
+    if o == "WIN":
+        outcome = "win"
+    elif o == "LOSS":
+        outcome = "loss"
+    elif o == "EXPIRED_WORTHLESS":
+        outcome = "expired_worthless"
+    else:
+        return
+    try:
+        learner.record_outcome(key, outcome)
+    except Exception as e:
+        log.warning(f"  learner feed failed for {key}: {e}")
+
+
 def grade_via_stock_proxy(entry: dict, bars: list, force_grade: bool = False) -> bool:
     """
     Walk daily stock bars after send date and BS-reprice the option.
@@ -393,6 +429,7 @@ def grade_via_stock_proxy(entry: dict, bars: list, force_grade: bool = False) ->
 
 # ── Scoreboard regen ──────────────────────────────────────────────────────
 def regenerate_scoreboard(state: dict) -> None:
+    # ── Signal stats ──────────────────────────────────────────────────
     by_strat = defaultdict(lambda: {"wins": 0, "losses": 0, "pending": 0, "expired": 0})
     wins = losses = pending = expired = 0
     for k, v in state.items():
@@ -400,68 +437,416 @@ def regenerate_scoreboard(state: dict) -> None:
             continue
         s = v.get("strategy", "Unknown")
         o = v.get("outcome", "open")
-        if o == "WIN":              wins += 1;     by_strat[s]["wins"]    += 1
-        elif o == "LOSS":           losses += 1;   by_strat[s]["losses"]  += 1
-        elif o == "expired_worthless": expired += 1; by_strat[s]["expired"] += 1
-        else:                       pending += 1;  by_strat[s]["pending"] += 1
+        if o == "WIN":                 wins += 1;     by_strat[s]["wins"]    += 1
+        elif o == "LOSS":              losses += 1;   by_strat[s]["losses"]  += 1
+        elif o == "expired_worthless": expired += 1;  by_strat[s]["expired"] += 1
+        else:                          pending += 1;  by_strat[s]["pending"] += 1
 
     total_graded = wins + losses
-    win_rate = round(wins / total_graded * 100, 1) if total_graded else 0
+    win_rate     = round(wins / total_graded * 100, 1) if total_graded else 0
 
-    rows = ""
+    strat_rows = ""
     for strat, c in sorted(by_strat.items()):
         graded = c["wins"] + c["losses"]
         rate = round(c["wins"] / graded * 100, 1) if graded else 0
-        rows += f"""
-        <tr>
-          <td>{strat}</td>
-          <td class="win">{c['wins']}</td>
-          <td class="loss">{c['losses']}</td>
-          <td class="pending">{c['pending']}</td>
-          <td class="expired">{c['expired']}</td>
-          <td>{"—" if not graded else f"{rate}%"}</td>
-        </tr>"""
+        strat_rows += (
+            f'\n        <tr><td>{strat}</td>'
+            f'<td class="win">{c["wins"]}</td>'
+            f'<td class="loss">{c["losses"]}</td>'
+            f'<td class="pending">{c["pending"]}</td>'
+            f'<td class="expired">{c["expired"]}</td>'
+            f'<td>{"—" if not graded else f"{rate}%"}</td></tr>'
+        )
 
-    updated = datetime.now().strftime("%b %d, %Y %I:%M %p")
+    # ── Paper trading aggregate ────────────────────────────────────────
+    paper       = paper_engine.get_all_trades()
+    p_total     = len(paper)
+    p_open      = sum(1 for t in paper if t.get("outcome") == "open")
+    p_wins      = sum(1 for t in paper if t.get("outcome") == "win")
+    p_losses    = sum(1 for t in paper if t.get("outcome") in ("loss", "expired_worthless"))
+    p_closed    = p_wins + p_losses
+    p_win_rate  = round(p_wins / p_closed * 100, 1) if p_closed else 0
+    p_pnl       = round(sum((t.get("pnl") or 0) for t in paper), 2)
+    p_pnl_color = "#00c853" if p_pnl >= 0 else "#ff3d3d"
+    p_pnl_pfx   = "−$" if p_pnl < 0 else "$"
+    p_pnl_str   = p_pnl_pfx + format(abs(p_pnl), ",.0f")
+
+    # ── Current week stats ─────────────────────────────────────────────
+    today      = date.today()
+    week_start = today - timedelta(days=today.weekday())
+    week_end   = week_start + timedelta(days=6)
+
+    def _open_date(t):
+        ts = t.get("open_time") or ""
+        try:
+            return datetime.fromisoformat(ts.replace("Z", "+00:00")).date()
+        except Exception:
+            return None
+
+    week_trades = []
+    for t in paper:
+        d = _open_date(t)
+        if d is not None and week_start <= d <= week_end:
+            week_trades.append(t)
+
+    wk_wins      = sum(1 for t in week_trades if t.get("outcome") == "win")
+    wk_losses    = sum(1 for t in week_trades if t.get("outcome") in ("loss", "expired_worthless"))
+    wk_closed    = wk_wins + wk_losses
+    wk_rate      = round(wk_wins / wk_closed * 100, 1) if wk_closed else 0
+    wk_pnl       = round(sum((t.get("pnl") or 0) for t in week_trades), 2)
+    wk_pnl_color = "#00c853" if wk_pnl >= 0 else "#ff3d3d"
+    wk_pnl_pfx   = "−$" if wk_pnl < 0 else "$"
+    wk_pnl_str   = wk_pnl_pfx + format(abs(wk_pnl), ",.0f")
+    wk_label     = f"{week_start.strftime('%b %d')} – {week_end.strftime('%b %d')}"
+
+    # ── Trade table rows ───────────────────────────────────────────────
+    def _fmt_ts(ts):
+        if not ts:
+            return "—"
+        try:
+            return datetime.fromisoformat(ts.replace("Z", "+00:00")).strftime("%m/%d %H:%M")
+        except Exception:
+            return "—"
+
+    def _week_of_month(d):
+        return (d.day - 1) // 7 + 1
+
+    trade_rows = ""
+    for t in sorted(paper, key=lambda x: x.get("open_time") or "", reverse=True):
+        ot = t.get("open_time") or ""
+        try:
+            ot_date    = datetime.fromisoformat(ot.replace("Z", "+00:00")).date()
+            data_month = ot_date.strftime("%Y-%m")
+            data_week  = str(_week_of_month(ot_date))
+        except Exception:
+            data_month, data_week = "unknown", "0"
+
+        outcome = t.get("outcome", "open")
+        if outcome == "win":
+            o_cls, o_lbl, row_cls = "win",     "WIN",  "trade-win"
+        elif outcome == "expired_worthless":
+            o_cls, o_lbl, row_cls = "expired", "EXP",  "trade-loss"
+        elif outcome == "loss":
+            o_cls, o_lbl, row_cls = "loss",    "LOSS", "trade-loss"
+        else:
+            o_cls, o_lbl, row_cls = "pending", "OPEN", "trade-open"
+
+        pnl     = t.get("pnl")
+        pnl_str = "—" if pnl is None else (f"+${pnl:.2f}" if pnl >= 0 else f"−${abs(pnl):.2f}")
+        pnl_cls = "" if pnl is None else ("win" if pnl >= 0 else "loss")
+
+        trade_rows += (
+            f'\n      <tr class="trade-row {row_cls}"'
+            f' data-month="{data_month}" data-week="{data_week}">'
+            f'<td class="td-contract">{t.get("contract", "—")}</td>'
+            f'<td class="td-strat">{t.get("strategy_name", t.get("strategy", "—"))}</td>'
+            f'<td class="td-time">{_fmt_ts(ot)}</td>'
+            f'<td class="td-time">{_fmt_ts(t.get("exit_time"))}</td>'
+            f'<td class="{o_cls}">{o_lbl}</td>'
+            f'<td class="{pnl_cls}">{pnl_str}</td>'
+            f'</tr>'
+        )
+
+    # ── Month tabs ─────────────────────────────────────────────────────
+    months_seen: list[str] = []
+    _seen_m: set[str] = set()
+    for t in paper:
+        ot = t.get("open_time") or ""
+        try:
+            m = datetime.fromisoformat(ot.replace("Z", "+00:00")).strftime("%Y-%m")
+            if m not in _seen_m:
+                _seen_m.add(m)
+                months_seen.append(m)
+        except Exception:
+            pass
+    months_seen.sort(reverse=True)
+
+    month_tabs = '    <button class="tab active" data-month="all">All</button>'
+    for m in months_seen:
+        try:
+            lbl = datetime.strptime(m, "%Y-%m").strftime("%b %Y")
+        except Exception:
+            lbl = m
+        month_tabs += f'\n    <button class="tab" data-month="{m}">{lbl}</button>'
+
+    def _wr(val, has_data):
+        if not has_data:
+            return "—"
+        return f'<span data-countup="{val}" data-suffix="%" data-decimals="1">0%</span>'
+
+    updated  = datetime.now().strftime("%b %d, %Y %I:%M %p")
+    sig_total = wins + losses + pending + expired
+
     html = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lil Tony — Scoreboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <style>
 * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-body {{ background: #0d0d0d; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-       padding: 24px 16px; max-width: 600px; margin: 0 auto; }}
+body {{ background: #0d0d0d; color: #e0e0e0;
+       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+       padding: 24px 16px; max-width: 700px; margin: 0 auto; }}
 h1 {{ font-size: 1.3rem; color: #ff6b00; letter-spacing: 1px; margin-bottom: 4px; }}
 .updated {{ font-size: 0.75rem; color: #555; margin-bottom: 6px; }}
-.method {{ font-size: 0.7rem; color: #b48a00; margin-bottom: 24px; }}
+.method  {{ font-size: 0.7rem;  color: #b48a00; margin-bottom: 24px; }}
+h2 {{ font-size: 0.8rem; color: #444; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 12px; }}
 .cards {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }}
-.card {{ background: #1a1a1a; border-radius: 10px; padding: 16px 12px; text-align: center; }}
+.card {{ background: #1a1a1a; border-radius: 10px; padding: 16px 12px;
+         text-align: center; opacity: 0; }}
 .card .label {{ font-size: 0.7rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }}
 .card .value {{ font-size: 2rem; font-weight: 700; margin-top: 4px; }}
 .win {{ color: #00c853; }} .loss {{ color: #ff3d3d; }}
 .pending {{ color: #888; }} .expired {{ color: #b48a00; }}
 .rate {{ color: #ff6b00; }}
-table {{ width: 100%; border-collapse: collapse; font-size: 0.85rem; }}
-th {{ text-align: left; padding: 8px 10px; color: #555; font-size: 0.7rem;
-      text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #222; }}
-td {{ padding: 10px 10px; border-bottom: 1px solid #1a1a1a; }}
-tr:last-child td {{ border-bottom: none; }}
-h2 {{ font-size: 0.8rem; color: #444; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }}
+.week-panel {{ background: #111; border: 1px solid #1f1f1f; border-radius: 12px;
+               padding: 16px; margin-bottom: 28px; opacity: 0; }}
+.week-panel .card {{ opacity: 1; }}
+.wp-header {{ display: flex; justify-content: space-between; align-items: baseline;
+              margin-bottom: 10px; }}
+.wp-title {{ font-size: 0.7rem; color: #ff6b00; text-transform: uppercase; letter-spacing: 1px; }}
+.wp-date  {{ font-size: 0.65rem; color: #555; }}
+.week-panel .cards {{ margin-bottom: 0; }}
+.tab-group {{ display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }}
+.tab {{ background: #1a1a1a; border: none; color: #555; padding: 5px 13px;
+        border-radius: 20px; font-size: 0.72rem; cursor: pointer; }}
+.tab:hover {{ color: #aaa; }}
+.tab.active {{ background: #ff6b00; color: #fff; }}
+#week-tabs {{ display: none; margin-bottom: 14px; }}
+.trades-wrap {{ overflow-x: auto; margin-top: 8px; }}
+table.trades-tbl {{ width: 100%; border-collapse: collapse; font-size: 0.8rem; }}
+table.trades-tbl th {{ text-align: left; padding: 6px 8px; color: #555; font-size: 0.68rem;
+                        text-transform: uppercase; letter-spacing: 0.8px;
+                        border-bottom: 1px solid #222; white-space: nowrap; }}
+table.trades-tbl td {{ padding: 9px 8px; border-bottom: 1px solid #141414; }}
+table.trades-tbl tr:last-child td {{ border-bottom: none; }}
+.td-contract {{ font-weight: 600; font-size: 0.82rem; }}
+.td-strat    {{ font-size: 0.7rem; color: #666; max-width: 110px; }}
+.td-time     {{ font-size: 0.7rem; color: #555; white-space: nowrap;
+                font-variant-numeric: tabular-nums; }}
+table.strat-tbl {{ width: 100%; border-collapse: collapse; font-size: 0.85rem; }}
+table.strat-tbl th {{ text-align: left; padding: 8px 10px; color: #555; font-size: 0.7rem;
+                       text-transform: uppercase; letter-spacing: 1px;
+                       border-bottom: 1px solid #222; }}
+table.strat-tbl td {{ padding: 10px 10px; border-bottom: 1px solid #1a1a1a; }}
+table.strat-tbl tr:last-child td {{ border-bottom: none; }}
+@keyframes pulse {{ 0%,100% {{ opacity: 1; }} 50% {{ opacity: 0.4; }} }}
+.trade-open {{ animation: pulse 2.8s ease-in-out infinite; }}
 </style></head><body>
 <h1>LIL TONY — SCOREBOARD</h1>
 <div class="updated">Updated {updated}</div>
 <div class="method">Auto-graded via stock-proxy BS reprice (estimate, not confirmed fill)</div>
-<div class="cards">
-  <div class="card"><div class="label">Signals</div><div class="value" style="color:#e0e0e0">{wins+losses+pending+expired}</div></div>
-  <div class="card"><div class="label">Wins</div><div class="value win">{wins}</div></div>
-  <div class="card"><div class="label">Losses</div><div class="value loss">{losses}</div></div>
-  <div class="card"><div class="label">Win Rate</div><div class="value rate">{"—" if not total_graded else f"{win_rate}%"}</div></div>
+
+<div id="week-panel" class="week-panel">
+  <div class="wp-header">
+    <span class="wp-title">This Week</span>
+    <span class="wp-date">{wk_label}</span>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="label">Win Rate</div>
+      <div class="value rate">{_wr(wk_rate, wk_closed > 0)}</div></div>
+    <div class="card"><div class="label">P&amp;L</div>
+      <div class="value" style="color:{wk_pnl_color}"
+           data-countup="{abs(wk_pnl):.0f}" data-prefix="{wk_pnl_pfx}">{wk_pnl_str}</div></div>
+    <div class="card"><div class="label">Wins</div>
+      <div class="value win" data-countup="{wk_wins}">{wk_wins}</div></div>
+    <div class="card"><div class="label">Losses</div>
+      <div class="value loss" data-countup="{wk_losses}">{wk_losses}</div></div>
+  </div>
 </div>
+
+<div class="cards" id="signal-cards">
+  <div class="card"><div class="label">Signals</div>
+    <div class="value" style="color:#e0e0e0" data-countup="{sig_total}">{sig_total}</div></div>
+  <div class="card"><div class="label">Wins</div>
+    <div class="value win" data-countup="{wins}">{wins}</div></div>
+  <div class="card"><div class="label">Losses</div>
+    <div class="value loss" data-countup="{losses}">{losses}</div></div>
+  <div class="card"><div class="label">Win Rate</div>
+    <div class="value rate">{_wr(win_rate, total_graded > 0)}</div></div>
+</div>
+
+<h2>Paper Trading (simulated)</h2>
+<div class="cards" id="paper-cards">
+  <div class="card"><div class="label">Trades</div>
+    <div class="value" style="color:#e0e0e0" data-countup="{p_total}">{p_total}</div></div>
+  <div class="card"><div class="label">Win Rate</div>
+    <div class="value rate">{_wr(p_win_rate, p_closed > 0)}</div></div>
+  <div class="card"><div class="label">Total P&amp;L</div>
+    <div class="value" style="color:{p_pnl_color}"
+         data-countup="{abs(p_pnl):.0f}" data-prefix="{p_pnl_pfx}">{p_pnl_str}</div></div>
+  <div class="card"><div class="label">Open</div>
+    <div class="value pending" data-countup="{p_open}">{p_open}</div></div>
+</div>
+
+<div id="month-tabs" class="tab-group">
+{month_tabs}
+</div>
+<div id="week-tabs" class="tab-group"></div>
+
+<div class="trades-wrap">
+<table class="trades-tbl"><thead><tr>
+  <th>Contract</th><th>Strategy</th><th>Opened</th><th>Closed</th><th>Result</th><th>P&amp;L</th>
+</tr></thead><tbody id="trades-body">{trade_rows}
+</tbody></table>
+</div>
+
+<br>
 <h2>By Strategy</h2>
-<table><thead><tr>
+<table class="strat-tbl"><thead><tr>
   <th>Strategy</th><th>Wins</th><th>Losses</th><th>Open</th><th>Expired</th><th>Win Rate</th>
-</tr></thead><tbody>{rows}
-</tbody></table></body></html>"""
+</tr></thead><tbody>{strat_rows}
+</tbody></table>
+
+<script>
+(function () {{
+  var anime = window.anime;
+  if (!anime) return;
+
+  // Staggered card entrance (signal + paper card groups only; week panel animates separately)
+  anime({{
+    targets: '#signal-cards .card, #paper-cards .card',
+    translateY: [20, 0],
+    opacity: [0, 1],
+    delay: anime.stagger(65),
+    duration: 480,
+    easing: 'easeOutCubic'
+  }});
+
+  // Week panel slide down
+  anime({{
+    targets: '#week-panel',
+    translateY: [-16, 0],
+    opacity: [0, 1],
+    duration: 550,
+    easing: 'easeOutCubic'
+  }});
+
+  // Number countup — handles data-countup + optional data-prefix / data-suffix / data-decimals
+  document.querySelectorAll('[data-countup]').forEach(function (el) {{
+    var target   = parseFloat(el.dataset.countup) || 0;
+    var prefix   = el.dataset.prefix   || '';
+    var suffix   = el.dataset.suffix   || '';
+    var decimals = parseInt(el.dataset.decimals || '0', 10);
+    var obj = {{ val: 0 }};
+    anime({{
+      targets: obj,
+      val: target,
+      duration: 1100,
+      easing: 'easeOutExpo',
+      update: function () {{
+        el.textContent = prefix + obj.val.toFixed(decimals) + suffix;
+      }}
+    }});
+  }});
+
+  // Win row flash green
+  anime({{
+    targets: '.trade-win',
+    backgroundColor: ['rgba(0,200,83,0.14)', 'rgba(0,200,83,0)'],
+    duration: 900,
+    delay: anime.stagger(22, {{start: 500}}),
+    easing: 'easeOutQuad'
+  }});
+  // Loss row flash red
+  anime({{
+    targets: '.trade-loss',
+    backgroundColor: ['rgba(255,61,61,0.14)', 'rgba(255,61,61,0)'],
+    duration: 900,
+    delay: anime.stagger(22, {{start: 600}}),
+    easing: 'easeOutQuad'
+  }});
+
+  // ── Tab filtering ──────────────────────────────────────────────────
+  var currentMonth = 'all';
+  var currentWeek  = 'all';
+
+  function filterTrades(month, week) {{
+    var rows    = document.querySelectorAll('.trade-row');
+    var showing = [];
+    rows.forEach(function (r) {{
+      var ok = (month === 'all' || r.dataset.month === month) &&
+               (week  === 'all' || r.dataset.week  === week);
+      if (ok) {{
+        r.style.display = '';
+        showing.push(r);
+      }} else {{
+        r.style.display = 'none';
+      }}
+    }});
+    if (showing.length) {{
+      anime({{
+        targets: showing,
+        opacity: [0, 1],
+        translateX: [6, 0],
+        delay: anime.stagger(12),
+        duration: 240,
+        easing: 'easeOutCubic'
+      }});
+    }}
+  }}
+
+  function buildWeekTabs(month) {{
+    var rows  = document.querySelectorAll('.trade-row');
+    var weeks = [];
+    var seen  = {{}};
+    rows.forEach(function (r) {{
+      if (r.dataset.month === month && !seen[r.dataset.week]) {{
+        seen[r.dataset.week] = true;
+        weeks.push(r.dataset.week);
+      }}
+    }});
+    weeks.sort();
+    var container = document.getElementById('week-tabs');
+    container.innerHTML = '<button class="tab active" data-week="all">All Weeks</button>';
+    weeks.forEach(function (w) {{
+      var btn = document.createElement('button');
+      btn.className    = 'tab';
+      btn.dataset.week = w;
+      btn.textContent  = 'Week ' + w;
+      container.appendChild(btn);
+    }});
+    container.querySelectorAll('.tab').forEach(function (btn) {{
+      btn.addEventListener('click', function () {{
+        container.querySelectorAll('.tab').forEach(function (t) {{ t.classList.remove('active'); }});
+        this.classList.add('active');
+        currentWeek = this.dataset.week;
+        filterTrades(currentMonth, currentWeek);
+        anime({{ targets: this, scale: [0.88, 1], duration: 200, easing: 'easeOutBack' }});
+      }});
+    }});
+  }}
+
+  document.querySelectorAll('#month-tabs .tab').forEach(function (tab) {{
+    tab.addEventListener('click', function () {{
+      document.querySelectorAll('#month-tabs .tab').forEach(function (t) {{
+        t.classList.remove('active');
+      }});
+      this.classList.add('active');
+      currentMonth = this.dataset.month;
+      currentWeek  = 'all';
+      var weekTabsEl = document.getElementById('week-tabs');
+      if (currentMonth === 'all') {{
+        weekTabsEl.style.display = 'none';
+      }} else {{
+        buildWeekTabs(currentMonth);
+        weekTabsEl.style.display = 'flex';
+        anime({{
+          targets: weekTabsEl,
+          opacity: [0, 1],
+          translateY: [-6, 0],
+          duration: 220,
+          easing: 'easeOutCubic'
+        }});
+      }}
+      filterTrades(currentMonth, currentWeek);
+      anime({{ targets: this, scale: [0.88, 1], duration: 200, easing: 'easeOutBack' }});
+    }});
+  }});
+}})();
+</script>
+</body></html>"""
     SCOREBOARD.write_text(html)
 
 
@@ -560,6 +945,7 @@ def poll_once(dry_run: bool) -> int:
         for aid, entry in items:
             if grade_via_stock_proxy(entry, bars, force_grade=force_week):
                 new_grades += 1
+                _feed_learner(entry)
 
         if n < len(by_ticker) - 1:
             time.sleep(PACING_SECONDS)

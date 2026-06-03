@@ -26,6 +26,7 @@ import pytz
 sys.path.insert(0, os.path.dirname(__file__))
 
 from config import settings
+from paper_trading import tracker as paper_tracker
 
 _CENTRAL = pytz.timezone("America/Chicago")
 
@@ -102,9 +103,26 @@ def main() -> None:
         logger.info(f"Today ({date.today()}) is a market holiday — exiting")
         return
 
+    # Paper-trade tracker lives and dies with this process (daemon thread).
+    paper_tracker.start_tracker()
+    logger.info("Paper-trade tracker thread started (5-min poll, 8:30 AM-3:00 PM CT)")
+
     logger.info(f"Schedule: {[s[0] for s in _SCHEDULE]} CT  |  stop {_STOP_TIME} CT")
 
     fired: set[str] = set()
+
+    # Restart guard: `fired` resets on every process start, so without this a
+    # mid-day (re)start would replay alert windows that already ran today and
+    # spam duplicate alerts. Seed already-passed windows so only future ones fire.
+    # Strict `>`: a window counts as passed only when the clock is past it, never
+    # when it equals it — otherwise the normal on-time 07:00 launchd start would
+    # mark its own 07:00 window as already-fired and skip the morning scan.
+    _now0 = _ct_hhmm()
+    for _t, _ in _SCHEDULE:
+        if _now0 > _t:
+            fired.add(_t)
+    if fired:
+        logger.info(f"Restart guard: skipping already-passed windows {sorted(fired)} (CT now {_now0})")
 
     while True:
         now = _ct_hhmm()

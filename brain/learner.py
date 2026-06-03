@@ -6,7 +6,7 @@ from datetime import datetime
 logger = logging.getLogger(__name__)
 
 _STATE_PATH = os.path.join(os.path.dirname(__file__), "state.json")
-_STRATEGIES = ["momentum_breakout", "unusual_options_activity", "mean_reversion"]
+_STRATEGIES = ["momentum_breakout", "unusual_options_activity", "mean_reversion", "volatility_breakout"]
 
 # Bayesian-style prior: start at 0.5 win rate with this many "ghost" trades
 _PRIOR_WEIGHT = 4

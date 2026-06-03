@@ -17,6 +17,11 @@ _MIN_VOL_RATIO = 1.8  # volume at least 1.8x average
 _TARGET_MULT = 2.5    # option premium target multiplier (stop: 0.5×)
 _STOP_MULT = 0.5
 
+# Backtest-validated firing gate (scripts/backtest_sweep.py, 2026-05-21):
+# out-of-sample edge appears only when the raw setup score is strong (>=~60),
+# ~60% directional win rate vs ~50% baseline. Weak setups are coin-flips — skip them.
+MIN_SCORE = 60.0
+
 
 def score(candidate: CandidateStock) -> float:
     """Rate how well this candidate fits a momentum breakout setup (0–100)."""
@@ -60,15 +65,17 @@ def build_plan(candidate: CandidateStock, combined_score: float) -> TradePlan | 
         or_low     = None
         t1 = t2 = t3 = target_hit = None
     else:
-        logger.debug(f"  {candidate.ticker} ORB not confirmed: {orb['reason']}")
+        logger.info(f"  {candidate.ticker} ORB not confirmed: {orb['reason']}")
         return None
 
     chain = get_options_chain(candidate.ticker, max_dte=settings.MAX_DTE, min_dte=settings.MIN_DTE)
     if chain.empty:
+        logger.info(f"  {candidate.ticker} no options chain (DTE {settings.MIN_DTE}-{settings.MAX_DTE})")
         return None
 
     side = chain[chain["type"] == opt_type].copy()
     if side.empty:
+        logger.info(f"  {candidate.ticker} no {opt_type} contracts in chain")
         return None
 
     # Near-ATM window: ±10% of spot (slightly wider for puts)
@@ -78,6 +85,7 @@ def build_plan(candidate: CandidateStock, combined_score: float) -> TradePlan | 
         & (side["volume"] > 0)
     ]
     if atm_candidates.empty:
+        logger.info(f"  {candidate.ticker} no near-ATM {opt_type} with volume>0")
         return None
 
     # Prefer $0.20–$1.00 premium; fall back up to $3.00 ceiling
@@ -88,6 +96,7 @@ def build_plan(candidate: CandidateStock, combined_score: float) -> TradePlan | 
     fallback  = atm_candidates[atm_candidates["lastPrice"] <= 3.00]
     window    = preferred if not preferred.empty else fallback
     if window.empty:
+        logger.info(f"  {candidate.ticker} no {opt_type} contract within $3.00 premium ceiling")
         return None
 
     row    = window.loc[window["volume"].idxmax()]
