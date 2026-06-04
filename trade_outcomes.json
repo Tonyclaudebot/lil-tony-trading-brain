@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-04T17:46:43.945473+00:00",
+    "updated_at": "2026-06-04T20:35:35.916422+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 18,
-    "losses": 51,
+    "losses": 52,
     "expired": 0,
-    "open": 16
+    "open": 15
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -1413,8 +1413,8 @@
     "outcome_at": null,
     "implied_vol": 0.5950008392333984,
     "last_underlying": 14.09,
-    "last_polled_at": "2026-06-04T17:46:34.847647+00:00",
-    "poll_count": 11
+    "last_polled_at": "2026-06-04T20:35:26.926902+00:00",
+    "poll_count": 12
   },
   "1868fe7e-dcb7-446b-a524-474c2e465ed2": {
     "ticker": "CRM",
@@ -1567,8 +1567,8 @@
     "outcome_at": null,
     "implied_vol": 0.8190950250625609,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:36.107009+00:00",
-    "poll_count": 7
+    "last_polled_at": "2026-06-04T20:35:28.128223+00:00",
+    "poll_count": 8
   },
   "2d120114-9811-4c04-b048-8cd890eba67f": {
     "ticker": "LRCX",
@@ -1589,8 +1589,8 @@
     "outcome_at": null,
     "implied_vol": 0.9492604827880858,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:37.392967+00:00",
-    "poll_count": 7
+    "last_polled_at": "2026-06-04T20:35:29.462134+00:00",
+    "poll_count": 8
   },
   "be80093c-41a1-4111-b0ba-6e59fbf9fe05": {
     "ticker": "RIVN",
@@ -1611,8 +1611,8 @@
     "outcome_at": null,
     "implied_vol": 0.9974300384521484,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:38.699305+00:00",
-    "poll_count": 7
+    "last_polled_at": "2026-06-04T20:35:30.724354+00:00",
+    "poll_count": 8
   },
   "42714b3d-0ea4-41cf-9c80-4e04bb4786f7": {
     "ticker": "MRVL",
@@ -1633,8 +1633,8 @@
     "outcome_at": null,
     "implied_vol": 1.5489933633804318,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:39.939706+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-06-04T20:35:32.036561+00:00",
+    "poll_count": 7
   },
   "d75da869-5211-42b7-97c7-7cb2c904e85e": {
     "ticker": "LRCX",
@@ -1655,8 +1655,8 @@
     "outcome_at": null,
     "implied_vol": 0.9366369342803953,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:37.393029+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-06-04T20:35:29.462196+00:00",
+    "poll_count": 7
   },
   "5056a36d-01f1-4b9a-997e-7319b2d5ba3c": {
     "ticker": "MS",
@@ -1670,13 +1670,13 @@
     "entry": 0.4,
     "target": 0.54,
     "stop": 0.2,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.2,
+    "graded_at": "2026-06-04T20:35:33.364537+00:00",
+    "outcome_at": "2026-06-04",
     "implied_vol": 0.4488153839111328,
-    "last_underlying": null,
+    "last_underlying": 218.27,
     "last_polled_at": "2026-06-04T17:46:41.219085+00:00",
     "poll_count": 6
   },
@@ -1699,8 +1699,8 @@
     "outcome_at": null,
     "implied_vol": 1.065611491203308,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:39.939770+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-04T20:35:32.036624+00:00",
+    "poll_count": 4
   },
   "a7589edb-1b36-4170-b36a-1c263363d695": {
     "ticker": "RIVN",
@@ -1721,8 +1721,8 @@
     "outcome_at": null,
     "implied_vol": 0.8329142379760743,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:38.699367+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-04T20:35:30.724414+00:00",
+    "poll_count": 4
   },
   "8a26f2cb-5f8d-40ae-8f21-89e95a079ec1": {
     "ticker": "AMD",
@@ -1743,8 +1743,8 @@
     "outcome_at": null,
     "implied_vol": 0.8194904041290283,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:42.507090+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-04T20:35:34.709149+00:00",
+    "poll_count": 4
   },
   "7cf8eb92-095c-4d7f-aff8-1fd4c94c0a4d": {
     "ticker": "MRVL",
@@ -1765,8 +1765,8 @@
     "outcome_at": null,
     "implied_vol": 1.8004639768600463,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:39.939813+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-04T20:35:32.036666+00:00",
+    "poll_count": 3
   },
   "31e5e121-3b55-462f-83c9-cb47b4a831ee": {
     "ticker": "RIVN",
@@ -1787,8 +1787,8 @@
     "outcome_at": null,
     "implied_vol": 0.6819651794433592,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:38.699410+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-04T20:35:30.724458+00:00",
+    "poll_count": 3
   },
   "88cb918a-f56c-434f-98fe-1200c43b6a8f": {
     "ticker": "LRCX",
@@ -1809,8 +1809,8 @@
     "outcome_at": null,
     "implied_vol": 0.868107738494873,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:37.393071+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-04T20:35:29.462239+00:00",
+    "poll_count": 3
   },
   "d048ba3c-5659-485f-a479-3cd2b5003b16": {
     "ticker": "MRVL",
@@ -1831,8 +1831,8 @@
     "outcome_at": null,
     "implied_vol": 1.830288896560669,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:39.939952+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-04T20:35:32.036703+00:00",
+    "poll_count": 2
   },
   "84715d30-b1f6-48fb-9fb8-3d46a920f7f3": {
     "ticker": "AMD",
@@ -1853,8 +1853,8 @@
     "outcome_at": null,
     "implied_vol": 0.832475986480713,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:42.507229+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-04T20:35:34.709207+00:00",
+    "poll_count": 2
   },
   "ae3fb1c9-10d8-41ac-a833-60a2eba2a466": {
     "ticker": "GME",
@@ -1875,7 +1875,7 @@
     "outcome_at": null,
     "implied_vol": 0.4882961273193358,
     "last_underlying": null,
-    "last_polled_at": "2026-06-04T17:46:43.945358+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-04T20:35:35.916272+00:00",
+    "poll_count": 2
   }
 }
