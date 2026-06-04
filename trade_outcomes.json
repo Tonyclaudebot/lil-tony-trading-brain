@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-03T20:37:58.854399+00:00",
+    "updated_at": "2026-06-04T12:02:47.017043+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 18,
     "losses": 51,
     "expired": 0,
-    "open": 7
+    "open": 10
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -1413,8 +1413,8 @@
     "outcome_at": null,
     "implied_vol": 0.5950008392333984,
     "last_underlying": 14.09,
-    "last_polled_at": "2026-06-03T20:37:52.283666+00:00",
-    "poll_count": 8
+    "last_polled_at": "2026-06-04T12:02:38.494478+00:00",
+    "poll_count": 9
   },
   "1868fe7e-dcb7-446b-a524-474c2e465ed2": {
     "ticker": "CRM",
@@ -1567,8 +1567,8 @@
     "outcome_at": null,
     "implied_vol": 0.8190950250625609,
     "last_underlying": null,
-    "last_polled_at": "2026-06-03T20:37:54.969779+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-04T12:02:39.839521+00:00",
+    "poll_count": 5
   },
   "2d120114-9811-4c04-b048-8cd890eba67f": {
     "ticker": "LRCX",
@@ -1589,8 +1589,8 @@
     "outcome_at": null,
     "implied_vol": 0.9492604827880858,
     "last_underlying": null,
-    "last_polled_at": "2026-06-03T20:37:56.313022+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-04T12:02:41.159960+00:00",
+    "poll_count": 5
   },
   "be80093c-41a1-4111-b0ba-6e59fbf9fe05": {
     "ticker": "RIVN",
@@ -1611,8 +1611,8 @@
     "outcome_at": null,
     "implied_vol": 0.9974300384521484,
     "last_underlying": null,
-    "last_polled_at": "2026-06-03T20:37:53.626360+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-04T12:02:42.493599+00:00",
+    "poll_count": 5
   },
   "42714b3d-0ea4-41cf-9c80-4e04bb4786f7": {
     "ticker": "MRVL",
@@ -1633,8 +1633,8 @@
     "outcome_at": null,
     "implied_vol": 1.5489933633804318,
     "last_underlying": null,
-    "last_polled_at": "2026-06-03T20:37:57.515936+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-04T12:02:43.850005+00:00",
+    "poll_count": 4
   },
   "d75da869-5211-42b7-97c7-7cb2c904e85e": {
     "ticker": "LRCX",
@@ -1655,8 +1655,8 @@
     "outcome_at": null,
     "implied_vol": 0.9366369342803953,
     "last_underlying": null,
-    "last_polled_at": "2026-06-03T20:37:56.313084+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-04T12:02:41.160023+00:00",
+    "poll_count": 4
   },
   "5056a36d-01f1-4b9a-997e-7319b2d5ba3c": {
     "ticker": "MS",
@@ -1677,7 +1677,73 @@
     "outcome_at": null,
     "implied_vol": 0.4488153839111328,
     "last_underlying": null,
-    "last_polled_at": "2026-06-03T20:37:58.854286+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-04T12:02:45.188724+00:00",
+    "poll_count": 4
+  },
+  "4acd667f-759a-4bbb-86a5-1d6895ac32de": {
+    "ticker": "MRVL",
+    "contract": "MRVL260605P00270000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 270.0,
+    "expiration": "2026-06-05",
+    "sent_at": "2026-06-04T12:01:45.919635+00:00",
+    "spot_at_send": 280.95,
+    "entry": 2.98,
+    "target": 4.02,
+    "stop": 1.49,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.065611491203308,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-04T12:02:43.850153+00:00",
+    "poll_count": 1
+  },
+  "a7589edb-1b36-4170-b36a-1c263363d695": {
+    "ticker": "RIVN",
+    "contract": "RIVN260605P00018000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 18.0,
+    "expiration": "2026-06-05",
+    "sent_at": "2026-06-04T12:01:49.924297+00:00",
+    "spot_at_send": 17.95,
+    "entry": 0.39,
+    "target": 0.53,
+    "stop": 0.2,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.8329142379760743,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-04T12:02:42.493751+00:00",
+    "poll_count": 1
+  },
+  "8a26f2cb-5f8d-40ae-8f21-89e95a079ec1": {
+    "ticker": "AMD",
+    "contract": "AMD260605P00485000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 485.0,
+    "expiration": "2026-06-05",
+    "sent_at": "2026-06-04T12:01:52.317939+00:00",
+    "spot_at_send": 519.94,
+    "entry": 0.95,
+    "target": 1.28,
+    "stop": 0.47,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.8194904041290283,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-04T12:02:47.016871+00:00",
+    "poll_count": 1
   }
 }
