@@ -1,181 +1,181 @@
 {
   "alerts": [
     {
-      "ticker": "ORCL",
-      "strategy": "composite",
-      "score": 91.68,
-      "momentum_score": 86.14,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "CRM",
-      "strategy": "composite",
-      "score": 91.0,
-      "momentum_score": 85.0,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "ADBE",
-      "strategy": "composite",
-      "score": 90.72,
-      "momentum_score": 84.54,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "NOW",
-      "strategy": "composite",
-      "score": 89.48,
-      "momentum_score": 82.47,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "LYFT",
-      "strategy": "composite",
-      "score": 85.59,
-      "momentum_score": 75.98,
-      "uoa_score": 100.0
-    },
-    {
       "ticker": "MRVL",
       "strategy": "composite",
-      "score": 85.4,
-      "momentum_score": 75.66,
+      "score": 88.8,
+      "momentum_score": 81.33,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "RIVN",
+      "strategy": "composite",
+      "score": 86.98,
+      "momentum_score": 78.3,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "GME",
+      "strategy": "composite",
+      "score": 82.05,
+      "momentum_score": 70.08,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "AMD",
+      "strategy": "composite",
+      "score": 78.63,
+      "momentum_score": 64.38,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "QCOM",
+      "strategy": "composite",
+      "score": 74.94,
+      "momentum_score": 58.24,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "AVGO",
+      "strategy": "composite",
+      "score": 69.35,
+      "momentum_score": 48.92,
       "uoa_score": 100.0
     },
     {
       "ticker": "MU",
       "strategy": "composite",
-      "score": 84.66,
-      "momentum_score": 74.44,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "NET",
-      "strategy": "composite",
-      "score": 84.53,
-      "momentum_score": 74.21,
+      "score": 68.31,
+      "momentum_score": 47.18,
       "uoa_score": 100.0
     },
     {
       "ticker": "DDOG",
       "strategy": "composite",
-      "score": 82.01,
-      "momentum_score": 70.01,
+      "score": 65.09,
+      "momentum_score": 41.82,
       "uoa_score": 100.0
     },
     {
-      "ticker": "RIOT",
+      "ticker": "ORCL",
       "strategy": "composite",
-      "score": 81.18,
-      "momentum_score": 68.64,
+      "score": 64.11,
+      "momentum_score": 40.19,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "CRWD",
+      "strategy": "composite",
+      "score": 63.33,
+      "momentum_score": 38.89,
       "uoa_score": 100.0
     }
   ],
   "top_picks": [
     {
-      "ticker": "ORCL",
-      "score": 91.68,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "CRM",
-      "score": 91.0,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "ADBE",
-      "score": 90.72,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "NOW",
-      "score": 89.48,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "LYFT",
-      "score": 85.59,
-      "strategy": "composite"
-    },
-    {
       "ticker": "MRVL",
-      "score": 85.4,
+      "score": 88.8,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "RIVN",
+      "score": 86.98,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "GME",
+      "score": 82.05,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "AMD",
+      "score": 78.63,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "QCOM",
+      "score": 74.94,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "AVGO",
+      "score": 69.35,
       "strategy": "composite"
     },
     {
       "ticker": "MU",
-      "score": 84.66,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "NET",
-      "score": 84.53,
+      "score": 68.31,
       "strategy": "composite"
     },
     {
       "ticker": "DDOG",
-      "score": 82.01,
+      "score": 65.09,
       "strategy": "composite"
     },
     {
-      "ticker": "RIOT",
-      "score": 81.18,
+      "ticker": "ORCL",
+      "score": 64.11,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "CRWD",
+      "score": 63.33,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-06-01T21:31:35.312255+00:00",
-  "last_updated": "2026-06-03T17:41:04.003143+00:00",
+  "scan_finished_at": "2026-06-03T21:31:41.498368+00:00",
+  "last_updated": "2026-06-04T12:01:53.866252+00:00",
   "prices": {},
   "phase4_alerts": [
     {
       "ticker": "MRVL",
       "contract_type": "PUT",
-      "strike": "$267.50",
+      "strike": "$270.00",
       "expiry": "06/05",
-      "entry": "$2.08",
-      "stop": "$1.04",
-      "target": "$4.16",
-      "score": 94,
-      "contract": "$267P",
+      "entry": "$2.98",
+      "stop": "$1.49",
+      "target": "$4.02",
+      "score": 89,
+      "contract": "$270P",
       "risk_iv_rank": 100.0,
       "risk_iv_label": "HIGH",
       "risk_premium_label": "EXPENSIVE",
       "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (100); expensive premium ($2.08)"
+      "risk_summary": "Watch: high IV rank (100); expensive premium ($2.98)"
     },
     {
-      "ticker": "LRCX",
+      "ticker": "RIVN",
       "contract_type": "PUT",
-      "strike": "$310.00",
+      "strike": "$18.00",
       "expiry": "06/05",
-      "entry": "$0.87",
-      "stop": "$0.43",
-      "target": "$1.17",
-      "score": 72,
-      "contract": "$310P",
+      "entry": "$0.39",
+      "stop": "$0.20",
+      "target": "$0.53",
+      "score": 87,
+      "contract": "$18P",
+      "risk_iv_rank": 100.0,
+      "risk_iv_label": "HIGH",
+      "risk_premium_label": "CHEAP",
+      "risk_score": "MEDIUM",
+      "risk_summary": "Watch: high IV rank (100); short-dated (1d to expiry)"
+    },
+    {
+      "ticker": "AMD",
+      "contract_type": "PUT",
+      "strike": "$485.00",
+      "expiry": "06/05",
+      "entry": "$0.95",
+      "stop": "$0.47",
+      "target": "$1.28",
+      "score": 79,
+      "contract": "$485P",
       "risk_iv_rank": 100.0,
       "risk_iv_label": "HIGH",
       "risk_premium_label": "FAIR",
       "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)"
-    },
-    {
-      "ticker": "MS",
-      "contract_type": "PUT",
-      "strike": "$202.50",
-      "expiry": "06/05",
-      "entry": "$0.40",
-      "stop": "$0.20",
-      "target": "$0.54",
-      "score": 63,
-      "contract": "$202P",
-      "risk_iv_rank": 63.3,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "MEDIUM",
-      "risk_summary": "Watch: high IV rank (63); short-dated (2d to expiry)"
+      "risk_summary": "Watch: high IV rank (100); short-dated (1d to expiry)"
     }
   ],
   "trades": {
@@ -1808,6 +1808,159 @@
         "risk_premium_label": "CHEAP",
         "risk_score": "MEDIUM",
         "risk_summary": "Watch: high IV rank (63); short-dated (2d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "4acd667f-759a-4bbb-86a5-1d6895ac32de",
+        "timestamp": "2026-06-04T12:01:45.919635+00:00",
+        "ticker": "MRVL",
+        "contract": "MRVL260605P00270000",
+        "opt_type": "put",
+        "strike": 270.0,
+        "expiration": "2026-06-05",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 280.95,
+        "entry": 2.98,
+        "target": 4.02,
+        "stop": 1.49,
+        "target_pct": 35.0,
+        "iv": 159.4,
+        "volume": 3765,
+        "open_interest": 2145,
+        "score": 94.4,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Ciena Stock Falls After Earnings Beat. Revenue Growth of 40% Wasn't Enough.",
+          "Trend Following, Technical Analysis And Why Price Means Everything",
+          "Ciena Stock Falls After Earnings Beat. Revenue Growth of 40% Wasn't Enough."
+        ],
+        "risk_iv_rank": 100.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "EXPENSIVE",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (100); expensive premium ($2.98)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "a7589edb-1b36-4170-b36a-1c263363d695",
+        "timestamp": "2026-06-04T12:01:49.924297+00:00",
+        "ticker": "RIVN",
+        "contract": "RIVN260605P00018000",
+        "opt_type": "put",
+        "strike": 18.0,
+        "expiration": "2026-06-05",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 17.95,
+        "entry": 0.39,
+        "target": 0.53,
+        "stop": 0.2,
+        "target_pct": 35.0,
+        "iv": 84.7,
+        "volume": 2394,
+        "open_interest": 1651,
+        "score": 91.14,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Rivian: Wait For The R2 Launch",
+          "Amazon tops 50,000 electric delivery vans globally in push toward net-zero by 2040",
+          "Rivian: Wait For The R2 Launch"
+        ],
+        "risk_iv_rank": 100.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "CHEAP",
+        "risk_score": "MEDIUM",
+        "risk_summary": "Watch: high IV rank (100); short-dated (1d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "8a26f2cb-5f8d-40ae-8f21-89e95a079ec1",
+        "timestamp": "2026-06-04T12:01:52.317939+00:00",
+        "ticker": "AMD",
+        "contract": "AMD260605P00485000",
+        "opt_type": "put",
+        "strike": 485.0,
+        "expiration": "2026-06-05",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 519.94,
+        "entry": 0.95,
+        "target": 1.28,
+        "stop": 0.47,
+        "target_pct": 35.0,
+        "iv": 91.8,
+        "volume": 1661,
+        "open_interest": 2827,
+        "score": 83.45,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "TSMC Stock Price Drops as CEO Warns Chip Supply Struggles to Meet AI Demand",
+          "What Is Going On With AMD Stock On Thursday?",
+          "TSMC Stock Price Drops as CEO Warns Chip Supply Struggles to Meet AI Demand"
+        ],
+        "risk_iv_rank": 100.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "FAIR",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (100); short-dated (1d to expiry)",
         "or_high": null,
         "or_low": null,
         "or_t1": null,
