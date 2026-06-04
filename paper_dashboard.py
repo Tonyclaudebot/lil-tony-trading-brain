@@ -333,6 +333,10 @@ h2{font-size:11px;color:var(--yel);text-shadow:0 0 5px var(--yel);margin:16px 0 
 .cal-day.pnl-loss{border-color:rgba(255,59,86,.3);color:var(--red);}
 .cal-day.pnl-flat{border-color:rgba(253,224,71,.2);color:var(--yel);}
 .cal-dot{font-size:7px;color:var(--dim);line-height:1.2;}
+.cal-pnl{font-size:8px;font-weight:700;line-height:1.1;}
+.pnl-win .cal-pnl{color:var(--grn);}
+.pnl-loss .cal-pnl{color:var(--red);}
+.pnl-flat .cal-pnl{color:var(--yel);}
 /* Open cards */
 .open-cards{display:flex;flex-direction:column;gap:6px;margin-bottom:6px;}
 @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.015)}}
@@ -409,7 +413,7 @@ td{padding:6px 6px;border-bottom:1px solid #0e1622;text-align:right;white-space:
 // ── state ────────────────────────────────────────────────────────────
 const MO=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 let STATE=null, initialized=false, prevClosedCount=-1;
-let currentRange='week', currentMonth='all', currentWeek='all';
+let currentRange='week', currentMonth='__thisweek__', currentWeek='all';
 let calMonth=new Date(); calMonth.setDate(1); calMonth.setHours(0,0,0,0);
 let expandedIdx=null;
 
@@ -555,7 +559,8 @@ function buildCalendar(closed,doAnimate,slideDir){
     const trs=byDate[k]||[];
     const pnl=trs.reduce((s,r)=>s+(r.pnl||0),0);
     const pc=trs.length===0?'':(pnl>0?'pnl-win':pnl<0?'pnl-loss':'pnl-flat');
-    html+=`<div class="cal-day ${pc}${trs.length?' has-trades':''}" data-date="${k}">${d}${trs.length?`<div class="cal-dot">${trs.length}T</div>`:''}</div>`;
+    const pnlStr=trs.length===0?'':(pnl>=0?'+$':'-$')+Math.abs(pnl).toFixed(0);
+    html+=`<div class="cal-day ${pc}${trs.length?' has-trades':''}" data-date="${k}">${d}${trs.length?`<div class="cal-dot">${trs.length}T</div><div class="cal-pnl">${pnlStr}</div>`:''}</div>`;
   }
   html+='</div>';
   const calEl=document.getElementById('calendar');
@@ -667,8 +672,9 @@ function buildOpenCards(open,doAnimate){
       </div></div>
     </div>`;
   });
-  el.innerHTML=html;
+  const prevExpanded=expandedIdx;
   expandedIdx=null;
+  el.innerHTML=html;
   if(doAnimate){
     const news=el.querySelectorAll('.oc-new');
     if(news.length)anime({targets:news,translateX:[-30,0],opacity:[0,1],duration:400,easing:'easeOutCubic'});
@@ -676,6 +682,18 @@ function buildOpenCards(open,doAnimate){
   el.querySelectorAll('.open-card').forEach((card,i)=>{
     card.addEventListener('click',()=>toggleCard(i));
   });
+  // restore previously expanded card without animation so 5s refresh doesn't close it
+  if(prevExpanded!==null){
+    const det=document.getElementById('ocd-'+prevExpanded);
+    const chv=document.getElementById('chev-'+prevExpanded);
+    if(det){
+      const inner=det.querySelector('.oc-detail-inner');
+      const h=(inner?inner.scrollHeight:60)+14;
+      det.style.height=h+'px'; det.style.opacity='1';
+      if(chv)chv.innerHTML='&#9652;';
+      expandedIdx=prevExpanded;
+    }
+  }
 }
 
 function toggleCard(i){
@@ -703,11 +721,24 @@ function toggleCard(i){
 }
 
 // ── closed trades ────────────────────────────────────────────────────
+function _thisWeekBounds(){
+  const now=new Date(),dow=now.getDay(),mo=dow===0?6:dow-1;
+  const s=new Date(now);s.setDate(now.getDate()-mo);s.setHours(0,0,0,0);
+  const e=new Date(s);e.setDate(s.getDate()+6);e.setHours(23,59,59,999);
+  return{s,e};
+}
+
 function applyClosedFilter(){
   const rows=document.querySelectorAll('#closedtbl .trade-row');
   const showing=[];
+  const{s:wkS,e:wkE}=_thisWeekBounds();
   rows.forEach(r=>{
-    const ok=(currentMonth==='all'||r.dataset.month===currentMonth)&&(currentWeek==='all'||r.dataset.week===currentWeek);
+    let ok;
+    if(currentMonth==='__thisweek__'){
+      ok=r.dataset.thisweek==='1';
+    } else {
+      ok=(currentMonth==='all'||r.dataset.month===currentMonth)&&(currentWeek==='all'||r.dataset.week===currentWeek);
+    }
     if(ok){r.style.display='';showing.push(r);}else r.style.display='none';
   });
   if(showing.length)anime({targets:showing,opacity:[0,1],translateX:[4,0],delay:anime.stagger(7),duration:160,easing:'easeOutCubic'});
@@ -715,7 +746,7 @@ function applyClosedFilter(){
 
 function buildWeekTabs(closed){
   const el=document.getElementById('week-tabs');
-  if(currentMonth==='all'){el.style.display='none';return;}
+  if(currentMonth==='all'||currentMonth==='__thisweek__'){el.style.display='none';return;}
   const ws=[],seen={};
   closed.forEach(r=>{const ts=r.open_time||r.exit_time;if(!ts)return;const d=new Date(ts);if(monthKey(d)!==currentMonth)return;const w=weekOfMonth(d).toString();if(!seen[w]){seen[w]=true;ws.push(w);}});
   ws.sort();
@@ -734,8 +765,10 @@ function buildMonthTabs(closed){
   closed.forEach(r=>{const ts=r.open_time||r.exit_time;if(!ts)return;const k=monthKey(new Date(ts));if(!seen[k]){seen[k]=true;ms.push(k);}});
   ms.sort().reverse();
   const el=document.getElementById('month-tabs');
-  el.innerHTML='<button class="tab'+(currentMonth==='all'?' active':'')+'" data-month="all">ALL</button>';
+  // THIS WEEK first, then months, then ALL
+  el.innerHTML=`<button class="tab${currentMonth==='__thisweek__'?' active':''}" data-month="__thisweek__">THIS WEEK</button>`;
   ms.forEach(m=>{el.innerHTML+=`<button class="tab${currentMonth===m?' active':''}" data-month="${m}">${MO[parseInt(m.split('-')[1])-1]} ${m.split('-')[0]}</button>`;});
+  el.innerHTML+=`<button class="tab${currentMonth==='all'?' active':''}" data-month="all">ALL</button>`;
   el.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',function(){
     el.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
     this.classList.add('active');currentMonth=this.dataset.month;currentWeek='all';
@@ -745,13 +778,16 @@ function buildMonthTabs(closed){
 }
 
 function buildClosed(closed,doAnimate){
+  const{s:wkS,e:wkE}=_thisWeekBounds();
   let ch='<tr><th>TICKER</th><th>SIDE</th><th>STRIKE</th><th>RESULT</th><th>OPENED</th><th>CLOSED</th><th>ENTRY</th><th>EXIT</th><th>P&L</th><th>STRAT</th></tr>';
   if(!closed.length){document.getElementById('closedtbl').innerHTML=ch+'<tr><td colspan="10" class="empty">NOTHING CLOSED YET</td></tr>';return;}
   closed.forEach(r=>{
     const ts=r.open_time||r.exit_time;let dm='unknown',dw='0';
     if(ts){const d=new Date(ts);dm=monthKey(d);dw=weekOfMonth(d).toString();}
+    const exitD=r.exit_time?new Date(r.exit_time):null;
+    const isThisWeek=exitD&&exitD>=wkS&&exitD<=wkE?'1':'0';
     const res=r.outcome==='win'?'<span class="win">WIN</span>':'<span class="loss">'+(r.outcome==='loss'?'LOSS':'EXP')+'</span>';
-    ch+=`<tr class="trade-row ${r.outcome==='win'?'trade-win':'trade-loss'}" data-month="${dm}" data-week="${dw}">
+    ch+=`<tr class="trade-row ${r.outcome==='win'?'trade-win':'trade-loss'}" data-month="${dm}" data-week="${dw}" data-thisweek="${isThisWeek}">
       <td class="${r.side==='PUT'?'put':'call'}">${r.ticker}</td>
       <td class="${r.side==='PUT'?'put':'call'}">${r.side||'&mdash;'}</td>
       <td>${r.strike==null?'&mdash;':r.strike}</td>
