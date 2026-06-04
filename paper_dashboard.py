@@ -904,11 +904,32 @@ def main() -> None:
     print(f"    on this Mac:        http://localhost:{port}")
     print(f"    on iPhone / iPad:   http://{ip}:{port}   (same WiFi)\n")
     print("  read-only — never touches the ledger. Ctrl-C to stop.\n")
+    save_gh_pages()
     try:
         srv.serve_forever()
     except KeyboardInterrupt:
         print("\n  arcade closed.\n")
         srv.shutdown()
+
+
+def save_gh_pages() -> None:
+    """Write PAGE to docs/paper-arcade/index.html and push only that file."""
+    dest = ROOT / "docs" / "paper-arcade" / "index.html"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(PAGE, encoding="utf-8")
+    rel = str(dest.relative_to(ROOT))
+    cmds = [
+        ["git", "-C", str(ROOT), "add", rel],
+        ["git", "-C", str(ROOT), "commit", "--allow-empty",
+         "-m", "chore: update paper-arcade GitHub Pages snapshot"],
+        ["git", "-C", str(ROOT), "push", "origin", "main"],
+    ]
+    for cmd in cmds:
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            print(f"  [gh-pages] {cmd[-1]} failed: {result.stderr.strip()}")
+            return
+    print("  [gh-pages] docs/paper-arcade/index.html pushed.")
 
 
 if __name__ == "__main__":
