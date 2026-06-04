@@ -810,8 +810,11 @@ function buildClosed(closed,doAnimate){
 // ── main tick ────────────────────────────────────────────────────────
 async function tick(){
   let s;
-  try{s=await(await fetch('/api/state',{cache:'no-store'})).json();}
-  catch(e){document.getElementById('foot').innerHTML='&#9888; LOST CONNECTION';return;}
+  if(window.__GH_STATE){ s=window.__GH_STATE; }
+  else{
+    try{s=await(await fetch('/api/state',{cache:'no-store'})).json();}
+    catch(e){document.getElementById('foot').innerHTML='&#9888; LOST CONNECTION';return;}
+  }
   STATE=s;
   const v=s.vitals,t=s.totals;
 
@@ -842,7 +845,7 @@ async function tick(){
 animateTitle();
 buildRangeSelector();
 tick();
-setInterval(tick,5000);
+if(!window.__GH_STATE) setInterval(tick,5000);
 </script>
 </body></html>"""
 
@@ -913,10 +916,27 @@ def main() -> None:
 
 
 def save_gh_pages() -> None:
-    """Write PAGE to docs/paper-arcade/index.html and push only that file."""
+    """Render PAGE with current ledger state baked in as window.__GH_STATE,
+    then push only docs/paper-arcade/index.html. GitHub Pages is static —
+    no /api/state — so the data has to be inlined or the page is blank."""
     dest = ROOT / "docs" / "paper-arcade" / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(PAGE, encoding="utf-8")
+    try:
+        state = build_state()
+    except Exception as e:
+        print(f"  [gh-pages] build_state failed ({e}) — snapshot not pushed")
+        return
+    # Escape </ in any string field so an embedded </script> can't break out.
+    inline = json.dumps(state, default=str).replace("</", "<\\/")
+    marker = "</body></html>"
+    if marker not in PAGE:
+        print("  [gh-pages] PAGE missing </body></html> marker — aborting")
+        return
+    rendered = PAGE.replace(
+        marker,
+        f"<script>window.__GH_STATE={inline};</script>\n</body></html>",
+    )
+    dest.write_text(rendered, encoding="utf-8")
     rel = str(dest.relative_to(ROOT))
     cmds = [
         ["git", "-C", str(ROOT), "add", rel],
