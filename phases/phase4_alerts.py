@@ -151,8 +151,8 @@ def run() -> list[str]:
         )
         send_alert(alert_data)
 
-        recipient = os.getenv("IMESSAGE_RECIPIENT", "")
-        if recipient:
+        recipients = [r.strip() for r in os.getenv("IMESSAGE_RECIPIENT", "").split(",") if r.strip()]
+        if recipients:
             try:
                 imsg_data = {
                     "ticker":     plan.ticker,
@@ -182,8 +182,9 @@ def run() -> list[str]:
                         "risk_summary":       plan.risk_summary,
                     })
                 imsg = format_alert_dict(imsg_data)
-                ok = send_imessage(recipient, imsg)
-                logger.info(f"  iMessage {'sent' if ok else 'FAILED'} → {ticker}")
+                for recipient in recipients:
+                    ok = send_imessage(recipient, imsg)
+                    logger.info(f"  iMessage {'sent' if ok else 'FAILED'} → {ticker} → {recipient}")
             except Exception as e:
                 logger.warning(f"  iMessage error for {ticker}: {e}")
 
