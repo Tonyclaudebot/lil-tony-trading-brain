@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-08T20:38:53.125496+00:00",
+    "updated_at": "2026-06-09T12:07:41.583194+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 22,
     "losses": 66,
     "expired": 0,
-    "open": 6
+    "open": 7
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -1963,8 +1963,8 @@
     "outcome_at": null,
     "implied_vol": 0.32778651714324947,
     "last_underlying": null,
-    "last_polled_at": "2026-06-08T20:38:49.088864+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-09T12:07:32.856497+00:00",
+    "poll_count": 3
   },
   "699309e4-89fa-4ab4-b964-db55c5d431cb": {
     "ticker": "MSTR",
@@ -1985,8 +1985,8 @@
     "outcome_at": null,
     "implied_vol": 0.955858073234558,
     "last_underlying": null,
-    "last_polled_at": "2026-06-08T20:38:46.407231+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-09T12:07:34.262588+00:00",
+    "poll_count": 2
   },
   "9457f7d0-bc1e-438c-b317-573fc36e20f6": {
     "ticker": "AMGN",
@@ -2007,8 +2007,8 @@
     "outcome_at": null,
     "implied_vol": 0.40788174152374257,
     "last_underlying": null,
-    "last_polled_at": "2026-06-08T20:38:47.746347+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-09T12:07:35.668455+00:00",
+    "poll_count": 2
   },
   "33fd9733-45b3-4bfc-8b1e-9fbb3c6e13fc": {
     "ticker": "ABBV",
@@ -2029,8 +2029,8 @@
     "outcome_at": null,
     "implied_vol": 0.33196896076202387,
     "last_underlying": null,
-    "last_polled_at": "2026-06-08T20:38:50.465947+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-09T12:07:37.002920+00:00",
+    "poll_count": 3
   },
   "f7282c72-50ff-4323-80ee-d121188a43b1": {
     "ticker": "BAC",
@@ -2051,8 +2051,8 @@
     "outcome_at": null,
     "implied_vol": 0.2953130340576171,
     "last_underlying": null,
-    "last_polled_at": "2026-06-08T20:38:51.780374+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-09T12:07:39.944706+00:00",
+    "poll_count": 3
   },
   "2de25988-de78-46d4-9e3f-077590209368": {
     "ticker": "NET",
@@ -2073,7 +2073,29 @@
     "outcome_at": null,
     "implied_vol": 0.938794846534729,
     "last_underlying": null,
-    "last_polled_at": "2026-06-08T20:38:53.125413+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-09T12:07:41.583008+00:00",
+    "poll_count": 3
+  },
+  "d0e30c0a-641e-40e5-ac9a-1a53bffaab9a": {
+    "ticker": "MSTR",
+    "contract": "MSTR260612C00135000",
+    "strategy": "Mean Reversion",
+    "opt_type": "call",
+    "strike": 135.0,
+    "expiration": "2026-06-12",
+    "sent_at": "2026-06-09T12:01:52.473320+00:00",
+    "spot_at_send": 125.38,
+    "entry": 2.03,
+    "target": 2.74,
+    "stop": 1.01,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.1126997089385988,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-09T12:07:34.262898+00:00",
+    "poll_count": 1
   }
 }
