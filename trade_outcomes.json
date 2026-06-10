@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-10T16:15:57.913695+00:00",
+    "updated_at": "2026-06-10T17:43:19.172139+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 23,
     "losses": 72,
     "expired": 0,
-    "open": 10
+    "open": 13
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -2117,8 +2117,8 @@
     "outcome_at": null,
     "implied_vol": 1.1235273790359495,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:48.612694+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-06-10T17:43:08.422043+00:00",
+    "poll_count": 7
   },
   "f27d6f02-1f41-44c4-aaf7-9f85c8c82369": {
     "ticker": "AMAT",
@@ -2139,8 +2139,8 @@
     "outcome_at": null,
     "implied_vol": 0.6889819669723509,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:49.800711+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-06-10T17:43:09.772438+00:00",
+    "poll_count": 7
   },
   "dd8b34cc-195a-4715-8ad9-cada338e5eb7": {
     "ticker": "LRCX",
@@ -2161,8 +2161,8 @@
     "outcome_at": null,
     "implied_vol": 0.6857951164245604,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:51.153341+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-06-10T17:43:11.131124+00:00",
+    "poll_count": 7
   },
   "8d8fda68-5d41-4752-81c8-ee1b980368e0": {
     "ticker": "MSTR",
@@ -2183,8 +2183,8 @@
     "outcome_at": null,
     "implied_vol": 0.9783136987686157,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:52.524336+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-06-10T17:43:12.539167+00:00",
+    "poll_count": 6
   },
   "8e6da8af-2cb6-4ef7-af44-4c86a8515c94": {
     "ticker": "HD",
@@ -2205,8 +2205,8 @@
     "outcome_at": null,
     "implied_vol": 0.44285611629486077,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:53.894954+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-10T17:43:13.738019+00:00",
+    "poll_count": 3
   },
   "6938cf68-7fc1-4195-9e46-8e86205408bd": {
     "ticker": "UNH",
@@ -2227,8 +2227,8 @@
     "outcome_at": null,
     "implied_vol": 0.4211293220520018,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:55.225742+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-10T17:43:15.092320+00:00",
+    "poll_count": 3
   },
   "491a5455-9349-44ce-b23e-dcd6bceb18c2": {
     "ticker": "BAC",
@@ -2249,8 +2249,8 @@
     "outcome_at": null,
     "implied_vol": 0.304802131652832,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:56.568551+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-10T17:43:16.451488+00:00",
+    "poll_count": 3
   },
   "8bb81a25-920b-4aea-8d54-1dcd4c192e8d": {
     "ticker": "HD",
@@ -2271,8 +2271,8 @@
     "outcome_at": null,
     "implied_vol": 0.4466955804824829,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:53.895269+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-10T17:43:13.738078+00:00",
+    "poll_count": 2
   },
   "0efc5ff6-3841-49a2-983f-6320b866647f": {
     "ticker": "UNH",
@@ -2293,8 +2293,8 @@
     "outcome_at": null,
     "implied_vol": 0.41687542438507075,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:55.225889+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-10T17:43:15.092379+00:00",
+    "poll_count": 2
   },
   "a80bf388-d2dc-46f6-a6fb-91a501b3a4c0": {
     "ticker": "WFC",
@@ -2315,7 +2315,73 @@
     "outcome_at": null,
     "implied_vol": 0.33018260955810547,
     "last_underlying": null,
-    "last_polled_at": "2026-06-10T16:15:57.913500+00:00",
+    "last_polled_at": "2026-06-10T17:43:17.811289+00:00",
+    "poll_count": 2
+  },
+  "23c68337-3fb8-45d9-84aa-cf2256b170f0": {
+    "ticker": "AMAT",
+    "contract": "AMAT260612P00462500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 462.5,
+    "expiration": "2026-06-12",
+    "sent_at": "2026-06-10T17:40:58.548601+00:00",
+    "spot_at_send": 500.48,
+    "entry": 2.71,
+    "target": 3.66,
+    "stop": 1.35,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.9818292379379271,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-10T17:43:09.772617+00:00",
+    "poll_count": 1
+  },
+  "4b77018f-6ad3-46bf-988a-c1cc1a97f945": {
+    "ticker": "LLY",
+    "contract": "LLY260612P01100000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 1100.0,
+    "expiration": "2026-06-12",
+    "sent_at": "2026-06-10T17:41:01.604760+00:00",
+    "spot_at_send": 1136.9,
+    "entry": 3.0,
+    "target": 4.05,
+    "stop": 1.5,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.4301754045486449,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-10T17:43:19.172003+00:00",
+    "poll_count": 1
+  },
+  "47cbafdf-dabb-41f5-b959-a9e15d65e6c5": {
+    "ticker": "BAC",
+    "contract": "BAC260612P00055000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 55.0,
+    "expiration": "2026-06-12",
+    "sent_at": "2026-06-10T17:41:04.832327+00:00",
+    "spot_at_send": 54.835,
+    "entry": 0.5,
+    "target": 0.68,
+    "stop": 0.25,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.2514116668701171,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-10T17:43:16.451621+00:00",
     "poll_count": 1
   }
 }
