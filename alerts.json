@@ -1,183 +1,183 @@
 {
   "alerts": [
     {
-      "ticker": "HD",
+      "ticker": "HOOD",
       "strategy": "composite",
-      "score": 70.52,
-      "momentum_score": 50.87,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "UNH",
-      "strategy": "composite",
-      "score": 69.62,
-      "momentum_score": 49.37,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "NKE",
-      "strategy": "composite",
-      "score": 65.22,
-      "momentum_score": 42.04,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "XLV",
-      "strategy": "composite",
-      "score": 63.97,
-      "momentum_score": 39.95,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "BAC",
-      "strategy": "composite",
-      "score": 59.41,
-      "momentum_score": 32.35,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "AMAT",
-      "strategy": "composite",
-      "score": 59.11,
-      "momentum_score": 31.85,
+      "score": 71.46,
+      "momentum_score": 52.44,
       "uoa_score": 100.0
     },
     {
       "ticker": "JNJ",
       "strategy": "composite",
-      "score": 46.75,
-      "momentum_score": 44.92,
-      "uoa_score": 49.48805460750854
+      "score": 61.66,
+      "momentum_score": 36.1,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "WFC",
+      "ticker": "COP",
       "strategy": "composite",
-      "score": 44.26,
-      "momentum_score": 28.62,
-      "uoa_score": 67.71014492753623
+      "score": 59.13,
+      "momentum_score": 31.89,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "JPM",
+      "ticker": "C",
       "strategy": "composite",
-      "score": 43.9,
-      "momentum_score": 32.07,
-      "uoa_score": 61.65191740412979
+      "score": 56.36,
+      "momentum_score": 27.27,
+      "uoa_score": 100.0
     },
     {
-      "ticker": "LOW",
+      "ticker": "BAC",
       "strategy": "composite",
-      "score": 34.77,
-      "momentum_score": 57.95,
-      "uoa_score": 0.0
+      "score": 55.22,
+      "momentum_score": 25.37,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "ABBV",
+      "strategy": "composite",
+      "score": 54.08,
+      "momentum_score": 23.47,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "CVX",
+      "strategy": "composite",
+      "score": 52.99,
+      "momentum_score": 21.65,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "XLF",
+      "strategy": "composite",
+      "score": 51.78,
+      "momentum_score": 19.63,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "UNH",
+      "strategy": "composite",
+      "score": 42.29,
+      "momentum_score": 34.64,
+      "uoa_score": 53.76146788990826
+    },
+    {
+      "ticker": "ORCL",
+      "strategy": "composite",
+      "score": 40.04,
+      "momentum_score": 22.13,
+      "uoa_score": 66.91135734072022
     }
   ],
   "top_picks": [
     {
-      "ticker": "HD",
-      "score": 70.52,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "UNH",
-      "score": 69.62,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "NKE",
-      "score": 65.22,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "XLV",
-      "score": 63.97,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "BAC",
-      "score": 59.41,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "AMAT",
-      "score": 59.11,
+      "ticker": "HOOD",
+      "score": 71.46,
       "strategy": "composite"
     },
     {
       "ticker": "JNJ",
-      "score": 46.75,
+      "score": 61.66,
       "strategy": "composite"
     },
     {
-      "ticker": "WFC",
-      "score": 44.26,
+      "ticker": "COP",
+      "score": 59.13,
       "strategy": "composite"
     },
     {
-      "ticker": "JPM",
-      "score": 43.9,
+      "ticker": "C",
+      "score": 56.36,
       "strategy": "composite"
     },
     {
-      "ticker": "LOW",
-      "score": 34.77,
+      "ticker": "BAC",
+      "score": 55.22,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "ABBV",
+      "score": 54.08,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "CVX",
+      "score": 52.99,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "XLF",
+      "score": 51.78,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "UNH",
+      "score": 42.29,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "ORCL",
+      "score": 40.04,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-06-09T21:31:32.537971+00:00",
-  "last_updated": "2026-06-10T17:41:06.679029+00:00",
+  "scan_finished_at": "2026-06-10T21:31:39.831851+00:00",
+  "last_updated": "2026-06-11T12:01:54.955970+00:00",
   "prices": {},
   "phase4_alerts": [
     {
-      "ticker": "AMAT",
-      "contract_type": "PUT",
-      "strike": "$462.50",
-      "expiry": "06/12",
-      "entry": "$2.71",
-      "stop": "$1.35",
-      "target": "$3.66",
-      "score": 54,
-      "contract": "$462P",
-      "risk_iv_rank": 100.0,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "EXPENSIVE",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (100); expensive premium ($2.71)",
-      "off_hours": true
-    },
-    {
-      "ticker": "LLY",
-      "contract_type": "PUT",
-      "strike": "$1100.00",
-      "expiry": "06/12",
-      "entry": "$3.00",
-      "stop": "$1.50",
-      "target": "$4.05",
-      "score": 53,
-      "contract": "$1100P",
-      "risk_iv_rank": 66.4,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "EXPENSIVE",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (66); expensive premium ($3.00)",
-      "off_hours": true
-    },
-    {
       "ticker": "BAC",
       "contract_type": "PUT",
-      "strike": "$55.00",
+      "strike": "$54.00",
       "expiry": "06/12",
-      "entry": "$0.50",
-      "stop": "$0.25",
-      "target": "$0.68",
-      "score": 53,
-      "contract": "$55P",
-      "risk_iv_rank": 47.0,
+      "entry": "$0.31",
+      "stop": "$0.15",
+      "target": "$0.42",
+      "score": 47,
+      "contract": "$54P",
+      "risk_iv_rank": 54.0,
       "risk_iv_label": "MEDIUM",
       "risk_premium_label": "CHEAP",
       "risk_score": "MEDIUM",
-      "risk_summary": "Watch: short-dated (2d to expiry)",
+      "risk_summary": "Watch: short-dated (1d to expiry)",
+      "off_hours": true
+    },
+    {
+      "ticker": "WFC",
+      "contract_type": "PUT",
+      "strike": "$82.00",
+      "expiry": "06/12",
+      "entry": "$0.80",
+      "stop": "$0.40",
+      "target": "$1.08",
+      "score": 45,
+      "contract": "$82P",
+      "risk_iv_rank": 57.0,
+      "risk_iv_label": "MEDIUM",
+      "risk_premium_label": "FAIR",
+      "risk_score": "MEDIUM",
+      "risk_summary": "Watch: short-dated (1d to expiry)",
+      "off_hours": true
+    },
+    {
+      "ticker": "UNH",
+      "contract_type": "PUT",
+      "strike": "$395.00",
+      "expiry": "06/12",
+      "entry": "$0.87",
+      "stop": "$0.43",
+      "target": "$1.17",
+      "score": 45,
+      "contract": "$395P",
+      "risk_iv_rank": 56.4,
+      "risk_iv_label": "MEDIUM",
+      "risk_premium_label": "FAIR",
+      "risk_score": "HIGH",
+      "risk_summary": "Watch: short-dated (1d to expiry)",
       "off_hours": true
     }
   ],
@@ -1418,6 +1418,159 @@
         "risk_premium_label": "CHEAP",
         "risk_score": "MEDIUM",
         "risk_summary": "Watch: short-dated (2d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "c2a7dd1e-6581-4877-96ea-f6fcbc8b59f1",
+        "timestamp": "2026-06-11T12:01:46.872240+00:00",
+        "ticker": "BAC",
+        "contract": "BAC260612P00054000",
+        "opt_type": "put",
+        "strike": 54.0,
+        "expiration": "2026-06-12",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 54.92,
+        "entry": 0.31,
+        "target": 0.42,
+        "stop": 0.15,
+        "target_pct": 35.0,
+        "iv": 36.0,
+        "volume": 10873,
+        "open_interest": 7008,
+        "score": 63.72,
+        "confidence": "MEDIUM",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "JPMorgan, BofA, Wells Fargo Subpoenaed By DOJ In Trump's Explosive 'Debanking' Crackdown: Report",
+          "Warren Buffett Would Never Buy the SpaceX IPO. Here's What He'd Do Instead.",
+          "JPMorgan, BofA, Wells Fargo Subpoenaed By DOJ In Trump's Explosive 'Debanking' Crackdown: Report"
+        ],
+        "risk_iv_rank": 54.0,
+        "risk_iv_label": "MEDIUM",
+        "risk_premium_label": "CHEAP",
+        "risk_score": "MEDIUM",
+        "risk_summary": "Watch: short-dated (1d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "b1823d05-250a-4b9d-b0ce-89a3a35f3750",
+        "timestamp": "2026-06-11T12:01:50.872573+00:00",
+        "ticker": "WFC",
+        "contract": "WFC260612P00082000",
+        "opt_type": "put",
+        "strike": 82.0,
+        "expiration": "2026-06-12",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 82.01,
+        "entry": 0.8,
+        "target": 1.08,
+        "stop": 0.4,
+        "target_pct": 35.0,
+        "iv": 38.0,
+        "volume": 2936,
+        "open_interest": 1253,
+        "score": 61.71,
+        "confidence": "MEDIUM",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "JPMorgan, BofA, Wells Fargo Subpoenaed By DOJ In Trump's Explosive 'Debanking' Crackdown: Report",
+          "Wells Fargo's FiNet Recruits $650 Million Team From Stifel",
+          "JPMorgan, BofA, Wells Fargo Subpoenaed By DOJ In Trump's Explosive 'Debanking' Crackdown: Report"
+        ],
+        "risk_iv_rank": 57.0,
+        "risk_iv_label": "MEDIUM",
+        "risk_premium_label": "FAIR",
+        "risk_score": "MEDIUM",
+        "risk_summary": "Watch: short-dated (1d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "3458aca4-7636-43ac-80b5-c5b513f3ff2e",
+        "timestamp": "2026-06-11T12:01:53.126302+00:00",
+        "ticker": "UNH",
+        "contract": "UNH260612P00395000",
+        "opt_type": "put",
+        "strike": 395.0,
+        "expiration": "2026-06-12",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 408.3,
+        "entry": 0.87,
+        "target": 1.17,
+        "stop": 0.43,
+        "target_pct": 35.0,
+        "iv": 37.6,
+        "volume": 909,
+        "open_interest": 1245,
+        "score": 53.29,
+        "confidence": "MEDIUM",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Report shows Medicare plans often deny access to special care, NY Times says",
+          "UnitedHealth (UNH) Bounced Hard. The Buy Case Is Less Compelling",
+          "Report shows Medicare plans often deny access to special care, NY Times says"
+        ],
+        "risk_iv_rank": 56.4,
+        "risk_iv_label": "MEDIUM",
+        "risk_premium_label": "FAIR",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: short-dated (1d to expiry)",
         "or_high": null,
         "or_low": null,
         "or_t1": null,
