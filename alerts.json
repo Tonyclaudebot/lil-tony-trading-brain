@@ -3,184 +3,132 @@
     {
       "ticker": "HOOD",
       "strategy": "composite",
-      "score": 71.46,
-      "momentum_score": 52.44,
+      "score": 78.84,
+      "momentum_score": 64.73,
       "uoa_score": 100.0
     },
     {
-      "ticker": "JNJ",
+      "ticker": "INTC",
       "strategy": "composite",
-      "score": 61.66,
-      "momentum_score": 36.1,
+      "score": 78.15,
+      "momentum_score": 63.59,
       "uoa_score": 100.0
     },
     {
-      "ticker": "COP",
+      "ticker": "SBUX",
       "strategy": "composite",
-      "score": 59.13,
-      "momentum_score": 31.89,
+      "score": 75.1,
+      "momentum_score": 58.5,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "TXN",
+      "strategy": "composite",
+      "score": 69.27,
+      "momentum_score": 48.79,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "AMD",
+      "strategy": "composite",
+      "score": 68.78,
+      "momentum_score": 47.97,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "RIOT",
+      "strategy": "composite",
+      "score": 68.74,
+      "momentum_score": 47.9,
       "uoa_score": 100.0
     },
     {
       "ticker": "C",
       "strategy": "composite",
-      "score": 56.36,
-      "momentum_score": 27.27,
+      "score": 67.41,
+      "momentum_score": 45.69,
       "uoa_score": 100.0
     },
     {
-      "ticker": "BAC",
+      "ticker": "MU",
       "strategy": "composite",
-      "score": 55.22,
-      "momentum_score": 25.37,
-      "uoa_score": 100.0
+      "score": 66.41,
+      "momentum_score": 49.81,
+      "uoa_score": 91.30666666666667
     },
     {
-      "ticker": "ABBV",
+      "ticker": "MRVL",
       "strategy": "composite",
-      "score": 54.08,
-      "momentum_score": 23.47,
-      "uoa_score": 100.0
+      "score": 62.59,
+      "momentum_score": 50.04,
+      "uoa_score": 81.40425531914893
     },
     {
-      "ticker": "CVX",
+      "ticker": "QCOM",
       "strategy": "composite",
-      "score": 52.99,
-      "momentum_score": 21.65,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "XLF",
-      "strategy": "composite",
-      "score": 51.78,
-      "momentum_score": 19.63,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "UNH",
-      "strategy": "composite",
-      "score": 42.29,
-      "momentum_score": 34.64,
-      "uoa_score": 53.76146788990826
-    },
-    {
-      "ticker": "ORCL",
-      "strategy": "composite",
-      "score": 40.04,
-      "momentum_score": 22.13,
-      "uoa_score": 66.91135734072022
+      "score": 55.87,
+      "momentum_score": 44.9,
+      "uoa_score": 72.32974910394265
     }
   ],
   "top_picks": [
     {
       "ticker": "HOOD",
-      "score": 71.46,
+      "score": 78.84,
       "strategy": "composite"
     },
     {
-      "ticker": "JNJ",
-      "score": 61.66,
+      "ticker": "INTC",
+      "score": 78.15,
       "strategy": "composite"
     },
     {
-      "ticker": "COP",
-      "score": 59.13,
+      "ticker": "SBUX",
+      "score": 75.1,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "TXN",
+      "score": 69.27,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "AMD",
+      "score": 68.78,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "RIOT",
+      "score": 68.74,
       "strategy": "composite"
     },
     {
       "ticker": "C",
-      "score": 56.36,
+      "score": 67.41,
       "strategy": "composite"
     },
     {
-      "ticker": "BAC",
-      "score": 55.22,
+      "ticker": "MU",
+      "score": 66.41,
       "strategy": "composite"
     },
     {
-      "ticker": "ABBV",
-      "score": 54.08,
+      "ticker": "MRVL",
+      "score": 62.59,
       "strategy": "composite"
     },
     {
-      "ticker": "CVX",
-      "score": 52.99,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "XLF",
-      "score": 51.78,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "UNH",
-      "score": 42.29,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "ORCL",
-      "score": 40.04,
+      "ticker": "QCOM",
+      "score": 55.87,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-06-10T21:31:39.831851+00:00",
-  "last_updated": "2026-06-11T17:40:52.311981+00:00",
+  "scan_finished_at": "2026-06-11T21:31:36.774480+00:00",
+  "last_updated": "2026-06-12T12:01:50.325843+00:00",
   "prices": {},
-  "phase4_alerts": [
-    {
-      "ticker": "WFC",
-      "contract_type": "PUT",
-      "strike": "$81.00",
-      "expiry": "06/12",
-      "entry": "$0.33",
-      "stop": "$0.17",
-      "target": "$0.45",
-      "score": 45,
-      "contract": "$81P",
-      "risk_iv_rank": 53.2,
-      "risk_iv_label": "MEDIUM",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "MEDIUM",
-      "risk_summary": "Watch: short-dated (1d to expiry)",
-      "off_hours": true
-    },
-    {
-      "ticker": "UNH",
-      "contract_type": "PUT",
-      "strike": "$397.50",
-      "expiry": "06/12",
-      "entry": "$0.87",
-      "stop": "$0.43",
-      "target": "$1.17",
-      "score": 45,
-      "contract": "$397P",
-      "risk_iv_rank": 59.6,
-      "risk_iv_label": "MEDIUM",
-      "risk_premium_label": "FAIR",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: short-dated (1d to expiry)",
-      "off_hours": true
-    },
-    {
-      "ticker": "C",
-      "contract_type": "PUT",
-      "strike": "$132.00",
-      "expiry": "06/12",
-      "entry": "$0.31",
-      "stop": "$0.15",
-      "target": "$0.42",
-      "score": 42,
-      "contract": "$132P",
-      "risk_iv_rank": 73.8,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (74); short-dated (1d to expiry)",
-      "off_hours": true
-    }
-  ],
+  "phase4_alerts": [],
   "trades": {
     "active": [
       {
