@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-15T17:41:11.806038+00:00",
+    "updated_at": "2026-06-15T20:31:48.993569+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 23,
+    "wins": 24,
     "losses": 93,
     "expired": 1,
-    "open": 8
+    "open": 7
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -2621,10 +2621,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "implied_vol": 0.5836491727828979,
+    "last_underlying": 141.21,
+    "last_polled_at": "2026-06-15T20:31:46.072078+00:00",
+    "poll_count": 1
   },
   "5bf81825-c6ea-4726-a0fb-af1e9a63682f": {
     "ticker": "BAC",
@@ -2638,13 +2638,13 @@
     "entry": 0.33,
     "target": 0.45,
     "stop": 0.17,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.45,
+    "graded_at": "2026-06-15T20:31:47.402517+00:00",
+    "outcome_at": "2026-06-15",
+    "implied_vol": 0.4213770294189452,
+    "last_underlying": 55.87,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -2709,10 +2709,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.3701301860809325,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-06-15T20:31:46.072231+00:00",
+    "poll_count": 1
   },
   "dfad1e05-0671-41d0-982b-83a8b7c98f18": {
     "ticker": "BAC",
@@ -2731,10 +2731,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.27177130699157714,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-06-15T20:31:47.408497+00:00",
+    "poll_count": 1
   },
   "2661b2c0-ce9c-4562-b23e-a744838bcb1a": {
     "ticker": "WFC",
@@ -2753,9 +2753,9 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.2671839570999145,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-06-15T20:31:48.993418+00:00",
+    "poll_count": 1
   }
 }
