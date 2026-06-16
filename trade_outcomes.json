@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-15T20:31:48.993569+00:00",
+    "updated_at": "2026-06-16T12:04:21.296625+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 24,
     "losses": 93,
     "expired": 1,
-    "open": 7
+    "open": 9
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -2599,10 +2599,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "implied_vol": 1.3643703937530518,
+    "last_underlying": 98.12,
+    "last_polled_at": "2026-06-16T12:04:16.225899+00:00",
+    "poll_count": 1
   },
   "90b2239f-9628-48ae-86de-636513cf4ab0": {
     "ticker": "C",
@@ -2623,8 +2623,8 @@
     "outcome_at": null,
     "implied_vol": 0.5836491727828979,
     "last_underlying": 141.21,
-    "last_polled_at": "2026-06-15T20:31:46.072078+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-16T12:04:17.517126+00:00",
+    "poll_count": 2
   },
   "5bf81825-c6ea-4726-a0fb-af1e9a63682f": {
     "ticker": "BAC",
@@ -2665,10 +2665,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.8998238086700439,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-06-16T12:04:18.827839+00:00",
+    "poll_count": 1
   },
   "5fd5c322-8079-4d3e-b288-3526e1bf3a73": {
     "ticker": "HOOD",
@@ -2687,10 +2687,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.8546743774414063,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-06-16T12:04:16.226004+00:00",
+    "poll_count": 1
   },
   "5bb19a1e-a8d3-4821-9a4c-b0febc7e56bf": {
     "ticker": "C",
@@ -2711,8 +2711,8 @@
     "outcome_at": null,
     "implied_vol": 0.3701301860809325,
     "last_underlying": null,
-    "last_polled_at": "2026-06-15T20:31:46.072231+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-16T12:04:17.517184+00:00",
+    "poll_count": 2
   },
   "dfad1e05-0671-41d0-982b-83a8b7c98f18": {
     "ticker": "BAC",
@@ -2733,8 +2733,8 @@
     "outcome_at": null,
     "implied_vol": 0.27177130699157714,
     "last_underlying": null,
-    "last_polled_at": "2026-06-15T20:31:47.408497+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-16T12:04:20.106346+00:00",
+    "poll_count": 2
   },
   "2661b2c0-ce9c-4562-b23e-a744838bcb1a": {
     "ticker": "WFC",
@@ -2755,7 +2755,51 @@
     "outcome_at": null,
     "implied_vol": 0.2671839570999145,
     "last_underlying": null,
-    "last_polled_at": "2026-06-15T20:31:48.993418+00:00",
+    "last_polled_at": "2026-06-16T12:04:21.296409+00:00",
+    "poll_count": 2
+  },
+  "55d6c0b4-273b-4dc9-8508-a0c229f7694c": {
+    "ticker": "LRCX",
+    "contract": "LRCX260618P00360000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 360.0,
+    "expiration": "2026-06-18",
+    "sent_at": "2026-06-16T12:01:44.818745+00:00",
+    "spot_at_send": 390.12,
+    "entry": 2.65,
+    "target": 3.58,
+    "stop": 1.32,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.0187471628189084,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-16T12:04:18.827960+00:00",
+    "poll_count": 1
+  },
+  "f0017984-ded4-447b-ab96-f8bcb8f31b55": {
+    "ticker": "HOOD",
+    "contract": "HOOD260618P00090000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 90.0,
+    "expiration": "2026-06-18",
+    "sent_at": "2026-06-16T12:01:49.252791+00:00",
+    "spot_at_send": 99.57,
+    "entry": 0.42,
+    "target": 0.57,
+    "stop": 0.21,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.0285458946228028,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-16T12:04:16.226100+00:00",
     "poll_count": 1
   }
 }
