@@ -1,169 +1,134 @@
 {
   "alerts": [
     {
-      "ticker": "LRCX",
+      "ticker": "AMAT",
       "strategy": "composite",
-      "score": 87.45,
-      "momentum_score": 79.09,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "HOOD",
-      "strategy": "composite",
-      "score": 86.65,
-      "momentum_score": 77.75,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "MU",
-      "strategy": "composite",
-      "score": 84.32,
-      "momentum_score": 73.86,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "AMD",
-      "strategy": "composite",
-      "score": 83.91,
-      "momentum_score": 73.19,
+      "score": 82.28,
+      "momentum_score": 70.46,
       "uoa_score": 100.0
     },
     {
       "ticker": "MRVL",
       "strategy": "composite",
-      "score": 80.11,
-      "momentum_score": 66.85,
+      "score": 79.76,
+      "momentum_score": 66.26,
       "uoa_score": 100.0
-    },
-    {
-      "ticker": "AFRM",
-      "strategy": "composite",
-      "score": 74.39,
-      "momentum_score": 77.15,
-      "uoa_score": 70.25974025974025
     },
     {
       "ticker": "INTC",
       "strategy": "composite",
-      "score": 73.58,
-      "momentum_score": 55.96,
+      "score": 76.74,
+      "momentum_score": 61.24,
       "uoa_score": 100.0
     },
     {
-      "ticker": "UPST",
+      "ticker": "MU",
       "strategy": "composite",
-      "score": 72.63,
-      "momentum_score": 63.78,
-      "uoa_score": 85.90038314176246
-    },
-    {
-      "ticker": "TXN",
-      "strategy": "composite",
-      "score": 72.32,
-      "momentum_score": 55.73,
-      "uoa_score": 97.2063492063492
-    },
-    {
-      "ticker": "XLK",
-      "strategy": "composite",
-      "score": 69.79,
-      "momentum_score": 49.65,
+      "score": 72.08,
+      "momentum_score": 53.46,
       "uoa_score": 100.0
+    },
+    {
+      "ticker": "AMD",
+      "strategy": "composite",
+      "score": 66.08,
+      "momentum_score": 43.46,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "JPM",
+      "strategy": "composite",
+      "score": 61.64,
+      "momentum_score": 36.06,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "ARKK",
+      "strategy": "composite",
+      "score": 58.77,
+      "momentum_score": 31.28,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "UBER",
+      "strategy": "composite",
+      "score": 52.22,
+      "momentum_score": 20.36,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "BAC",
+      "strategy": "composite",
+      "score": 48.12,
+      "momentum_score": 13.54,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "AVGO",
+      "strategy": "composite",
+      "score": 32.0,
+      "momentum_score": 53.33,
+      "uoa_score": 0.0
     }
   ],
   "top_picks": [
     {
-      "ticker": "LRCX",
-      "score": 87.45,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "HOOD",
-      "score": 86.65,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "MU",
-      "score": 84.32,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "AMD",
-      "score": 83.91,
+      "ticker": "AMAT",
+      "score": 82.28,
       "strategy": "composite"
     },
     {
       "ticker": "MRVL",
-      "score": 80.11,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "AFRM",
-      "score": 74.39,
+      "score": 79.76,
       "strategy": "composite"
     },
     {
       "ticker": "INTC",
-      "score": 73.58,
+      "score": 76.74,
       "strategy": "composite"
     },
     {
-      "ticker": "UPST",
-      "score": 72.63,
+      "ticker": "MU",
+      "score": 72.08,
       "strategy": "composite"
     },
     {
-      "ticker": "TXN",
-      "score": 72.32,
+      "ticker": "AMD",
+      "score": 66.08,
       "strategy": "composite"
     },
     {
-      "ticker": "XLK",
-      "score": 69.79,
+      "ticker": "JPM",
+      "score": 61.64,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "ARKK",
+      "score": 58.77,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "UBER",
+      "score": 52.22,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "BAC",
+      "score": 48.12,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "AVGO",
+      "score": 32.0,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-06-15T21:31:31.719538+00:00",
-  "last_updated": "2026-06-16T12:01:52.467407+00:00",
+  "scan_finished_at": "2026-06-18T02:48:34.063423+00:00",
+  "last_updated": "2026-06-18T12:01:47.875037+00:00",
   "prices": {},
-  "phase4_alerts": [
-    {
-      "ticker": "LRCX",
-      "contract_type": "PUT",
-      "strike": "$360.00",
-      "expiry": "06/18",
-      "entry": "$2.65",
-      "stop": "$1.32",
-      "target": "$3.58",
-      "score": 87,
-      "contract": "$360P",
-      "risk_iv_rank": 100.0,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "EXPENSIVE",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (100); expensive premium ($2.65)",
-      "off_hours": true
-    },
-    {
-      "ticker": "HOOD",
-      "contract_type": "PUT",
-      "strike": "$90.00",
-      "expiry": "06/18",
-      "entry": "$0.42",
-      "stop": "$0.21",
-      "target": "$0.57",
-      "score": 87,
-      "contract": "$90P",
-      "risk_iv_rank": 100.0,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
-      "off_hours": true
-    }
-  ],
+  "phase4_alerts": [],
   "trades": {
     "active": [
       {
