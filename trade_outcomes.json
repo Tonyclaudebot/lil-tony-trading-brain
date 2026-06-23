@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-23T12:05:11.259589+00:00",
+    "updated_at": "2026-06-23T16:11:30.421826+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 24,
     "losses": 102,
     "expired": 1,
-    "open": 3
+    "open": 6
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -2821,8 +2821,8 @@
     "outcome_at": null,
     "implied_vol": 0.7448304510116576,
     "last_underlying": null,
-    "last_polled_at": "2026-06-23T12:05:08.394294+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-23T16:11:26.372817+00:00",
+    "poll_count": 2
   },
   "05a28e3e-a188-4060-95ed-bbde893b2c46": {
     "ticker": "INTC",
@@ -2843,8 +2843,8 @@
     "outcome_at": null,
     "implied_vol": 0.9078314256668089,
     "last_underlying": null,
-    "last_polled_at": "2026-06-23T12:05:09.930314+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-23T16:11:27.711105+00:00",
+    "poll_count": 2
   },
   "c9dd4ccd-9992-464c-8495-6dc94ed9bdfe": {
     "ticker": "TXN",
@@ -2865,7 +2865,73 @@
     "outcome_at": null,
     "implied_vol": 0.5402622747421265,
     "last_underlying": null,
-    "last_polled_at": "2026-06-23T12:05:11.259343+00:00",
+    "last_polled_at": "2026-06-23T16:11:29.065294+00:00",
+    "poll_count": 2
+  },
+  "00ee9ef7-65c4-4541-915a-c5a6333a3fb7": {
+    "ticker": "INTC",
+    "contract": "INTC260626P00125000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 125.0,
+    "expiration": "2026-06-26",
+    "sent_at": "2026-06-23T16:10:38.738656+00:00",
+    "spot_at_send": 135.85,
+    "entry": 1.84,
+    "target": 2.48,
+    "stop": 0.92,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.174016809463501,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-23T16:11:27.711265+00:00",
+    "poll_count": 1
+  },
+  "3e8d0c73-b777-4160-8b25-149023812911": {
+    "ticker": "TXN",
+    "contract": "TXN260626P00277500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 277.5,
+    "expiration": "2026-06-26",
+    "sent_at": "2026-06-23T16:10:43.191802+00:00",
+    "spot_at_send": 305.665,
+    "entry": 0.82,
+    "target": 1.11,
+    "stop": 0.41,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.7600120544433593,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-23T16:11:29.065402+00:00",
+    "poll_count": 1
+  },
+  "1c65442e-6f31-46f4-b24b-41361fe5c092": {
+    "ticker": "ABBV",
+    "contract": "ABBV260626P00222500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 222.5,
+    "expiration": "2026-06-26",
+    "sent_at": "2026-06-23T16:10:46.445279+00:00",
+    "spot_at_send": 233.9,
+    "entry": 0.28,
+    "target": 0.38,
+    "stop": 0.14,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.37789009571075427,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-23T16:11:30.421692+00:00",
     "poll_count": 1
   }
 }
