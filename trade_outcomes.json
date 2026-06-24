@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-24T20:33:54.516583+00:00",
+    "updated_at": "2026-06-24T20:39:48.050911+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 28,
-    "losses": 106,
+    "wins": 29,
+    "losses": 109,
     "expired": 1,
-    "open": 10
+    "open": 6
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -2880,13 +2880,13 @@
     "entry": 1.84,
     "target": 2.48,
     "stop": 0.92,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 2.48,
+    "graded_at": "2026-06-24T20:39:37.378621+00:00",
+    "outcome_at": "2026-06-24",
     "implied_vol": 1.174016809463501,
-    "last_underlying": null,
+    "last_underlying": 131.65,
     "last_polled_at": "2026-06-24T20:33:40.862373+00:00",
     "poll_count": 7
   },
@@ -2902,13 +2902,13 @@
     "entry": 0.82,
     "target": 1.11,
     "stop": 0.41,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.41,
+    "graded_at": "2026-06-24T20:39:38.761973+00:00",
+    "outcome_at": "2026-06-24",
     "implied_vol": 0.7600120544433593,
-    "last_underlying": null,
+    "last_underlying": 303.11,
     "last_polled_at": "2026-06-24T20:33:42.314265+00:00",
     "poll_count": 7
   },
@@ -2946,13 +2946,13 @@
     "entry": 0.59,
     "target": 0.8,
     "stop": 0.29,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.29,
+    "graded_at": "2026-06-24T20:39:38.763631+00:00",
+    "outcome_at": "2026-06-24",
     "implied_vol": 0.7284912919998167,
-    "last_underlying": null,
+    "last_underlying": 303.11,
     "last_polled_at": "2026-06-24T20:33:42.314322+00:00",
     "poll_count": 6
   },
@@ -3012,13 +3012,13 @@
     "entry": 0.58,
     "target": 0.78,
     "stop": 0.29,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.29,
+    "graded_at": "2026-06-24T20:39:40.096214+00:00",
+    "outcome_at": "2026-06-24",
     "implied_vol": 1.0625199127197265,
-    "last_underlying": null,
+    "last_underlying": 60.42,
     "last_polled_at": "2026-06-24T20:33:46.408741+00:00",
     "poll_count": 4
   },
@@ -3085,8 +3085,8 @@
     "outcome_at": null,
     "implied_vol": 0.30629313945770265,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T20:33:43.757091+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-24T20:39:41.437929+00:00",
+    "poll_count": 4
   },
   "c046339a-2e00-4ac1-85b8-8ccf0feafeb4": {
     "ticker": "JPM",
@@ -3107,8 +3107,8 @@
     "outcome_at": null,
     "implied_vol": 0.30968482494354244,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T20:33:49.103154+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-24T20:39:42.850796+00:00",
+    "poll_count": 4
   },
   "1eac684d-343c-427e-b5e6-742ab27623f9": {
     "ticker": "BAC",
@@ -3129,8 +3129,8 @@
     "outcome_at": null,
     "implied_vol": 0.2583855819702148,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T20:33:50.486054+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-24T20:39:44.108720+00:00",
+    "poll_count": 4
   },
   "07674791-ff9b-4911-b104-47a2be7fa8f9": {
     "ticker": "CRM",
@@ -3151,8 +3151,8 @@
     "outcome_at": null,
     "implied_vol": 0.5187164974212646,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T20:33:51.831815+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-24T20:39:45.428951+00:00",
+    "poll_count": 3
   },
   "5c7a7ba6-502c-45d4-83cc-dd540957cdaf": {
     "ticker": "C",
@@ -3173,8 +3173,8 @@
     "outcome_at": null,
     "implied_vol": 0.33922392845153804,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T20:33:53.170511+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-24T20:39:46.649383+00:00",
+    "poll_count": 3
   },
   "697ab1a6-e5ee-4195-ba20-d5e6605912dc": {
     "ticker": "NET",
@@ -3195,7 +3195,7 @@
     "outcome_at": null,
     "implied_vol": 0.7832774925231933,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T20:33:54.516399+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-06-24T20:39:48.050773+00:00",
+    "poll_count": 3
   }
 }
