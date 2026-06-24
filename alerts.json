@@ -1,189 +1,183 @@
 {
   "alerts": [
     {
-      "ticker": "INTC",
-      "strategy": "composite",
-      "score": 84.79,
-      "momentum_score": 74.65,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "MU",
-      "strategy": "composite",
-      "score": 84.09,
-      "momentum_score": 73.49,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "MARA",
-      "strategy": "composite",
-      "score": 79.59,
-      "momentum_score": 65.98,
-      "uoa_score": 100.0
-    },
-    {
       "ticker": "ABBV",
-      "strategy": "composite",
-      "score": 77.32,
-      "momentum_score": 62.2,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "LRCX",
-      "strategy": "composite",
-      "score": 76.43,
-      "momentum_score": 78.28,
-      "uoa_score": 73.66459627329193
-    },
-    {
-      "ticker": "AMD",
-      "strategy": "composite",
-      "score": 70.62,
-      "momentum_score": 51.04,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "RBLX",
       "strategy": "composite",
       "score": 68.27,
       "momentum_score": 47.11,
       "uoa_score": 100.0
     },
     {
-      "ticker": "RIOT",
+      "ticker": "BMY",
       "strategy": "composite",
-      "score": 66.89,
-      "momentum_score": 44.82,
+      "score": 53.96,
+      "momentum_score": 23.26,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "INTC",
+      "strategy": "composite",
+      "score": 53.52,
+      "momentum_score": 22.53,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "RBLX",
+      "strategy": "composite",
+      "score": 52.76,
+      "momentum_score": 21.26,
       "uoa_score": 100.0
     },
     {
       "ticker": "MRNA",
       "strategy": "composite",
-      "score": 65.37,
-      "momentum_score": 42.28,
-      "uoa_score": 100.0
+      "score": 52.44,
+      "momentum_score": 58.85,
+      "uoa_score": 42.83636363636363
+    },
+    {
+      "ticker": "JNJ",
+      "strategy": "composite",
+      "score": 48.48,
+      "momentum_score": 47.36,
+      "uoa_score": 50.16501650165017
+    },
+    {
+      "ticker": "NET",
+      "strategy": "composite",
+      "score": 47.48,
+      "momentum_score": 21.03,
+      "uoa_score": 87.14285714285714
+    },
+    {
+      "ticker": "NOW",
+      "strategy": "composite",
+      "score": 40.01,
+      "momentum_score": 22.05,
+      "uoa_score": 66.93877551020408
     },
     {
       "ticker": "HOOD",
       "strategy": "composite",
-      "score": 63.48,
-      "momentum_score": 39.13,
-      "uoa_score": 100.0
+      "score": 37.56,
+      "momentum_score": 28.95,
+      "uoa_score": 50.47901653242899
+    },
+    {
+      "ticker": "BAC",
+      "strategy": "composite",
+      "score": 30.15,
+      "momentum_score": 21.23,
+      "uoa_score": 43.52134949920928
     }
   ],
   "top_picks": [
     {
-      "ticker": "INTC",
-      "score": 84.79,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "MU",
-      "score": 84.09,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "MARA",
-      "score": 79.59,
-      "strategy": "composite"
-    },
-    {
       "ticker": "ABBV",
-      "score": 77.32,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "LRCX",
-      "score": 76.43,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "AMD",
-      "score": 70.62,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "RBLX",
       "score": 68.27,
       "strategy": "composite"
     },
     {
-      "ticker": "RIOT",
-      "score": 66.89,
+      "ticker": "BMY",
+      "score": 53.96,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "INTC",
+      "score": 53.52,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "RBLX",
+      "score": 52.76,
       "strategy": "composite"
     },
     {
       "ticker": "MRNA",
-      "score": 65.37,
+      "score": 52.44,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "JNJ",
+      "score": 48.48,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "NET",
+      "score": 47.48,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "NOW",
+      "score": 40.01,
       "strategy": "composite"
     },
     {
       "ticker": "HOOD",
-      "score": 63.48,
+      "score": 37.56,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "BAC",
+      "score": 30.15,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-06-22T22:41:56.587293+00:00",
-  "last_updated": "2026-06-23T17:40:59.214767+00:00",
+  "scan_finished_at": "2026-06-23T21:31:37.388655+00:00",
+  "last_updated": "2026-06-24T12:01:52.877919+00:00",
   "prices": {},
   "phase4_alerts": [
     {
-      "ticker": "TXN",
+      "ticker": "MRNA",
       "contract_type": "PUT",
-      "strike": "$275.00",
+      "strike": "$57.00",
       "expiry": "06/26",
-      "entry": "$0.59",
+      "entry": "$0.58",
       "stop": "$0.29",
-      "target": "$0.80",
-      "score": 76,
-      "contract": "$275P",
+      "target": "$0.78",
+      "score": 75,
+      "contract": "$57P",
       "risk_iv_rank": 100.0,
       "risk_iv_label": "HIGH",
       "risk_premium_label": "FAIR",
       "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (100); short-dated (3d to expiry)",
+      "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
       "off_hours": true
     },
     {
       "ticker": "ABBV",
-      "contract_type": "CALL",
-      "strike": "$240.00",
+      "contract_type": "PUT",
+      "strike": "$222.50",
       "expiry": "06/26",
-      "entry": "$0.85",
-      "stop": "$0.42",
-      "target": "$2.12",
+      "entry": "$0.20",
+      "stop": "$0.10",
+      "target": "$0.27",
       "score": 67,
-      "contract": "$240C",
-      "or_high": 234.71,
-      "or_low": 233.26,
-      "or_t1": 236.16,
-      "or_t2": 237.61,
-      "or_t3": 239.06,
-      "or_target_hit": null,
-      "risk_iv_rank": 46.2,
-      "risk_iv_label": "MEDIUM",
-      "risk_premium_label": "FAIR",
-      "risk_score": "MEDIUM",
-      "risk_summary": "Watch: short-dated (3d to expiry)",
+      "contract": "$222P",
+      "risk_iv_rank": 60.6,
+      "risk_iv_label": "HIGH",
+      "risk_premium_label": "CHEAP",
+      "risk_score": "HIGH",
+      "risk_summary": "Watch: high IV rank (61); short-dated (2d to expiry)",
       "off_hours": true
     },
     {
-      "ticker": "MS",
-      "contract_type": "PUT",
-      "strike": "$220.00",
+      "ticker": "NOW",
+      "contract_type": "CALL",
+      "strike": "$100.00",
       "expiry": "06/26",
-      "entry": "$0.86",
-      "stop": "$0.43",
-      "target": "$1.16",
-      "score": 62,
-      "contract": "$220P",
-      "risk_iv_rank": 61.5,
+      "entry": "$0.95",
+      "stop": "$0.47",
+      "target": "$1.28",
+      "score": 53,
+      "contract": "$100C",
+      "risk_iv_rank": 100.0,
       "risk_iv_label": "HIGH",
       "risk_premium_label": "FAIR",
       "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (62); short-dated (3d to expiry)",
+      "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
       "off_hours": true
     }
   ],
@@ -674,6 +668,159 @@
         "risk_premium_label": "FAIR",
         "risk_score": "HIGH",
         "risk_summary": "Watch: high IV rank (62); short-dated (3d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "564608a0-3a56-4193-ad75-fc7b1fbfebb1",
+        "timestamp": "2026-06-24T12:01:45.057586+00:00",
+        "ticker": "MRNA",
+        "contract": "MRNA260626P00057000",
+        "opt_type": "put",
+        "strike": 57.0,
+        "expiration": "2026-06-26",
+        "dte": 2,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 61.16,
+        "entry": 0.58,
+        "target": 0.78,
+        "stop": 0.29,
+        "target_pct": 35.0,
+        "iv": 94.2,
+        "volume": 598,
+        "open_interest": 620,
+        "score": 78.78,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Moderna: Flu Vaccine Progress Is Only Part Of The Story",
+          "Moderna (MRNA) Is Up 10.1% After Unanimous FDA Panel Backing For mRNA Flu Shot mFlusiva",
+          "Moderna: Flu Vaccine Progress Is Only Part Of The Story"
+        ],
+        "risk_iv_rank": 100.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "FAIR",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "99e67af0-b5d6-48b6-b423-99fdfb2374ed",
+        "timestamp": "2026-06-24T12:01:48.269265+00:00",
+        "ticker": "ABBV",
+        "contract": "ABBV260626P00222500",
+        "opt_type": "put",
+        "strike": 222.5,
+        "expiration": "2026-06-26",
+        "dte": 2,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 235.08,
+        "entry": 0.2,
+        "target": 0.27,
+        "stop": 0.1,
+        "target_pct": 35.0,
+        "iv": 40.4,
+        "volume": 230,
+        "open_interest": 288,
+        "score": 67.52,
+        "confidence": "MEDIUM",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "2 Value Stocks Worth Your Attention and 1 Facing Headwinds",
+          "Apogee Therapeutics downgraded to Hold from Buy at TD Cowen",
+          "2 Value Stocks Worth Your Attention and 1 Facing Headwinds"
+        ],
+        "risk_iv_rank": 60.6,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "CHEAP",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (61); short-dated (2d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "462db048-e6cf-4bab-a281-f4cb96c85f1e",
+        "timestamp": "2026-06-24T12:01:51.170067+00:00",
+        "ticker": "NOW",
+        "contract": "NOW260626C00100000",
+        "opt_type": "call",
+        "strike": 100.0,
+        "expiration": "2026-06-26",
+        "dte": 2,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 94.752,
+        "entry": 0.95,
+        "target": 1.28,
+        "stop": 0.47,
+        "target_pct": 35.0,
+        "iv": 70.9,
+        "volume": 13068,
+        "open_interest": 9046,
+        "score": 76.61,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Dan Ives Says The AI Revolution Is In The 3rd Inning, Calls Chip Sell-Off A 'Gut Check Moment' As Micron Earnings Loom",
+          "Software Back Down",
+          "Dan Ives Says The AI Revolution Is In The 3rd Inning, Calls Chip Sell-Off A 'Gut Check Moment' As Micron Earnings Loom"
+        ],
+        "risk_iv_rank": 100.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "FAIR",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
         "or_high": null,
         "or_low": null,
         "or_t1": null,
