@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-24T12:05:18.258002+00:00",
+    "updated_at": "2026-06-24T16:14:42.071510+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 26,
     "losses": 103,
     "expired": 1,
-    "open": 9
+    "open": 12
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -2887,8 +2887,8 @@
     "outcome_at": null,
     "implied_vol": 1.174016809463501,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T12:05:11.346246+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-24T16:14:32.465856+00:00",
+    "poll_count": 5
   },
   "3e8d0c73-b777-4160-8b25-149023812911": {
     "ticker": "TXN",
@@ -2909,8 +2909,8 @@
     "outcome_at": null,
     "implied_vol": 0.7600120544433593,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T12:05:12.690766+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-24T16:14:33.781790+00:00",
+    "poll_count": 5
   },
   "1c65442e-6f31-46f4-b24b-41361fe5c092": {
     "ticker": "ABBV",
@@ -2931,8 +2931,8 @@
     "outcome_at": null,
     "implied_vol": 0.37789009571075427,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T12:05:14.042665+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-24T16:14:35.139027+00:00",
+    "poll_count": 5
   },
   "27bbaf53-d453-4fdc-864a-4dfd2031af28": {
     "ticker": "TXN",
@@ -2953,8 +2953,8 @@
     "outcome_at": null,
     "implied_vol": 0.7284912919998167,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T12:05:12.690824+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-24T16:14:33.781845+00:00",
+    "poll_count": 4
   },
   "315a6ea8-ebfd-4f0a-a37a-d12335665580": {
     "ticker": "ABBV",
@@ -2975,8 +2975,8 @@
     "outcome_at": null,
     "implied_vol": 0.29882380962371824,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T12:05:14.042722+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-24T16:14:35.139084+00:00",
+    "poll_count": 4
   },
   "9bec4ba7-bd36-4492-822f-4820c2d53a18": {
     "ticker": "MS",
@@ -2997,8 +2997,8 @@
     "outcome_at": null,
     "implied_vol": 0.4227060747146606,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T12:05:15.377800+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-06-24T16:14:36.494245+00:00",
+    "poll_count": 4
   },
   "564608a0-3a56-4193-ad75-fc7b1fbfebb1": {
     "ticker": "MRNA",
@@ -3019,8 +3019,8 @@
     "outcome_at": null,
     "implied_vol": 1.0625199127197265,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T12:05:16.922995+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-24T16:14:37.836068+00:00",
+    "poll_count": 2
   },
   "99e67af0-b5d6-48b6-b423-99fdfb2374ed": {
     "ticker": "ABBV",
@@ -3041,8 +3041,8 @@
     "outcome_at": null,
     "implied_vol": 0.436687250137329,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T12:05:14.043008+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-24T16:14:35.139120+00:00",
+    "poll_count": 2
   },
   "462db048-e6cf-4bab-a281-f4cb96c85f1e": {
     "ticker": "NOW",
@@ -3063,7 +3063,73 @@
     "outcome_at": null,
     "implied_vol": 0.9023580455780027,
     "last_underlying": null,
-    "last_polled_at": "2026-06-24T12:05:18.257774+00:00",
+    "last_polled_at": "2026-06-24T16:14:39.176908+00:00",
+    "poll_count": 2
+  },
+  "76917da1-7bee-48eb-8de2-67c49876cbe0": {
+    "ticker": "ABBV",
+    "contract": "ABBV260626P00230000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 230.0,
+    "expiration": "2026-06-26",
+    "sent_at": "2026-06-24T16:10:39.305018+00:00",
+    "spot_at_send": 233.12,
+    "entry": 0.96,
+    "target": 1.3,
+    "stop": 0.48,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.30629313945770265,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-24T16:14:35.139277+00:00",
+    "poll_count": 1
+  },
+  "c046339a-2e00-4ac1-85b8-8ccf0feafeb4": {
+    "ticker": "JPM",
+    "contract": "JPM260626P00322500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 322.5,
+    "expiration": "2026-06-26",
+    "sent_at": "2026-06-24T16:10:43.235956+00:00",
+    "spot_at_send": 333.18,
+    "entry": 0.31,
+    "target": 0.42,
+    "stop": 0.15,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.30968482494354244,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-24T16:14:40.738816+00:00",
+    "poll_count": 1
+  },
+  "1eac684d-343c-427e-b5e6-742ab27623f9": {
+    "ticker": "BAC",
+    "contract": "BAC260626P00057000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 57.0,
+    "expiration": "2026-06-26",
+    "sent_at": "2026-06-24T16:10:45.682693+00:00",
+    "spot_at_send": 57.485,
+    "entry": 0.25,
+    "target": 0.34,
+    "stop": 0.12,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.2583855819702148,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-24T16:14:42.071352+00:00",
     "poll_count": 1
   }
 }
