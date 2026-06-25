@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-06-25T12:02:13.502102+00:00",
+    "updated_at": "2026-06-25T16:14:33.009503+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 29,
     "losses": 109,
     "expired": 1,
-    "open": 9
+    "open": 11
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -3085,8 +3085,8 @@
     "outcome_at": null,
     "implied_vol": 0.30629313945770265,
     "last_underlying": null,
-    "last_polled_at": "2026-06-25T12:02:02.522111+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-06-25T16:14:20.814511+00:00",
+    "poll_count": 6
   },
   "c046339a-2e00-4ac1-85b8-8ccf0feafeb4": {
     "ticker": "JPM",
@@ -3107,8 +3107,8 @@
     "outcome_at": null,
     "implied_vol": 0.30968482494354244,
     "last_underlying": null,
-    "last_polled_at": "2026-06-25T12:02:03.880195+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-06-25T16:14:22.146901+00:00",
+    "poll_count": 6
   },
   "1eac684d-343c-427e-b5e6-742ab27623f9": {
     "ticker": "BAC",
@@ -3129,8 +3129,8 @@
     "outcome_at": null,
     "implied_vol": 0.2583855819702148,
     "last_underlying": null,
-    "last_polled_at": "2026-06-25T12:02:05.210660+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-06-25T16:14:23.398276+00:00",
+    "poll_count": 6
   },
   "07674791-ff9b-4911-b104-47a2be7fa8f9": {
     "ticker": "CRM",
@@ -3151,8 +3151,8 @@
     "outcome_at": null,
     "implied_vol": 0.5187164974212646,
     "last_underlying": null,
-    "last_polled_at": "2026-06-25T12:02:06.543483+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-25T16:14:24.749915+00:00",
+    "poll_count": 5
   },
   "5c7a7ba6-502c-45d4-83cc-dd540957cdaf": {
     "ticker": "C",
@@ -3173,8 +3173,8 @@
     "outcome_at": null,
     "implied_vol": 0.33922392845153804,
     "last_underlying": null,
-    "last_polled_at": "2026-06-25T12:02:07.859426+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-25T16:14:26.106798+00:00",
+    "poll_count": 5
   },
   "697ab1a6-e5ee-4195-ba20-d5e6605912dc": {
     "ticker": "NET",
@@ -3195,8 +3195,8 @@
     "outcome_at": null,
     "implied_vol": 0.7832774925231933,
     "last_underlying": null,
-    "last_polled_at": "2026-06-25T12:02:09.223086+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-06-25T16:14:27.442526+00:00",
+    "poll_count": 5
   },
   "e080a4f1-4f45-4e5c-8302-ee180042d893": {
     "ticker": "HD",
@@ -3217,8 +3217,8 @@
     "outcome_at": null,
     "implied_vol": 0.48438044548034653,
     "last_underlying": null,
-    "last_polled_at": "2026-06-25T12:02:10.557648+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-25T16:14:28.768864+00:00",
+    "poll_count": 2
   },
   "c86b8058-b3dc-47e4-997a-615c81e75305": {
     "ticker": "MRNA",
@@ -3239,8 +3239,8 @@
     "outcome_at": null,
     "implied_vol": 1.0791544151306152,
     "last_underlying": null,
-    "last_polled_at": "2026-06-25T12:02:11.909675+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-06-25T16:14:30.115718+00:00",
+    "poll_count": 2
   },
   "652055b4-a2c8-4245-aedf-bd90ba23bc4f": {
     "ticker": "SBUX",
@@ -3261,7 +3261,51 @@
     "outcome_at": null,
     "implied_vol": 0.12216558456420898,
     "last_underlying": null,
-    "last_polled_at": "2026-06-25T12:02:13.501969+00:00",
+    "last_polled_at": "2026-06-25T16:14:31.459897+00:00",
+    "poll_count": 2
+  },
+  "1b11dcff-2e8a-4f11-b4a3-1e09a5f06477": {
+    "ticker": "HD",
+    "contract": "HD260626P00335000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 335.0,
+    "expiration": "2026-06-26",
+    "sent_at": "2026-06-25T16:10:41.084173+00:00",
+    "spot_at_send": 344.84,
+    "entry": 0.35,
+    "target": 0.47,
+    "stop": 0.17,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.39161403656005844,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-25T16:14:28.769035+00:00",
+    "poll_count": 1
+  },
+  "4d788949-4fa0-4686-9f77-92d9c48a1f73": {
+    "ticker": "AXP",
+    "contract": "AXP260626P00340000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 340.0,
+    "expiration": "2026-06-26",
+    "sent_at": "2026-06-25T16:10:47.331630+00:00",
+    "spot_at_send": 346.8,
+    "entry": 0.55,
+    "target": 0.74,
+    "stop": 0.28,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.34375411510467524,
+    "last_underlying": null,
+    "last_polled_at": "2026-06-25T16:14:33.009323+00:00",
     "poll_count": 1
   }
 }
