@@ -126,61 +126,9 @@
   "scan_status": "idle",
   "total_tickers": 93,
   "scan_finished_at": "2026-07-07T21:31:37.711854+00:00",
-  "last_updated": "2026-07-08T16:11:02.958161+00:00",
+  "last_updated": "2026-07-08T17:41:16.831512+00:00",
   "prices": {},
-  "phase4_alerts": [
-    {
-      "ticker": "NET",
-      "contract_type": "PUT",
-      "strike": "$240.00",
-      "expiry": "07/10",
-      "entry": "$0.59",
-      "stop": "$0.29",
-      "target": "$0.80",
-      "score": 91,
-      "contract": "$240P",
-      "risk_iv_rank": 100.0,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "FAIR",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (100); short-dated (2d to expiry)",
-      "off_hours": true
-    },
-    {
-      "ticker": "GILD",
-      "contract_type": "PUT",
-      "strike": "$131.00",
-      "expiry": "07/10",
-      "entry": "$0.33",
-      "stop": "$0.17",
-      "target": "$0.45",
-      "score": 82,
-      "contract": "$131P",
-      "risk_iv_rank": 68.8,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "MEDIUM",
-      "risk_summary": "Watch: high IV rank (69); short-dated (2d to expiry)",
-      "off_hours": true
-    },
-    {
-      "ticker": "REGN",
-      "contract_type": "PUT",
-      "strike": "$632.50",
-      "expiry": "07/10",
-      "entry": "$1.20",
-      "stop": "$0.60",
-      "target": "$1.62",
-      "score": 74,
-      "contract": "$632P",
-      "risk_iv_rank": 63.9,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "EXPENSIVE",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (64); expensive premium ($1.20)",
-      "off_hours": true
-    }
-  ],
+  "phase4_alerts": [],
   "trades": {
     "active": [
       {
