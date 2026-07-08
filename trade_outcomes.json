@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-08T12:03:37.224612+00:00",
+    "updated_at": "2026-07-08T16:16:22.372764+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 32,
     "losses": 120,
     "expired": 1,
-    "open": 3
+    "open": 6
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -3393,8 +3393,8 @@
     "outcome_at": null,
     "implied_vol": 0.9459640693664548,
     "last_underlying": null,
-    "last_polled_at": "2026-07-08T12:03:33.709723+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-08T16:16:19.556597+00:00",
+    "poll_count": 2
   },
   "80032fc6-e5f0-404e-9fc4-5f547f3343b0": {
     "ticker": "GILD",
@@ -3415,8 +3415,8 @@
     "outcome_at": null,
     "implied_vol": 0.5830441951751708,
     "last_underlying": null,
-    "last_polled_at": "2026-07-08T12:03:35.421165+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-08T16:16:21.096714+00:00",
+    "poll_count": 2
   },
   "7f035348-6a73-41ac-b5b0-48ae8d632a3c": {
     "ticker": "REGN",
@@ -3437,7 +3437,73 @@
     "outcome_at": null,
     "implied_vol": 0.39626331329345693,
     "last_underlying": null,
-    "last_polled_at": "2026-07-08T12:03:37.224489+00:00",
+    "last_polled_at": "2026-07-08T16:16:22.372524+00:00",
+    "poll_count": 2
+  },
+  "615c166d-e9eb-43af-a196-f5e458d05669": {
+    "ticker": "NET",
+    "contract": "NET260710P00240000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 240.0,
+    "expiration": "2026-07-10",
+    "sent_at": "2026-07-08T16:10:54.293003+00:00",
+    "spot_at_send": 263.43,
+    "entry": 0.59,
+    "target": 0.8,
+    "stop": 0.29,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.8512445831298829,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-08T16:16:19.556680+00:00",
+    "poll_count": 1
+  },
+  "b63e6eb5-6f77-4ad2-b0fd-da59cfc92130": {
+    "ticker": "GILD",
+    "contract": "GILD260710P00131000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 131.0,
+    "expiration": "2026-07-10",
+    "sent_at": "2026-07-08T16:10:57.903174+00:00",
+    "spot_at_send": 135.69,
+    "entry": 0.33,
+    "target": 0.45,
+    "stop": 0.17,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.4306946372985839,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-08T16:16:21.096781+00:00",
+    "poll_count": 1
+  },
+  "3c621fc5-f7ae-4973-bd1c-b05e5ad8e9b1": {
+    "ticker": "REGN",
+    "contract": "REGN260710P00632500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 632.5,
+    "expiration": "2026-07-10",
+    "sent_at": "2026-07-08T16:11:00.870288+00:00",
+    "spot_at_send": 662.67,
+    "entry": 1.2,
+    "target": 1.62,
+    "stop": 0.6,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.48024087429046614,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-08T16:16:22.372630+00:00",
     "poll_count": 1
   }
 }
