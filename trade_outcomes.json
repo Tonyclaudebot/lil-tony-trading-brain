@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-13T17:42:43.340061+00:00",
+    "updated_at": "2026-07-13T20:32:50.864895+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 34,
-    "losses": 130,
+    "losses": 131,
     "expired": 2,
-    "open": 6
+    "open": 5
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -3672,13 +3672,13 @@
     "entry": 0.92,
     "target": 1.24,
     "stop": 0.46,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.46,
+    "graded_at": "2026-07-13T20:32:49.480688+00:00",
+    "outcome_at": "2026-07-13",
+    "implied_vol": 0.7091272449493407,
+    "last_underlying": 269.53,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -3721,10 +3721,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.6531549072265623,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-13T20:32:49.485497+00:00",
+    "poll_count": 1
   },
   "18a7df70-c929-47b2-852f-187041abffa4": {
     "ticker": "PYPL",
@@ -3765,10 +3765,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.6611434698104856,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-13T20:32:49.485591+00:00",
+    "poll_count": 1
   },
   "ce334d5c-21ee-4729-a19c-ed589aa4e187": {
     "ticker": "PYPL",
