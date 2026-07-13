@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-10T20:00:56.172351+00:00",
+    "updated_at": "2026-07-13T12:02:30.867168+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 34,
     "losses": 130,
     "expired": 2,
-    "open": 0
+    "open": 2
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -3659,5 +3659,49 @@
     "last_underlying": 79.77,
     "last_polled_at": "2026-07-09T20:40:47.745849+00:00",
     "poll_count": 3
+  },
+  "cc36c68c-b61f-4ef8-8f10-5ccb76e2d43f": {
+    "ticker": "NET",
+    "contract": "NET260717P00242500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 242.5,
+    "expiration": "2026-07-17",
+    "sent_at": "2026-07-13T12:01:51.913605+00:00",
+    "spot_at_send": 267.86,
+    "entry": 0.92,
+    "target": 1.24,
+    "stop": 0.46,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
+  },
+  "5a53879c-c40a-41a7-ab3f-5db6ae61f0de": {
+    "ticker": "PYPL",
+    "contract": "PYPL260717P00045000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 45.0,
+    "expiration": "2026-07-17",
+    "sent_at": "2026-07-13T12:01:57.998047+00:00",
+    "spot_at_send": 46.81,
+    "entry": 0.27,
+    "target": 0.36,
+    "stop": 0.14,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
   }
 }
