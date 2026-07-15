@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-14T20:36:46.466845+00:00",
+    "updated_at": "2026-07-15T12:07:40.433054+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 37,
     "losses": 135,
     "expired": 2,
-    "open": 3
+    "open": 6
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -3745,8 +3745,8 @@
     "outcome_at": null,
     "implied_vol": 0.35344804763793936,
     "last_underlying": 47.37,
-    "last_polled_at": "2026-07-14T20:36:42.491684+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-07-15T12:07:33.557828+00:00",
+    "poll_count": 7
   },
   "21631051-ddeb-477e-969d-7f3778538119": {
     "ticker": "NET",
@@ -3877,8 +3877,8 @@
     "outcome_at": null,
     "implied_vol": 0.5254522323608397,
     "last_underlying": null,
-    "last_polled_at": "2026-07-14T20:36:46.466751+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-07-15T12:07:34.922095+00:00",
+    "poll_count": 5
   },
   "b731a758-2fb5-4907-bfec-e06157282405": {
     "ticker": "BMY",
@@ -3899,7 +3899,73 @@
     "outcome_at": null,
     "implied_vol": 0.3282200050354003,
     "last_underlying": null,
-    "last_polled_at": "2026-07-14T20:36:45.248330+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-07-15T12:07:36.275099+00:00",
+    "poll_count": 4
+  },
+  "86347ca3-840d-4053-b841-6c403b5e4aa6": {
+    "ticker": "CRWD",
+    "contract": "CRWD260717P00195000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 195.0,
+    "expiration": "2026-07-17",
+    "sent_at": "2026-07-15T12:01:50.398301+00:00",
+    "spot_at_send": 211.3192,
+    "entry": 1.0,
+    "target": 1.35,
+    "stop": 0.5,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.9040014886856077,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-15T12:07:37.646426+00:00",
+    "poll_count": 1
+  },
+  "a5615d25-9b9e-417c-b96a-de9a37c58a9d": {
+    "ticker": "NET",
+    "contract": "NET260717P00257500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 257.5,
+    "expiration": "2026-07-17",
+    "sent_at": "2026-07-15T12:01:54.737069+00:00",
+    "spot_at_send": 283.7071,
+    "entry": 0.76,
+    "target": 1.03,
+    "stop": 0.38,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.8832131242752074,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-15T12:07:39.042066+00:00",
+    "poll_count": 1
+  },
+  "ae53c01c-4473-4af8-af5c-9c6d607867cf": {
+    "ticker": "DDOG",
+    "contract": "DDOG260717P00250000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 250.0,
+    "expiration": "2026-07-17",
+    "sent_at": "2026-07-15T12:01:57.751478+00:00",
+    "spot_at_send": 272.58,
+    "entry": 1.9,
+    "target": 2.56,
+    "stop": 0.95,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.0793735408782958,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-15T12:07:40.432898+00:00",
+    "poll_count": 1
   }
 }
