@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-15T16:16:13.948454+00:00",
+    "updated_at": "2026-07-15T17:43:04.536176+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 37,
     "losses": 135,
     "expired": 2,
-    "open": 9
+    "open": 10
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -3745,8 +3745,8 @@
     "outcome_at": null,
     "implied_vol": 0.35344804763793936,
     "last_underlying": 47.37,
-    "last_polled_at": "2026-07-15T16:16:07.104496+00:00",
-    "poll_count": 8
+    "last_polled_at": "2026-07-15T17:42:56.023027+00:00",
+    "poll_count": 9
   },
   "21631051-ddeb-477e-969d-7f3778538119": {
     "ticker": "NET",
@@ -3877,8 +3877,8 @@
     "outcome_at": null,
     "implied_vol": 0.5254522323608397,
     "last_underlying": null,
-    "last_polled_at": "2026-07-15T16:16:08.536227+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-07-15T17:42:57.408987+00:00",
+    "poll_count": 7
   },
   "b731a758-2fb5-4907-bfec-e06157282405": {
     "ticker": "BMY",
@@ -3899,8 +3899,8 @@
     "outcome_at": null,
     "implied_vol": 0.3282200050354003,
     "last_underlying": null,
-    "last_polled_at": "2026-07-15T16:16:09.935621+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-07-15T17:42:58.783349+00:00",
+    "poll_count": 6
   },
   "86347ca3-840d-4053-b841-6c403b5e4aa6": {
     "ticker": "CRWD",
@@ -3921,8 +3921,8 @@
     "outcome_at": null,
     "implied_vol": 0.9040014886856077,
     "last_underlying": null,
-    "last_polled_at": "2026-07-15T16:16:11.175471+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-07-15T17:43:00.196948+00:00",
+    "poll_count": 3
   },
   "a5615d25-9b9e-417c-b96a-de9a37c58a9d": {
     "ticker": "NET",
@@ -3943,8 +3943,8 @@
     "outcome_at": null,
     "implied_vol": 0.8832131242752074,
     "last_underlying": null,
-    "last_polled_at": "2026-07-15T16:16:12.573166+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-07-15T17:43:01.560340+00:00",
+    "poll_count": 3
   },
   "ae53c01c-4473-4af8-af5c-9c6d607867cf": {
     "ticker": "DDOG",
@@ -3965,8 +3965,8 @@
     "outcome_at": null,
     "implied_vol": 1.0793735408782958,
     "last_underlying": null,
-    "last_polled_at": "2026-07-15T16:16:13.948202+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-07-15T17:43:02.925132+00:00",
+    "poll_count": 3
   },
   "0854af27-0c11-44a1-a823-c2383bbb4951": {
     "ticker": "CRWD",
@@ -3987,8 +3987,8 @@
     "outcome_at": null,
     "implied_vol": 0.8313708305358887,
     "last_underlying": null,
-    "last_polled_at": "2026-07-15T16:16:11.175544+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-15T17:43:00.197015+00:00",
+    "poll_count": 2
   },
   "8f4e0b9a-6722-4090-96b0-3d73991efae9": {
     "ticker": "NET",
@@ -4009,8 +4009,8 @@
     "outcome_at": null,
     "implied_vol": 0.7366465806961059,
     "last_underlying": null,
-    "last_polled_at": "2026-07-15T16:16:12.573279+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-15T17:43:01.560408+00:00",
+    "poll_count": 2
   },
   "8f546aec-f24f-4a9b-825b-51b014d28380": {
     "ticker": "DDOG",
@@ -4031,7 +4031,29 @@
     "outcome_at": null,
     "implied_vol": 0.8465000343322753,
     "last_underlying": null,
-    "last_polled_at": "2026-07-15T16:16:13.948312+00:00",
+    "last_polled_at": "2026-07-15T17:43:02.925180+00:00",
+    "poll_count": 2
+  },
+  "725b5c59-1a44-49d5-acd6-08bd3e39f46c": {
+    "ticker": "ZS",
+    "contract": "ZS260717P00140000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 140.0,
+    "expiration": "2026-07-17",
+    "sent_at": "2026-07-15T17:41:03.819164+00:00",
+    "spot_at_send": 148.52,
+    "entry": 0.55,
+    "target": 0.74,
+    "stop": 0.28,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.712109260559082,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-15T17:43:04.536076+00:00",
     "poll_count": 1
   }
 }
