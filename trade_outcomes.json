@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-20T17:44:21.547367+00:00",
+    "updated_at": "2026-07-20T20:35:05.579643+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 38,
-    "losses": 144,
+    "losses": 145,
     "expired": 2,
-    "open": 9
+    "open": 8
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -4090,13 +4090,13 @@
     "entry": 0.38,
     "target": 0.51,
     "stop": 0.19,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.19,
+    "graded_at": "2026-07-20T20:35:02.291678+00:00",
+    "outcome_at": "2026-07-20",
+    "implied_vol": 0.353200340270996,
+    "last_underlying": 55.19,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -4161,10 +4161,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.4232538890838623,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-20T20:35:02.294485+00:00",
+    "poll_count": 1
   },
   "1bc2663c-212b-4ca4-8884-1f18ec61ad98": {
     "ticker": "CVX",
@@ -4183,10 +4183,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.30459729671478264,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-20T20:35:04.053436+00:00",
+    "poll_count": 1
   },
   "d2c26733-06e1-40b3-98c7-83031244e924": {
     "ticker": "ZS",
@@ -4249,9 +4249,9 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.3496943283081055,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-20T20:35:05.579546+00:00",
+    "poll_count": 1
   }
 }
