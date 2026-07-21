@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-21T16:13:05.762202+00:00",
+    "updated_at": "2026-07-21T17:46:13.467865+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 38,
     "losses": 147,
     "expired": 2,
-    "open": 12
+    "open": 15
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -4141,8 +4141,8 @@
     "outcome_at": null,
     "implied_vol": 0.8840991544723509,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:12:56.143638+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-07-21T17:46:00.415176+00:00",
+    "poll_count": 4
   },
   "f9541918-9a27-425b-b0bd-3900b113a572": {
     "ticker": "OXY",
@@ -4163,8 +4163,8 @@
     "outcome_at": null,
     "implied_vol": 0.4232538890838623,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:12:57.572421+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-07-21T17:46:01.764237+00:00",
+    "poll_count": 5
   },
   "1bc2663c-212b-4ca4-8884-1f18ec61ad98": {
     "ticker": "CVX",
@@ -4185,8 +4185,8 @@
     "outcome_at": null,
     "implied_vol": 0.30459729671478264,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:12:58.921896+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-07-21T17:46:03.211863+00:00",
+    "poll_count": 5
   },
   "d2c26733-06e1-40b3-98c7-83031244e924": {
     "ticker": "ZS",
@@ -4207,8 +4207,8 @@
     "outcome_at": null,
     "implied_vol": 0.7939384365081787,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:12:56.143662+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-07-21T17:46:00.415203+00:00",
+    "poll_count": 4
   },
   "09ecdbb2-2ced-43b1-8f7c-0b0923a58f7e": {
     "ticker": "ADBE",
@@ -4229,8 +4229,8 @@
     "outcome_at": null,
     "implied_vol": 0.5911089754104614,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:13:00.404174+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-07-21T17:46:04.520103+00:00",
+    "poll_count": 4
   },
   "682df2d5-ce9c-4304-8efc-6ffa7bd098bd": {
     "ticker": "COP",
@@ -4251,8 +4251,8 @@
     "outcome_at": null,
     "implied_vol": 0.3496943283081055,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:13:01.830159+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-07-21T17:46:06.022373+00:00",
+    "poll_count": 5
   },
   "0b81d705-942b-4871-a977-da4385c9eb00": {
     "ticker": "PYPL",
@@ -4273,8 +4273,8 @@
     "outcome_at": null,
     "implied_vol": 0.4185665035247802,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:13:03.237114+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-07-21T17:46:07.425045+00:00",
+    "poll_count": 3
   },
   "c2e83194-49a1-4f68-a15a-78d276ce65c4": {
     "ticker": "RIOT",
@@ -4295,8 +4295,8 @@
     "outcome_at": null,
     "implied_vol": 0.8114018058776855,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:13:04.525892+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-07-21T17:46:08.952088+00:00",
+    "poll_count": 3
   },
   "cfe02b2e-9bad-4ed5-942c-7c3d32120d3c": {
     "ticker": "CVX",
@@ -4317,8 +4317,8 @@
     "outcome_at": null,
     "implied_vol": 0.3728454399108886,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:12:58.921921+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-07-21T17:46:03.211887+00:00",
+    "poll_count": 3
   },
   "f0424418-15d0-47ab-ae41-ba6a8b027a9a": {
     "ticker": "RIOT",
@@ -4339,8 +4339,8 @@
     "outcome_at": null,
     "implied_vol": 0.8829511260986327,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:13:04.525955+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-21T17:46:08.952113+00:00",
+    "poll_count": 2
   },
   "b15d299e-be0a-4e09-beab-3fe9fabbce99": {
     "ticker": "CVX",
@@ -4361,8 +4361,8 @@
     "outcome_at": null,
     "implied_vol": 0.3162347793579101,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:12:58.923470+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-21T17:46:03.211901+00:00",
+    "poll_count": 2
   },
   "16a6fa18-fc9e-4080-b254-9617f1b1598e": {
     "ticker": "PLTR",
@@ -4383,7 +4383,73 @@
     "outcome_at": null,
     "implied_vol": 0.6390022420883178,
     "last_underlying": null,
-    "last_polled_at": "2026-07-21T16:13:05.762095+00:00",
+    "last_polled_at": "2026-07-21T17:46:10.331807+00:00",
+    "poll_count": 2
+  },
+  "ea041bf0-f03e-4b9b-9f65-07108564fe49": {
+    "ticker": "RIOT",
+    "contract": "RIOT260724C00023000",
+    "strategy": "Mean Reversion",
+    "opt_type": "call",
+    "strike": 23.0,
+    "expiration": "2026-07-24",
+    "sent_at": "2026-07-21T17:41:07.044949+00:00",
+    "spot_at_send": 21.64,
+    "entry": 0.38,
+    "target": 0.51,
+    "stop": 0.19,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.0893485260009768,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-21T17:46:08.952179+00:00",
+    "poll_count": 1
+  },
+  "dff71cba-177f-411b-a778-3da7ef69314d": {
+    "ticker": "MSFT",
+    "contract": "MSFT260722P00390000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 390.0,
+    "expiration": "2026-07-22",
+    "sent_at": "2026-07-21T17:41:13.327477+00:00",
+    "spot_at_send": 399.42,
+    "entry": 0.63,
+    "target": 0.85,
+    "stop": 0.32,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.39918816566467274,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-21T17:46:11.927963+00:00",
+    "poll_count": 1
+  },
+  "3bc4296b-bace-49f7-a3c8-0c42f46466a4": {
+    "ticker": "MRVL",
+    "contract": "MRVL260724C00227500",
+    "strategy": "Mean Reversion",
+    "opt_type": "call",
+    "strike": 227.5,
+    "expiration": "2026-07-24",
+    "sent_at": "2026-07-21T17:41:16.360973+00:00",
+    "spot_at_send": 209.01,
+    "entry": 2.78,
+    "target": 3.75,
+    "stop": 1.39,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.1407049322128295,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-21T17:46:13.467757+00:00",
     "poll_count": 1
   }
 }
