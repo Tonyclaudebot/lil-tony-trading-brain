@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-23T20:32:28.391471+00:00",
+    "updated_at": "2026-07-23T20:38:13.607534+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 46,
-    "losses": 163,
+    "wins": 47,
+    "losses": 165,
     "expired": 2,
-    "open": 9
+    "open": 6
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -4530,13 +4530,13 @@
     "entry": 0.45,
     "target": 0.61,
     "stop": 0.23,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.61,
+    "graded_at": "2026-07-23T20:38:03.654773+00:00",
+    "outcome_at": "2026-07-23",
     "implied_vol": 0.8921258258819578,
-    "last_underlying": null,
+    "last_underlying": 161.16,
     "last_polled_at": "2026-07-23T20:32:16.194570+00:00",
     "poll_count": 8
   },
@@ -4574,13 +4574,13 @@
     "entry": 0.36,
     "target": 0.49,
     "stop": 0.18,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.18,
+    "graded_at": "2026-07-23T20:38:05.087558+00:00",
+    "outcome_at": "2026-07-23",
     "implied_vol": 1.0374824142456056,
-    "last_underlying": null,
+    "last_underlying": 93.63,
     "last_polled_at": "2026-07-23T20:32:18.997948+00:00",
     "poll_count": 8
   },
@@ -4596,13 +4596,13 @@
     "entry": 0.31,
     "target": 0.42,
     "stop": 0.15,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.15,
+    "graded_at": "2026-07-23T20:38:03.670718+00:00",
+    "outcome_at": "2026-07-23",
     "implied_vol": 0.9001286792755125,
-    "last_underlying": null,
+    "last_underlying": 161.16,
     "last_polled_at": "2026-07-23T20:32:16.194597+00:00",
     "poll_count": 7
   },
@@ -4735,8 +4735,8 @@
     "outcome_at": null,
     "implied_vol": 0.34241554260253904,
     "last_underlying": null,
-    "last_polled_at": "2026-07-23T20:32:21.711162+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-07-23T20:38:06.534777+00:00",
+    "poll_count": 4
   },
   "1516bc1f-0d6d-43b6-8d1c-e79fc0a59203": {
     "ticker": "XOM",
@@ -4757,8 +4757,8 @@
     "outcome_at": null,
     "implied_vol": 0.35745900154113763,
     "last_underlying": null,
-    "last_polled_at": "2026-07-23T20:32:23.108028+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-07-23T20:38:08.011322+00:00",
+    "poll_count": 4
   },
   "2c648ef4-77e2-46c9-bb8d-661fcd6fcc10": {
     "ticker": "COP",
@@ -4779,8 +4779,8 @@
     "outcome_at": null,
     "implied_vol": 0.3333646965026855,
     "last_underlying": null,
-    "last_polled_at": "2026-07-23T20:32:24.485362+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-07-23T20:38:09.388488+00:00",
+    "poll_count": 4
   },
   "dfd229a9-90c7-48ee-a330-60f44b579178": {
     "ticker": "CVX",
@@ -4801,8 +4801,8 @@
     "outcome_at": null,
     "implied_vol": 0.2898539447784423,
     "last_underlying": null,
-    "last_polled_at": "2026-07-23T20:32:25.693902+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-07-23T20:38:10.796396+00:00",
+    "poll_count": 3
   },
   "53cdd047-8932-4aad-a55d-09ea5b9845f7": {
     "ticker": "XLE",
@@ -4823,8 +4823,8 @@
     "outcome_at": null,
     "implied_vol": 0.3104422378540039,
     "last_underlying": null,
-    "last_polled_at": "2026-07-23T20:32:27.026377+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-07-23T20:38:12.207064+00:00",
+    "poll_count": 3
   },
   "3cb8f37d-d7e8-4f88-af5d-b02eaef6d1d0": {
     "ticker": "EOG",
@@ -4845,7 +4845,7 @@
     "outcome_at": null,
     "implied_vol": 0.383315839767456,
     "last_underlying": null,
-    "last_polled_at": "2026-07-23T20:32:28.391355+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-07-23T20:38:13.607355+00:00",
+    "poll_count": 3
   }
 }
