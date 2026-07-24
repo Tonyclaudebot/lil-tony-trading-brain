@@ -1,186 +1,134 @@
 {
   "alerts": [
     {
-      "ticker": "RIOT",
+      "ticker": "MARA",
       "strategy": "composite",
-      "score": 87.26,
-      "momentum_score": 78.76,
+      "score": 75.96,
+      "momentum_score": 59.93,
       "uoa_score": 100.0
     },
     {
-      "ticker": "GM",
+      "ticker": "MU",
       "strategy": "composite",
-      "score": 77.39,
-      "momentum_score": 62.31,
+      "score": 75.78,
+      "momentum_score": 59.64,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "RIOT",
+      "strategy": "composite",
+      "score": 74.36,
+      "momentum_score": 57.27,
       "uoa_score": 100.0
     },
     {
       "ticker": "XOM",
       "strategy": "composite",
-      "score": 62.86,
-      "momentum_score": 38.1,
+      "score": 62.52,
+      "momentum_score": 37.53,
       "uoa_score": 100.0
-    },
-    {
-      "ticker": "XLE",
-      "strategy": "composite",
-      "score": 55.65,
-      "momentum_score": 26.09,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "CVX",
-      "strategy": "composite",
-      "score": 55.57,
-      "momentum_score": 25.95,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "BAC",
-      "strategy": "composite",
-      "score": 55.33,
-      "momentum_score": 25.55,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "OXY",
-      "strategy": "composite",
-      "score": 22.3,
-      "momentum_score": 37.17,
-      "uoa_score": 0.0
-    },
-    {
-      "ticker": "JNJ",
-      "strategy": "composite",
-      "score": 20.96,
-      "momentum_score": 34.94,
-      "uoa_score": 0.0
-    },
-    {
-      "ticker": "AVGO",
-      "strategy": "composite",
-      "score": 20.3,
-      "momentum_score": 33.83,
-      "uoa_score": 0.0
     },
     {
       "ticker": "AMD",
       "strategy": "composite",
-      "score": 20.05,
-      "momentum_score": 33.42,
-      "uoa_score": 0.0
+      "score": 59.16,
+      "momentum_score": 31.94,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "JNJ",
+      "strategy": "composite",
+      "score": 57.09,
+      "momentum_score": 28.48,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "BMY",
+      "strategy": "composite",
+      "score": 55.94,
+      "momentum_score": 26.57,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "AVGO",
+      "strategy": "composite",
+      "score": 55.55,
+      "momentum_score": 25.91,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "TSLA",
+      "strategy": "composite",
+      "score": 54.56,
+      "momentum_score": 24.26,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "ABBV",
+      "strategy": "composite",
+      "score": 53.24,
+      "momentum_score": 22.06,
+      "uoa_score": 100.0
     }
   ],
   "top_picks": [
     {
-      "ticker": "RIOT",
-      "score": 87.26,
+      "ticker": "MARA",
+      "score": 75.96,
       "strategy": "composite"
     },
     {
-      "ticker": "GM",
-      "score": 77.39,
+      "ticker": "MU",
+      "score": 75.78,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "RIOT",
+      "score": 74.36,
       "strategy": "composite"
     },
     {
       "ticker": "XOM",
-      "score": 62.86,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "XLE",
-      "score": 55.65,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "CVX",
-      "score": 55.57,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "BAC",
-      "score": 55.33,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "OXY",
-      "score": 22.3,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "JNJ",
-      "score": 20.96,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "AVGO",
-      "score": 20.3,
+      "score": 62.52,
       "strategy": "composite"
     },
     {
       "ticker": "AMD",
-      "score": 20.05,
+      "score": 59.16,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "JNJ",
+      "score": 57.09,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "BMY",
+      "score": 55.94,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "AVGO",
+      "score": 55.55,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "TSLA",
+      "score": 54.56,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "ABBV",
+      "score": 53.24,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-07-22T21:31:41.710357+00:00",
-  "last_updated": "2026-07-23T17:40:58.756536+00:00",
+  "scan_finished_at": "2026-07-23T21:31:41.805398+00:00",
+  "last_updated": "2026-07-24T12:01:54.583840+00:00",
   "prices": {},
-  "phase4_alerts": [
-    {
-      "ticker": "CVX",
-      "contract_type": "PUT",
-      "strike": "$192.50",
-      "expiry": "07/24",
-      "entry": "$0.25",
-      "stop": "$0.12",
-      "target": "$0.34",
-      "score": 55,
-      "contract": "$192P",
-      "risk_iv_rank": 45.5,
-      "risk_iv_label": "MEDIUM",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "MEDIUM",
-      "risk_summary": "Watch: short-dated (1d to expiry)",
-      "off_hours": true
-    },
-    {
-      "ticker": "XLE",
-      "contract_type": "PUT",
-      "strike": "$59.50",
-      "expiry": "07/24",
-      "entry": "$0.32",
-      "stop": "$0.16",
-      "target": "$0.43",
-      "score": 53,
-      "contract": "$59P",
-      "risk_iv_rank": 42.3,
-      "risk_iv_label": "MEDIUM",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "MEDIUM",
-      "risk_summary": "Watch: short-dated (1d to expiry)",
-      "off_hours": true
-    },
-    {
-      "ticker": "EOG",
-      "contract_type": "PUT",
-      "strike": "$144.00",
-      "expiry": "07/24",
-      "entry": "$0.40",
-      "stop": "$0.20",
-      "target": "$0.54",
-      "score": 51,
-      "contract": "$144P",
-      "risk_iv_rank": 62.2,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "MEDIUM",
-      "risk_summary": "Watch: high IV rank (62); short-dated (1d to expiry)",
-      "off_hours": true
-    }
-  ],
+  "phase4_alerts": [],
   "trades": {
     "active": [
       {
