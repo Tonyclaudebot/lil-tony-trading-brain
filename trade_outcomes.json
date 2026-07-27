@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-27T17:44:58.950510+00:00",
+    "updated_at": "2026-07-27T20:34:25.863456+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 53,
-    "losses": 165,
+    "losses": 168,
     "expired": 2,
-    "open": 8
+    "open": 5
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -4860,13 +4860,13 @@
     "entry": 0.5,
     "target": 0.68,
     "stop": 0.25,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.25,
+    "graded_at": "2026-07-27T20:34:20.564154+00:00",
+    "outcome_at": "2026-07-27",
+    "implied_vol": 0.32862967491149897,
+    "last_underlying": 51.53,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -4882,13 +4882,13 @@
     "entry": 1.0,
     "target": 1.35,
     "stop": 0.5,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.5,
+    "graded_at": "2026-07-27T20:34:21.834954+00:00",
+    "outcome_at": "2026-07-27",
+    "implied_vol": 0.2920785474777221,
+    "last_underlying": 154.77,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -4904,13 +4904,13 @@
     "entry": 0.25,
     "target": 0.34,
     "stop": 0.12,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.12,
+    "graded_at": "2026-07-27T20:34:23.220494+00:00",
+    "outcome_at": "2026-07-27",
+    "implied_vol": 0.3173304080963134,
+    "last_underlying": 140.31,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -4931,10 +4931,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.4780353260040282,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-27T20:34:21.841897+00:00",
+    "poll_count": 1
   },
   "b60a63b6-df45-4daf-9b7a-392f2ebb8390": {
     "ticker": "EOG",
@@ -4953,10 +4953,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.3457691192626953,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-27T20:34:23.229278+00:00",
+    "poll_count": 1
   },
   "9297d156-5df4-41e6-aff7-36f72777df15": {
     "ticker": "OXY",
@@ -4975,10 +4975,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.4501396656036376,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-27T20:34:24.481121+00:00",
+    "poll_count": 1
   },
   "c03ecff9-8a69-490a-b694-2285f498a1e5": {
     "ticker": "XOM",
@@ -4997,10 +4997,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.4572612524032593,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-27T20:34:21.841992+00:00",
+    "poll_count": 1
   },
   "88af26bf-b720-4ce9-a67e-530c4f8f71f0": {
     "ticker": "COP",
@@ -5019,9 +5019,9 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.3990119123458862,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-07-27T20:34:25.863283+00:00",
+    "poll_count": 1
   }
 }
