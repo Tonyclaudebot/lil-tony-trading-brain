@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-27T20:34:25.863456+00:00",
+    "updated_at": "2026-07-28T12:06:57.353093+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 53,
     "losses": 168,
     "expired": 2,
-    "open": 5
+    "open": 8
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -4933,8 +4933,8 @@
     "outcome_at": null,
     "implied_vol": 0.4780353260040282,
     "last_underlying": null,
-    "last_polled_at": "2026-07-27T20:34:21.841897+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-28T12:06:49.112432+00:00",
+    "poll_count": 2
   },
   "b60a63b6-df45-4daf-9b7a-392f2ebb8390": {
     "ticker": "EOG",
@@ -4955,8 +4955,8 @@
     "outcome_at": null,
     "implied_vol": 0.3457691192626953,
     "last_underlying": null,
-    "last_polled_at": "2026-07-27T20:34:23.229278+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-28T12:06:50.468285+00:00",
+    "poll_count": 2
   },
   "9297d156-5df4-41e6-aff7-36f72777df15": {
     "ticker": "OXY",
@@ -4977,8 +4977,8 @@
     "outcome_at": null,
     "implied_vol": 0.4501396656036376,
     "last_underlying": null,
-    "last_polled_at": "2026-07-27T20:34:24.481121+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-28T12:06:51.708109+00:00",
+    "poll_count": 2
   },
   "c03ecff9-8a69-490a-b694-2285f498a1e5": {
     "ticker": "XOM",
@@ -4999,8 +4999,8 @@
     "outcome_at": null,
     "implied_vol": 0.4572612524032593,
     "last_underlying": null,
-    "last_polled_at": "2026-07-27T20:34:21.841992+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-28T12:06:49.112458+00:00",
+    "poll_count": 2
   },
   "88af26bf-b720-4ce9-a67e-530c4f8f71f0": {
     "ticker": "COP",
@@ -5021,7 +5021,73 @@
     "outcome_at": null,
     "implied_vol": 0.3990119123458862,
     "last_underlying": null,
-    "last_polled_at": "2026-07-27T20:34:25.863283+00:00",
+    "last_polled_at": "2026-07-28T12:06:53.076381+00:00",
+    "poll_count": 2
+  },
+  "ef46dac1-ad21-47ab-a5b6-9d687706cde3": {
+    "ticker": "GM",
+    "contract": "GM260731P00085000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 85.0,
+    "expiration": "2026-07-31",
+    "sent_at": "2026-07-28T12:01:50.226222+00:00",
+    "spot_at_send": 87.7047,
+    "entry": 0.94,
+    "target": 1.27,
+    "stop": 0.47,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6112304353713989,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-28T12:06:54.486302+00:00",
+    "poll_count": 1
+  },
+  "209f0dcc-0050-4804-af06-404145626d66": {
+    "ticker": "F",
+    "contract": "F260731P00014000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 14.0,
+    "expiration": "2026-07-31",
+    "sent_at": "2026-07-28T12:01:54.408341+00:00",
+    "spot_at_send": 14.7139,
+    "entry": 0.22,
+    "target": 0.3,
+    "stop": 0.11,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.9085602569580077,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-28T12:06:55.959823+00:00",
+    "poll_count": 1
+  },
+  "3048eda8-fbfd-4e46-bddf-0652d787802e": {
+    "ticker": "SLB",
+    "contract": "SLB260731P00051000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 51.0,
+    "expiration": "2026-07-31",
+    "sent_at": "2026-07-28T12:01:57.754953+00:00",
+    "spot_at_send": 51.1005,
+    "entry": 0.56,
+    "target": 0.76,
+    "stop": 0.28,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.31687310218811027,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-28T12:06:57.352944+00:00",
     "poll_count": 1
   }
 }
