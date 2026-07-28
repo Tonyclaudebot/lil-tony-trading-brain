@@ -126,44 +126,9 @@
   "scan_status": "idle",
   "total_tickers": 93,
   "scan_finished_at": "2026-07-27T21:31:39.469711+00:00",
-  "last_updated": "2026-07-28T16:10:58.984269+00:00",
+  "last_updated": "2026-07-28T17:40:57.870078+00:00",
   "prices": {},
-  "phase4_alerts": [
-    {
-      "ticker": "GM",
-      "contract_type": "PUT",
-      "strike": "$88.00",
-      "expiry": "07/31",
-      "entry": "$0.78",
-      "stop": "$0.39",
-      "target": "$1.05",
-      "score": 85,
-      "contract": "$88P",
-      "risk_iv_rank": 69.9,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "FAIR",
-      "risk_score": "HIGH",
-      "risk_summary": "Watch: high IV rank (70); short-dated (3d to expiry)",
-      "off_hours": true
-    },
-    {
-      "ticker": "F",
-      "contract_type": "PUT",
-      "strike": "$14.50",
-      "expiry": "07/31",
-      "entry": "$0.27",
-      "stop": "$0.14",
-      "target": "$0.36",
-      "score": 59,
-      "contract": "$14P",
-      "risk_iv_rank": 100.0,
-      "risk_iv_label": "HIGH",
-      "risk_premium_label": "CHEAP",
-      "risk_score": "MEDIUM",
-      "risk_summary": "Watch: high IV rank (100); short-dated (3d to expiry)",
-      "off_hours": true
-    }
-  ],
+  "phase4_alerts": [],
   "trades": {
     "active": [
       {
