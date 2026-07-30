@@ -1,134 +1,186 @@
 {
   "alerts": [
     {
-      "ticker": "GM",
+      "ticker": "ADBE",
       "strategy": "composite",
-      "score": 84.88,
-      "momentum_score": 74.8,
+      "score": 90.72,
+      "momentum_score": 84.53,
       "uoa_score": 100.0
     },
     {
       "ticker": "NOW",
       "strategy": "composite",
-      "score": 69.94,
-      "momentum_score": 49.9,
+      "score": 87.83,
+      "momentum_score": 79.72,
       "uoa_score": 100.0
     },
     {
-      "ticker": "MSTR",
+      "ticker": "DDOG",
       "strategy": "composite",
-      "score": 69.62,
-      "momentum_score": 49.36,
+      "score": 82.99,
+      "momentum_score": 71.65,
       "uoa_score": 100.0
     },
     {
       "ticker": "CRM",
       "strategy": "composite",
-      "score": 67.85,
-      "momentum_score": 51.13,
-      "uoa_score": 92.93150684931506
-    },
-    {
-      "ticker": "PLTR",
-      "strategy": "composite",
-      "score": 66.51,
-      "momentum_score": 44.18,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "ADBE",
-      "strategy": "composite",
-      "score": 64.24,
-      "momentum_score": 51.6,
-      "uoa_score": 83.1896551724138
-    },
-    {
-      "ticker": "JNJ",
-      "strategy": "composite",
-      "score": 61.88,
-      "momentum_score": 36.46,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "JPM",
-      "strategy": "composite",
-      "score": 59.84,
-      "momentum_score": 33.06,
-      "uoa_score": 100.0
-    },
-    {
-      "ticker": "TGT",
-      "strategy": "composite",
-      "score": 59.36,
-      "momentum_score": 32.26,
+      "score": 82.94,
+      "momentum_score": 71.57,
       "uoa_score": 100.0
     },
     {
       "ticker": "F",
       "strategy": "composite",
-      "score": 59.06,
-      "momentum_score": 43.27,
-      "uoa_score": 82.75280898876404
+      "score": 70.74,
+      "momentum_score": 51.23,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "CMCSA",
+      "strategy": "composite",
+      "score": 62.23,
+      "momentum_score": 37.05,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "REGN",
+      "strategy": "composite",
+      "score": 61.26,
+      "momentum_score": 35.43,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "TGT",
+      "strategy": "composite",
+      "score": 60.87,
+      "momentum_score": 34.78,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "MA",
+      "strategy": "composite",
+      "score": 59.09,
+      "momentum_score": 31.81,
+      "uoa_score": 100.0
+    },
+    {
+      "ticker": "WMT",
+      "strategy": "composite",
+      "score": 50.3,
+      "momentum_score": 31.7,
+      "uoa_score": 78.20419985517741
     }
   ],
   "top_picks": [
     {
-      "ticker": "GM",
-      "score": 84.88,
+      "ticker": "ADBE",
+      "score": 90.72,
       "strategy": "composite"
     },
     {
       "ticker": "NOW",
-      "score": 69.94,
+      "score": 87.83,
       "strategy": "composite"
     },
     {
-      "ticker": "MSTR",
-      "score": 69.62,
+      "ticker": "DDOG",
+      "score": 82.99,
       "strategy": "composite"
     },
     {
       "ticker": "CRM",
-      "score": 67.85,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "PLTR",
-      "score": 66.51,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "ADBE",
-      "score": 64.24,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "JNJ",
-      "score": 61.88,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "JPM",
-      "score": 59.84,
-      "strategy": "composite"
-    },
-    {
-      "ticker": "TGT",
-      "score": 59.36,
+      "score": 82.94,
       "strategy": "composite"
     },
     {
       "ticker": "F",
-      "score": 59.06,
+      "score": 70.74,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "CMCSA",
+      "score": 62.23,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "REGN",
+      "score": 61.26,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "TGT",
+      "score": 60.87,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "MA",
+      "score": 59.09,
+      "strategy": "composite"
+    },
+    {
+      "ticker": "WMT",
+      "score": 50.3,
       "strategy": "composite"
     }
   ],
   "scan_status": "idle",
   "total_tickers": 93,
-  "scan_finished_at": "2026-07-27T21:31:39.469711+00:00",
-  "last_updated": "2026-07-28T17:40:57.870078+00:00",
+  "scan_finished_at": "2026-07-29T22:52:02.159483+00:00",
+  "last_updated": "2026-07-30T12:01:56.989857+00:00",
   "prices": {},
-  "phase4_alerts": [],
+  "phase4_alerts": [
+    {
+      "ticker": "ADBE",
+      "contract_type": "PUT",
+      "strike": "$250.00",
+      "expiry": "07/31",
+      "entry": "$0.90",
+      "stop": "$0.45",
+      "target": "$1.22",
+      "score": 91,
+      "contract": "$250P",
+      "risk_iv_rank": 93.0,
+      "risk_iv_label": "HIGH",
+      "risk_premium_label": "FAIR",
+      "risk_score": "HIGH",
+      "risk_summary": "Watch: high IV rank (93); short-dated (1d to expiry)",
+      "off_hours": true
+    },
+    {
+      "ticker": "CRM",
+      "contract_type": "PUT",
+      "strike": "$180.00",
+      "expiry": "07/31",
+      "entry": "$0.80",
+      "stop": "$0.40",
+      "target": "$1.08",
+      "score": 83,
+      "contract": "$180P",
+      "risk_iv_rank": 99.1,
+      "risk_iv_label": "HIGH",
+      "risk_premium_label": "FAIR",
+      "risk_score": "HIGH",
+      "risk_summary": "Watch: high IV rank (99); short-dated (1d to expiry)",
+      "off_hours": true
+    },
+    {
+      "ticker": "EOG",
+      "contract_type": "PUT",
+      "strike": "$143.00",
+      "expiry": "07/31",
+      "entry": "$1.00",
+      "stop": "$0.50",
+      "target": "$1.35",
+      "score": 59,
+      "contract": "$143P",
+      "risk_iv_rank": 63.2,
+      "risk_iv_label": "HIGH",
+      "risk_premium_label": "FAIR",
+      "risk_score": "HIGH",
+      "risk_summary": "Watch: high IV rank (63); short-dated (1d to expiry)",
+      "off_hours": true
+    }
+  ],
   "trades": {
     "active": [
       {
@@ -784,6 +836,159 @@
         "risk_premium_label": "CHEAP",
         "risk_score": "MEDIUM",
         "risk_summary": "Watch: high IV rank (100); short-dated (3d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "bef903ef-5b00-412f-9be8-567b6a49000b",
+        "timestamp": "2026-07-30T12:01:46.987921+00:00",
+        "ticker": "ADBE",
+        "contract": "ADBE260731P00250000",
+        "opt_type": "put",
+        "strike": 250.0,
+        "expiration": "2026-07-31",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 256.0,
+        "entry": 0.9,
+        "target": 1.22,
+        "stop": 0.45,
+        "target_pct": 35.0,
+        "iv": 62.0,
+        "volume": 2183,
+        "open_interest": 1657,
+        "score": 83.8,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Adobe (ADBE) Joins Open Source AI Cybersecurity Alliance As AI Security Effort Expands",
+          "Equinix shares fall on soft third-quarter forecast ",
+          "Adobe (ADBE) Joins Open Source AI Cybersecurity Alliance As AI Security Effort Expands"
+        ],
+        "risk_iv_rank": 93.0,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "FAIR",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (93); short-dated (1d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "716802c5-bd18-4ecf-9f56-dbc4a999c359",
+        "timestamp": "2026-07-30T12:01:51.480623+00:00",
+        "ticker": "CRM",
+        "contract": "CRM260731P00180000",
+        "opt_type": "put",
+        "strike": 180.0,
+        "expiration": "2026-07-31",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 180.75,
+        "entry": 0.8,
+        "target": 1.08,
+        "stop": 0.4,
+        "target_pct": 35.0,
+        "iv": 66.1,
+        "volume": 1616,
+        "open_interest": 1777,
+        "score": 79.48,
+        "confidence": "HIGH",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Salesforce (CRM) Stock Still Trades Below Fair Value",
+          "Stocks Plunge on a Rout in Chipmakers and a Hawkish Fed Hold",
+          "Salesforce (CRM) Stock Still Trades Below Fair Value"
+        ],
+        "risk_iv_rank": 99.1,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "FAIR",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (99); short-dated (1d to expiry)",
+        "or_high": null,
+        "or_low": null,
+        "or_t1": null,
+        "or_t2": null,
+        "or_t3": null,
+        "or_target_hit": null,
+        "outcome": null,
+        "graded_at": null,
+        "exit_price": null
+      },
+      {
+        "alert_id": "d318bd8e-a31a-41e3-8ada-02dbcf9206e3",
+        "timestamp": "2026-07-30T12:01:54.640480+00:00",
+        "ticker": "EOG",
+        "contract": "EOG260731P00143000",
+        "opt_type": "put",
+        "strike": 143.0,
+        "expiration": "2026-07-31",
+        "dte": 1,
+        "strategy_key": "mean_reversion",
+        "strategy_name": "Mean Reversion",
+        "spot": 144.02,
+        "entry": 1.0,
+        "target": 1.35,
+        "stop": 0.5,
+        "target_pct": 35.0,
+        "iv": 42.1,
+        "volume": 103,
+        "open_interest": 104,
+        "score": 67.02,
+        "confidence": "MEDIUM",
+        "earnings_date": null,
+        "days_to_earnings": null,
+        "earnings_proximity_risk": "UNKNOWN",
+        "earnings_beat_rate": null,
+        "earnings_avg_move": null,
+        "earnings_warning": null,
+        "macro_events": [],
+        "macro_warning": null,
+        "binary_event_flag": false,
+        "binary_event_detail": null,
+        "news_context": [
+          "Oakmark U.S. Large Value Strategy Q2 2026 Portfolio Review",
+          "EOG Resources (EOG) Nears Earnings, Is The Stock Still Cheap?",
+          "Oakmark U.S. Large Value Strategy Q2 2026 Portfolio Review"
+        ],
+        "risk_iv_rank": 63.2,
+        "risk_iv_label": "HIGH",
+        "risk_premium_label": "FAIR",
+        "risk_score": "HIGH",
+        "risk_summary": "Watch: high IV rank (63); short-dated (1d to expiry)",
         "or_high": null,
         "or_low": null,
         "or_t1": null,
