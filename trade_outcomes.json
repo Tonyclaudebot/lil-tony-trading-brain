@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-30T12:05:50.877510+00:00",
+    "updated_at": "2026-07-30T16:12:31.869874+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 55,
     "losses": 176,
     "expired": 2,
-    "open": 3
+    "open": 6
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5153,8 +5153,8 @@
     "outcome_at": null,
     "implied_vol": 0.4853236389160155,
     "last_underlying": null,
-    "last_polled_at": "2026-07-30T12:05:48.208175+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-30T16:12:29.324824+00:00",
+    "poll_count": 2
   },
   "716802c5-bd18-4ecf-9f56-dbc4a999c359": {
     "ticker": "CRM",
@@ -5175,8 +5175,8 @@
     "outcome_at": null,
     "implied_vol": 0.2605387306213378,
     "last_underlying": null,
-    "last_polled_at": "2026-07-30T12:05:49.518763+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-30T16:12:30.643118+00:00",
+    "poll_count": 2
   },
   "d318bd8e-a31a-41e3-8ada-02dbcf9206e3": {
     "ticker": "EOG",
@@ -5197,7 +5197,73 @@
     "outcome_at": null,
     "implied_vol": 0.4170993137359619,
     "last_underlying": null,
-    "last_polled_at": "2026-07-30T12:05:50.877284+00:00",
+    "last_polled_at": "2026-07-30T16:12:31.869387+00:00",
+    "poll_count": 2
+  },
+  "00a3f6f7-6327-4be3-b92e-26f574f85b04": {
+    "ticker": "ADBE",
+    "contract": "ADBE260731P00230000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 230.0,
+    "expiration": "2026-07-31",
+    "sent_at": "2026-07-30T16:10:48.305826+00:00",
+    "spot_at_send": 245.41,
+    "entry": 0.2,
+    "target": 0.27,
+    "stop": 0.1,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6920830726623532,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-30T16:12:29.325043+00:00",
+    "poll_count": 1
+  },
+  "1ca4c951-3842-4c39-95bd-545797fed726": {
+    "ticker": "CRM",
+    "contract": "CRM260731P00175000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 175.0,
+    "expiration": "2026-07-31",
+    "sent_at": "2026-07-30T16:10:53.031117+00:00",
+    "spot_at_send": 178.55,
+    "entry": 0.8,
+    "target": 1.08,
+    "stop": 0.4,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5262334632873533,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-30T16:12:30.643293+00:00",
+    "poll_count": 1
+  },
+  "28b923f2-b939-459f-a7e3-776eb8dc55dd": {
+    "ticker": "EOG",
+    "contract": "EOG260731P00139000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 139.0,
+    "expiration": "2026-07-31",
+    "sent_at": "2026-07-30T16:10:56.078841+00:00",
+    "spot_at_send": 143.79,
+    "entry": 0.25,
+    "target": 0.34,
+    "stop": 0.12,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5103516101837158,
+    "last_underlying": null,
+    "last_polled_at": "2026-07-30T16:12:31.869569+00:00",
     "poll_count": 1
   }
 }
