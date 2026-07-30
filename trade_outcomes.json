@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-30T16:12:31.869874+00:00",
+    "updated_at": "2026-07-30T21:21:11.776558+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 55,
-    "losses": 176,
+    "wins": 56,
+    "losses": 178,
     "expired": 2,
-    "open": 6
+    "open": 3
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5146,13 +5146,13 @@
     "entry": 0.9,
     "target": 1.22,
     "stop": 0.45,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 1.22,
+    "graded_at": "2026-07-30T21:21:09.049551+00:00",
+    "outcome_at": "2026-07-30",
     "implied_vol": 0.4853236389160155,
-    "last_underlying": null,
+    "last_underlying": 247.9,
     "last_polled_at": "2026-07-30T16:12:29.324824+00:00",
     "poll_count": 2
   },
@@ -5168,13 +5168,13 @@
     "entry": 0.8,
     "target": 1.08,
     "stop": 0.4,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.4,
+    "graded_at": "2026-07-30T21:21:10.460640+00:00",
+    "outcome_at": "2026-07-30",
     "implied_vol": 0.2605387306213378,
-    "last_underlying": null,
+    "last_underlying": 180.71,
     "last_polled_at": "2026-07-30T16:12:30.643118+00:00",
     "poll_count": 2
   },
@@ -5190,13 +5190,13 @@
     "entry": 1.0,
     "target": 1.35,
     "stop": 0.5,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.5,
+    "graded_at": "2026-07-30T21:21:11.775696+00:00",
+    "outcome_at": "2026-07-30",
     "implied_vol": 0.4170993137359619,
-    "last_underlying": null,
+    "last_underlying": 145.51,
     "last_polled_at": "2026-07-30T16:12:31.869387+00:00",
     "poll_count": 2
   },
@@ -5219,8 +5219,8 @@
     "outcome_at": null,
     "implied_vol": 0.6920830726623532,
     "last_underlying": null,
-    "last_polled_at": "2026-07-30T16:12:29.325043+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-30T21:21:09.059696+00:00",
+    "poll_count": 2
   },
   "1ca4c951-3842-4c39-95bd-545797fed726": {
     "ticker": "CRM",
@@ -5241,8 +5241,8 @@
     "outcome_at": null,
     "implied_vol": 0.5262334632873533,
     "last_underlying": null,
-    "last_polled_at": "2026-07-30T16:12:30.643293+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-30T21:21:10.461365+00:00",
+    "poll_count": 2
   },
   "28b923f2-b939-459f-a7e3-776eb8dc55dd": {
     "ticker": "EOG",
@@ -5263,7 +5263,7 @@
     "outcome_at": null,
     "implied_vol": 0.5103516101837158,
     "last_underlying": null,
-    "last_polled_at": "2026-07-30T16:12:31.869569+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-07-30T21:21:11.776439+00:00",
+    "poll_count": 2
   }
 }
