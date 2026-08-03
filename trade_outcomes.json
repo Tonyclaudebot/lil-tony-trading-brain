@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-07-31T20:01:19.275726+00:00",
+    "updated_at": "2026-08-03T12:06:19.577020+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 56,
     "losses": 181,
     "expired": 2,
-    "open": 0
+    "open": 1
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5265,5 +5265,27 @@
     "last_underlying": 139.64,
     "last_polled_at": "2026-07-30T21:21:11.776439+00:00",
     "poll_count": 2
+  },
+  "e7477aa9-fcb7-43e6-b335-6d8742f625b4": {
+    "ticker": "GM",
+    "contract": "GM260807P00086000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 86.0,
+    "expiration": "2026-08-07",
+    "sent_at": "2026-08-03T12:01:49.835331+00:00",
+    "spot_at_send": 89.7796,
+    "entry": 0.65,
+    "target": 0.88,
+    "stop": 0.33,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
   }
 }
