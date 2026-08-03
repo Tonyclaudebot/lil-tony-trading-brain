@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-03T17:43:57.562981+00:00",
+    "updated_at": "2026-08-03T20:33:01.149600+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 56,
+    "wins": 57,
     "losses": 181,
     "expired": 2,
-    "open": 3
+    "open": 2
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5278,13 +5278,13 @@
     "entry": 0.65,
     "target": 0.88,
     "stop": 0.33,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.88,
+    "graded_at": "2026-08-03T20:32:59.753573+00:00",
+    "outcome_at": "2026-08-03",
+    "implied_vol": 0.524489984512329,
+    "last_underlying": 87.68,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -5327,9 +5327,9 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.40644789695739736,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-08-03T20:32:59.763810+00:00",
+    "poll_count": 1
   }
 }
