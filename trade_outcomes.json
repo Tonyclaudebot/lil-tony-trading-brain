@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-05T16:15:20.170763+00:00",
+    "updated_at": "2026-08-05T20:31:14.219561+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 58,
+    "wins": 59,
     "losses": 185,
     "expired": 2,
-    "open": 8
+    "open": 7
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5417,8 +5417,8 @@
     "outcome_at": null,
     "implied_vol": 0.42805083751678463,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T16:15:13.601426+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-08-05T20:31:07.529694+00:00",
+    "poll_count": 7
   },
   "c2c20fe6-fca8-4923-b142-bbd6627ceb53": {
     "ticker": "MSFT",
@@ -5439,8 +5439,8 @@
     "outcome_at": null,
     "implied_vol": 0.46748394489288325,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T16:15:14.872755+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-08-05T20:31:08.886243+00:00",
+    "poll_count": 7
   },
   "67e89540-1fc1-4227-9099-bc362bd4015c": {
     "ticker": "TGT",
@@ -5454,13 +5454,13 @@
     "entry": 0.81,
     "target": 1.09,
     "stop": 0.41,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 1.09,
+    "graded_at": "2026-08-05T20:31:10.270398+00:00",
+    "outcome_at": "2026-08-05",
     "implied_vol": 0.3798288822174072,
-    "last_underlying": null,
+    "last_underlying": 147.7,
     "last_polled_at": "2026-08-05T16:15:16.142530+00:00",
     "poll_count": 6
   },
@@ -5483,8 +5483,8 @@
     "outcome_at": null,
     "implied_vol": 0.4350104618072509,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T16:15:13.601452+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-05T20:31:07.529720+00:00",
+    "poll_count": 6
   },
   "476b2d7b-87c5-4cc3-a784-bdaad4151c82": {
     "ticker": "BLK",
@@ -5505,8 +5505,8 @@
     "outcome_at": null,
     "implied_vol": 0.3258715486526489,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T16:15:17.385601+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-05T20:31:11.684182+00:00",
+    "poll_count": 6
   },
   "86fd952a-e0f5-4858-b357-eb08e6d09887": {
     "ticker": "PLTR",
@@ -5527,8 +5527,8 @@
     "outcome_at": null,
     "implied_vol": 0.8331428909301757,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T16:15:18.754272+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-05T20:31:13.008195+00:00",
+    "poll_count": 3
   },
   "3450074e-4b58-4a98-9505-71d4986d2b02": {
     "ticker": "SNAP",
