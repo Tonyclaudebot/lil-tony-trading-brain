@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-05T12:05:08.046090+00:00",
+    "updated_at": "2026-08-05T16:15:20.170763+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 58,
     "losses": 185,
     "expired": 2,
-    "open": 7
+    "open": 8
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5417,8 +5417,8 @@
     "outcome_at": null,
     "implied_vol": 0.42805083751678463,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T12:05:01.206828+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-05T16:15:13.601426+00:00",
+    "poll_count": 6
   },
   "c2c20fe6-fca8-4923-b142-bbd6627ceb53": {
     "ticker": "MSFT",
@@ -5439,8 +5439,8 @@
     "outcome_at": null,
     "implied_vol": 0.46748394489288325,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T12:05:02.586932+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-05T16:15:14.872755+00:00",
+    "poll_count": 6
   },
   "67e89540-1fc1-4227-9099-bc362bd4015c": {
     "ticker": "TGT",
@@ -5461,8 +5461,8 @@
     "outcome_at": null,
     "implied_vol": 0.3798288822174072,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T12:05:03.811392+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-05T16:15:16.142530+00:00",
+    "poll_count": 6
   },
   "a4166d86-5365-4fb4-9b63-a1b77668d68f": {
     "ticker": "AMZN",
@@ -5483,8 +5483,8 @@
     "outcome_at": null,
     "implied_vol": 0.4350104618072509,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T12:05:01.206855+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-05T16:15:13.601452+00:00",
+    "poll_count": 5
   },
   "476b2d7b-87c5-4cc3-a784-bdaad4151c82": {
     "ticker": "BLK",
@@ -5505,8 +5505,8 @@
     "outcome_at": null,
     "implied_vol": 0.3258715486526489,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T12:05:05.177752+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-05T16:15:17.385601+00:00",
+    "poll_count": 5
   },
   "86fd952a-e0f5-4858-b357-eb08e6d09887": {
     "ticker": "PLTR",
@@ -5527,8 +5527,8 @@
     "outcome_at": null,
     "implied_vol": 0.8331428909301757,
     "last_underlying": null,
-    "last_polled_at": "2026-08-05T12:05:06.480944+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-05T16:15:18.754272+00:00",
+    "poll_count": 2
   },
   "3450074e-4b58-4a98-9505-71d4986d2b02": {
     "ticker": "SNAP",
@@ -5542,6 +5542,28 @@
     "entry": 0.28,
     "target": 0.38,
     "stop": 0.14,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_unsolvable",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
+  },
+  "dc1876f2-1d33-4514-a5e0-146fe4125941": {
+    "ticker": "SNAP",
+    "contract": "SNAP260807P00005500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 5.5,
+    "expiration": "2026-08-07",
+    "sent_at": "2026-08-05T16:10:42.728752+00:00",
+    "spot_at_send": 5.225,
+    "entry": 0.25,
+    "target": 0.34,
+    "stop": 0.12,
     "outcome": "open",
     "outcome_method": "stock_proxy_unsolvable",
     "exit_price": null,
