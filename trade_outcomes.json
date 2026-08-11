@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-11T16:12:23.892610+00:00",
+    "updated_at": "2026-08-11T17:43:18.155928+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 59,
     "losses": 190,
     "expired": 2,
-    "open": 5
+    "open": 8
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5593,8 +5593,8 @@
     "outcome_at": null,
     "implied_vol": 0.7883554935455321,
     "last_underlying": null,
-    "last_polled_at": "2026-08-11T16:12:21.176966+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-11T17:43:12.699119+00:00",
+    "poll_count": 2
   },
   "f0cad78f-3d73-46a8-a352-63c3232e10fa": {
     "ticker": "ZS",
@@ -5615,8 +5615,8 @@
     "outcome_at": null,
     "implied_vol": 0.5759750080108643,
     "last_underlying": null,
-    "last_polled_at": "2026-08-11T16:12:22.530994+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-11T17:43:14.046500+00:00",
+    "poll_count": 2
   },
   "a8ca14e3-37f8-4731-9671-9879cc25323c": {
     "ticker": "CRWD",
@@ -5637,7 +5637,73 @@
     "outcome_at": null,
     "implied_vol": 0.6248829221725463,
     "last_underlying": null,
-    "last_polled_at": "2026-08-11T16:12:23.892375+00:00",
+    "last_polled_at": "2026-08-11T17:43:15.466515+00:00",
+    "poll_count": 2
+  },
+  "10797a97-a6e7-4f5a-b2b1-ecb86c825598": {
+    "ticker": "NET",
+    "contract": "NET260814P00280000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 280.0,
+    "expiration": "2026-08-14",
+    "sent_at": "2026-08-11T17:40:35.740819+00:00",
+    "spot_at_send": 309.78,
+    "entry": 0.5,
+    "target": 0.68,
+    "stop": 0.25,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.7053639984130858,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-11T17:43:12.699282+00:00",
+    "poll_count": 1
+  },
+  "ead6cd43-f4fb-41e2-a706-d8667388e86c": {
+    "ticker": "ADBE",
+    "contract": "ADBE260814P00250000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 250.0,
+    "expiration": "2026-08-14",
+    "sent_at": "2026-08-11T17:40:41.014584+00:00",
+    "spot_at_send": 264.38,
+    "entry": 0.51,
+    "target": 0.69,
+    "stop": 0.26,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.46834615707397464,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-11T17:43:16.816154+00:00",
+    "poll_count": 1
+  },
+  "c7faace7-3ddd-4683-aacf-d31611df30be": {
+    "ticker": "ORCL",
+    "contract": "ORCL260814P00138000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 138.0,
+    "expiration": "2026-08-14",
+    "sent_at": "2026-08-11T17:40:43.295073+00:00",
+    "spot_at_send": 144.63,
+    "entry": 1.0,
+    "target": 1.35,
+    "stop": 0.5,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6373206901550292,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-11T17:43:18.155648+00:00",
     "poll_count": 1
   }
 }
