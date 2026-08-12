@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-12T20:31:31.296931+00:00",
+    "updated_at": "2026-08-12T20:37:24.233355+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 59,
-    "losses": 192,
+    "wins": 62,
+    "losses": 196,
     "expired": 2,
-    "open": 15
+    "open": 8
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5608,13 +5608,13 @@
     "entry": 0.5,
     "target": 0.68,
     "stop": 0.25,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.25,
+    "graded_at": "2026-08-12T20:37:12.519701+00:00",
+    "outcome_at": "2026-08-12",
     "implied_vol": 0.5759750080108643,
-    "last_underlying": null,
+    "last_underlying": 177.32,
     "last_polled_at": "2026-08-12T20:31:20.239967+00:00",
     "poll_count": 6
   },
@@ -5630,13 +5630,13 @@
     "entry": 1.0,
     "target": 1.35,
     "stop": 0.5,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.5,
+    "graded_at": "2026-08-12T20:37:14.069589+00:00",
+    "outcome_at": "2026-08-12",
     "implied_vol": 0.6248829221725463,
-    "last_underlying": null,
+    "last_underlying": 221.78,
     "last_polled_at": "2026-08-12T20:31:21.670123+00:00",
     "poll_count": 6
   },
@@ -5674,13 +5674,13 @@
     "entry": 0.51,
     "target": 0.69,
     "stop": 0.26,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.69,
+    "graded_at": "2026-08-12T20:37:15.486966+00:00",
+    "outcome_at": "2026-08-12",
     "implied_vol": 0.46834615707397464,
-    "last_underlying": null,
+    "last_underlying": 258.75,
     "last_polled_at": "2026-08-12T20:31:23.081078+00:00",
     "poll_count": 5
   },
@@ -5696,13 +5696,13 @@
     "entry": 1.0,
     "target": 1.35,
     "stop": 0.5,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.5,
+    "graded_at": "2026-08-12T20:37:16.786430+00:00",
+    "outcome_at": "2026-08-12",
     "implied_vol": 0.6373206901550292,
-    "last_underlying": null,
+    "last_underlying": 153.28,
     "last_polled_at": "2026-08-12T20:31:24.458700+00:00",
     "poll_count": 5
   },
@@ -5718,13 +5718,13 @@
     "entry": 0.65,
     "target": 0.88,
     "stop": 0.33,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.88,
+    "graded_at": "2026-08-12T20:37:18.313974+00:00",
+    "outcome_at": "2026-08-12",
     "implied_vol": 0.3935671138763427,
-    "last_underlying": null,
+    "last_underlying": 180.095,
     "last_polled_at": "2026-08-12T20:31:25.722278+00:00",
     "poll_count": 4
   },
@@ -5740,13 +5740,13 @@
     "entry": 0.51,
     "target": 0.69,
     "stop": 0.26,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.26,
+    "graded_at": "2026-08-12T20:37:12.520499+00:00",
+    "outcome_at": "2026-08-12",
     "implied_vol": 0.5961250495910644,
-    "last_underlying": null,
+    "last_underlying": 177.32,
     "last_polled_at": "2026-08-12T20:31:20.239994+00:00",
     "poll_count": 4
   },
@@ -5762,13 +5762,13 @@
     "entry": 0.26,
     "target": 0.35,
     "stop": 0.13,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.35,
+    "graded_at": "2026-08-12T20:37:19.658803+00:00",
+    "outcome_at": "2026-08-12",
     "implied_vol": 0.4699657821655273,
-    "last_underlying": null,
+    "last_underlying": 16.58,
     "last_polled_at": "2026-08-12T20:31:27.203680+00:00",
     "poll_count": 4
   },
@@ -5791,8 +5791,8 @@
     "outcome_at": null,
     "implied_vol": 0.35899764537811274,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T20:31:25.722304+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-08-12T20:37:18.314735+00:00",
+    "poll_count": 4
   },
   "c58e1338-8724-4d22-9d29-d6285ccbb721": {
     "ticker": "ZS",
@@ -5813,8 +5813,8 @@
     "outcome_at": null,
     "implied_vol": 0.5524189901351929,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T20:31:20.240010+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-08-12T20:37:12.524807+00:00",
+    "poll_count": 4
   },
   "500c48c8-3b17-4196-a36e-af95ee840731": {
     "ticker": "LYFT",
@@ -5835,8 +5835,8 @@
     "outcome_at": null,
     "implied_vol": 0.5361608123779296,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T20:31:27.203706+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-08-12T20:37:19.659823+00:00",
+    "poll_count": 4
   },
   "49c8fe89-88be-42a8-ba26-67ab5d8d33c2": {
     "ticker": "NOW",
@@ -5857,8 +5857,8 @@
     "outcome_at": null,
     "implied_vol": 0.5814626789093018,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T20:31:28.394075+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-12T20:37:21.102233+00:00",
+    "poll_count": 3
   },
   "671d6ff3-e02f-4d02-9472-1f91c64734b4": {
     "ticker": "PLTR",
@@ -5879,8 +5879,8 @@
     "outcome_at": null,
     "implied_vol": 0.5970682430267336,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T20:31:29.886785+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-12T20:37:22.686666+00:00",
+    "poll_count": 3
   },
   "200b3851-d48a-42e8-acde-fba263243244": {
     "ticker": "AMGN",
@@ -5901,7 +5901,7 @@
     "outcome_at": null,
     "implied_vol": 0.38802227973937975,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T20:31:31.296806+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-12T20:37:24.233231+00:00",
+    "poll_count": 3
   }
 }
