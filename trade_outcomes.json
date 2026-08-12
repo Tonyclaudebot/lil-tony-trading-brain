@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-12T17:41:44.686823+00:00",
+    "updated_at": "2026-08-12T20:31:31.296931+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 59,
-    "losses": 190,
+    "losses": 192,
     "expired": 2,
-    "open": 17
+    "open": 15
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5586,13 +5586,13 @@
     "entry": 1.0,
     "target": 1.35,
     "stop": 0.5,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.5,
+    "graded_at": "2026-08-12T20:31:18.672180+00:00",
+    "outcome_at": "2026-08-12",
     "implied_vol": 0.7883554935455321,
-    "last_underlying": null,
+    "last_underlying": 311.45,
     "last_polled_at": "2026-08-12T17:41:32.679910+00:00",
     "poll_count": 5
   },
@@ -5615,8 +5615,8 @@
     "outcome_at": null,
     "implied_vol": 0.5759750080108643,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:34.024772+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-12T20:31:20.239967+00:00",
+    "poll_count": 6
   },
   "a8ca14e3-37f8-4731-9671-9879cc25323c": {
     "ticker": "CRWD",
@@ -5637,8 +5637,8 @@
     "outcome_at": null,
     "implied_vol": 0.6248829221725463,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:35.241280+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-12T20:31:21.670123+00:00",
+    "poll_count": 6
   },
   "10797a97-a6e7-4f5a-b2b1-ecb86c825598": {
     "ticker": "NET",
@@ -5652,13 +5652,13 @@
     "entry": 0.5,
     "target": 0.68,
     "stop": 0.25,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.25,
+    "graded_at": "2026-08-12T20:31:18.675060+00:00",
+    "outcome_at": "2026-08-12",
     "implied_vol": 0.7053639984130858,
-    "last_underlying": null,
+    "last_underlying": 311.45,
     "last_polled_at": "2026-08-12T17:41:32.679951+00:00",
     "poll_count": 4
   },
@@ -5681,8 +5681,8 @@
     "outcome_at": null,
     "implied_vol": 0.46834615707397464,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:36.595800+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-12T20:31:23.081078+00:00",
+    "poll_count": 5
   },
   "c7faace7-3ddd-4683-aacf-d31611df30be": {
     "ticker": "ORCL",
@@ -5703,8 +5703,8 @@
     "outcome_at": null,
     "implied_vol": 0.6373206901550292,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:37.938049+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-12T20:31:24.458700+00:00",
+    "poll_count": 5
   },
   "80a864fe-a21c-4c76-868a-22d8558f89ff": {
     "ticker": "ABNB",
@@ -5725,8 +5725,8 @@
     "outcome_at": null,
     "implied_vol": 0.3935671138763427,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:39.287482+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-08-12T20:31:25.722278+00:00",
+    "poll_count": 4
   },
   "ab2e1065-e083-4a9a-8046-7425c91519b4": {
     "ticker": "ZS",
@@ -5747,8 +5747,8 @@
     "outcome_at": null,
     "implied_vol": 0.5961250495910644,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:34.024814+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-08-12T20:31:20.239994+00:00",
+    "poll_count": 4
   },
   "693e14c8-1978-4c33-be14-1536023d5270": {
     "ticker": "LYFT",
@@ -5769,8 +5769,8 @@
     "outcome_at": null,
     "implied_vol": 0.4699657821655273,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:40.634886+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-08-12T20:31:27.203680+00:00",
+    "poll_count": 4
   },
   "7ab5ed68-5383-45d3-b04d-26f0d7b0c2ed": {
     "ticker": "ABNB",
@@ -5791,8 +5791,8 @@
     "outcome_at": null,
     "implied_vol": 0.35899764537811274,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:39.287507+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-12T20:31:25.722304+00:00",
+    "poll_count": 3
   },
   "c58e1338-8724-4d22-9d29-d6285ccbb721": {
     "ticker": "ZS",
@@ -5813,8 +5813,8 @@
     "outcome_at": null,
     "implied_vol": 0.5524189901351929,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:34.024845+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-12T20:31:20.240010+00:00",
+    "poll_count": 3
   },
   "500c48c8-3b17-4196-a36e-af95ee840731": {
     "ticker": "LYFT",
@@ -5835,8 +5835,8 @@
     "outcome_at": null,
     "implied_vol": 0.5361608123779296,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:40.635198+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-12T20:31:27.203706+00:00",
+    "poll_count": 3
   },
   "49c8fe89-88be-42a8-ba26-67ab5d8d33c2": {
     "ticker": "NOW",
@@ -5857,8 +5857,8 @@
     "outcome_at": null,
     "implied_vol": 0.5814626789093018,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:41.982336+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-12T20:31:28.394075+00:00",
+    "poll_count": 2
   },
   "671d6ff3-e02f-4d02-9472-1f91c64734b4": {
     "ticker": "PLTR",
@@ -5879,8 +5879,8 @@
     "outcome_at": null,
     "implied_vol": 0.5970682430267336,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:43.348540+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-12T20:31:29.886785+00:00",
+    "poll_count": 2
   },
   "200b3851-d48a-42e8-acde-fba263243244": {
     "ticker": "AMGN",
@@ -5901,7 +5901,7 @@
     "outcome_at": null,
     "implied_vol": 0.38802227973937975,
     "last_underlying": null,
-    "last_polled_at": "2026-08-12T17:41:44.686613+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-12T20:31:31.296806+00:00",
+    "poll_count": 2
   }
 }
