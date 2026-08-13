@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-13T12:03:29.925596+00:00",
+    "updated_at": "2026-08-13T16:13:00.030121+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 62,
     "losses": 196,
     "expired": 2,
-    "open": 11
+    "open": 14
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -5791,8 +5791,8 @@
     "outcome_at": null,
     "implied_vol": 0.35899764537811274,
     "last_underlying": null,
-    "last_polled_at": "2026-08-13T12:03:20.513038+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-13T16:12:50.930808+00:00",
+    "poll_count": 6
   },
   "c58e1338-8724-4d22-9d29-d6285ccbb721": {
     "ticker": "ZS",
@@ -5813,8 +5813,8 @@
     "outcome_at": null,
     "implied_vol": 0.5524189901351929,
     "last_underlying": null,
-    "last_polled_at": "2026-08-13T12:03:21.859993+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-13T16:12:52.254999+00:00",
+    "poll_count": 6
   },
   "500c48c8-3b17-4196-a36e-af95ee840731": {
     "ticker": "LYFT",
@@ -5835,8 +5835,8 @@
     "outcome_at": null,
     "implied_vol": 0.5361608123779296,
     "last_underlying": null,
-    "last_polled_at": "2026-08-13T12:03:23.198908+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-13T16:12:53.441970+00:00",
+    "poll_count": 6
   },
   "49c8fe89-88be-42a8-ba26-67ab5d8d33c2": {
     "ticker": "NOW",
@@ -5857,8 +5857,8 @@
     "outcome_at": null,
     "implied_vol": 0.5814626789093018,
     "last_underlying": null,
-    "last_polled_at": "2026-08-13T12:03:24.514648+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-13T16:12:54.780448+00:00",
+    "poll_count": 5
   },
   "671d6ff3-e02f-4d02-9472-1f91c64734b4": {
     "ticker": "PLTR",
@@ -5879,8 +5879,8 @@
     "outcome_at": null,
     "implied_vol": 0.5970682430267336,
     "last_underlying": null,
-    "last_polled_at": "2026-08-13T12:03:25.862360+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-13T16:12:56.119351+00:00",
+    "poll_count": 5
   },
   "200b3851-d48a-42e8-acde-fba263243244": {
     "ticker": "AMGN",
@@ -5901,8 +5901,8 @@
     "outcome_at": null,
     "implied_vol": 0.38802227973937975,
     "last_underlying": null,
-    "last_polled_at": "2026-08-13T12:03:27.225612+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-13T16:12:57.466495+00:00",
+    "poll_count": 5
   },
   "84f65e90-2f9d-4000-a897-0c1ad641044e": {
     "ticker": "ORCL",
@@ -5923,8 +5923,8 @@
     "outcome_at": null,
     "implied_vol": 0.7632894134521484,
     "last_underlying": null,
-    "last_polled_at": "2026-08-13T12:03:28.566689+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-13T16:12:58.671249+00:00",
+    "poll_count": 2
   },
   "51e4683d-a402-4024-b720-951246b2071d": {
     "ticker": "ABNB",
@@ -5945,8 +5945,8 @@
     "outcome_at": null,
     "implied_vol": 0.4118498229980468,
     "last_underlying": null,
-    "last_polled_at": "2026-08-13T12:03:20.513137+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-13T16:12:50.930852+00:00",
+    "poll_count": 2
   },
   "d227d32b-a5af-4207-86cd-0aee61baa806": {
     "ticker": "NET",
@@ -5967,7 +5967,73 @@
     "outcome_at": null,
     "implied_vol": 0.9719828701019286,
     "last_underlying": null,
-    "last_polled_at": "2026-08-13T12:03:29.925283+00:00",
+    "last_polled_at": "2026-08-13T16:13:00.029824+00:00",
+    "poll_count": 2
+  },
+  "94c242c6-2ee5-4dd9-a5ff-5f759497a5ec": {
+    "ticker": "ORCL",
+    "contract": "ORCL260814P00150000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 150.0,
+    "expiration": "2026-08-14",
+    "sent_at": "2026-08-13T16:10:47.643516+00:00",
+    "spot_at_send": 153.771,
+    "entry": 0.58,
+    "target": 0.78,
+    "stop": 0.29,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5487176704406738,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-13T16:12:58.671404+00:00",
+    "poll_count": 1
+  },
+  "ebdf8670-4306-4956-acd0-16203275e17c": {
+    "ticker": "ABNB",
+    "contract": "ABNB260814P00177500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 177.5,
+    "expiration": "2026-08-14",
+    "sent_at": "2026-08-13T16:10:51.800110+00:00",
+    "spot_at_send": 182.97,
+    "entry": 0.2,
+    "target": 0.27,
+    "stop": 0.1,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.41355519294738763,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-13T16:12:50.930962+00:00",
+    "poll_count": 1
+  },
+  "a7929cc7-4886-4ac2-9ad7-92121171316c": {
+    "ticker": "NET",
+    "contract": "NET260814P00310000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 310.0,
+    "expiration": "2026-08-14",
+    "sent_at": "2026-08-13T16:10:54.517406+00:00",
+    "spot_at_send": 327.695,
+    "entry": 0.25,
+    "target": 0.34,
+    "stop": 0.12,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6030513286590575,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-13T16:13:00.029924+00:00",
     "poll_count": 1
   }
 }
