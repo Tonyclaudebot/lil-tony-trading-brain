@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-19T20:34:06.924563+00:00",
+    "updated_at": "2026-08-19T20:39:56.304108+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 69,
-    "losses": 218,
+    "losses": 225,
     "expired": 2,
-    "open": 14
+    "open": 7
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -6378,13 +6378,13 @@
     "entry": 0.75,
     "target": 1.01,
     "stop": 0.38,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.38,
+    "graded_at": "2026-08-19T20:39:46.252958+00:00",
+    "outcome_at": "2026-08-19",
     "implied_vol": 0.8403406953811646,
-    "last_underlying": null,
+    "last_underlying": 237.27,
     "last_polled_at": "2026-08-19T20:33:57.368934+00:00",
     "poll_count": 8
   },
@@ -6400,13 +6400,13 @@
     "entry": 0.85,
     "target": 1.15,
     "stop": 0.42,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.42,
+    "graded_at": "2026-08-19T20:39:47.939589+00:00",
+    "outcome_at": "2026-08-19",
     "implied_vol": 0.788493638038635,
-    "last_underlying": null,
+    "last_underlying": 307.17,
     "last_polled_at": "2026-08-19T20:33:58.758675+00:00",
     "poll_count": 8
   },
@@ -6422,13 +6422,13 @@
     "entry": 0.6,
     "target": 0.81,
     "stop": 0.3,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.3,
+    "graded_at": "2026-08-19T20:39:49.347734+00:00",
+    "outcome_at": "2026-08-19",
     "implied_vol": 0.8227296543121339,
-    "last_underlying": null,
+    "last_underlying": 174.38,
     "last_polled_at": "2026-08-19T20:34:00.203067+00:00",
     "poll_count": 8
   },
@@ -6444,13 +6444,13 @@
     "entry": 0.95,
     "target": 1.28,
     "stop": 0.47,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.47,
+    "graded_at": "2026-08-19T20:39:47.940366+00:00",
+    "outcome_at": "2026-08-19",
     "implied_vol": 0.7534144639968873,
-    "last_underlying": null,
+    "last_underlying": 307.17,
     "last_polled_at": "2026-08-19T20:33:58.758719+00:00",
     "poll_count": 7
   },
@@ -6466,13 +6466,13 @@
     "entry": 0.35,
     "target": 0.47,
     "stop": 0.17,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.17,
+    "graded_at": "2026-08-19T20:39:50.752092+00:00",
+    "outcome_at": "2026-08-19",
     "implied_vol": 0.5523665904998778,
-    "last_underlying": null,
+    "last_underlying": 184.6,
     "last_polled_at": "2026-08-19T20:34:01.440713+00:00",
     "poll_count": 7
   },
@@ -6510,13 +6510,13 @@
     "entry": 0.21,
     "target": 0.28,
     "stop": 0.1,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.1,
+    "graded_at": "2026-08-19T20:39:52.185948+00:00",
+    "outcome_at": "2026-08-19",
     "implied_vol": 0.47890230178832993,
-    "last_underlying": null,
+    "last_underlying": 147.6,
     "last_polled_at": "2026-08-19T20:34:04.123105+00:00",
     "poll_count": 4
   },
@@ -6554,13 +6554,13 @@
     "entry": 0.23,
     "target": 0.31,
     "stop": 0.12,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.12,
+    "graded_at": "2026-08-19T20:39:50.753025+00:00",
+    "outcome_at": "2026-08-19",
     "implied_vol": 0.6435800647735594,
-    "last_underlying": null,
+    "last_underlying": 184.6,
     "last_polled_at": "2026-08-19T20:34:01.440739+00:00",
     "poll_count": 4
   },
@@ -6583,8 +6583,8 @@
     "outcome_at": null,
     "implied_vol": 0.31648248672485346,
     "last_underlying": null,
-    "last_polled_at": "2026-08-19T20:34:04.123131+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-08-19T20:39:52.187143+00:00",
+    "poll_count": 4
   },
   "8d774a0f-7432-4e12-b827-4ff042f12122": {
     "ticker": "XOM",
@@ -6605,8 +6605,8 @@
     "outcome_at": null,
     "implied_vol": 0.31902148723602286,
     "last_underlying": null,
-    "last_polled_at": "2026-08-19T20:34:05.543336+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-08-19T20:39:53.587391+00:00",
+    "poll_count": 4
   },
   "4144511d-789e-4564-bc3b-3857cdcac16d": {
     "ticker": "ZS",
@@ -6627,8 +6627,8 @@
     "outcome_at": null,
     "implied_vol": 0.6083484554290772,
     "last_underlying": null,
-    "last_polled_at": "2026-08-19T20:34:01.440755+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-08-19T20:39:50.754492+00:00",
+    "poll_count": 4
   },
   "8b81d312-433f-4716-9846-aa4e50b75101": {
     "ticker": "COP",
@@ -6649,8 +6649,8 @@
     "outcome_at": null,
     "implied_vol": 0.2861145162582397,
     "last_underlying": null,
-    "last_polled_at": "2026-08-19T20:34:02.858766+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-19T20:39:54.942648+00:00",
+    "poll_count": 3
   },
   "ab4f01c8-c3cd-45fe-9e48-725f1e380532": {
     "ticker": "ABNB",
@@ -6671,7 +6671,7 @@
     "outcome_at": null,
     "implied_vol": 0.3023298215866088,
     "last_underlying": null,
-    "last_polled_at": "2026-08-19T20:34:06.924425+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-19T20:39:56.303971+00:00",
+    "poll_count": 3
   }
 }
