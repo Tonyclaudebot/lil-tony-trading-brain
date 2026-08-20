@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-20T12:04:50.472197+00:00",
+    "updated_at": "2026-08-20T16:11:55.000244+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 69,
     "losses": 225,
     "expired": 2,
-    "open": 10
+    "open": 13
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -6583,8 +6583,8 @@
     "outcome_at": null,
     "implied_vol": 0.31648248672485346,
     "last_underlying": null,
-    "last_polled_at": "2026-08-20T12:04:40.884815+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-20T16:11:44.193817+00:00",
+    "poll_count": 6
   },
   "8d774a0f-7432-4e12-b827-4ff042f12122": {
     "ticker": "XOM",
@@ -6605,8 +6605,8 @@
     "outcome_at": null,
     "implied_vol": 0.31902148723602286,
     "last_underlying": null,
-    "last_polled_at": "2026-08-20T12:04:42.266979+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-20T16:11:45.557749+00:00",
+    "poll_count": 6
   },
   "4144511d-789e-4564-bc3b-3857cdcac16d": {
     "ticker": "ZS",
@@ -6627,8 +6627,8 @@
     "outcome_at": null,
     "implied_vol": 0.6083484554290772,
     "last_underlying": null,
-    "last_polled_at": "2026-08-20T12:04:43.634832+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-20T16:11:46.938631+00:00",
+    "poll_count": 6
   },
   "8b81d312-433f-4716-9846-aa4e50b75101": {
     "ticker": "COP",
@@ -6649,8 +6649,8 @@
     "outcome_at": null,
     "implied_vol": 0.2861145162582397,
     "last_underlying": null,
-    "last_polled_at": "2026-08-20T12:04:45.006708+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-20T16:11:48.148054+00:00",
+    "poll_count": 5
   },
   "ab4f01c8-c3cd-45fe-9e48-725f1e380532": {
     "ticker": "ABNB",
@@ -6671,8 +6671,8 @@
     "outcome_at": null,
     "implied_vol": 0.3023298215866088,
     "last_underlying": null,
-    "last_polled_at": "2026-08-20T12:04:46.369041+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-20T16:11:49.521024+00:00",
+    "poll_count": 5
   },
   "d11efa92-9899-4616-bc79-986c91bb053e": {
     "ticker": "MSTR",
@@ -6693,8 +6693,8 @@
     "outcome_at": null,
     "implied_vol": 2.022843265533447,
     "last_underlying": null,
-    "last_polled_at": "2026-08-20T12:04:47.728300+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-20T16:11:50.879078+00:00",
+    "poll_count": 2
   },
   "572cd313-5f39-4f13-8937-c6ea28c4bce8": {
     "ticker": "MRVL",
@@ -6715,8 +6715,8 @@
     "outcome_at": null,
     "implied_vol": 0.9798237609863281,
     "last_underlying": null,
-    "last_polled_at": "2026-08-20T12:04:49.097846+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-20T16:11:52.265095+00:00",
+    "poll_count": 2
   },
   "2e35fe7c-8e08-4070-b070-5d182a3f29e2": {
     "ticker": "CRM",
@@ -6737,7 +6737,73 @@
     "outcome_at": null,
     "implied_vol": 0.5727643394470214,
     "last_underlying": null,
-    "last_polled_at": "2026-08-20T12:04:50.471779+00:00",
+    "last_polled_at": "2026-08-20T16:11:53.630215+00:00",
+    "poll_count": 2
+  },
+  "9b4a00e3-6cc9-402d-95f9-f470d7c643a0": {
+    "ticker": "MSTR",
+    "contract": "MSTR260821P00108000",
+    "strategy": "Unusual Options Activity",
+    "opt_type": "put",
+    "strike": 108.0,
+    "expiration": "2026-08-21",
+    "sent_at": "2026-08-20T16:11:00.163797+00:00",
+    "spot_at_send": 112.14,
+    "entry": 0.83,
+    "target": 1.66,
+    "stop": 0.41,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.9319781303405761,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-20T16:11:50.879187+00:00",
+    "poll_count": 1
+  },
+  "3cf1b813-8bef-4708-ac5f-95a5e0aa44e7": {
+    "ticker": "MRNA",
+    "contract": "MRNA260821P00130000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 130.0,
+    "expiration": "2026-08-21",
+    "sent_at": "2026-08-20T16:11:04.100573+00:00",
+    "spot_at_send": 139.31,
+    "entry": 2.85,
+    "target": 3.85,
+    "stop": 1.43,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 2.1042294263839727,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-20T16:11:54.999872+00:00",
+    "poll_count": 1
+  },
+  "3fac62eb-9f77-447a-956c-e76eb6f3eda7": {
+    "ticker": "MRVL",
+    "contract": "MRVL260821P00230000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 230.0,
+    "expiration": "2026-08-21",
+    "sent_at": "2026-08-20T16:11:07.233432+00:00",
+    "spot_at_send": 241.8201,
+    "entry": 1.0,
+    "target": 1.35,
+    "stop": 0.5,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.8807312870025632,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-20T16:11:52.265202+00:00",
     "poll_count": 1
   }
 }
