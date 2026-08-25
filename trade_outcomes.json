@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-25T12:05:49.855867+00:00",
+    "updated_at": "2026-08-25T16:11:41.789161+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 77,
     "losses": 234,
     "expired": 2,
-    "open": 11
+    "open": 14
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -6957,8 +6957,8 @@
     "outcome_at": null,
     "implied_vol": 1.35831109046936,
     "last_underlying": null,
-    "last_polled_at": "2026-08-25T12:05:42.824151+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-25T16:11:35.112024+00:00",
+    "poll_count": 3
   },
   "b8fd83d6-c063-4404-bbe7-e8715638b08e": {
     "ticker": "HOOD",
@@ -6979,8 +6979,8 @@
     "outcome_at": null,
     "implied_vol": 0.7631893777847291,
     "last_underlying": null,
-    "last_polled_at": "2026-08-25T12:05:44.220013+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-25T16:11:36.449255+00:00",
+    "poll_count": 3
   },
   "9f25918d-15a7-4027-9445-5a625ff062ae": {
     "ticker": "MSTR",
@@ -7001,8 +7001,8 @@
     "outcome_at": null,
     "implied_vol": 0.9448350954055784,
     "last_underlying": null,
-    "last_polled_at": "2026-08-25T12:05:45.581256+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-25T16:11:37.808779+00:00",
+    "poll_count": 3
   },
   "9ffb7519-3b68-4c44-9a6c-08eb1c1616bf": {
     "ticker": "MRNA",
@@ -7023,8 +7023,8 @@
     "outcome_at": null,
     "implied_vol": 1.331596803665161,
     "last_underlying": null,
-    "last_polled_at": "2026-08-25T12:05:42.824197+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-25T16:11:35.112209+00:00",
+    "poll_count": 3
   },
   "941d1f3e-dff3-42da-a52c-2e6f99af5947": {
     "ticker": "COIN",
@@ -7045,8 +7045,8 @@
     "outcome_at": null,
     "implied_vol": 0.8050281047821044,
     "last_underlying": null,
-    "last_polled_at": "2026-08-25T12:05:46.962086+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-25T16:11:39.154158+00:00",
+    "poll_count": 3
   },
   "c496f7a9-e8f6-4de4-9d91-4453d325c654": {
     "ticker": "MSTR",
@@ -7067,8 +7067,8 @@
     "outcome_at": null,
     "implied_vol": 0.9273193264007566,
     "last_underlying": null,
-    "last_polled_at": "2026-08-25T12:05:45.581292+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-08-25T16:11:37.808821+00:00",
+    "poll_count": 3
   },
   "d2baaf41-2c36-4c88-9999-e840c6753e43": {
     "ticker": "MSTR",
@@ -7089,8 +7089,8 @@
     "outcome_at": null,
     "implied_vol": 0.9516899204254148,
     "last_underlying": null,
-    "last_polled_at": "2026-08-25T12:05:45.581394+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-25T16:11:37.808851+00:00",
+    "poll_count": 2
   },
   "ee554060-2c54-4908-a962-31fc80d68043": {
     "ticker": "MA",
@@ -7111,8 +7111,8 @@
     "outcome_at": null,
     "implied_vol": 0.2907828474044799,
     "last_underlying": null,
-    "last_polled_at": "2026-08-25T12:05:48.521321+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-25T16:11:40.426640+00:00",
+    "poll_count": 2
   },
   "ecb3210d-9970-4143-9882-6ea771033a75": {
     "ticker": "DIS",
@@ -7133,7 +7133,73 @@
     "outcome_at": null,
     "implied_vol": 0.3251141357421875,
     "last_underlying": null,
-    "last_polled_at": "2026-08-25T12:05:49.855643+00:00",
+    "last_polled_at": "2026-08-25T16:11:41.788810+00:00",
+    "poll_count": 2
+  },
+  "a716b20b-c25f-4f05-9220-eebaddfae7ee": {
+    "ticker": "MSTR",
+    "contract": "MSTR260828P00115000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 115.0,
+    "expiration": "2026-08-28",
+    "sent_at": "2026-08-25T16:11:02.150882+00:00",
+    "spot_at_send": 127.235,
+    "entry": 0.56,
+    "target": 0.76,
+    "stop": 0.28,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.897632551193237,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-25T16:11:37.808964+00:00",
+    "poll_count": 1
+  },
+  "af55bbc3-86f0-4009-a448-32ca8dbfb166": {
+    "ticker": "MA",
+    "contract": "MA260828P00580000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 580.0,
+    "expiration": "2026-08-28",
+    "sent_at": "2026-08-25T16:11:06.308518+00:00",
+    "spot_at_send": 596.6,
+    "entry": 0.75,
+    "target": 1.01,
+    "stop": 0.38,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.2515307569503784,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-25T16:11:40.426750+00:00",
+    "poll_count": 1
+  },
+  "408cc8ae-bb1f-4ce5-9f72-5a9ed58ad326": {
+    "ticker": "DIS",
+    "contract": "DIS260828P00109000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 109.0,
+    "expiration": "2026-08-28",
+    "sent_at": "2026-08-25T16:11:09.381759+00:00",
+    "spot_at_send": 111.325,
+    "entry": 0.29,
+    "target": 0.39,
+    "stop": 0.14,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.26479739189147944,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-25T16:11:41.788919+00:00",
     "poll_count": 1
   }
 }
