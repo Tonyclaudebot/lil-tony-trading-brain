@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-27T12:04:51.381636+00:00",
+    "updated_at": "2026-08-27T16:15:54.906481+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 80,
     "losses": 245,
     "expired": 2,
-    "open": 5
+    "open": 8
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -7265,8 +7265,8 @@
     "outcome_at": null,
     "implied_vol": 0.4505159902572631,
     "last_underlying": 440.34,
-    "last_polled_at": "2026-08-27T12:04:48.640653+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-08-27T16:15:50.655100+00:00",
+    "poll_count": 6
   },
   "dd0fd4c4-0d30-4833-83ee-16716ab7000f": {
     "ticker": "PLTR",
@@ -7287,8 +7287,8 @@
     "outcome_at": null,
     "implied_vol": 0.7185877609252929,
     "last_underlying": null,
-    "last_polled_at": "2026-08-27T12:04:49.829433+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-08-27T16:15:52.202576+00:00",
+    "poll_count": 2
   },
   "5403c99b-7d1a-4131-a93d-c532c22034ed": {
     "ticker": "CMCSA",
@@ -7311,5 +7311,71 @@
     "last_underlying": null,
     "last_polled_at": null,
     "poll_count": 0
+  },
+  "0bd3f5df-4bbf-43be-b404-f147c7845e7f": {
+    "ticker": "PLTR",
+    "contract": "PLTR260828P00180000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 180.0,
+    "expiration": "2026-08-28",
+    "sent_at": "2026-08-27T16:10:54.376225+00:00",
+    "spot_at_send": 185.84,
+    "entry": 0.56,
+    "target": 0.76,
+    "stop": 0.28,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5870932579040529,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-27T16:15:52.202639+00:00",
+    "poll_count": 1
+  },
+  "c37027a0-3c46-4637-8ce4-cdd81a387eaf": {
+    "ticker": "CMCSA",
+    "contract": "CMCSA260828P00027000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 27.0,
+    "expiration": "2026-08-28",
+    "sent_at": "2026-08-27T16:10:58.813460+00:00",
+    "spot_at_send": 26.735,
+    "entry": 0.3,
+    "target": 0.41,
+    "stop": 0.15,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.2120833587646484,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-27T16:15:53.606642+00:00",
+    "poll_count": 1
+  },
+  "30c3371d-5998-4e8a-893b-5ab423402d3f": {
+    "ticker": "CRM",
+    "contract": "CRM260828P00230000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 230.0,
+    "expiration": "2026-08-28",
+    "sent_at": "2026-08-27T16:11:02.011899+00:00",
+    "spot_at_send": 245.275,
+    "entry": 0.2,
+    "target": 0.27,
+    "stop": 0.1,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6874909591674803,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-27T16:15:54.906307+00:00",
+    "poll_count": 1
   }
 }
