@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-27T00:29:27.434038+00:00",
+    "updated_at": "2026-08-27T12:04:51.381636+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 80,
     "losses": 245,
     "expired": 2,
-    "open": 3
+    "open": 5
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -7265,7 +7265,51 @@
     "outcome_at": null,
     "implied_vol": 0.4505159902572631,
     "last_underlying": 440.34,
-    "last_polled_at": "2026-08-27T00:29:27.433685+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-08-27T12:04:48.640653+00:00",
+    "poll_count": 5
+  },
+  "dd0fd4c4-0d30-4833-83ee-16716ab7000f": {
+    "ticker": "PLTR",
+    "contract": "PLTR260828P00170000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 170.0,
+    "expiration": "2026-08-28",
+    "sent_at": "2026-08-27T12:01:44.813981+00:00",
+    "spot_at_send": 177.0,
+    "entry": 0.74,
+    "target": 1.0,
+    "stop": 0.37,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.7185877609252929,
+    "last_underlying": null,
+    "last_polled_at": "2026-08-27T12:04:49.829433+00:00",
+    "poll_count": 1
+  },
+  "5403c99b-7d1a-4131-a93d-c532c22034ed": {
+    "ticker": "CMCSA",
+    "contract": "CMCSA260828P00028000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 28.0,
+    "expiration": "2026-08-28",
+    "sent_at": "2026-08-27T12:01:50.146075+00:00",
+    "spot_at_send": 26.86,
+    "entry": 0.93,
+    "target": 1.26,
+    "stop": 0.47,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_unsolvable",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
   }
 }
