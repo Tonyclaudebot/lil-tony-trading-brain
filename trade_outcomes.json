@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-31T16:13:47.613743+00:00",
+    "updated_at": "2026-08-31T17:43:41.837265+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 83,
     "losses": 248,
     "expired": 2,
-    "open": 9
+    "open": 10
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -7522,6 +7522,28 @@
     "entry": 0.27,
     "target": 0.36,
     "stop": 0.14,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
+  },
+  "77b0fbf1-a2be-465f-8b6d-1531aa785e34": {
+    "ticker": "MSTR",
+    "contract": "MSTR260904P00118000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 118.0,
+    "expiration": "2026-09-04",
+    "sent_at": "2026-08-31T17:40:50.195765+00:00",
+    "spot_at_send": 130.93,
+    "entry": 0.53,
+    "target": 0.72,
+    "stop": 0.27,
     "outcome": "open",
     "outcome_method": "stock_proxy_bs_reprice",
     "exit_price": null,
