@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-08-31T20:37:03.670974+00:00",
+    "updated_at": "2026-09-01T12:06:49.080553+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 83,
     "losses": 251,
     "expired": 2,
-    "open": 7
+    "open": 10
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -7485,8 +7485,8 @@
     "outcome_at": null,
     "implied_vol": 0.6573945140838622,
     "last_underlying": null,
-    "last_polled_at": "2026-08-31T20:36:59.689620+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-01T12:06:43.107488+00:00",
+    "poll_count": 2
   },
   "0412cd39-dfb6-4f0d-b284-b1cf1e927967": {
     "ticker": "SLB",
@@ -7507,8 +7507,8 @@
     "outcome_at": null,
     "implied_vol": 0.4158798313140868,
     "last_underlying": null,
-    "last_polled_at": "2026-08-31T20:37:01.053803+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-01T12:06:44.514674+00:00",
+    "poll_count": 3
   },
   "23a57663-6dd8-4084-9a50-270415495f2e": {
     "ticker": "CRM",
@@ -7529,8 +7529,8 @@
     "outcome_at": null,
     "implied_vol": 0.49150203227996825,
     "last_underlying": null,
-    "last_polled_at": "2026-08-31T20:37:02.435229+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-01T12:06:45.933723+00:00",
+    "poll_count": 3
   },
   "77b0fbf1-a2be-465f-8b6d-1531aa785e34": {
     "ticker": "MSTR",
@@ -7551,7 +7551,73 @@
     "outcome_at": null,
     "implied_vol": 0.7876314258575439,
     "last_underlying": null,
-    "last_polled_at": "2026-08-31T20:37:03.670748+00:00",
+    "last_polled_at": "2026-09-01T12:06:47.337689+00:00",
+    "poll_count": 2
+  },
+  "721477ce-e9f3-4e18-8caf-48fc0c2efb4b": {
+    "ticker": "SLB",
+    "contract": "SLB260904P00057000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 57.0,
+    "expiration": "2026-09-04",
+    "sent_at": "2026-09-01T12:01:47.203224+00:00",
+    "spot_at_send": 60.68,
+    "entry": 0.2,
+    "target": 0.27,
+    "stop": 0.1,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.570172939300537,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-01T12:06:44.514780+00:00",
+    "poll_count": 1
+  },
+  "a2e29662-3227-4696-8d51-809bda6f0e6c": {
+    "ticker": "RBLX",
+    "contract": "RBLX260904P00040000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 40.0,
+    "expiration": "2026-09-04",
+    "sent_at": "2026-09-01T12:01:51.968215+00:00",
+    "spot_at_send": 40.7,
+    "entry": 0.53,
+    "target": 0.72,
+    "stop": 0.27,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5437063598632812,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-01T12:06:49.080241+00:00",
+    "poll_count": 1
+  },
+  "9f3778da-6794-4f6e-8017-c7f61e756cb4": {
+    "ticker": "MSTR",
+    "contract": "MSTR260904P00120000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 120.0,
+    "expiration": "2026-09-04",
+    "sent_at": "2026-09-01T12:01:55.291718+00:00",
+    "spot_at_send": 128.75,
+    "entry": 0.54,
+    "target": 0.73,
+    "stop": 0.27,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6666406679153442,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-01T12:06:47.337753+00:00",
     "poll_count": 1
   }
 }
