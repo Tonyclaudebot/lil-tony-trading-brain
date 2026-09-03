@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-03T20:35:25.820254+00:00",
+    "updated_at": "2026-09-03T20:41:14.467729+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 91,
-    "losses": 266,
+    "losses": 268,
     "expired": 2,
-    "open": 9
+    "open": 7
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -7852,13 +7852,13 @@
     "entry": 0.52,
     "target": 0.7,
     "stop": 0.26,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.26,
+    "graded_at": "2026-09-03T20:41:10.215587+00:00",
+    "outcome_at": "2026-09-03",
     "implied_vol": 0.9109134769439695,
-    "last_underlying": null,
+    "last_underlying": 148.87,
     "last_polled_at": "2026-09-03T20:35:20.167177+00:00",
     "poll_count": 8
   },
@@ -7918,13 +7918,13 @@
     "entry": 1.0,
     "target": 1.35,
     "stop": 0.5,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.5,
+    "graded_at": "2026-09-03T20:41:10.260244+00:00",
+    "outcome_at": "2026-09-03",
     "implied_vol": 0.8833131599426267,
-    "last_underlying": null,
+    "last_underlying": 148.87,
     "last_polled_at": "2026-09-03T20:35:20.167208+00:00",
     "poll_count": 7
   },
@@ -8057,8 +8057,8 @@
     "outcome_at": null,
     "implied_vol": 0.544468536376953,
     "last_underlying": null,
-    "last_polled_at": "2026-09-03T20:35:22.878114+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-03T20:41:13.053146+00:00",
+    "poll_count": 4
   },
   "e9368ab5-0c20-4496-94db-9105d32e2ed5": {
     "ticker": "RBLX",
@@ -8079,8 +8079,8 @@
     "outcome_at": null,
     "implied_vol": 0.6501443099975583,
     "last_underlying": null,
-    "last_polled_at": "2026-09-03T20:35:25.820080+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-03T20:41:14.467564+00:00",
+    "poll_count": 4
   },
   "9e8134ed-85f1-4111-9dc6-5b34e5c6c7bd": {
     "ticker": "CRM",
@@ -8101,7 +8101,7 @@
     "outcome_at": null,
     "implied_vol": 0.5034062767028809,
     "last_underlying": null,
-    "last_polled_at": "2026-09-03T20:35:22.878139+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-03T20:41:13.053174+00:00",
+    "poll_count": 3
   }
 }
