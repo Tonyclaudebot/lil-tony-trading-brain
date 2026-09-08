@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-08T20:35:19.322251+00:00",
+    "updated_at": "2026-09-08T20:41:03.082685+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 92,
+    "wins": 94,
     "losses": 270,
     "expired": 3,
-    "open": 9
+    "open": 7
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -8138,13 +8138,13 @@
     "entry": 0.51,
     "target": 0.69,
     "stop": 0.26,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.69,
+    "graded_at": "2026-09-08T20:40:59.149690+00:00",
+    "outcome_at": "2026-09-08",
+    "implied_vol": 0.848319730758667,
+    "last_underlying": 136.52,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -8160,13 +8160,13 @@
     "entry": 2.43,
     "target": 3.28,
     "stop": 1.22,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 3.28,
+    "graded_at": "2026-09-08T20:41:00.375855+00:00",
+    "outcome_at": "2026-09-08",
+    "implied_vol": 0.614136233329773,
+    "last_underlying": 472.79,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -8189,8 +8189,8 @@
     "outcome_at": null,
     "implied_vol": 0.7469978904724119,
     "last_underlying": null,
-    "last_polled_at": "2026-09-08T20:35:17.469714+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-08T20:41:01.721439+00:00",
+    "poll_count": 2
   },
   "5019c5a5-4f4d-419d-a8ed-3a75cea405bd": {
     "ticker": "AMAT",
@@ -8209,10 +8209,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.6051520776748657,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-09-08T20:41:00.377055+00:00",
+    "poll_count": 1
   },
   "e01d662f-4f4d-4159-ab70-d956f4bc6a60": {
     "ticker": "META",
@@ -8231,9 +8231,9 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.37621330738067615,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-09-08T20:41:03.082439+00:00",
+    "poll_count": 1
   }
 }
