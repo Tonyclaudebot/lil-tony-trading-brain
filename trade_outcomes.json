@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-08T20:41:03.082685+00:00",
+    "updated_at": "2026-09-09T12:03:53.977449+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 94,
     "losses": 270,
     "expired": 3,
-    "open": 7
+    "open": 10
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -8189,8 +8189,8 @@
     "outcome_at": null,
     "implied_vol": 0.7469978904724119,
     "last_underlying": null,
-    "last_polled_at": "2026-09-08T20:41:01.721439+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-09T12:03:48.511203+00:00",
+    "poll_count": 3
   },
   "5019c5a5-4f4d-419d-a8ed-3a75cea405bd": {
     "ticker": "AMAT",
@@ -8211,8 +8211,8 @@
     "outcome_at": null,
     "implied_vol": 0.6051520776748657,
     "last_underlying": null,
-    "last_polled_at": "2026-09-08T20:41:00.377055+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-09T12:03:49.747192+00:00",
+    "poll_count": 2
   },
   "e01d662f-4f4d-4159-ab70-d956f4bc6a60": {
     "ticker": "META",
@@ -8233,7 +8233,73 @@
     "outcome_at": null,
     "implied_vol": 0.37621330738067615,
     "last_underlying": null,
-    "last_polled_at": "2026-09-08T20:41:03.082439+00:00",
+    "last_polled_at": "2026-09-09T12:03:51.125561+00:00",
+    "poll_count": 2
+  },
+  "4dfda187-e0d9-4dc2-9098-dd93076540b8": {
+    "ticker": "MARA",
+    "contract": "MARA260911P00011500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 11.5,
+    "expiration": "2026-09-11",
+    "sent_at": "2026-09-09T12:01:46.969320+00:00",
+    "spot_at_send": 11.85,
+    "entry": 0.27,
+    "target": 0.36,
+    "stop": 0.14,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.1287530517578126,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-09T12:03:52.618366+00:00",
+    "poll_count": 1
+  },
+  "867634e6-b955-4237-bb6f-e3c4f5939aa7": {
+    "ticker": "ORCL",
+    "contract": "ORCL260911P00147000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 147.0,
+    "expiration": "2026-09-11",
+    "sent_at": "2026-09-09T12:01:51.416619+00:00",
+    "spot_at_send": 163.11,
+    "entry": 2.8,
+    "target": 3.78,
+    "stop": 1.4,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 1.7198495197296142,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-09T12:03:53.977256+00:00",
+    "poll_count": 1
+  },
+  "df669f53-4040-4339-b6c4-ea1fe585a5e5": {
+    "ticker": "RBLX",
+    "contract": "RBLX260911P00044000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 44.0,
+    "expiration": "2026-09-11",
+    "sent_at": "2026-09-09T12:01:54.192288+00:00",
+    "spot_at_send": 44.65,
+    "entry": 0.81,
+    "target": 1.09,
+    "stop": 0.41,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.7794094467163084,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-09T12:03:48.511261+00:00",
     "poll_count": 1
   }
 }
