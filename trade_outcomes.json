@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-09T17:42:56.841472+00:00",
+    "updated_at": "2026-09-09T20:33:31.685022+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 94,
+    "wins": 96,
     "losses": 270,
     "expired": 3,
-    "open": 14
+    "open": 12
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -8182,13 +8182,13 @@
     "entry": 0.6,
     "target": 0.81,
     "stop": 0.3,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.81,
+    "graded_at": "2026-09-09T20:33:24.916756+00:00",
+    "outcome_at": "2026-09-09",
     "implied_vol": 0.7469978904724119,
-    "last_underlying": null,
+    "last_underlying": 44.52,
     "last_polled_at": "2026-09-09T17:42:50.171346+00:00",
     "poll_count": 5
   },
@@ -8211,8 +8211,8 @@
     "outcome_at": null,
     "implied_vol": 0.6051520776748657,
     "last_underlying": null,
-    "last_polled_at": "2026-09-09T17:42:51.574871+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-09-09T20:33:26.296042+00:00",
+    "poll_count": 5
   },
   "e01d662f-4f4d-4159-ab70-d956f4bc6a60": {
     "ticker": "META",
@@ -8233,8 +8233,8 @@
     "outcome_at": null,
     "implied_vol": 0.37621330738067615,
     "last_underlying": null,
-    "last_polled_at": "2026-09-09T17:42:52.841267+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-09-09T20:33:27.667265+00:00",
+    "poll_count": 5
   },
   "4dfda187-e0d9-4dc2-9098-dd93076540b8": {
     "ticker": "MARA",
@@ -8254,9 +8254,9 @@
     "graded_at": null,
     "outcome_at": null,
     "implied_vol": 1.1287530517578126,
-    "last_underlying": null,
-    "last_polled_at": "2026-09-09T17:42:54.102722+00:00",
-    "poll_count": 3
+    "last_underlying": 11.92,
+    "last_polled_at": "2026-09-09T20:33:28.920963+00:00",
+    "poll_count": 4
   },
   "867634e6-b955-4237-bb6f-e3c4f5939aa7": {
     "ticker": "ORCL",
@@ -8276,9 +8276,9 @@
     "graded_at": null,
     "outcome_at": null,
     "implied_vol": 1.7198495197296142,
-    "last_underlying": null,
-    "last_polled_at": "2026-09-09T17:42:55.463873+00:00",
-    "poll_count": 3
+    "last_underlying": 161.63,
+    "last_polled_at": "2026-09-09T20:33:30.311346+00:00",
+    "poll_count": 4
   },
   "df669f53-4040-4339-b6c4-ea1fe585a5e5": {
     "ticker": "RBLX",
@@ -8292,13 +8292,13 @@
     "entry": 0.81,
     "target": 1.09,
     "stop": 0.41,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 1.09,
+    "graded_at": "2026-09-09T20:33:24.924825+00:00",
+    "outcome_at": "2026-09-09",
     "implied_vol": 0.7794094467163084,
-    "last_underlying": null,
+    "last_underlying": 44.52,
     "last_polled_at": "2026-09-09T17:42:50.171388+00:00",
     "poll_count": 3
   },
@@ -8321,8 +8321,8 @@
     "outcome_at": null,
     "implied_vol": 1.7372366714477536,
     "last_underlying": null,
-    "last_polled_at": "2026-09-09T17:42:55.463897+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-09T20:33:30.311393+00:00",
+    "poll_count": 3
   },
   "fa57705c-0a0a-4f3f-ade4-5e33e1e1b6cb": {
     "ticker": "RBLX",
@@ -8343,8 +8343,8 @@
     "outcome_at": null,
     "implied_vol": 0.7144148445129395,
     "last_underlying": null,
-    "last_polled_at": "2026-09-09T17:42:50.171417+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-09T20:33:24.926226+00:00",
+    "poll_count": 3
   },
   "2a1ea7bf-ed52-4555-a870-aee4c88812f1": {
     "ticker": "QCOM",
@@ -8365,8 +8365,8 @@
     "outcome_at": null,
     "implied_vol": 0.5729834651947021,
     "last_underlying": null,
-    "last_polled_at": "2026-09-09T17:42:56.841238+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-09T20:33:31.684843+00:00",
+    "poll_count": 3
   },
   "28ff63e6-b3fa-409a-afb4-93e3cd1d3f2c": {
     "ticker": "QCOM",
@@ -8387,7 +8387,7 @@
     "outcome_at": null,
     "implied_vol": 0.5670384883880615,
     "last_underlying": null,
-    "last_polled_at": "2026-09-09T17:42:56.841305+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-09T20:33:31.684867+00:00",
+    "poll_count": 2
   }
 }
