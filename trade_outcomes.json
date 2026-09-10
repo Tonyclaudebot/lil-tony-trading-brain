@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-10T16:15:20.131847+00:00",
+    "updated_at": "2026-09-10T17:43:58.926392+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 96,
     "losses": 272,
     "expired": 3,
-    "open": 16
+    "open": 19
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -8255,8 +8255,8 @@
     "outcome_at": null,
     "implied_vol": 1.1287530517578126,
     "last_underlying": 11.92,
-    "last_polled_at": "2026-09-10T16:15:11.896303+00:00",
-    "poll_count": 7
+    "last_polled_at": "2026-09-10T17:43:49.360909+00:00",
+    "poll_count": 8
   },
   "867634e6-b955-4237-bb6f-e3c4f5939aa7": {
     "ticker": "ORCL",
@@ -8277,8 +8277,8 @@
     "outcome_at": null,
     "implied_vol": 1.7198495197296142,
     "last_underlying": 161.63,
-    "last_polled_at": "2026-09-10T16:15:13.281989+00:00",
-    "poll_count": 7
+    "last_polled_at": "2026-09-10T17:43:50.736555+00:00",
+    "poll_count": 8
   },
   "df669f53-4040-4339-b6c4-ea1fe585a5e5": {
     "ticker": "RBLX",
@@ -8321,8 +8321,8 @@
     "outcome_at": null,
     "implied_vol": 1.7372366714477536,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:13.282067+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-09-10T17:43:50.736629+00:00",
+    "poll_count": 7
   },
   "fa57705c-0a0a-4f3f-ade4-5e33e1e1b6cb": {
     "ticker": "RBLX",
@@ -8343,8 +8343,8 @@
     "outcome_at": null,
     "implied_vol": 0.7144148445129395,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:14.644423+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-09-10T17:43:52.108704+00:00",
+    "poll_count": 7
   },
   "2a1ea7bf-ed52-4555-a870-aee4c88812f1": {
     "ticker": "QCOM",
@@ -8365,8 +8365,8 @@
     "outcome_at": null,
     "implied_vol": 0.5729834651947021,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:16.031843+00:00",
-    "poll_count": 6
+    "last_polled_at": "2026-09-10T17:43:53.459496+00:00",
+    "poll_count": 7
   },
   "28ff63e6-b3fa-409a-afb4-93e3cd1d3f2c": {
     "ticker": "QCOM",
@@ -8387,8 +8387,8 @@
     "outcome_at": null,
     "implied_vol": 0.5670384883880615,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:16.031919+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-09-10T17:43:53.459579+00:00",
+    "poll_count": 6
   },
   "f85c33b5-080c-4c1f-9052-5375b74e0758": {
     "ticker": "GME",
@@ -8409,8 +8409,8 @@
     "outcome_at": null,
     "implied_vol": 0.7805527114868163,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:17.401991+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-10T17:43:54.848110+00:00",
+    "poll_count": 3
   },
   "6fff0d28-4d66-4ff9-b6af-1e985ee855cf": {
     "ticker": "META",
@@ -8431,8 +8431,8 @@
     "outcome_at": null,
     "implied_vol": 0.6446804571151731,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:18.750495+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-10T17:43:56.214769+00:00",
+    "poll_count": 3
   },
   "603d0f2d-5a0f-4b24-a84d-9879e62e150c": {
     "ticker": "AMD",
@@ -8453,8 +8453,8 @@
     "outcome_at": null,
     "implied_vol": 0.5620509958267211,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:20.131419+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-10T17:43:57.556070+00:00",
+    "poll_count": 3
   },
   "19705c78-326b-4276-a61e-92fab0bd39cd": {
     "ticker": "GME",
@@ -8475,8 +8475,8 @@
     "outcome_at": null,
     "implied_vol": 0.48277034759521475,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:17.402172+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-10T17:43:54.848186+00:00",
+    "poll_count": 2
   },
   "de9030ab-0b8c-475c-8d56-e7a3c2c26f51": {
     "ticker": "META",
@@ -8497,8 +8497,8 @@
     "outcome_at": null,
     "implied_vol": 0.4716473340988159,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:18.750619+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-10T17:43:56.214823+00:00",
+    "poll_count": 2
   },
   "272fdc94-b51d-46a7-85bc-74d1a4642955": {
     "ticker": "AMD",
@@ -8519,7 +8519,73 @@
     "outcome_at": null,
     "implied_vol": 0.526281099319458,
     "last_underlying": null,
-    "last_polled_at": "2026-09-10T16:15:20.131532+00:00",
+    "last_polled_at": "2026-09-10T17:43:57.556098+00:00",
+    "poll_count": 2
+  },
+  "69a1406a-b8ac-4e4e-a38f-810200524035": {
+    "ticker": "META",
+    "contract": "META260911P00620000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 620.0,
+    "expiration": "2026-09-11",
+    "sent_at": "2026-09-10T17:41:05.312027+00:00",
+    "spot_at_send": 649.205,
+    "entry": 0.38,
+    "target": 0.51,
+    "stop": 0.19,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5051449918746946,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-10T17:43:56.214929+00:00",
+    "poll_count": 1
+  },
+  "681e5bba-189c-4feb-a5f3-7e1762d2d326": {
+    "ticker": "INTC",
+    "contract": "INTC260911P00100000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 100.0,
+    "expiration": "2026-09-11",
+    "sent_at": "2026-09-10T17:41:10.716158+00:00",
+    "spot_at_send": 101.2399,
+    "entry": 0.96,
+    "target": 1.3,
+    "stop": 0.48,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6718377590179441,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-10T17:43:58.926102+00:00",
+    "poll_count": 1
+  },
+  "39c34881-e104-4e41-a39e-f84a760f1658": {
+    "ticker": "QCOM",
+    "contract": "QCOM260911P00170000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 170.0,
+    "expiration": "2026-09-11",
+    "sent_at": "2026-09-10T17:41:14.016531+00:00",
+    "spot_at_send": 179.5399,
+    "entry": 0.21,
+    "target": 0.28,
+    "stop": 0.1,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6717424869537352,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-10T17:43:53.459740+00:00",
     "poll_count": 1
   }
 }
