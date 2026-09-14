@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-14T20:33:19.032326+00:00",
+    "updated_at": "2026-09-14T20:39:09.519966+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 100,
-    "losses": 285,
+    "losses": 286,
     "expired": 3,
-    "open": 7
+    "open": 6
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -8622,13 +8622,13 @@
     "entry": 0.8,
     "target": 1.08,
     "stop": 0.4,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.4,
+    "graded_at": "2026-09-14T20:39:06.749448+00:00",
+    "outcome_at": "2026-09-14",
+    "implied_vol": 0.25326470851898186,
+    "last_underlying": 180.15,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -8673,8 +8673,8 @@
     "outcome_at": null,
     "implied_vol": 0.47998840332031234,
     "last_underlying": null,
-    "last_polled_at": "2026-09-14T20:33:17.419101+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-14T20:39:08.130266+00:00",
+    "poll_count": 2
   },
   "db5be257-1438-4cd6-91d1-90dd5a3d5af0": {
     "ticker": "RBLX",
@@ -8695,7 +8695,7 @@
     "outcome_at": null,
     "implied_vol": 0.641274480819702,
     "last_underlying": null,
-    "last_polled_at": "2026-09-14T20:33:19.032050+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-14T20:39:09.519802+00:00",
+    "poll_count": 2
   }
 }
