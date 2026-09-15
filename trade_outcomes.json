@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-15T12:05:03.692970+00:00",
+    "updated_at": "2026-09-15T16:17:01.642350+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 100,
     "losses": 286,
     "expired": 3,
-    "open": 9
+    "open": 12
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -8673,8 +8673,8 @@
     "outcome_at": null,
     "implied_vol": 0.47998840332031234,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T12:04:58.948222+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-15T16:16:55.046821+00:00",
+    "poll_count": 4
   },
   "db5be257-1438-4cd6-91d1-90dd5a3d5af0": {
     "ticker": "RBLX",
@@ -8695,8 +8695,8 @@
     "outcome_at": null,
     "implied_vol": 0.641274480819702,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T12:05:00.527597+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-15T16:16:56.928820+00:00",
+    "poll_count": 4
   },
   "bf0d58c1-002e-41b3-926c-86d03d44b717": {
     "ticker": "CRWD",
@@ -8717,8 +8717,8 @@
     "outcome_at": null,
     "implied_vol": 0.6326952314376831,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T12:05:02.109988+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-15T16:16:58.493215+00:00",
+    "poll_count": 2
   },
   "ebd05edd-586f-4fac-9725-4ee523170269": {
     "ticker": "NET",
@@ -8739,8 +8739,8 @@
     "outcome_at": null,
     "implied_vol": 0.602675004005432,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T12:05:03.689537+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-15T16:17:00.068231+00:00",
+    "poll_count": 2
   },
   "4eeb7dcf-87dd-49a7-9986-b6df310bec0d": {
     "ticker": "RBLX",
@@ -8761,7 +8761,73 @@
     "outcome_at": null,
     "implied_vol": 0.6965989685058592,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T12:05:00.527689+00:00",
+    "last_polled_at": "2026-09-15T16:16:56.928864+00:00",
+    "poll_count": 2
+  },
+  "d8bda7c7-63c6-4ec4-a6a6-6e122d746fc3": {
+    "ticker": "CRWD",
+    "contract": "CRWD260918P00222500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 222.5,
+    "expiration": "2026-09-18",
+    "sent_at": "2026-09-15T16:11:12.249132+00:00",
+    "spot_at_send": 239.65,
+    "entry": 0.75,
+    "target": 1.01,
+    "stop": 0.38,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6513876104354855,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-15T16:16:58.493314+00:00",
+    "poll_count": 1
+  },
+  "974d22f9-ed59-4e57-9201-82232f0a5da2": {
+    "ticker": "ZS",
+    "contract": "ZS260918C00210000",
+    "strategy": "Momentum Breakout",
+    "opt_type": "call",
+    "strike": 210.0,
+    "expiration": "2026-09-18",
+    "sent_at": "2026-09-15T16:11:22.949498+00:00",
+    "spot_at_send": 192.93,
+    "entry": 0.95,
+    "target": 2.38,
+    "stop": 0.47,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.7921568489074706,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-15T16:17:01.640290+00:00",
+    "poll_count": 1
+  },
+  "cbf8bc07-00ab-4bca-a2bd-840a3f1eadb3": {
+    "ticker": "RBLX",
+    "contract": "RBLX260918P00050000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 50.0,
+    "expiration": "2026-09-18",
+    "sent_at": "2026-09-15T16:11:31.882246+00:00",
+    "spot_at_send": 50.11,
+    "entry": 0.97,
+    "target": 1.31,
+    "stop": 0.48,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5536813449859619,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-15T16:16:56.928950+00:00",
     "poll_count": 1
   }
 }
