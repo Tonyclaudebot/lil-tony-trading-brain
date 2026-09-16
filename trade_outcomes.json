@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-15T20:36:43.222974+00:00",
+    "updated_at": "2026-09-16T12:06:42.841694+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 101,
     "losses": 289,
     "expired": 3,
-    "open": 11
+    "open": 14
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -8761,8 +8761,8 @@
     "outcome_at": null,
     "implied_vol": 0.6965989685058592,
     "last_underlying": 50.24,
-    "last_polled_at": "2026-09-15T20:36:36.937552+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-09-16T12:06:33.394058+00:00",
+    "poll_count": 5
   },
   "d8bda7c7-63c6-4ec4-a6a6-6e122d746fc3": {
     "ticker": "CRWD",
@@ -8783,8 +8783,8 @@
     "outcome_at": null,
     "implied_vol": 0.6513876104354855,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T20:36:38.522276+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-16T12:06:34.965228+00:00",
+    "poll_count": 4
   },
   "974d22f9-ed59-4e57-9201-82232f0a5da2": {
     "ticker": "ZS",
@@ -8805,8 +8805,8 @@
     "outcome_at": null,
     "implied_vol": 0.7921568489074706,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T20:36:41.602256+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-16T12:06:36.539975+00:00",
+    "poll_count": 4
   },
   "cbf8bc07-00ab-4bca-a2bd-840a3f1eadb3": {
     "ticker": "RBLX",
@@ -8827,8 +8827,8 @@
     "outcome_at": null,
     "implied_vol": 0.5536813449859619,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T20:36:36.937588+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-16T12:06:33.396233+00:00",
+    "poll_count": 4
   },
   "1ea6d616-a6d3-4a10-beb4-ad2813a38e36": {
     "ticker": "RBLX",
@@ -8849,8 +8849,8 @@
     "outcome_at": null,
     "implied_vol": 0.7159201431274413,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T20:36:36.937615+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-16T12:06:33.396287+00:00",
+    "poll_count": 3
   },
   "c6575b44-b91f-4598-a2e8-a574db989e1e": {
     "ticker": "GME",
@@ -8871,8 +8871,8 @@
     "outcome_at": null,
     "implied_vol": 0.46901306152343747,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T20:36:35.419543+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-16T12:06:38.112814+00:00",
+    "poll_count": 3
   },
   "a9bf79b0-e589-411c-a6e0-20c43d7ea1ae": {
     "ticker": "GOOGL",
@@ -8893,7 +8893,73 @@
     "outcome_at": null,
     "implied_vol": 0.3423726701736449,
     "last_underlying": null,
-    "last_polled_at": "2026-09-15T20:36:43.222701+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-16T12:06:39.694544+00:00",
+    "poll_count": 3
+  },
+  "4cf6f2ae-3023-4cc8-9f8b-afcf565b77ed": {
+    "ticker": "CRWD",
+    "contract": "CRWD260918P00222500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 222.5,
+    "expiration": "2026-09-18",
+    "sent_at": "2026-09-16T12:02:09.810383+00:00",
+    "spot_at_send": 239.4368,
+    "entry": 0.66,
+    "target": 0.89,
+    "stop": 0.33,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.7229655122756957,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-16T12:06:34.965632+00:00",
+    "poll_count": 1
+  },
+  "ab808028-de74-4dfa-b506-3099956a0290": {
+    "ticker": "QCOM",
+    "contract": "QCOM260918P00177500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 177.5,
+    "expiration": "2026-09-18",
+    "sent_at": "2026-09-16T12:02:20.461892+00:00",
+    "spot_at_send": 188.9697,
+    "entry": 0.82,
+    "target": 1.11,
+    "stop": 0.41,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.7405336809158324,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-16T12:06:41.257054+00:00",
+    "poll_count": 1
+  },
+  "d2cdbcfc-bb4e-49c8-bda2-6d7d732de0f0": {
+    "ticker": "EOG",
+    "contract": "EOG260918P00150000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 150.0,
+    "expiration": "2026-09-18",
+    "sent_at": "2026-09-16T12:02:26.674872+00:00",
+    "spot_at_send": 152.99,
+    "entry": 0.8,
+    "target": 1.08,
+    "stop": 0.4,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.40140800476074207,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-16T12:06:42.835884+00:00",
+    "poll_count": 1
   }
 }
