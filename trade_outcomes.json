@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-16T20:32:55.198415+00:00",
+    "updated_at": "2026-09-16T20:38:55.717414+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 105,
-    "losses": 290,
+    "losses": 295,
     "expired": 3,
-    "open": 15
+    "open": 10
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -8776,13 +8776,13 @@
     "entry": 0.75,
     "target": 1.01,
     "stop": 0.38,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.38,
+    "graded_at": "2026-09-16T20:38:45.748650+00:00",
+    "outcome_at": "2026-09-16",
     "implied_vol": 0.6513876104354855,
-    "last_underlying": null,
+    "last_underlying": 241.36,
     "last_polled_at": "2026-09-16T20:32:44.222770+00:00",
     "poll_count": 7
   },
@@ -8798,13 +8798,13 @@
     "entry": 0.95,
     "target": 2.38,
     "stop": 0.47,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.47,
+    "graded_at": "2026-09-16T20:38:47.456923+00:00",
+    "outcome_at": "2026-09-16",
     "implied_vol": 0.7921568489074706,
-    "last_underlying": null,
+    "last_underlying": 191.58,
     "last_polled_at": "2026-09-16T20:32:45.747436+00:00",
     "poll_count": 7
   },
@@ -8886,13 +8886,13 @@
     "entry": 0.32,
     "target": 0.8,
     "stop": 0.16,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.16,
+    "graded_at": "2026-09-16T20:38:49.416922+00:00",
+    "outcome_at": "2026-09-16",
     "implied_vol": 0.3423726701736449,
-    "last_underlying": null,
+    "last_underlying": 342.87,
     "last_polled_at": "2026-09-16T20:32:48.908107+00:00",
     "poll_count": 6
   },
@@ -8908,13 +8908,13 @@
     "entry": 0.66,
     "target": 0.89,
     "stop": 0.33,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.33,
+    "graded_at": "2026-09-16T20:38:45.753160+00:00",
+    "outcome_at": "2026-09-16",
     "implied_vol": 0.7229655122756957,
-    "last_underlying": null,
+    "last_underlying": 241.36,
     "last_polled_at": "2026-09-16T20:32:44.222814+00:00",
     "poll_count": 4
   },
@@ -8930,13 +8930,13 @@
     "entry": 0.82,
     "target": 1.11,
     "stop": 0.41,
-    "outcome": "open",
+    "outcome": "LOSS",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
+    "exit_price": 0.41,
+    "graded_at": "2026-09-16T20:38:50.992701+00:00",
+    "outcome_at": "2026-09-16",
     "implied_vol": 0.7405336809158324,
-    "last_underlying": null,
+    "last_underlying": 184.84,
     "last_polled_at": "2026-09-16T20:32:50.478104+00:00",
     "poll_count": 4
   },
@@ -8981,8 +8981,8 @@
     "outcome_at": null,
     "implied_vol": 0.6612149238586422,
     "last_underlying": null,
-    "last_polled_at": "2026-09-16T20:32:44.222849+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-16T20:38:45.756500+00:00",
+    "poll_count": 4
   },
   "224b2233-7901-42f7-95f2-28c38c97d56c": {
     "ticker": "QCOM",
@@ -9003,8 +9003,8 @@
     "outcome_at": null,
     "implied_vol": 0.6156272411346435,
     "last_underlying": null,
-    "last_polled_at": "2026-09-16T20:32:50.478144+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-16T20:38:50.993725+00:00",
+    "poll_count": 4
   },
   "6611d045-4c58-48ed-8e6b-058c58452f18": {
     "ticker": "EOG",
@@ -9025,8 +9025,8 @@
     "outcome_at": null,
     "implied_vol": 0.48983000755310047,
     "last_underlying": null,
-    "last_polled_at": "2026-09-16T20:32:52.039685+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-16T20:38:52.567231+00:00",
+    "poll_count": 4
   },
   "3f32d1f2-d5a2-446f-b927-7ba0bec99989": {
     "ticker": "CRWD",
@@ -9047,8 +9047,8 @@
     "outcome_at": null,
     "implied_vol": 0.6703134059906004,
     "last_underlying": null,
-    "last_polled_at": "2026-09-16T20:32:44.222992+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-16T20:38:45.756546+00:00",
+    "poll_count": 3
   },
   "398ec543-6b9c-4333-978a-695442d3e534": {
     "ticker": "COP",
@@ -9069,8 +9069,8 @@
     "outcome_at": null,
     "implied_vol": 0.3738076877593993,
     "last_underlying": null,
-    "last_polled_at": "2026-09-16T20:32:53.615882+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-16T20:38:54.137343+00:00",
+    "poll_count": 3
   },
   "7e6ec444-9616-4650-8075-90f5971d4dd8": {
     "ticker": "OXY",
@@ -9091,7 +9091,7 @@
     "outcome_at": null,
     "implied_vol": 0.3765991592407225,
     "last_underlying": null,
-    "last_polled_at": "2026-09-16T20:32:55.191976+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-16T20:38:55.716791+00:00",
+    "poll_count": 3
   }
 }
