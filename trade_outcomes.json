@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-21T17:42:35.919078+00:00",
+    "updated_at": "2026-09-21T20:35:19.962933+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
-    "wins": 109,
+    "wins": 111,
     "losses": 306,
     "expired": 3,
-    "open": 9
+    "open": 7
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -9304,13 +9304,13 @@
     "entry": 0.48,
     "target": 0.65,
     "stop": 0.24,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.65,
+    "graded_at": "2026-09-21T20:35:16.914228+00:00",
+    "outcome_at": "2026-09-21",
+    "implied_vol": 1.444065475463867,
+    "last_underlying": 13.28,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -9326,13 +9326,13 @@
     "entry": 0.49,
     "target": 0.66,
     "stop": 0.24,
-    "outcome": "open",
+    "outcome": "WIN",
     "outcome_method": "stock_proxy_bs_reprice",
-    "exit_price": null,
-    "graded_at": null,
-    "outcome_at": null,
-    "implied_vol": null,
-    "last_underlying": null,
+    "exit_price": 0.66,
+    "graded_at": "2026-09-21T20:35:18.338170+00:00",
+    "outcome_at": "2026-09-21",
+    "implied_vol": 1.3071023559570312,
+    "last_underlying": 24.18,
     "last_polled_at": null,
     "poll_count": 0
   },
@@ -9375,10 +9375,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.8478147888183594,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-09-21T20:35:18.338941+00:00",
+    "poll_count": 1
   },
   "b459da78-d59d-42fb-afbc-4e7d023aad70": {
     "ticker": "LRCX",
