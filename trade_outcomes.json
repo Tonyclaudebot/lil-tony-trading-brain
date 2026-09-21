@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-21T16:16:06.409562+00:00",
+    "updated_at": "2026-09-21T17:42:35.919078+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 109,
     "losses": 306,
     "expired": 3,
-    "open": 8
+    "open": 9
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -9370,6 +9370,28 @@
     "entry": 0.46,
     "target": 0.62,
     "stop": 0.23,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
+  },
+  "b459da78-d59d-42fb-afbc-4e7d023aad70": {
+    "ticker": "LRCX",
+    "contract": "LRCX260925C00330000",
+    "strategy": "Momentum Breakout",
+    "opt_type": "call",
+    "strike": 330.0,
+    "expiration": "2026-09-25",
+    "sent_at": "2026-09-21T17:41:05.585662+00:00",
+    "spot_at_send": 301.4,
+    "entry": 0.83,
+    "target": 2.07,
+    "stop": 0.41,
     "outcome": "open",
     "outcome_method": "stock_proxy_bs_reprice",
     "exit_price": null,
