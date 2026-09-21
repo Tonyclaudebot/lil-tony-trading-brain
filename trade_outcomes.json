@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-18T20:03:48.756425+00:00",
+    "updated_at": "2026-09-21T12:02:42.089365+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 109,
     "losses": 306,
     "expired": 3,
-    "open": 4
+    "open": 6
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -9291,5 +9291,49 @@
     "last_underlying": 670.24,
     "last_polled_at": "2026-09-17T20:38:13.209482+00:00",
     "poll_count": 3
+  },
+  "24900c86-539c-49ef-9ee2-68f8a0a4d7d9": {
+    "ticker": "MARA",
+    "contract": "MARA260925P00013000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 13.0,
+    "expiration": "2026-09-25",
+    "sent_at": "2026-09-21T12:01:57.627420+00:00",
+    "spot_at_send": 13.864,
+    "entry": 0.48,
+    "target": 0.65,
+    "stop": 0.24,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
+  },
+  "91e58621-cf21-4b62-8b44-af75d6014509": {
+    "ticker": "RIOT",
+    "contract": "RIOT260925P00022500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 22.5,
+    "expiration": "2026-09-25",
+    "sent_at": "2026-09-21T12:02:14.479859+00:00",
+    "spot_at_send": 24.8203,
+    "entry": 0.49,
+    "target": 0.66,
+    "stop": 0.24,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
   }
 }
