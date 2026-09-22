@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-21T20:35:19.962933+00:00",
+    "updated_at": "2026-09-22T12:07:42.320505+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 111,
     "losses": 306,
     "expired": 3,
-    "open": 7
+    "open": 10
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -9353,10 +9353,10 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.7377517366409301,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-09-22T12:07:35.384153+00:00",
+    "poll_count": 1
   },
   "1312df2b-a537-4280-aeb6-343ad5e1261f": {
     "ticker": "RIOT",
@@ -9377,8 +9377,8 @@
     "outcome_at": null,
     "implied_vol": 0.8478147888183594,
     "last_underlying": null,
-    "last_polled_at": "2026-09-21T20:35:18.338941+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-22T12:07:36.759795+00:00",
+    "poll_count": 2
   },
   "b459da78-d59d-42fb-afbc-4e7d023aad70": {
     "ticker": "LRCX",
@@ -9397,9 +9397,75 @@
     "exit_price": null,
     "graded_at": null,
     "outcome_at": null,
-    "implied_vol": null,
+    "implied_vol": 0.6212911653518677,
     "last_underlying": null,
-    "last_polled_at": null,
-    "poll_count": 0
+    "last_polled_at": "2026-09-22T12:07:38.135427+00:00",
+    "poll_count": 1
+  },
+  "18020e6a-8f0a-4255-af7d-aa75f7c6e089": {
+    "ticker": "AMD",
+    "contract": "AMD260923P00575000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 575.0,
+    "expiration": "2026-09-23",
+    "sent_at": "2026-09-22T12:01:53.130028+00:00",
+    "spot_at_send": 605.35,
+    "entry": 1.0,
+    "target": 1.35,
+    "stop": 0.5,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6366680765151976,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-22T12:07:39.554861+00:00",
+    "poll_count": 1
+  },
+  "c3114a49-c98c-4368-962f-b7a15be13ff3": {
+    "ticker": "META",
+    "contract": "META260923P00705000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 705.0,
+    "expiration": "2026-09-23",
+    "sent_at": "2026-09-22T12:01:57.189439+00:00",
+    "spot_at_send": 735.8396,
+    "entry": 1.69,
+    "target": 2.28,
+    "stop": 0.84,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.6116972684860229,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-22T12:07:40.944305+00:00",
+    "poll_count": 1
+  },
+  "67e8912d-558d-4e99-9398-8246863c7e66": {
+    "ticker": "INTC",
+    "contract": "INTC260923P00115000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 115.0,
+    "expiration": "2026-09-23",
+    "sent_at": "2026-09-22T12:01:59.979612+00:00",
+    "spot_at_send": 120.23,
+    "entry": 0.58,
+    "target": 0.78,
+    "stop": 0.29,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.8061523151397705,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-22T12:07:42.318856+00:00",
+    "poll_count": 1
   }
 }
