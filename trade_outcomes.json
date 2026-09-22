@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-22T12:07:42.320505+00:00",
+    "updated_at": "2026-09-22T16:13:49.603221+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 111,
     "losses": 306,
     "expired": 3,
-    "open": 10
+    "open": 13
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -9355,8 +9355,8 @@
     "outcome_at": null,
     "implied_vol": 0.7377517366409301,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T12:07:35.384153+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-22T16:13:42.630879+00:00",
+    "poll_count": 2
   },
   "1312df2b-a537-4280-aeb6-343ad5e1261f": {
     "ticker": "RIOT",
@@ -9377,8 +9377,8 @@
     "outcome_at": null,
     "implied_vol": 0.8478147888183594,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T12:07:36.759795+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-22T16:13:44.015632+00:00",
+    "poll_count": 3
   },
   "b459da78-d59d-42fb-afbc-4e7d023aad70": {
     "ticker": "LRCX",
@@ -9399,8 +9399,8 @@
     "outcome_at": null,
     "implied_vol": 0.6212911653518677,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T12:07:38.135427+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-22T16:13:45.401393+00:00",
+    "poll_count": 2
   },
   "18020e6a-8f0a-4255-af7d-aa75f7c6e089": {
     "ticker": "AMD",
@@ -9421,8 +9421,8 @@
     "outcome_at": null,
     "implied_vol": 0.6366680765151976,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T12:07:39.554861+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-22T16:13:46.804064+00:00",
+    "poll_count": 2
   },
   "c3114a49-c98c-4368-962f-b7a15be13ff3": {
     "ticker": "META",
@@ -9443,8 +9443,8 @@
     "outcome_at": null,
     "implied_vol": 0.6116972684860229,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T12:07:40.944305+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-22T16:13:48.207555+00:00",
+    "poll_count": 2
   },
   "67e8912d-558d-4e99-9398-8246863c7e66": {
     "ticker": "INTC",
@@ -9465,7 +9465,73 @@
     "outcome_at": null,
     "implied_vol": 0.8061523151397705,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T12:07:42.318856+00:00",
+    "last_polled_at": "2026-09-22T16:13:49.594771+00:00",
+    "poll_count": 2
+  },
+  "ad9098c4-1a59-4fbe-97ec-17b64f4d2016": {
+    "ticker": "AMD",
+    "contract": "AMD260923P00590000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 590.0,
+    "expiration": "2026-09-23",
+    "sent_at": "2026-09-22T16:10:53.125748+00:00",
+    "spot_at_send": 618.805,
+    "entry": 0.75,
+    "target": 1.01,
+    "stop": 0.38,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5945530605316163,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-22T16:13:46.804145+00:00",
+    "poll_count": 1
+  },
+  "5b224268-b279-4336-bd09-0e07e9a7a888": {
+    "ticker": "META",
+    "contract": "META260923P00720000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 720.0,
+    "expiration": "2026-09-23",
+    "sent_at": "2026-09-22T16:10:57.038209+00:00",
+    "spot_at_send": 749.0,
+    "entry": 1.0,
+    "target": 1.35,
+    "stop": 0.5,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.529248824119568,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-22T16:13:48.207619+00:00",
+    "poll_count": 1
+  },
+  "773e5496-32ba-4295-90a6-240c3e58eb69": {
+    "ticker": "INTC",
+    "contract": "INTC260923P00120000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 120.0,
+    "expiration": "2026-09-23",
+    "sent_at": "2026-09-22T16:11:00.038634+00:00",
+    "spot_at_send": 121.5732,
+    "entry": 0.89,
+    "target": 1.2,
+    "stop": 0.45,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5642470169067382,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-22T16:13:49.594939+00:00",
     "poll_count": 1
   }
 }
