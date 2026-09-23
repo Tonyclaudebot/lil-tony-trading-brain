@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-22T20:38:19.343804+00:00",
+    "updated_at": "2026-09-23T12:06:12.560368+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 111,
     "losses": 311,
     "expired": 3,
-    "open": 11
+    "open": 14
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -9355,8 +9355,8 @@
     "outcome_at": null,
     "implied_vol": 0.7377517366409301,
     "last_underlying": 201.07,
-    "last_polled_at": "2026-09-22T20:38:12.475388+00:00",
-    "poll_count": 5
+    "last_polled_at": "2026-09-23T12:06:02.592634+00:00",
+    "poll_count": 6
   },
   "1312df2b-a537-4280-aeb6-343ad5e1261f": {
     "ticker": "RIOT",
@@ -9487,8 +9487,8 @@
     "outcome_at": null,
     "implied_vol": 0.5945530605316163,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T20:38:15.200204+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-09-23T12:06:03.987195+00:00",
+    "poll_count": 5
   },
   "5b224268-b279-4336-bd09-0e07e9a7a888": {
     "ticker": "META",
@@ -9509,8 +9509,8 @@
     "outcome_at": null,
     "implied_vol": 0.529248824119568,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T20:38:16.602979+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-09-23T12:06:05.342939+00:00",
+    "poll_count": 5
   },
   "773e5496-32ba-4295-90a6-240c3e58eb69": {
     "ticker": "INTC",
@@ -9531,8 +9531,8 @@
     "outcome_at": null,
     "implied_vol": 0.5642470169067382,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T20:38:17.967512+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-09-23T12:06:06.882159+00:00",
+    "poll_count": 5
   },
   "3f2e5eed-4088-46ff-bf9f-290da83c2e82": {
     "ticker": "META",
@@ -9553,8 +9553,8 @@
     "outcome_at": null,
     "implied_vol": 0.5012102556228638,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T20:38:16.603016+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-23T12:06:05.342965+00:00",
+    "poll_count": 4
   },
   "81025c9b-566f-4738-aa86-f37de6cec1b2": {
     "ticker": "INTC",
@@ -9575,8 +9575,8 @@
     "outcome_at": null,
     "implied_vol": 0.6432656669616696,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T20:38:17.967534+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-23T12:06:06.882205+00:00",
+    "poll_count": 4
   },
   "08465a23-2b91-40be-8c18-77fb74b7e1e2": {
     "ticker": "MSTR",
@@ -9597,7 +9597,73 @@
     "outcome_at": null,
     "implied_vol": 0.7849447536468506,
     "last_underlying": null,
-    "last_polled_at": "2026-09-22T20:38:19.343631+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-23T12:06:08.434146+00:00",
+    "poll_count": 4
+  },
+  "fda0d401-d154-4890-b3a0-82154e44e4ec": {
+    "ticker": "MRNA",
+    "contract": "MRNA260925P00165000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 165.0,
+    "expiration": "2026-09-25",
+    "sent_at": "2026-09-23T12:01:52.032544+00:00",
+    "spot_at_send": 180.9086,
+    "entry": 0.69,
+    "target": 0.93,
+    "stop": 0.34,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.9339359712600707,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-23T12:06:09.849216+00:00",
+    "poll_count": 1
+  },
+  "12e02f53-1443-4291-8d05-caa9ec3aafe5": {
+    "ticker": "RIOT",
+    "contract": "RIOT260925P00024000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 24.0,
+    "expiration": "2026-09-25",
+    "sent_at": "2026-09-23T12:01:57.854740+00:00",
+    "spot_at_send": 24.5581,
+    "entry": 0.4,
+    "target": 0.54,
+    "stop": 0.2,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.8247970581054687,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-23T12:06:11.199964+00:00",
+    "poll_count": 1
+  },
+  "0d821427-ab5f-4640-8e48-2a3bb8ceebac": {
+    "ticker": "MARA",
+    "contract": "MARA260925P00013500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 13.5,
+    "expiration": "2026-09-25",
+    "sent_at": "2026-09-23T12:02:00.482908+00:00",
+    "spot_at_send": 13.4501,
+    "entry": 0.39,
+    "target": 0.53,
+    "stop": 0.2,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.8467096328735351,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-23T12:06:12.560188+00:00",
+    "poll_count": 1
   }
 }
