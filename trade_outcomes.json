@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-09-28T16:13:30.184045+00:00",
+    "updated_at": "2026-09-28T17:44:19.720300+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 112,
     "losses": 324,
     "expired": 3,
-    "open": 16
+    "open": 19
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -9773,8 +9773,8 @@
     "outcome_at": null,
     "implied_vol": 0.5338885736465454,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:21.652491+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-09-28T17:44:11.139412+00:00",
+    "poll_count": 5
   },
   "a3804fc7-2b9b-4bf4-872a-b51a07cfa8eb": {
     "ticker": "DDOG",
@@ -9795,8 +9795,8 @@
     "outcome_at": null,
     "implied_vol": 0.5681102991104127,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:23.052590+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-09-28T17:44:12.542424+00:00",
+    "poll_count": 5
   },
   "65c84c0b-7efe-4a3d-9544-042dbcc01210": {
     "ticker": "PYPL",
@@ -9817,8 +9817,8 @@
     "outcome_at": null,
     "implied_vol": 0.6187998008728028,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:24.290661+00:00",
-    "poll_count": 4
+    "last_polled_at": "2026-09-28T17:44:13.938127+00:00",
+    "poll_count": 5
   },
   "e5950d70-295a-4292-810d-4a104b51f9c6": {
     "ticker": "MSFT",
@@ -9839,8 +9839,8 @@
     "outcome_at": null,
     "implied_vol": 0.24081741333007808,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:25.668262+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-28T17:44:15.355195+00:00",
+    "poll_count": 4
   },
   "323e2c01-d722-45d0-8b92-4cb097de4b65": {
     "ticker": "LRCX",
@@ -9861,8 +9861,8 @@
     "outcome_at": null,
     "implied_vol": 0.6223010492324829,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:27.020602+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-28T17:44:16.742722+00:00",
+    "poll_count": 4
   },
   "9ec45a9d-5df4-4d67-b60c-7bb55083da0e": {
     "ticker": "COST",
@@ -9883,8 +9883,8 @@
     "outcome_at": null,
     "implied_vol": 0.22097700595855713,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:28.331529+00:00",
-    "poll_count": 3
+    "last_polled_at": "2026-09-28T17:44:18.109488+00:00",
+    "poll_count": 4
   },
   "92de1a82-48a6-46c1-bfc7-26e4f2733bb4": {
     "ticker": "QCOM",
@@ -9905,8 +9905,8 @@
     "outcome_at": null,
     "implied_vol": 0.5311352109909057,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:21.652516+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-28T17:44:11.139438+00:00",
+    "poll_count": 3
   },
   "5a539e2d-7530-497a-a3f0-6c84a8153555": {
     "ticker": "DDOG",
@@ -9927,8 +9927,8 @@
     "outcome_at": null,
     "implied_vol": 0.6649972248077392,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:23.052634+00:00",
-    "poll_count": 2
+    "last_polled_at": "2026-09-28T17:44:12.542500+00:00",
+    "poll_count": 3
   },
   "3c29841d-60ae-4c63-89de-a460be881413": {
     "ticker": "MRNA",
@@ -9971,8 +9971,8 @@
     "outcome_at": null,
     "implied_vol": 0.5979828548431396,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:21.652589+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-28T17:44:11.139454+00:00",
+    "poll_count": 2
   },
   "e9c8afdf-c5cf-4c95-a64e-a855dbaa65f4": {
     "ticker": "DDOG",
@@ -9993,8 +9993,8 @@
     "outcome_at": null,
     "implied_vol": 0.7192641925811767,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:23.052731+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-09-28T17:44:12.542815+00:00",
+    "poll_count": 2
   },
   "e931346a-8494-4376-a0d7-22b0bdbd2fa0": {
     "ticker": "COST",
@@ -10015,7 +10015,73 @@
     "outcome_at": null,
     "implied_vol": 0.2157418060302734,
     "last_underlying": null,
-    "last_polled_at": "2026-09-28T16:13:28.331632+00:00",
+    "last_polled_at": "2026-09-28T17:44:18.109533+00:00",
+    "poll_count": 2
+  },
+  "a16bca5f-2cde-4223-ae00-2d98ccd7736d": {
+    "ticker": "DDOG",
+    "contract": "DDOG261002P00247500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 247.5,
+    "expiration": "2026-10-02",
+    "sent_at": "2026-09-28T17:40:41.544589+00:00",
+    "spot_at_send": 272.6,
+    "entry": 0.85,
+    "target": 1.15,
+    "stop": 0.42,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.695079379081726,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-28T17:44:12.542966+00:00",
     "poll_count": 1
+  },
+  "54b639b7-0046-48a0-9116-597001dc0cb0": {
+    "ticker": "COST",
+    "contract": "COST261002P00890000",
+    "strategy": "Momentum Breakout",
+    "opt_type": "put",
+    "strike": 890.0,
+    "expiration": "2026-10-02",
+    "sent_at": "2026-09-28T17:40:46.118214+00:00",
+    "spot_at_send": 923.685,
+    "entry": 0.56,
+    "target": 1.4,
+    "stop": 0.28,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.22719350814819333,
+    "last_underlying": null,
+    "last_polled_at": "2026-09-28T17:44:18.109708+00:00",
+    "poll_count": 1
+  },
+  "e62436fa-ea24-4f28-9276-93a6689bc116": {
+    "ticker": "TXN",
+    "contract": "TXN261002P00257500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 257.5,
+    "expiration": "2026-10-02",
+    "sent_at": "2026-09-28T17:40:50.364559+00:00",
+    "spot_at_send": 277.97,
+    "entry": 0.32,
+    "target": 0.43,
+    "stop": 0.16,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
   }
 }
