@@ -484,13 +484,13 @@
     "poll_count": 16
   },
   "_meta": {
-    "updated_at": "2026-10-06T19:23:58.291572+00:00",
+    "updated_at": "2026-10-06T19:29:43.828076+00:00",
     "method": "stock_proxy_bs_reprice",
     "risk_free_rate": 0.05,
     "wins": 114,
     "losses": 337,
     "expired": 6,
-    "open": 7
+    "open": 10
   },
   "afa997ea-4c1b-4b04-86fc-a55c76d3c9af": {
     "ticker": "XOM",
@@ -10169,8 +10169,8 @@
     "outcome_at": null,
     "implied_vol": 0.8777683258056639,
     "last_underlying": null,
-    "last_polled_at": "2026-10-06T19:23:56.137539+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-10-06T19:29:38.213473+00:00",
+    "poll_count": 2
   },
   "d3d3100c-091c-424b-bc0c-3b557a343f5d": {
     "ticker": "DDOG",
@@ -10191,8 +10191,8 @@
     "outcome_at": null,
     "implied_vol": 0.6236634397506713,
     "last_underlying": null,
-    "last_polled_at": "2026-10-06T19:23:48.123625+00:00",
-    "poll_count": 1
+    "last_polled_at": "2026-10-06T19:29:39.568981+00:00",
+    "poll_count": 2
   },
   "ba86ec38-7b91-477a-81e7-e35be59775b1": {
     "ticker": "NET",
@@ -10213,7 +10213,73 @@
     "outcome_at": null,
     "implied_vol": 0.5977018022537232,
     "last_underlying": null,
-    "last_polled_at": "2026-10-06T19:23:58.290146+00:00",
+    "last_polled_at": "2026-10-06T19:29:40.923258+00:00",
+    "poll_count": 2
+  },
+  "2d34ecc0-1bcf-44b8-ae5c-1a24f13d4a1f": {
+    "ticker": "GME",
+    "contract": "GME261009P00024500",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 24.5,
+    "expiration": "2026-10-09",
+    "sent_at": "2026-10-06T19:24:43.093909+00:00",
+    "spot_at_send": 24.545,
+    "entry": 0.46,
+    "target": 0.62,
+    "stop": 0.23,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.5436491966247559,
+    "last_underlying": null,
+    "last_polled_at": "2026-10-06T19:29:42.274071+00:00",
+    "poll_count": 1
+  },
+  "2b2cfdbc-9643-4f15-b94f-14cdae69843c": {
+    "ticker": "CMCSA",
+    "contract": "CMCSA261009C00021000",
+    "strategy": "Mean Reversion",
+    "opt_type": "call",
+    "strike": 21.0,
+    "expiration": "2026-10-09",
+    "sent_at": "2026-10-06T19:24:46.484301+00:00",
+    "spot_at_send": 21.545,
+    "entry": 0.43,
+    "target": 0.58,
+    "stop": 0.21,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_unsolvable",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": null,
+    "last_underlying": null,
+    "last_polled_at": null,
+    "poll_count": 0
+  },
+  "d0434305-6081-4be0-b0c5-a0ced44ad28e": {
+    "ticker": "XLK",
+    "contract": "XLK261009P00200000",
+    "strategy": "Mean Reversion",
+    "opt_type": "put",
+    "strike": 200.0,
+    "expiration": "2026-10-09",
+    "sent_at": "2026-10-06T19:24:50.312769+00:00",
+    "spot_at_send": 202.33,
+    "entry": 0.64,
+    "target": 0.86,
+    "stop": 0.32,
+    "outcome": "open",
+    "outcome_method": "stock_proxy_bs_reprice",
+    "exit_price": null,
+    "graded_at": null,
+    "outcome_at": null,
+    "implied_vol": 0.21201666831970212,
+    "last_underlying": null,
+    "last_polled_at": "2026-10-06T19:29:43.827526+00:00",
     "poll_count": 1
   }
 }
